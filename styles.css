@@ -21,8 +21,15 @@
 .label {
   font-size: Roboto, sans-serif;
   color: black;
+  text-align: center;
 }
+
 .section-title {
+  margin-top: -90%;
+  width: 100vw;
+  height: 10vw;
+  margin: 0px 0 40px calc(50% - 50vw);
+  background-color: black;
     /* Identidade e Fonte (Se preferir a clássica, troque por 'Cinzel', serif) */
     font-family: 'Raleway', sans-serif; 
     
@@ -30,15 +37,18 @@
     font-size: 24px;
     font-weight: 500;          /* Peso médio, elegante e preciso */
     line-height: 1.8;          /* Espaçamento vertical nobre para leitura */
-    color: #1a1a1a;            /* Grafite escuro de alta sofisticação */
-    text-transform: uppercase; /* Caixa alta obrigatória para o conceito */
+    color: #ffffff;            /* Grafite escuro de alta sofisticação */
+    text-transform: none;
     letter-spacing: 0.15em;    /* Espaçamento amplo entre letras */
     
     /* Alinhamento e Bloco */
     text-align: center;
-    max-width: 850px;          /* Evita que o texto estique demais nas telas largas */
-    margin: 100px auto 40px auto; /* 100px de distância do carrossel | Centralizado | 40px para o que vier abaixo */
-    padding: 0 20px;           /* Proteção para telas de celular não colarem nas bordas */
+    max-width: none;
+    padding: 0 20px;
+}
+
+.section-title span {
+  color: #c99664;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -221,6 +231,33 @@ p { margin: 0; color: var(--muted); }
   color: var(--white);
   box-shadow: 0 18px 35px rgba(181,138,91,0.22);
 }
+.texto_foto{
+  position: absolute;
+  margin-top: -5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000000;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.btn-CAT {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  margin-top: -3%;
+    border-radius: 999px;
+   min-height: 50px;
+   width: 35%;
+  padding: 0 22px;
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  background: linear-gradient(135deg, var(--accent), #b48830);
+  color: var(--white);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .btn-secondary {
   background: transparent;
   border-color: rgba(23, 22, 22, 0.707);
@@ -230,6 +267,11 @@ p { margin: 0; color: var(--muted); }
   background: rgba(4, 0, 0, 0.558);
   border-color: rgba(0, 0, 0, 0.596);
   color: var(--white);
+}
+
+.highlight{
+  color: #c99664;
+  font-weight: bold;
 }
 
 .menu-toggle {
@@ -598,7 +640,6 @@ p { margin: 0; color: var(--muted); }
 /* Seção de teste: 3 produtos lado a lado */
 .test-products {
   padding: 80px 0;
-  background: var(--bg);
 }
 
 .products-grid-3 {
@@ -614,6 +655,42 @@ p { margin: 0; color: var(--muted); }
   overflow: hidden;
   border-radius: 12px;
   aspect-ratio: 1.2 / 1;
+  
+
+  margin-top: -33%;
+}
+
+.product-3-card2{
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 1.2 / 1;
+  
+
+  margin-top: -30%;
+}
+
+.product-3-card3 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 1.2 / 1;
+  
+
+  margin-top: -30%;
+}
+
+
+
+
+.product-3-card1 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 1.2 / 1;
+  
+
+  margin-top: -30%;
 }
 
 .product-3-card img {
