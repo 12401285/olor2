@@ -1,2 +1,2 @@
 ﻿# inoxcolor
-É
+
