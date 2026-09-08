@@ -2,6 +2,17 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navs = document.querySelectorAll('.main-nav');
 const siteHeader = document.querySelector('.site-header');
+const navWrap = document.querySelector('.nav-wrap');
+const brandItem = document.querySelector('.brand-item');
+
+// Reúne os dois grupos de links em um único painel apenas no comportamento mobile.
+let mobileMenuPanel = null;
+if (navWrap && brandItem && navs.length) {
+  mobileMenuPanel = document.createElement('div');
+  mobileMenuPanel.className = 'mobile-menu-panel';
+  navWrap.insertBefore(mobileMenuPanel, brandItem);
+  navs.forEach(nav => mobileMenuPanel.appendChild(nav));
+}
 
 // Detecta scroll para mudar a cor do header após passar pelo carrossel
 window.addEventListener('scroll', () => {
@@ -15,15 +26,39 @@ window.addEventListener('scroll', () => {
 });
 
 // Só executa a lógica se os elementos existirem na página.
-if (menuToggle && navs.length) {
+if (menuToggle && navs.length && mobileMenuPanel) {
   // Quando o botão for clicado, alterna o estado do menu.
   menuToggle.addEventListener('click', () => {
     // Toggle adiciona ou remove a classe 'open' no menu.
     const isOpen = !navs[0].classList.contains('open');
     navs.forEach(nav => nav.classList.toggle('open', isOpen));
+    mobileMenuPanel.classList.toggle('open', isOpen);
+    menuToggle.classList.toggle('is-open', isOpen);
     // Atualiza o atributo aria-expanded para acessibilidade.
     menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
 
+  });
+
+  navs.forEach(nav => nav.addEventListener('click', (event) => {
+    if (event.target.closest('a')) {
+      navs.forEach(item => item.classList.remove('open'));
+      mobileMenuPanel.classList.remove('open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu');
+    }
+  }));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navs[0].classList.contains('open')) {
+      navs.forEach(nav => nav.classList.remove('open'));
+      mobileMenuPanel.classList.remove('open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu');
+      menuToggle.focus();
+    }
   });
 }
 
