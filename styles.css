@@ -135,15 +135,20 @@ p { margin: 0; color: var(--muted); }
 
 
 .products-page-body .main-nav {
-  color: #000;
+  color: #fff;
 }
 
 .products-page-body .site-header {
+  background: #111;
   border-bottom: 0;
 }
 
+.products-page-body .main-nav a {
+  color: #fff;
+}
+
 .products-page-body .main-nav a::after {
-  background: #000;
+  background: #fff;
 }
  .products-page {
           min-height: 40vh;
@@ -176,24 +181,29 @@ p { margin: 0; color: var(--muted); }
         .product-image {
           margin: 0;
           color: #121212;
-          width: min(100%, 240px);
+          width: 100%;
           justify-self: center;
           background: var(--bg);
+          display: grid;
+          grid-template-rows: 210px auto;
+          align-items: start;
+        }
+
+        .product-image:nth-child(4) img {
+          transform: none;
+          transform-origin: center;
         }
 
         .product-image:nth-child(9),
         .product-image:nth-child(10) {
-          position: relative;
-          margin-left: 10px;
-        }
-
-        .product-image:nth-child(10) {
-          margin-left: 18px;
+          position: static;
+          margin-left: 0;
         }
 
         .product-image img {
           width: 100%;
           height: 210px;
+          min-width: 0;
           object-fit: contain;
           object-position: center;
           background: var(--bg);
@@ -202,7 +212,7 @@ p { margin: 0; color: var(--muted); }
 
         .product-image figcaption {
           padding-top: 8px;
-          color: #c99664;
+          color: #000000;
           font-family: "Cormorant Garamond", serif;
           font-size: clamp(1.2rem, 1.8vw, 1.65rem);
           font-weight: 600;
@@ -271,6 +281,7 @@ p { margin: 0; color: var(--muted); }
         }
 
         .products-cta-button {
+          width: 30%;
           background: linear-gradient(135deg, var(--accent), #b48830);
           color: var(--white);
         }
@@ -294,9 +305,9 @@ p { margin: 0; color: var(--muted); }
           background: #fff;
           color: #121212;
           font-family: "Cormorant Garamond", serif;
-          font-size: clamp(1.4rem, 2.2vw, 2.3rem);
-          font-weight: 500;
-          line-height: 1.15;
+          font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+          font-weight: 600;
+          line-height: 1.1;
           letter-spacing: 0;
           text-align: center;
         }
@@ -310,12 +321,16 @@ p { margin: 0; color: var(--muted); }
             width: calc(100% - 32px);
             margin: 36px auto 48px;
             padding: 24px 12px;
-            font-size: 1.3rem;
+            font-size: clamp(1.2rem, 1.8vw, 1.65rem);
           }
         }
 
 .products-page-body .site-header.scrolled .main-nav {
   color: #fff;
+}
+
+.products-page-body .site-header.scrolled {
+  background: #111;
 }
 
 .products-page-body .site-header.scrolled .main-nav a::after {
