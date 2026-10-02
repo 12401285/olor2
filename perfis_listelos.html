@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perfis e listelos em aço inox colorido Inoxcolor para projetos de arquitetura e interiores." />
+    <link rel="icon" href="site_favicon_16_1787921832250.ico" type="image/x-icon">
+    <title>Inoxcolor | Perfis e Listelos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .brises-page { background: #fff; color: #121212; }
+      .brises-page .site-header { background: rgba(10, 10, 10, 0.315); }
+      .brises-page .main-nav,
+      .brises-page .main-nav a { color: #fff; }
+      .brises-hero {
+        margin-top: 0;
+        padding: 82px 0 20px;
+        background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.36)), url("perfis%20e%20listelos/1.jpg") center / cover;
+      }
+      .brises-hero-inner {
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        min-height: 124px;
+      }
+      .brises-description { position: relative; width: 100%; }
+      .brises-title-frame {
+        width: min(780px, 65%);
+        margin-left: -160px;
+        padding: 22px 28px 20px;
+        border: 1px solid rgba(255,255,255,.7);
+      }
+      .brises-title-frame strong {
+        display: block;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+        font-weight: 400;
+        line-height: 1.7;
+        text-align: center;
+        text-transform: uppercase;
+        transform: translateX(80px);
+      }
+      .brises-subtitle {
+        position: absolute;
+        top: 50%;
+        left: calc(min(620px, 52%) + 28px);
+        width: min(700px, calc(100% - min(620px, 52%) - 56px));
+        margin: 0;
+        color: rgba(255,255,255,.9);
+        font-family: "Inter", sans-serif;
+        font-size: clamp(.8rem, 1.8vw, 1.2rem);
+        line-height: 1.7;
+        white-space: nowrap;
+        transform: translateY(-50%);
+      }
+      .brises-section { padding: 0 0 88px; }
+      .brises-page .site-footer { margin-top: 0; }
+      .brises-intro {
+        width: min(920px, 78vw);
+        margin: 32px auto 36px;
+        text-align: center;
+      }
+      .brises-intro p,
+      .brises-copy p {
+        color: #121212;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.7;
+      }
+      .brises-intro p { margin: 0; text-align: justify; text-align-last: center; }
+      .brises-feature {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        width: min(1400px, calc(100% - 24px));
+        margin: 0 auto;
+        align-items: start;
+      }
+      .brises-feature img {
+        display: block;
+        width: 100%;
+        height: 360px;
+        min-height: 0;
+        max-height: 360px;
+        aspect-ratio: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+      .brises-feature > img {
+        height: 100%;
+        max-height: none;
+        align-self: stretch;
+      }
+      .brises-feature:nth-of-type(odd) img { grid-column: 2; grid-row: 1; }
+      .brises-feature:nth-of-type(odd) .brises-copy { grid-column: 1; grid-row: 1; }
+      .brises-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-self: stretch;
+        padding: 12px 18px 0;
+      }
+      .brises-copy p {
+        width: 100%;
+        margin: 0;
+        text-align: justify;
+        text-align-last: left;
+      }
+      .brises-copy-detail {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 180px;
+        align-items: center;
+        gap: 18px;
+        width: 100%;
+        margin-top: 18px;
+      }
+      .brises-copy-detail p {
+        margin: 0;
+        color: #121212;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        text-align: justify;
+        text-align-last: left;
+      }
+      .brises-copy-detail .slot-image {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+      }
+      .brises-feature.is-spot { position: relative; }
+      .brises-feature .slot-image {
+        display: block;
+        width: 180px;
+        height: 180px;
+        margin: 18px 0 0 auto;
+        object-fit: contain;
+        object-position: center;
+        box-sizing: border-box;
+        background: #fff;
+      }
+      .brises-feature .slot-image.green {
+        border: 3px solid var(--accent);
+      }
+      .brises-final-copy { display: flex; flex-direction: column; align-items: center; }
+      .brises-final-copy .slot-image { align-self: flex-end; }
+      .brises-architecture-btn {
+        display: flex;
+        position: static;
+        width: max-content;
+        max-width: 100%;
+        align-self: center;
+        margin: 60px auto 0;
+        transform: none;
+        white-space: normal;
+        color: #fff !important;
+      }
+      .porcelinox-carousel {
+        width: 100%;
+        margin: 24px auto 54px;
+      }
+      .porcelinox-carousel-inner {
+        position: relative;
+        height: min(62vw, 560px);
+        overflow: hidden;
+      }
+      .porcelinox-carousel-viewport {
+        height: 100%;
+        overflow: hidden;
+      }
+      .porcelinox-carousel-track {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.55s ease;
+        will-change: transform;
+      }
+      .porcelinox-carousel-track img {
+        display: block;
+        flex: 0 0 100%;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .porcelinox-carousel .slider-btn {
+        width: 44px;
+        height: 44px;
+        background: rgba(12, 12, 12, 0.72);
+      }
+      .porcelinox-carousel .slider-btn.prev { left: 12px; }
+      .porcelinox-carousel .slider-btn.next { right: 12px; }
+      @media (max-width: 768px) {
+        .brises-page .site-header {
+          background: #fff;
+          border-bottom: 1px solid rgb(240, 240, 240);
+          backdrop-filter: blur(12px);
+        }
+        .brises-page .site-header.scrolled { background: #fff; }
+        .brises-hero { margin-top: -40%; padding: 126px 12px 18px; }
+        .brises-hero-inner { min-height: 142px; width: 110%; margin-left: -10%; }
+        .brises-description { display: flex; align-items: center; gap: 8px; width: 100%; }
+        .brises-title-frame { box-sizing: border-box; flex: 0 0 115px; width: 115px; max-width: none; margin: 0 0 0 6%; padding: 6px 8px; }
+        .brises-title-frame strong { margin: 0; font-size: clamp(.5rem, 2.6vw, .72rem); line-height: 1.25; text-align: center; white-space: nowrap; transform: none; }
+        .brises-subtitle { position: static; flex: 1; width: auto; max-width: none; margin: 0; font-size: clamp(.42rem, 2.2vw, .56rem); line-height: 1.3; text-align: left; white-space: nowrap; transform: none; }
+        .brises-intro { width: calc(100% - 32px); margin: 24px auto 30px; text-align: left; }
+        .brises-intro p, .brises-copy p { font-size: 1rem; line-height: 1.55; text-align: left; text-align-last: left; }
+        .brises-feature { grid-template-columns: 1fr; gap: 6px; width: calc(100% - 20px); margin: 22px auto; }
+        .brises-feature:nth-of-type(odd) img,
+        .brises-feature:nth-of-type(odd) .brises-copy { grid-column: auto; grid-row: auto; }
+        .brises-feature img { height: auto !important; }
+        .brises-feature > img { min-height: 0; }
+        .brises-copy { padding: 12px 8px; }
+        .brises-copy-detail { grid-template-columns: minmax(0, 1fr) 120px; gap: 12px; margin-top: 12px; }
+        .brises-copy-detail p { font-size: 1rem; line-height: 1.55; }
+        .brises-copy-detail .slot-image { width: 120px; height: 120px; }
+        .porcelinox-carousel { margin: 18px auto 36px; }
+        .porcelinox-carousel-inner,
+        .porcelinox-carousel-viewport,
+        .porcelinox-carousel-track,
+        .porcelinox-carousel-track img { height: min(72vw, 360px); }
+        .brises-architecture-btn {
+          margin-top: 40px;
+          display: inline-flex !important;
+          width: 100% !important;
+          max-width: 100%;
+          min-height: 52px;
+          padding: 0 16px;
+          border-radius: 999px;
+          font-size: 0.58rem;
+          line-height: 1.2;
+          letter-spacing: 0.08em;
+          white-space: nowrap;
+          justify-content: center;
+        }
+        .brises-page .site-footer .footer-brand .btn_excl {
+          position: static !important;
+          left: auto !important;
+          display: inline-flex !important;
+          width: fit-content !important;
+          min-width: 180px;
+          max-width: 100%;
+          min-height: 38px;
+          padding: 0 12px;
+          margin: 14px auto 0 !important;
+          font-size: 0.52rem;
+          letter-spacing: 0.08em;
+          line-height: 1.25;
+          white-space: nowrap;
+          transform: none !important;
+         
+        }
+
+        .brises-page .site-footer { margin-top: 0; }
+        .brises-page .whatsapp-float { width: 52px; height: 52px; right: 18px; bottom: 18px; }
+        .brises-page .whatsapp-float svg { width: 24px; height: 24px; }
+      }
+    </style>
+  </head>
+  <body class="products-page-body brises-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
+          <a href="produtos.html">Produtos</a><a href="industria.html">Indústria</a><a href="arquitetura.html">Arquitetura</a><a href="residencial.html">Residencial</a>
+        </nav>
+        <a href="index.html" class="brand-item" aria-label="Inoxcolor Home"><img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor" /></a>
+        <nav class="main-nav nav-right" aria-label="Menu principal direito">
+          <a href="ainoxcolor.html">A Inoxcolor</a><a href="downloads.html">Download</a><a href="na_midia.html">Na Mídia</a><a href="Blog.html">Blog</a>
+        </nav>
+        <div class="nav-actions"><a href="contato.html" class="btn btn-primary">Orçamento</a><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero brises-hero"><div class="container page-hero-inner brises-hero-inner"><div class="brises-description"><div class="brises-title-frame"><strong>Perfis e Listelos</strong></div><p class="brises-subtitle">Linhas e traços que transformam detalhe em sofisticação</p></div></div></section>
+      <section class="section brises-section" aria-label="Perfis e listelos em aço inox colorido">
+        <article class="brises-intro"><p>Versáteis, podem ser aplicados em cozinhas, banheiros, lavabos, áreas úmidas, salas, halls, cabeceiras e diversos ambientes residenciais ou comerciais de alto padrão.</p></article>
+        <div class="porcelinox-carousel" role="region" aria-label="Galeria de perfis e listelos">
+          <div class="porcelinox-carousel-inner">
+            <button class="slider-btn prev" type="button" aria-label="Imagem anterior">&#10094;</button>
+            <div class="porcelinox-carousel-viewport">
+              <div class="porcelinox-carousel-track">
+                <img src="perfis%20e%20listelos/carrossel/1.jpg" alt="Listelos metálicos dourados em painel decorativo" loading="lazy" />
+                <img src="perfis%20e%20listelos/carrossel/2.jpg" alt="Perfis metálicos aplicados em painel de quarto" loading="lazy" />
+                <img src="perfis%20e%20listelos/carrossel/3.jpg" alt="Listelos metálicos em painel de parede" loading="lazy" />
+                <img src="perfis%20e%20listelos/carrossel/4.jpg" alt="Perfis metálicos em painel decorativo de sala" loading="lazy" />
+                <img src="perfis%20e%20listelos/carrossel/5.jpg" alt="Detalhe de listelo metálico em parede revestida" loading="lazy" />
+                <img src="perfis%20e%20listelos/carrossel/6.jpg" alt="Perfil metálico dourado aplicado em revestimento" loading="lazy" />
+                <img src="perfis%20e%20listelos/carrossel/7.jpg" alt="Perfis metálicos aplicados em painel de quarto" loading="lazy" />
+              </div>
+            </div>
+            <button class="slider-btn next" type="button" aria-label="Próxima imagem">&#10095;</button>
+          </div>
+        </div>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/1.jpg" alt="Listelos metálicos dourados em painel decorativo" loading="lazy" /><div class="brises-copy"><div class="brises-copy-detail"><p>Perfil U para decoração e sobreposição de paredes e superfícies. Detalhes de alto luxo que valorizam a arquitetura, criam pontos de destaque e conferem sofisticação à composição dos ambientes.</p><img src="perfis%20e%20listelos/lst/img1.jpg" class="slot-image green" alt="Imagem detalhada do perfil Inoxcolor" loading="lazy" /></div></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/2.jpg" alt="Perfis metálicos aplicados em painel de quarto" loading="lazy" /><div class="brises-copy"><p>Perfil U com Aba Alongada instaladas entre porcelanatos e azulejos,  aplicados em ambientes de cozinhas, banheiros, lavabos, áreas úmidas, salas, halls, cabeceiras e diversos ambientes residenciais ou comerciais de alto padrão.</p><img src="perfis%20e%20listelos/lst/img2.jpg" class="slot-image green" alt="Imagem de detalhe do perfil Inoxcolor" loading="lazy" /></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/3.jpg" alt="Listelos metálicos em painel de parede" loading="lazy" /><div class="brises-copy"><p>Perfil  de Transição - Utilizados na união de dois pisos com desnível criando uma transição continua entre pisos.No acabamento polido, reflete a luz com brilho e imponência; no escovado, apresenta uma superfície mais fosca, de textura sutil e elegância contemporânea.</p><img src="perfis%20e%20listelos/lst/img4.jpg" class="slot-image green" alt="Desenho técnico do perfil de transição" loading="lazy" /></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/4.jpg" alt="Perfis metálicos em painel decorativo de sala" loading="lazy" /><div class="brises-copy"><p>Perfil L - Decoração e sobreposição utilizado como cantoneiras. Nas quinas, os perfis proporcionam um acabamento elegante e preciso, transformando encontros e contornos em elementos de refinamento visual.</p><img src="perfis%20e%20listelos/lst/5.jpg" class="slot-image green" alt="Desenho técnico do perfil L" loading="lazy" /></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/5.jpg" alt="Detalhe de listelo metálico em parede revestida" loading="lazy" /><div class="brises-copy"><p>Perfil L Aba Alongado - Utilizados para substituição de soleiras no encontro de pisos e nas quinas de escadas. Nas quinas, os perfis proporcionam um acabamento elegante e preciso, transformando encontros e contornos em elementos de refinamento.</p><img src="perfis%20e%20listelos/lst/6.jpg" class="slot-image green" alt="Desenho técnico do perfil L com aba alongada" loading="lazy" /></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/6.jpg" alt="Perfil metálico dourado aplicado em revestimento" loading="lazy" /><div class="brises-copy brises-final-copy"><p>Perfil T - Utilizados na união de dois pisos no mesmo nível, encobrindo juntas criando uma transição continua entre pisos proporcionando uma passagem harmoniosa entre materiais, cores e paginações, acrescentando continuidade e distinção ao espaço.</p><img src="perfis%20e%20listelos/lst/7.jpg" class="slot-image green" alt="Desenho técnico do perfil T" loading="lazy" /></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/7.jpg" alt="Perfil metálico dourado aplicado em ambiente residencial" loading="lazy" /><div class="brises-copy"><p>Perfil  de Transição - Utilizados na união de dois pisos com desnível criando uma transição continua entre pisos.No acabamento polido, reflete a luz com brilho e imponência; no escovado, apresenta uma superfície mais fosca, de textura sutil e elegância contemporânea.</p><img src="perfis%20e%20listelos/lst/8.jpg" class="slot-image green" alt="Desenho técnico do perfil de transição" loading="lazy" /><a class="btn btn-primary brises-architecture-btn" href="arquitetura.html">Explore Nossas Soluções para Arquitetura</a></div></article>
+      </section>
+    </main>
+    <footer class="site-footer" id="contato">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo logo-footer" aria-label="Inoxcolor Home"><span class="logo-mark">I</span><span class="logo-text">Inoxcolor</span></a>
+          <div class="logo-footer"><img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor"></div>
+          <div><a href="contato.html" class="btn_excl">Atendimento Exclusivo</a></div>
+        </div>
+        <div class="letras"><h3>Produtos</h3><ul><li class="letraf"><a href="sobre.html">Portfólio de cores</a><br><a href="colecoes.html">Chapas</a><br><a href="produtos.html">Revestimentos</a><br><a href="brises.html">Brises</a><br><a href="perfis_listelos.html">Perfis e Listelos</a><br><a href="projetos.html">Ralos</a><br><a href="projetos.html">Obras de arte</a></li></ul></div>
+        <div><h3>Contatos</h3><ul><li>E-mail: comercial@inoxcolor.com.br</li><li>Whatsapp (31) 99125-7328</li><li>Telefone 1 (31) 3224-8666</li><li>Telefone 2 (31) 3224-6534</li></ul></div>
+        <div><div class="newsletter-form"><h3>Endereço</h3><p>Av. Álvares Cabral, 593, sala 1602, Lourdes<br>Belo Horizonte, MG, CEP 30170-002</p><h3>Horário de Atendimento</h3><p>Segunda a sexta-feira, das 8h às 11h30 e das 13h às 17h</p></div></div>
+      </div>
+      <div class="footer-bottom"><div class="container footer-bottom-inner"><span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Imagens ilustrativas. Todos os direitos reservados. 2026 © Inoxcolor.</span><span></span></div></div>
+    </footer>
+    <a class="whatsapp-float" href="https://wa.me/5531991257328?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20perfis%20e%20listelos%20Inoxcolor." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Inoxcolor pelo WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true"><path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" /></svg>
+    </a>
+    <script src="script.js"></script>
+    <script src="Proteção.js" defer></script>
+  </body>
+</html>

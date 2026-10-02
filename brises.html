@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Brises em aço inox colorido Inoxcolor: design, controle de luz e personalidade para fachadas." />
+    <link rel="icon" href="site_favicon_16_1787921832250.ico" type="image/x-icon">
+    <title>Inoxcolor | Brises</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .brises-page { background: #fff; color: #121212; }
+      .brises-page .site-header { background: rgba(10, 10, 10, 0.315); }
+      .brises-page .main-nav,
+      .brises-page .main-nav a { color: #fff; }
+      .brises-hero {
+        margin-top: 0;
+        padding: 82px 0 20px;
+        background: linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.36)), url("bdrv/1.jpg") center / cover;
+      }
+      .brises-hero-inner {
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        min-height: 124px;
+      }
+      .brises-description { position: relative; width: 100%; }
+      .brises-title-frame {
+        width: min(780px, 65%);
+        margin-left: -160px;
+        padding: 22px 28px 20px;
+        border: 1px solid rgba(255,255,255,.7);
+      }
+      .brises-title-frame strong {
+        display: block;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+        font-weight: 400;
+        line-height: 1.7;
+        text-align: center;
+        text-transform: uppercase;
+        transform: translateX(160px);
+      }
+      .brises-subtitle {
+        position: absolute;
+        top: 50%;
+        left: calc(min(620px, 52%) + 28px);
+        width: min(440px, 40%);
+        margin: 0;
+        color: rgba(255,255,255,.9);
+        font-family: "Inter", sans-serif;
+        font-size: clamp(.8rem, 1.8vw, 1.2rem);
+        line-height: 1.7;
+        white-space: nowrap;
+        transform: translateY(-50%);
+      }
+      .brises-section { padding: 0 0 88px; }
+      .brises-intro {
+        width: min(920px, 78vw);
+        margin: 32px auto 36px;
+        text-align: center;
+      }
+      .brises-intro p,
+      .brises-copy p {
+        color: #121212;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.7;
+      }
+      .brises-intro p { margin: 0; text-align: justify; text-align-last: center; }
+      .brises-feature {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+        width: min(1400px, calc(100% - 24px));
+        margin: 0 auto;
+        align-items: center;
+      }
+      .brises-feature img {
+        display: block;
+        width: 100%;
+        height: 360px;
+        min-height: 0;
+        max-height: 360px;
+        aspect-ratio: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+      .brises-feature:nth-of-type(odd) img { grid-column: 2; grid-row: 1; }
+      .brises-feature:nth-of-type(odd) .brises-copy { grid-column: 1; grid-row: 1; }
+      .brises-copy { padding: 12px 18px; }
+      .brises-copy p { margin: 0; text-align: justify; text-align-last: left; }
+      .brises-final-copy { display: flex; flex-direction: column; align-items: center; }
+      .brises-architecture-btn {
+        display: flex;
+        position: static;
+        width: max-content;
+        max-width: 100%;
+        align-self: center;
+        margin: 60px auto 0;
+        transform: none;
+        white-space: normal;
+        color: #fff !important;
+      }
+      @media (max-width: 768px) {
+        .brises-page .site-header {
+          background: #fff;
+          border-bottom: 1px solid rgb(240, 240, 240);
+          backdrop-filter: blur(12px);
+        }
+        .brises-page .site-header.scrolled { background: #fff; }
+        .brises-hero { margin-top: -40%; padding: 126px 12px 18px; }
+        .brises-hero-inner { min-height: 142px; margin-left: -10%;; }
+        .brises-description { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 8px; align-items: center; }
+        .brises-title-frame { box-sizing: border-box; width: 100%; margin-left: 10%; padding: 10px 8px; }
+        .brises-title-frame strong {  margin-left: 50%; font-size: clamp(.95rem, 4.4vw, 1.2rem); line-height: 1.25; text-align: center; white-space: nowrap; transform: none; }
+        .brises-subtitle { position: static; width: auto; min-width: 0; max-width: none; margin-left: 10%; font-size: clamp(.5rem, 2.8vw, .72rem); line-height: 1.3; text-align: left; white-space: nowrap; transform: none; }
+        .brises-intro { width: calc(100% - 32px); }
+        .brises-intro p, .brises-copy p { font-size: 1rem; line-height: 1.55; }
+        .brises-feature { grid-template-columns: 1fr; gap: 6px; width: calc(100% - 20px); margin: 22px auto; }
+        .brises-feature:nth-of-type(odd) img,
+        .brises-feature:nth-of-type(odd) .brises-copy { grid-column: auto; grid-row: auto; }
+        .brises-feature img { height: auto !important; }
+        .brises-copy { padding: 12px 8px; }
+        .brises-architecture-btn {
+          margin-top: 40px;
+          display: inline-flex !important;
+          width: 100% !important;
+          max-width: 100%;
+          min-height: 52px;
+          padding: 0 16px;
+          border-radius: 999px;
+          font-size: 0.58rem;
+          line-height: 1.2;
+          letter-spacing: 0.08em;
+          white-space: nowrap;
+          justify-content: center;
+        }
+        .brises-page .site-footer .footer-brand .btn_excl {
+          position: static !important;
+          left: auto !important;
+          display: inline-flex !important;
+          width: fit-content !important;
+          min-width: 180px;
+          max-width: 100%;
+          min-height: 38px;
+          padding: 0 12px;
+          margin: 14px auto 0 !important;
+          font-size: 0.52rem;
+          letter-spacing: 0.08em;
+          line-height: 1.25;
+          white-space: nowrap;
+          transform: none !important;
+         
+        }
+
+        .site-footer{
+            margin-top: -20% !important;
+          }
+        .brises-page .whatsapp-float { width: 52px; height: 52px; right: 18px; bottom: 18px; }
+        .brises-page .whatsapp-float svg { width: 24px; height: 24px; }
+      }
+    </style>
+  </head>
+  <body class="products-page-body brises-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
+          <a href="produtos.html">Produtos</a><a href="industria.html">Indústria</a><a href="arquitetura.html">Arquitetura</a><a href="residencial.html">Residencial</a>
+        </nav>
+        <a href="index.html" class="brand-item" aria-label="Inoxcolor Home"><img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor" /></a>
+        <nav class="main-nav nav-right" aria-label="Menu principal direito">
+          <a href="ainoxcolor.html">A Inoxcolor</a><a href="downloads.html">Download</a><a href="na_midia.html">Na Mídia</a><a href="Blog.html">Blog</a>
+        </nav>
+        <div class="nav-actions"><a href="contato.html" class="btn btn-primary">Orçamento</a><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero brises-hero"><div class="container page-hero-inner brises-hero-inner"><div class="brises-description"><div class="brises-title-frame"><strong>Brises</strong></div><p class="brises-subtitle">Design que filtra a luz e revela luxo.</p></div></div></section>
+      <section class="section brises-section" aria-label="Brises em aço inox colorido">
+        <article class="brises-intro"><p>Mais do que elementos de proteção solar, os brises transformam fachadas em composições de ritmo, luz e profundidade. Em aço inox colorido, cada linha acrescenta sofisticação e identidade ao projeto.</p></article>
+        <article class="brises-feature"><img src="brises/1.jpg" alt="Fachada contemporânea com brises em aço inox" loading="lazy" /><div class="brises-copy"><p>Os brises em aço inox colorido combinam controle solar e expressão arquitetônica, criando fachadas de presença marcante e acabamento refinado.</p></div></article>
+        <article class="brises-feature"><img src="brises/2.jpg" alt="Detalhe de brises aplicados em fachada" loading="lazy" /><div class="brises-copy"><p>Em fachadas ou ambientes internos, a paginação dos brises compõe superfícies contemporâneas, equilibrando funcionalidade, leveza visual e personalidade.</p></div></article>
+        <article class="brises-feature"><img src="brises/3.jpg" alt="Brises compondo a arquitetura de um edifício" loading="lazy" /><div class="brises-copy"><p>Desenhos e paginações podem ser personalizados para traduzir a linguagem do projeto e criar uma composição autoral, alinhada à identidade de cada espaço.</p></div></article>
+        <article class="brises-feature"><img src="brises/4.jpg" alt="Fachada revestida com brises metálicos" loading="lazy" /><div class="brises-copy"><p>No acabamento polido, o inox reflete a luz com brilho e imponência; no escovado, revela uma textura sutil e sofisticada. Duas expressões para diferentes propostas arquitetônicas.</p></div></article>
+        <article class="brises-feature"><img src="brises/5.jpg" alt="Composição arquitetônica com brises" loading="lazy" /><div class="brises-copy"><p>A incidência da luz sobre as cores e a geometria dos brises transforma a leitura da fachada ao longo do dia, criando nuances e profundidade visual.</p></div></article>
+        <article class="brises-feature"><img src="brises/6.jpg" alt="Brises em projeto arquitetônico contemporâneo" loading="lazy" /><div class="brises-copy"><p>A cor não é pintura: resulta da nanotecnologia aplicada ao aço inox. O acabamento não descasca nem desbota, preservando a aparência do material em aplicações internas e externas.</p></div></article>
+        <article class="brises-feature"><img src="brises/7.jpg" alt="Detalhe de fachada com brises em aço inox colorido" loading="lazy" /><div class="brises-copy"><p>Da definição do desenho à especificação dos acabamentos, a Inoxcolor oferece suporte técnico para integrar os brises às necessidades e à linguagem de cada projeto.</p></div></article>
+        <article class="brises-feature"><img src="brises/8.jpg" alt="Fachada com brises Inoxcolor" loading="lazy" /><div class="brises-copy brises-final-copy"><p>Com sete cores e dois acabamentos, os brises Inoxcolor abrem espaço para composições personalizadas. Conheça também nossa coleção de malhas e desenhos.</p><a class="btn btn-primary brises-architecture-btn" href="arquitetura.html">Explore Nossas Soluções para Arquitetura</a></div></article>
+      </section>
+    </main>
+    <footer class="site-footer" id="contato">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo logo-footer" aria-label="Inoxcolor Home"><span class="logo-mark">I</span><span class="logo-text">Inoxcolor</span></a>
+          <div class="logo-footer"><img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor"></div>
+          <div><a href="contato.html" class="btn_excl">Atendimento Exclusivo</a></div>
+        </div>
+        <div class="letras"><h3>Produtos</h3><ul><li class="letraf"><a href="sobre.html">Portfólio de cores</a><br><a href="colecoes.html">Chapas</a><br><a href="produtos.html">Revestimentos</a><br><a href="brises.html">Brises</a><br><a href="projetos.html">Ralos</a><br><a href="projetos.html">Obras de arte</a></li></ul></div>
+        <div><h3>Contatos</h3><ul><li>E-mail: comercial@inoxcolor.com.br</li><li>Whatsapp (31) 99125-7328</li><li>Telefone 1 (31) 3224-8666</li><li>Telefone 2 (31) 3224-6534</li></ul></div>
+        <div><div class="newsletter-form"><h3>Endereço</h3><p>Av. Álvares Cabral, 593, sala 1602, Lourdes<br>Belo Horizonte, MG, CEP 30170-002</p><h3>Horário de Atendimento</h3><p>Segunda a sexta-feira, das 8h às 11h30 e das 13h às 17h</p></div></div>
+      </div>
+      <div class="footer-bottom"><div class="container footer-bottom-inner"><span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Imagens ilustrativas. Todos os direitos reservados. 2026 © Inoxcolor.</span><span></span></div></div>
+    </footer>
+    <a class="whatsapp-float" href="https://wa.me/5531991257328?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20brises%20Inoxcolor." target="_blank" rel="noopener noreferrer" aria-label="Falar com a Inoxcolor pelo WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true"><path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" /></svg>
+    </a>
+    <script src="script.js"></script>
+    <script src="Proteção.js" defer></script>
+  </body>
+</html>

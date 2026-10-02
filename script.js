@@ -14,10 +14,10 @@ if (navWrap && brandItem && navs.length) {
   navs.forEach(nav => mobileMenuPanel.appendChild(nav));
 }
 
-// Detecta scroll para mudar a cor do header após passar pelo carrossel
+// Muda a cor do header após passar pelo carrossel
 window.addEventListener('scroll', () => {
   if (siteHeader) {
-    if (window.scrollY > window.innerHeight * 0.5) {
+    if (window.scrollY > window.innerHeight * 0.1) {
       siteHeader.classList.add('scrolled');
     } else {
       siteHeader.classList.remove('scrolled');
@@ -116,6 +116,39 @@ document.querySelectorAll('.pure-slider').forEach(slider => {
   initSlider(slider);
 });
 
+// Inicializa o carrossel de imagens da página Porcelinox.
+document.querySelectorAll('.porcelinox-carousel, .colunas-carousel').forEach((carousel) => {
+  const track = carousel.querySelector('.porcelinox-carousel-track, .colunas-carousel-track');
+  const images = Array.from(carousel.querySelectorAll('.porcelinox-carousel-track img, .colunas-carousel-track img'));
+  const previousButton = carousel.querySelector('.slider-btn.prev');
+  const nextButton = carousel.querySelector('.slider-btn.next');
+  let currentIndex = 0;
+
+  if (!track || !images.length) return;
+
+  const getVisibleImages = () => 1;
+  const showSlide = (index) => {
+    const visibleImages = getVisibleImages();
+    const lastIndex = Math.max(0, images.length - visibleImages);
+    currentIndex = Math.min(Math.max(index, 0), lastIndex);
+    track.style.transform = `translate3d(-${currentIndex * 100}%, 0, 0)`;
+  };
+
+  showSlide(0);
+
+  previousButton?.addEventListener('click', () => showSlide(currentIndex - 1));
+  nextButton?.addEventListener('click', () => showSlide(currentIndex + 1));
+  window.addEventListener('resize', () => showSlide(currentIndex));
+
+  const advanceSlide = () => {
+    const visibleImages = getVisibleImages();
+    const lastIndex = Math.max(0, images.length - visibleImages);
+    showSlide(currentIndex >= lastIndex ? 0 : currentIndex + 1);
+  };
+
+  setInterval(advanceSlide, 4000);
+});
+
 // Seleciona o formulário de newsletter, se ele existir.
 document.querySelector('.newsletter-form')?.addEventListener('submit', (event) => {
   // Evita o envio padrão do formulário.
@@ -131,3 +164,22 @@ document.querySelector('.newsletter-form')?.addEventListener('submit', (event) =
     input.value = '';
   }
 });
+
+document.querySelectorAll('.contact-dropdown').forEach((menu) => {
+  menu.querySelectorAll('input[type="radio"]').forEach((option) => {
+    option.addEventListener('change', () => {
+      menu.querySelector('summary').textContent = option.value;
+      menu.open = false;
+    });
+  });
+});
+
+document.querySelectorAll('.footer-bottom-inner').forEach((footerBottom) => {
+  if (footerBottom.querySelector('.footer-note')) return;
+
+  const note = document.createElement('span');
+  note.className = 'footer-note';
+  note.textContent = 'As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.';
+  footerBottom.insertBefore(note, footerBottom.firstChild);
+});
+
