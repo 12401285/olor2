@@ -197,6 +197,36 @@
       }
       .porcelinox-carousel .slider-btn.prev { left: 12px; }
       .porcelinox-carousel .slider-btn.next { right: 12px; }
+      .brises-juntas-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: min(1400px, calc(100% - 24px));
+        margin: 0 auto;
+      }
+      .brises-juntas-gallery img {
+        display: block;
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+      }
+      .brises-juntas-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin: 0 0 0 auto;
+      }
+      .brises-juntas-copy p {
+        width: 100%;
+        margin: 16px 0 0;
+        color: #121212;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        text-align: justify;
+      }
+      .brises-juntas-copy .brises-architecture-btn { margin-top: 24px; }
       @media (max-width: 768px) {
         .brises-page .site-header {
           background: #fff;
@@ -217,6 +247,10 @@
         .brises-feature:nth-of-type(odd) .brises-copy { grid-column: auto; grid-row: auto; }
         .brises-feature img { height: auto !important; }
         .brises-feature > img { min-height: 0; }
+        .brises-juntas-gallery { width: calc(100% - 20px); margin: 0 auto; }
+        .brises-juntas-gallery img { width: 100%; }
+        .brises-juntas-copy { width: calc(100% - 20px); }
+        .brises-juntas-copy p { margin-top: 14px; font-size: 1rem; line-height: 1.55; text-align: left; }
         .brises-copy { padding: 12px 8px; }
         .brises-copy-detail { grid-template-columns: minmax(0, 1fr) 120px; gap: 12px; margin-top: 12px; }
         .brises-copy-detail p { font-size: 1rem; line-height: 1.55; }
@@ -299,12 +333,20 @@
           </div>
         </div>
         <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/1.jpg" alt="Listelos metálicos dourados em painel decorativo" loading="lazy" /><div class="brises-copy"><div class="brises-copy-detail"><p>Perfil U para decoração e sobreposição de paredes e superfícies. Detalhes de alto luxo que valorizam a arquitetura, criam pontos de destaque e conferem sofisticação à composição dos ambientes.</p><img src="perfis%20e%20listelos/lst/img1.jpg" class="slot-image green" alt="Imagem detalhada do perfil Inoxcolor" loading="lazy" /></div></div></article>
-        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/2.jpg" alt="Perfis metálicos aplicados em painel de quarto" loading="lazy" /><div class="brises-copy"><p>Perfil U com Aba Alongada instaladas entre porcelanatos e azulejos,  aplicados em ambientes de cozinhas, banheiros, lavabos, áreas úmidas, salas, halls, cabeceiras e diversos ambientes residenciais ou comerciais de alto padrão.</p><img src="perfis%20e%20listelos/lst/img2.jpg" class="slot-image green" alt="Imagem de detalhe do perfil Inoxcolor" loading="lazy" /></div></article>
-        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/3.jpg" alt="Listelos metálicos em painel de parede" loading="lazy" /><div class="brises-copy"><p>Perfil  de Transição - Utilizados na união de dois pisos com desnível criando uma transição continua entre pisos.No acabamento polido, reflete a luz com brilho e imponência; no escovado, apresenta uma superfície mais fosca, de textura sutil e elegância contemporânea.</p><img src="perfis%20e%20listelos/lst/img4.jpg" class="slot-image green" alt="Desenho técnico do perfil de transição" loading="lazy" /></div></article>
-        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/4.jpg" alt="Perfis metálicos em painel decorativo de sala" loading="lazy" /><div class="brises-copy"><p>Perfil L - Decoração e sobreposição utilizado como cantoneiras. Nas quinas, os perfis proporcionam um acabamento elegante e preciso, transformando encontros e contornos em elementos de refinamento visual.</p><img src="perfis%20e%20listelos/lst/5.jpg" class="slot-image green" alt="Desenho técnico do perfil L" loading="lazy" /></div></article>
-        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/5.jpg" alt="Detalhe de listelo metálico em parede revestida" loading="lazy" /><div class="brises-copy"><p>Perfil L Aba Alongado - Utilizados para substituição de soleiras no encontro de pisos e nas quinas de escadas. Nas quinas, os perfis proporcionam um acabamento elegante e preciso, transformando encontros e contornos em elementos de refinamento.</p><img src="perfis%20e%20listelos/lst/6.jpg" class="slot-image green" alt="Desenho técnico do perfil L com aba alongada" loading="lazy" /></div></article>
-        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/6.jpg" alt="Perfil metálico dourado aplicado em revestimento" loading="lazy" /><div class="brises-copy brises-final-copy"><p>Perfil T - Utilizados na união de dois pisos no mesmo nível, encobrindo juntas criando uma transição continua entre pisos proporcionando uma passagem harmoniosa entre materiais, cores e paginações, acrescentando continuidade e distinção ao espaço.</p><img src="perfis%20e%20listelos/lst/7.jpg" class="slot-image green" alt="Desenho técnico do perfil T" loading="lazy" /></div></article>
-        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/7.jpg" alt="Perfil metálico dourado aplicado em ambiente residencial" loading="lazy" /><div class="brises-copy"><p>Perfil  de Transição - Utilizados na união de dois pisos com desnível criando uma transição continua entre pisos.No acabamento polido, reflete a luz com brilho e imponência; no escovado, apresenta uma superfície mais fosca, de textura sutil e elegância contemporânea.</p><img src="perfis%20e%20listelos/lst/8.jpg" class="slot-image green" alt="Desenho técnico do perfil de transição" loading="lazy" /><a class="btn btn-primary brises-architecture-btn" href="arquitetura.html">Explore Nossas Soluções para Arquitetura</a></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/2.jpg" alt="Perfis metálicos aplicados em painel de quarto" loading="lazy" /><div class="brises-copy"><div class="brises-copy-detail"><p>Perfil U com Aba Alongada instaladas entre porcelanatos e azulejos,  aplicados em ambientes de cozinhas, banheiros, lavabos, áreas úmidas, salas, halls, cabeceiras e diversos ambientes residenciais ou comerciais de alto padrão.</p><img src="perfis%20e%20listelos/lst/img2.jpg" class="slot-image green" alt="Imagem de detalhe do perfil Inoxcolor" loading="lazy" /></div></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/3.jpg" alt="Listelos metálicos em painel de parede" loading="lazy" /><div class="brises-copy"><div class="brises-copy-detail"><p>Perfil L - Decoração e sobreposição utilizado como cantoneiras. Nas quinas, os perfis proporcionam um acabamento elegante e preciso, transformando encontros e contornos em elementos de refinamento visual.</p><img src="perfis%20e%20listelos/ordem/perfil_l.jpg" class="slot-image green" alt="Desenho técnico do perfil L" loading="lazy" /></div></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/4.jpg" alt="Perfis metálicos em painel decorativo de sala" loading="lazy" /><div class="brises-copy"><div class="brises-copy-detail"><p>Perfil L Aba Alongado -  Utilizados para substituição de soleiras no encontro de pisos e nas quinas de escadas.Nas quinas, os perfis proporcionam um acabamento elegante e preciso, transformando encontros e contornos em elementos de refinamento</p><img src="perfis%20e%20listelos/ordem/abalonga.jpg" class="slot-image green" alt="Desenho técnico do perfil L com aba alongada" loading="lazy" /></div></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/5.jpg" alt="Detalhe de listelo metálico em parede revestida" loading="lazy" /><div class="brises-copy"><div class="brises-copy-detail"><p>Perfil T - Utilizados na união de dois pisos no mesmo nível, encobrindo juntas criando uma transição continua entre pisos proporcionando uma passagem harmoniosa entre materiais, cores e paginações, acrescentando continuidade e distinção ao espaço.</p><img src="perfis%20e%20listelos/ordem/perfilt.jpg" class="slot-image green" alt="Desenho técnico do perfil T" loading="lazy" /></div></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/6.jpg" alt="Perfil metálico dourado aplicado em revestimento" loading="lazy" /><div class="brises-copy brises-final-copy"><div class="brises-copy-detail"><p>Perfil  de Transição - Utilizados na união de dois pisos com desnível criando uma transição continua entre pisos.No acabamento polido, reflete a luz com brilho e imponência; no escovado, apresenta uma superfície mais fosca, de textura sutil e elegância contemporânea.</p><img src="perfis%20e%20listelos/ordem/perfildetransicao.jpg" class="slot-image green" alt="Desenho técnico do perfil de transição" loading="lazy" /></div></div></article>
+        <article class="brises-feature is-spot"><img src="perfis%20e%20listelos/ordem/7.jpg" alt="Perfil metálico dourado aplicado em ambiente residencial" loading="lazy" /><div class="brises-copy"><div class="brises-copy-detail"><p>Perfil  de Transição - Utilizados na união de dois pisos com desnível criando uma transição continua entre pisos.No acabamento polido, reflete a luz com brilho e imponência; no escovado, apresenta uma superfície mais fosca, de textura sutil e elegância contemporânea.</p><img src="perfis%20e%20listelos/lst/8.jpg" class="slot-image green" alt="Desenho técnico do perfil de transição" loading="lazy" /></div></div></article>
+        <div class="brises-juntas-gallery" aria-label="Imagens de ambientes com perfis e listelos">
+          <img src="perfis%20e%20listelos/ordem/juntas2.jpg" alt="Sala de jantar com mesa de mármore e detalhes metálicos dourados" loading="lazy" />
+          <img src="perfis%20e%20listelos/ordem/juntas1.jpg" alt="Sala com revestimento de parede e detalhes metálicos dourados" loading="lazy" />
+          <div class="brises-juntas-copy">
+            <p>O detalhe que traz sofisticação ao projeto: os listelos Inoxcolor não possuem dobras e oferecem liberdade para acompanhar diferentes curvaturas. Aplicados de forma sobreposta em móveis, peças, paredes e pisos, criam contornos elegantes que transformam cada superfície em uma expressão única de luxo e design, além de serem fáceis de aplicar.</p>
+            <a class="btn btn-primary brises-architecture-btn" href="arquitetura.html">Explore Nossas Soluções para Arquitetura</a>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="site-footer" id="contato">
@@ -314,7 +356,7 @@
           <div class="logo-footer"><img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor"></div>
           <div><a href="contato.html" class="btn_excl">Atendimento Exclusivo</a></div>
         </div>
-        <div class="letras"><h3>Produtos</h3><ul><li class="letraf"><a href="sobre.html">Portfólio de cores</a><br><a href="colecoes.html">Chapas</a><br><a href="produtos.html">Revestimentos</a><br><a href="brises.html">Brises</a><br><a href="perfis_listelos.html">Perfis e Listelos</a><br><a href="projetos.html">Ralos</a><br><a href="projetos.html">Obras de arte</a></li></ul></div>
+        <div class="letras"><h3>Produtos</h3><ul><li class="letraf"><a href="sobre.html">Portfólio de cores</a><br><a href="colecoes.html">Chapas</a><br><a href="produtos.html">Revestimentos</a><br><a href="brises.html">Brises</a><br><a href="perfis_listelos.html">Perfis e Listelos</a><br><a href="ralos.html">Ralos</a><br><a href="projetos.html">Obras de arte</a></li></ul></div>
         <div><h3>Contatos</h3><ul><li>E-mail: comercial@inoxcolor.com.br</li><li>Whatsapp (31) 99125-7328</li><li>Telefone 1 (31) 3224-8666</li><li>Telefone 2 (31) 3224-6534</li></ul></div>
         <div><div class="newsletter-form"><h3>Endereço</h3><p>Av. Álvares Cabral, 593, sala 1602, Lourdes<br>Belo Horizonte, MG, CEP 30170-002</p><h3>Horário de Atendimento</h3><p>Segunda a sexta-feira, das 8h às 11h30 e das 13h às 17h</p></div></div>
       </div>
