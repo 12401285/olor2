@@ -71,16 +71,38 @@
         color: #121212;
         font-family: "Inter", sans-serif;
         font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
         line-height: 1.7;
       }
-      .ralos-intro p { margin: 0; text-align: justify; text-align-last: center; }
+      .ralos-intro p {
+        margin: 0;
+        text-align: center;
+      }
+      .ralos-copy p {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 0 16px;
+        text-align: left !important;
+        text-align-last: left;
+      }
+      .ralos-copy p:last-of-type { margin-bottom: 0; }
+      @media (min-width: 769px) {
+        .ralos-page .ralos-intro p {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0;
+          text-align: justify;
+          text-align-last: center;
+        }
+      }
       .ralos-feature {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0;
         width: min(1400px, calc(100% - 24px));
         margin: 0 auto;
-        align-items: start;
+        align-items: center;
       }
       .ralos-feature img {
         display: block;
@@ -89,7 +111,7 @@
         min-height: 0;
         max-height: 360px;
         aspect-ratio: auto;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
       }
       .ralos-feature > img {
@@ -102,15 +124,13 @@
       .ralos-copy {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        align-self: stretch;
-        padding: 12px 18px 0;
-      }
-      .ralos-copy p {
+        align-items: center;
+        justify-content: center;
+        align-self: center;
         width: 100%;
+        max-width: none;
         margin: 0;
-        text-align: justify;
-        text-align-last: left;
+        padding: 24px 28px;
       }
       .ralos-final-copy { display: flex; flex-direction: column; align-items: center; }
       .ralos-architecture-btn {
@@ -150,7 +170,7 @@
         width: 100%;
         height: 100%;
         max-width: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
       }
       .porcelinox-carousel .slider-btn {
@@ -174,13 +194,15 @@
         .ralos-title-frame strong { margin: 0; font-size: clamp(.5rem, 2.6vw, .72rem); line-height: 1.25; text-align: center; white-space: nowrap; transform: none; }
         .ralos-subtitle { position: static; flex: 1; width: auto; max-width: none; margin: 0; font-size: clamp(.42rem, 2.2vw, .56rem); line-height: 1.3; text-align: left; white-space: nowrap; transform: none; }
         .ralos-intro { width: calc(100% - 32px); margin: 24px auto 30px; text-align: left; }
-        .ralos-intro p, .ralos-copy p { font-size: 1rem; line-height: 1.55; text-align: left; text-align-last: left; }
-        .ralos-feature { grid-template-columns: 1fr; gap: 6px; width: calc(100% - 20px); margin: 22px auto; }
+        .ralos-intro p { font-size: 1rem; line-height: 1.55; }
+        .ralos-copy p { padding: 0 16px; font-size: 1rem; line-height: 1.55; text-align: left !important; text-align-last: left !important; }
+        .ralos-feature { grid-template-columns: 1fr; gap: 14px; width: calc(100% - 20px); margin: 22px auto; }
+        .ralos-copy { align-self: stretch; padding: 20px 16px; }
+        .ralos-copy p { padding: 0 16px; }
         .ralos-feature:nth-of-type(odd) img,
         .ralos-feature:nth-of-type(odd) .ralos-copy { grid-column: auto; grid-row: auto; }
         .ralos-feature img { height: auto !important; }
         .ralos-feature > img { min-height: 0; }
-        .ralos-copy { padding: 12px 8px; }
         .porcelinox-carousel { margin: 18px auto 36px; }
         .porcelinox-carousel-inner,
         .porcelinox-carousel-viewport,
@@ -250,21 +272,24 @@
                 <img src="ralos/carrossel/2.jpg" alt="Grelha quadrada de ralo em acabamento bronze" loading="lazy" />
                 <img src="ralos/carrossel/3.jpg" alt="Grelha quadrada de ralo em acabamento preto" loading="lazy" />
                 <img src="ralos/carrossel/4.jpg" alt="Grelhas quadradas em diferentes tons de dourado" loading="lazy" />
-                <img src="ralos/carrossel/5.jpg" alt="Ralo linear escuro e canaleta em bancada de banheiro" loading="lazy" />
+                <img src="ralos/carrossel/4.png" alt="Ralo linear escuro e canaleta em bancada de banheiro" loading="lazy" />
                 <img src="ralos/carrossel/6.jpg" alt="Ralo linear dourado instalado no piso junto a uma banheira" loading="lazy" />
+                <img src="ralos/carrossel/7.png" alt="Ralo linear dourado instalado no piso de um box revestido em mármore" loading="lazy" />
+                <img src="ralos/carrossel/8.png" alt="Ralo linear dourado instalado no piso de um banheiro com revestimento escuro" loading="lazy" />
+                <img src="ralos/carrossel/9.png" alt="Ralo linear dourado instalado no piso de uma área externa junto à piscina" loading="lazy" />
               </div>
             </div>
             <button class="slider-btn next" type="button" aria-label="Próxima imagem">&#10095;</button>
           </div>
         </div>
         <article class="ralos-feature"><img src="ralos/1.jpg" alt="Ralo linear dourado em piso de mármore junto a uma banheira" loading="lazy" /><div class="ralos-copy"><p>Linhas precisas, acabamento impecável e presença sofisticada elevam o ralo à condição de elemento arquitetônico.</p></div></article>
-        <article class="ralos-feature"><img src="ralos/2.jpg" alt="Ralo quadrado instalado no piso de um box revestido em mármore claro" loading="lazy" /><div class="ralos-copy"><p>Para composições elegantes e minimalistas, os ralos quadrados estão disponíveis nas dimensões de 100 × 100 mm e 150 × 150 mm.</p></div></article>
+        <article class="ralos-feature"><img src="ralos/2.png" alt="Ralo quadrado instalado no piso de um box revestido em mármore claro" loading="lazy" /><div class="ralos-copy"><p>Para composições elegantes e minimalistas, os ralos quadrados estão disponíveis nas dimensões de 100 × 100 mm e 150 × 150 mm.</p></div></article>
         <article class="ralos-feature"><img src="ralos/3.jpg" alt="Ralo linear dourado em banheiro com revestimento escuro" loading="lazy" /><div class="ralos-copy"><p>Os ralos lineares estão disponíveis nas dimensões de 600 × 60 mm, 700 × 60 mm, 800 × 60 mm e 900 × 60 mm, proporcionando equilíbrio entre estética e funcionalidade.</p></div></article>
         <article class="ralos-feature"><img src="ralos/4.jpg" alt="Ralo linear acompanhando a borda de uma piscina" loading="lazy" /><div class="ralos-copy"><p>Para espaços mais amplos e imponentes, os modelos lineares são produzidos também nas dimensões de 1.000 × 60 mm, 1.100 × 60 mm e 1.200 × 60 mm.</p></div></article>
         <article class="ralos-feature"><img src="ralos/5.jpg" alt="Ralo linear dourado acompanhando o piso de uma área externa junto à piscina" loading="lazy" /><div class="ralos-copy"><p>Produzidos também em dimensões especiais, respeitando as particularidades e tornando cada projeto ainda mais exclusivo e autoral.</p></div></article>
         <article class="ralos-feature"><img src="ralos/6.jpg" alt="Ralo linear dourado integrado ao piso de um banheiro com banheira" loading="lazy" /><div class="ralos-copy"><p>Criados para ambientes memoráveis, os ralos Inoxcolor são feitos para durar e resistir ao tempo. Não desbotam nem descascam, transformando o encontro entre água e arquitetura em uma experiência elegante e duradoura.</p></div></article>
         <article class="ralos-feature"><img src="ralos/7.jpg" alt="Detalhe de grelhas quadradas de ralo em acabamento dourado" loading="lazy" /><div class="ralos-copy"><p>Nos modelos quadrados ou lineares, a forma dialoga com a paginação e valoriza a amplitude do espaço.</p></div></article>
-        <article class="ralos-feature"><img src="ralos/8.jpg" alt="Detalhe de grelha quadrada de ralo em aço inox" loading="lazy" /><div class="ralos-copy ralos-final-copy"><p>Porque um ambiente extraordinário merece elegância em cada escolha, do primeiro olhar ao último acabamento.</p><a class="btn btn-primary ralos-architecture-btn" href="contato.html">Solicite um orçamento</a></div></article>
+        <article class="ralos-feature"><img src="ralos/ult.png" alt="Detalhe de grelha quadrada de ralo em aço inox" loading="lazy" /><div class="ralos-copy ralos-final-copy"><p>Porque um ambiente extraordinário merece elegância em cada escolha, do primeiro olhar ao último acabamento.</p><a class="btn btn-primary ralos-architecture-btn" href="contato.html">Solicite um orçamento</a></div></article>
       </section>
     </main>
     <footer class="site-footer" id="contato">
