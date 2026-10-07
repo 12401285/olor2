@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Porcelinox | Inoxcolor" />
+		<title>Porcelinox | Inoxcolor</title>
+		<link rel="icon" href="site_favicon_16_1787921832250.ico" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Raleway:wght@500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			.porcelinox-footer .btn_excl {
+				position: static;
+				left: auto;
+				transform: none;
+				margin-top: 16px;
+			}
+
+			.porcelinox-footer .footer-bottom-inner {
+				margin-left: 0;
+			}
+
+			.porcelinox-footer .socials {
+				margin-top: 16px;
+			}
+
+			.porcelinox-page .site-footer h3 {
+				font-family: "Inter", sans-serif;
+				font-size: 0.9rem;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				line-height: 1.4;
+			}
+
+			.porcelinox-page .site-footer :where(p, h3, a, li, span, strong, button, input, textarea, label) {
+				font-family: "Inter", sans-serif;
+				font-size: 0.9rem;
+			}
+
+			.porcelinox-page .site-footer .letraf {
+				font-size: 0.9rem;
+				line-height: 1.35;
+			}
+
+			.porcelinox-page .site-footer .newsletter-form > h3 {
+				margin-top: 0;
+			}
+
+			.porcelinox-page .site-footer .footer-grid {
+				gap: 48px;
+				padding-top: 64px;
+				padding-bottom: 48px;
+			}
+
+			.porcelinox-page .site-footer h3 {
+				margin-bottom: 12px;
+			}
+
+			.porcelinox-page .site-footer ul {
+				gap: 6px;
+			}
+
+			.porcelinox-page .site-footer .newsletter-form {
+				gap: 8px;
+			}
+
+			.porcelinox-page .site-footer .footer-brand > div:nth-of-type(2) {
+				margin-top: 14px;
+			}
+
+			.porcelinox-page .site-footer .newsletter-form h3 {
+				margin: 0 0 4px;
+			}
+
+			.porcelinox-whatsapp svg {
+				width: 34px;
+				height: 34px;
+			}
+
+			.porcelinox-page,
+			.porcelinox-page :where(p, h1, h2, h3, a, li, span) {
+				color: #fff;
+			}
+
+			body.porcelinox-page {
+				background: #fff;
+				color: #121212;
+			}
+
+			.porcelinox-page .section {
+				background: #fff;
+				margin-top: 0;
+				padding: 72px 0 96px;
+			}
+
+			.porcelinox-page main :where(p, h1, h2, h3, a, li, span) {
+				color: #121212;
+			}
+
+			.porcelinox-page,
+			.porcelinox-page :where(p, a, li, span, strong, button, input, textarea, label) {
+				font-family: "Inter", sans-serif;
+			}
+
+			.porcelinox-page :where(h1, h2, h3, .porcelinox-description strong) {
+				font-family: "Inter", sans-serif;
+				letter-spacing: 0.02em;
+			}
+
+			.porcelinox-page .main-nav,
+			.porcelinox-page .main-nav a,
+			.porcelinox-page .mobile-menu-panel .main-nav a {
+				color: #fff;
+			}
+
+			.porcelinox-page .page-hero {
+				margin-top: 0;
+				background:
+					linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.36)),
+					url("img_porcelainox/1.jpg") center / cover;
+				padding: 82px 0 20px;
+			}
+
+			.porcelinox-page .page-hero-inner {
+				align-items: center;
+				justify-content: flex-start;
+				width: 100%;
+				max-width: none;
+				padding: 0;
+				min-height: 124px;
+			}
+
+			.porcelinox-description {
+				position: relative;
+				width: 100%;
+				max-width: none;
+				margin: 0;
+			}
+
+			.porcelinox-title-frame {
+				width: min(780px, 65%);
+				margin: 0 0 0 -160px;
+				padding: 22px 28px 20px;
+				border: 1px solid rgba(255, 255, 255, 0.7);
+				background: transparent;
+			}
+
+			.porcelinox-page .porcelinox-title-frame strong {
+				display: block;
+				margin: 0;
+				color: #ffffff;
+				font-family: "Inter", sans-serif;
+				font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				transform: translateX(160px);
+				text-shadow: 0 2px 12px rgba(201, 150, 100, 0.28);
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			.porcelinox-page .porcelinox-subtitle {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: calc(min(620px, 52%) + 28px);
+					width: min(440px, 40%);
+				margin: 0;
+				color: rgba(255, 255, 255, 0.9) !important;
+				font-family: "Inter", sans-serif;
+					font-size: 1.2rem;
+				font-weight: 400;
+					font-style: normal;
+					letter-spacing: 0.02em;
+					line-height: 1.7;
+				text-align: left;
+				text-transform: none;
+				white-space: nowrap;
+				z-index: 2;
+				transform: translateY(-50%);
+			}
+
+			.porcelinox-description strong {
+				display: block;
+				margin: 0 0 14px;
+				color: #d3b77f;
+				font-family: inherit;
+				font-size: inherit;
+				font-weight: inherit;
+				letter-spacing: inherit;
+				line-height: inherit;
+				text-align: center;
+				text-transform: none;
+			}
+
+			.porcelinox-gallery {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 42px;
+			}
+
+			.porcelinox-gallery img {
+				width: 100%;
+				height: auto;
+				border-radius: 0;
+				box-shadow: 0 12px 28px rgba(23, 17, 14, 0.14);
+			}
+
+			.porcelinox-feature {
+				MARGIN-TOP: 10%;
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 52px;
+				align-items: center;
+				width: min(1200px, calc(100% - 48px));
+				margin: 48px auto 0;
+			}
+
+			.porcelinox-carousel + .section {
+				padding-top: 0;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:first-of-type {
+				margin-top: 24px;
+			}
+
+			@media (min-width: 769px) {
+				.porcelinox-feature {
+					gap: 52px;
+					width: min(1200px, calc(100% - 48px));
+					margin-top: 48px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(2) {
+					margin-top: 12px;
+				}
+
+				.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) {
+					margin-top: 12px;
+				}
+
+				.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) img {
+					width: calc(100% + 130px);
+					max-width: none;
+					margin-left: 0%;
+				}
+
+				.porcelinox-feature:not(:has(> img[src="img_porcelainox/6.jpg"])) img {
+					width: calc(100% + 130px);
+					max-width: none;
+					height: 360px;
+				}
+
+				.porcelinox-feature:not(:has(> img[src="img_porcelainox/6.jpg"])) .porcelinox-feature-copy {
+					padding: 12px 18px;
+					margin-left: 20%;
+				}
+
+				.porcelinox-feature:nth-child(even) img {
+					margin-left: calc((min(1200px, calc(100vw - 48px)) - 100vw) / 2 + 36px);
+				}
+					.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) .porcelinox-feature-copy {
+						transform: translateX(40px);
+					}
+					.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) .porcelinox-feature-copy p {
+						text-align: justify;
+						text-align-last: left;
+					}
+			}
+
+			.porcelinox-feature img {
+				width: 100%;
+				max-width: 560px;
+				height: 320px;
+				min-height: 0;
+				object-fit: cover;
+				border-radius: 0;
+				box-shadow: 0 12px 28px rgba(23, 17, 14, 0.14);
+			}
+
+			@media (min-width: 769px) {
+				.porcelinox-feature img {
+					height: 360px;
+				}
+
+				.porcelinox-feature img {
+					width: calc(100% + 130px);
+					max-width: none;
+					height: 360px;
+				}
+
+				.porcelinox-feature:nth-child(even) img {
+					margin-left: calc((min(1200px, calc(100vw - 48px)) - 100vw) / 2 + 36px);
+					margin-right: 0;
+				}
+
+				.porcelinox-feature:nth-child(odd) img {
+					margin-left: 0;
+					margin-right: 36px;
+				}
+			}
+
+			.porcelinox-feature-copy {
+				padding: 12px 18px;
+				background: transparent;
+				border: 0;
+			}
+			.porcelinox-feature-copy5 {
+				padding: 12px 18px;
+				background: transparent;
+				border: 0;
+				margin-left: 20%;
+			}
+
+				.porcelinox-feature-copy5 h2 {
+				margin-bottom: 14px;
+				color: #d3b77f;
+			}
+
+
+			.porcelinox-feature-copy2 {
+				margin-top: 10%;
+				padding: 12px 18px;
+				background: transparent;
+				border: 0;
+			}
+			
+			.porcelinox-feature-copy2 h2 {
+				margin-bottom: 14px;
+				color: #d3b77f;
+			}
+
+			.porcelinox-feature-copy h2 {
+				margin-bottom: 14px;
+				color: #d3b77f;
+			}
+			.porcelinox-subtitle {
+				
+				color: #ffffff;
+			}
+			.porcelinox-feature-copy p {
+				color: #121212;
+				font-size: 1.2rem;
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				text-align: left;
+			}
+
+			.porcelinox-feature-copy2 {
+				width: min(920px, 78vw);
+				margin-top: 32px;
+				margin-right: 0;
+				margin-bottom: 0;
+				margin-left: max(9.8%, calc((100% - 1200px) / 2 + 96px));
+				padding: 0;
+			}
+
+			.porcelinox-feature-copy2 p {
+				margin: 0;
+				color: #121212;
+				font-size: 1.2rem;
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				text-align: justify;
+				text-align-last: center;
+			}
+
+			.porcelinox-feature-copy5 {
+				padding: 12px 18px;
+				background: transparent;
+				border: 0;
+			}
+
+			.porcelinox-feature-copy5 p {
+				margin: 0;
+				color: #121212;
+				font-family: "Inter", sans-serif;
+				font-size: 1.2rem;
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				text-align: justify;
+				text-align-last: left;
+			}
+
+			.porcelinox-feature-copy p {
+				text-align: justify;
+				text-align-last: left;
+			}
+
+			.porcelinox-carousel > .porcelinox-feature-copy {
+				width: min(920px, 78vw);
+				max-width: 920px;
+				margin: -30px 0 24px max(9.8%, calc((100% - 1200px) / 2 + 96px));
+				padding: 0;
+				text-align: center;
+			}
+
+			.porcelinox-carousel > .porcelinox-feature-copy p {
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+				padding: 0;
+				text-align: justify;
+				text-align-last: center;
+			}
+
+			.porcelinox-carousel {
+				width: 100%;
+				height: auto;
+				margin: 0;
+				padding: 54px 0 0;
+			}
+
+			.porcelinox-carousel h2 {
+				margin-bottom: 22px;
+				color: #d3b77f;
+				font-size: clamp(2rem, 3vw, 3.2rem);
+				text-align: center;
+			}
+
+			.porcelinox-carousel-inner {
+				position: relative;
+				height: min(62vw, 560px);
+				overflow: hidden;
+			}
+
+			.porcelinox-carousel-viewport {
+				height: 100%;
+				overflow: hidden;
+			}
+
+			.porcelinox-carousel-track {
+				display: flex;
+				width: 100%;
+				height: 100%;
+				transition: transform 0.55s ease;
+				will-change: transform;
+			}
+
+			.porcelinox-carousel-track img {
+				display: block;
+				flex: 0 0 100%;
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+				object-fit: cover;
+				object-position: center;
+				background: transparent;
+				border-radius: 0;
+				box-shadow: 0 12px 28px rgba(23, 17, 14, 0.2);
+			}
+
+			.porcelinox-carousel .slider-btn {
+				width: 44px;
+				height: 44px;
+				background: rgba(12, 12, 12, 0.72);
+			}
+
+			.porcelinox-carousel .slider-btn.prev {
+				left: 12px;
+			}
+
+			.porcelinox-carousel .slider-btn.next {
+				right: 12px;
+			}
+
+			.porcelinox-feature:nth-of-type(3) {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.porcelinox-feature:nth-of-type(3) img {
+				grid-column: 2;
+				grid-row: 1;
+			}
+
+			.porcelinox-feature:nth-of-type(3) .porcelinox-feature-copy {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			.porcelinox-feature:nth-of-type(5) {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+			}
+
+			.porcelinox-feature:nth-of-type(5) img {
+				grid-column: 2;
+				grid-row: 1;
+			}
+
+			.porcelinox-feature:nth-of-type(5) .porcelinox-feature-copy {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			@media (max-width: 768px) {
+				body.porcelinox-page .site-header {
+					background: #fff !important;
+					border-bottom: 1px solid rgb(240, 240, 240) !important;
+					backdrop-filter: blur(12px);
+				}
+
+				body.porcelinox-page .site-header.scrolled {
+					background: #fff !important;
+				}
+
+					.porcelinox-page .page-hero {
+				background:
+					linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.36)),
+					url("img_porcelainox/1.jpg") center / cover;
+				padding: 130px 12px 18px;
+					margin-top: -32px;
+			}
+				.porcelinox-page .page-hero-inner {
+					min-height: 142px;
+				}
+				.porcelinox-title-frame {
+					width: calc(100% + 72px);
+					margin-top: 0;
+					margin-left: -72px;
+					padding: 16px 10px;
+				}
+
+				.porcelinox-description {
+					display: block;
+				}
+
+				.porcelinox-description {
+					font-size: 1.2rem;
+					line-height: 1.7;
+				}
+
+				.porcelinox-page .porcelinox-title-frame strong {
+					margin-left: 0;
+					font-size: clamp(1.15rem, 5vw, 1.5rem);
+					line-height: 1.25;
+					transform: translateX(72px);
+				}
+
+				.porcelinox-page .porcelinox-subtitle {
+					position: static;
+					width: 100%;
+					margin: 8px 0 0;
+					white-space: normal;
+					text-align: center;
+					transform: none;
+					font-size: clamp(.68rem, 2.5vw, .95rem);
+					line-height: 1.35;
+				}
+
+				.porcelinox-page .porcelinox-description {
+					display: grid;
+					grid-template-columns: max-content minmax(0, 1fr);
+					gap: 8px;
+					align-items: center;
+				}
+
+				.porcelinox-page .porcelinox-title-frame {
+					box-sizing: border-box;
+					width: max-content !important;
+					max-width: none !important;
+					margin: 0 !important;
+					padding: 7px 8px !important;
+					transform: none !important;
+				}
+
+				.porcelinox-page .porcelinox-title-frame strong {
+					width: max-content !important;
+					font-size: clamp(.58rem, 3.3vw, .88rem) !important;
+					line-height: 1.1 !important;
+					white-space: nowrap;
+					transform: none !important;
+				}
+
+				.porcelinox-page .porcelinox-subtitle {
+					position: static !important;
+					width: auto !important;
+					min-width: 0;
+					margin: 0 !important;
+					font-size: clamp(.48rem, 2.45vw, .66rem) !important;
+					line-height: 1.25 !important;
+					text-align: left !important;
+					white-space: nowrap !important;
+					transform: none !important;
+				}
+
+				.porcelinox-gallery {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					gap: 10px;
+				}
+
+				.porcelinox-feature {
+					grid-template-columns: 1fr;
+					gap: 14px;
+					margin-top: 24px;
+				}
+
+				.porcelinox-carousel + .section {
+					padding-top: 0;
+					margin-top: 0;
+				}
+
+				.porcelinox-feature:nth-of-type(3) {
+					grid-template-columns: 1fr;
+				}
+
+				.porcelinox-feature:nth-of-type(5) {
+					grid-template-columns: 1fr;
+				}
+
+				.porcelinox-feature:nth-of-type(3) img,
+				.porcelinox-feature:nth-of-type(3) .porcelinox-feature-copy,
+				.porcelinox-feature:nth-of-type(5) img,
+				.porcelinox-feature:nth-of-type(5) .porcelinox-feature-copy {
+					grid-column: auto;
+					grid-row: auto;
+				}
+
+				.porcelinox-feature img {
+					display: block;
+					width: 100%;
+					max-width: 100%;
+					height: auto !important;
+					min-height: 0 !important;
+					max-height: none !important;
+					object-fit: initial;
+					object-position: center;
+				}
+
+				.porcelinox-feature img[src="img_porcelainox/7.jpg"] {
+					height: auto !important;
+					max-height: none;
+					object-fit: contain;
+				}
+
+				.porcelinox-feature-copy {
+					padding: 20px 16px;
+				}
+
+				.porcelinox-feature-copy2 {
+					width: calc(100% - 20px);
+					margin: 24px auto 0;
+					padding: 0 8px;
+				}
+
+				.porcelinox-feature-copy2 p {
+					padding: 0 16px;
+					font-size: 1rem;
+					line-height: 1.55;
+					text-align: left;
+				}
+
+				.porcelinox-feature-copy5 {
+					padding: 20px 16px;
+				}
+
+				.porcelinox-feature-copy5 p {
+					padding: 0 16px;
+					font-size: 1rem;
+					line-height: 1.55;
+					text-align: left;
+				}
+
+				.porcelinox-carousel > .porcelinox-feature-copy {
+					width: calc(100% - 20px);
+					max-width: none;
+					padding: 0 8px;
+					margin: -12px auto 6px;
+				}
+
+				.porcelinox-carousel > .porcelinox-feature-copy p {
+					padding: 0 16px;
+					margin: 0;
+					font-size: 1rem;
+					line-height: 1.55;
+					text-align: left;
+					text-align-last: left;
+				}
+
+				.porcelinox-carousel {
+					padding-top: 34px;
+				}
+
+				.porcelinox-carousel-inner,
+				.porcelinox-carousel-viewport,
+				.porcelinox-carousel-track {
+					height: min(72vw, 360px);
+				}
+
+				.porcelinox-carousel-track img {
+					height: min(72vw, 360px);
+				}
+
+				.porcelinox-page .site-footer .footer-brand .btn_excl {
+					position: static !important;
+					left: auto !important;
+					display: inline-flex !important;
+					width: fit-content !important;
+					min-width: 180px;
+					max-width: 100%;
+					min-height: 38px;
+					padding: 0 12px;
+					margin: 14px auto 0 !important;
+					font-size: 0.52rem;
+					letter-spacing: 0.08em;
+					line-height: 1.25;
+					white-space: nowrap;
+					transform: none !important;
+				}
+
+				.porcelinox-page .whatsapp-float {
+					width: 52px;
+					height: 52px;
+					right: 18px;
+					bottom: 18px;
+				}
+
+				.porcelinox-page .whatsapp-float svg {
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			.porcelinox-page .site-footer .footer-grid {
+				grid-template-columns: 1.3fr 0.8fr 0.9fr 1.2fr;
+				gap: 34px;
+				align-items: start;
+			}
+
+			.porcelinox-page .site-footer .footer-brand .btn_excl {
+				position: static;
+				transform: none;
+				margin: 24px 0 0;
+			}
+
+			.porcelinox-carousel + .section {
+				padding: 0 0 88px;
+			}
+
+			.porcelinox-carousel + .section > .container.porcelinox-gallery {
+				display: none;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature {
+				position: relative;
+				display: grid;
+				grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+				gap: 10px;
+				align-items: center;
+				width: min(1240px, calc(100% - 48px));
+				margin: 0 auto;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-gallery + .porcelinox-feature {
+				margin-top: 132px;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature + .porcelinox-feature {
+				margin-top: 72px;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3),
+			.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) {
+				grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature img {
+				width: 100%;
+				max-width: none;
+				height: 340px;
+				margin: 0;
+				object-fit: cover;
+				box-shadow: 0 14px 28px rgba(23, 17, 14, 0.16);
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3) img,
+			.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) img {
+				grid-column: 2;
+				grid-row: 1;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy,
+			.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy5 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-self: center;
+				width: 100%;
+				max-width: none;
+				margin: 0;
+				padding: 24px 28px;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy p,
+			.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy5 p {
+				width: 100%;
+				max-width: 520px;
+				margin-right: auto;
+				margin-left: auto;
+				text-align: justify;
+				text-align-last: left;
+				text-wrap: wrap;
+			}
+
+			.porcelinox-final-copy p {
+				text-align: justify !important;
+				text-align-last: left !important;
+			}
+
+			.porcelinox-final-copy {
+				flex-direction: column;
+			}
+
+			.porcelinox-final-copy p:first-child {
+				font-size: 1.2rem;
+			}
+
+			.porcelinox-final-copy p:last-child {
+				font-size: 1.2rem;
+				text-align: left !important;
+				text-align-last: left !important;
+		}
+
+			.porcelinox-final-copy p + p {
+				margin-top: 24px;
+			}
+
+			.porcelinox-final-copy .porcelinox-architecture-btn {
+				position: static;
+				left: auto;
+				align-self: center;
+				margin-top: 60px;
+				display: inline-flex !important;
+				width: 100% !important;
+				max-width: 100%;
+				min-height: 52px;
+				padding: 0 16px;
+				border-radius: 999px;
+				font-size: 0.58rem;
+				line-height: 1.2;
+				letter-spacing: 0.08em;
+				white-space: nowrap;
+				justify-content: center;
+				color: #ffffff !important;
+				transform: none;
+			}
+
+			.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy p,
+			.porcelinox-page main .porcelinox-feature-copy2 p {
+				text-align: center;
+				text-align-last: center;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3) .porcelinox-feature-copy,
+			.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) .porcelinox-feature-copy {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:has(> img.imagem-esquerda) {
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+				gap: 0;
+				column-gap: 0;
+				width: min(1400px, calc(100% - 24px));
+				margin: 0 auto;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:has(> img.imagem-direita) {
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+				gap: 0;
+				column-gap: 0;
+				width: min(1400px, calc(100% - 24px));
+				margin: 0 auto;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature > img.imagem-esquerda {
+				grid-column: 1;
+				grid-row: 1;
+				width: 100%;
+				margin-left: 0;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature > img.imagem-direita {
+				grid-column: 2;
+				grid-row: 1;
+				width: 100%;
+				margin-left: 0;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature > img.imagem-esquerda,
+			.porcelinox-carousel + .section > .porcelinox-feature > img.imagem-direita {
+				height: auto;
+				min-height: 0;
+				object-fit: contain;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:has(> img.imagem-esquerda) .porcelinox-feature-copy,
+			.porcelinox-carousel + .section > .porcelinox-feature:has(> img.imagem-esquerda) .porcelinox-feature-copy5 {
+				grid-column: 2;
+				grid-row: 1;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature:has(> img.imagem-direita) .porcelinox-feature-copy,
+			.porcelinox-carousel + .section > .porcelinox-feature:has(> img.imagem-direita) .porcelinox-feature-copy5 {
+				grid-column: 1;
+				grid-row: 1;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-gallery + .porcelinox-feature:has(> img.imagem-esquerda) {
+				margin-top: 48px;
+			}
+
+			.porcelinox-carousel + .section > .porcelinox-feature + .porcelinox-feature:has(> img.imagem-esquerda),
+			.porcelinox-carousel + .section > .porcelinox-feature + .porcelinox-feature:has(> img.imagem-direita) {
+				margin-top: 0;
+			}
+
+			@media (max-width: 768px) {
+				.porcelinox-carousel + .section {
+					padding: 18px 0 64px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3),
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) {
+					grid-template-columns: 1fr;
+					gap: 6px;
+					width: calc(100% - 20px);
+					margin: 22px auto;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-gallery + .porcelinox-feature {
+					margin-top: 80px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature + .porcelinox-feature {
+					margin-top: 40px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature img,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3) img,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) img {
+					grid-column: auto;
+					grid-row: auto;
+					width: 100%;
+					margin-left: 0;
+					height: auto;
+					object-fit: contain;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy,
+				.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy5 {
+					grid-column: auto;
+					grid-row: auto;
+					padding: 12px 8px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-gallery + .porcelinox-feature:has(> img.imagem-esquerda) {
+					margin-top: 24px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature + .porcelinox-feature:has(> img.imagem-esquerda),
+				.porcelinox-carousel + .section > .porcelinox-feature + .porcelinox-feature:has(> img.imagem-direita) {
+					margin-top: 0;
+				}
+			}
+
+			@media (max-width: 1100px) {
+				.porcelinox-page .site-footer .footer-grid {
+					display: grid !important;
+					grid-template-columns: 1fr !important;
+					gap: 30px !important;
+					width: min(calc(100% - 32px), 420px) !important;
+					padding: 42px 0 30px !important;
+					justify-items: center !important;
+					text-align: center !important;
+				}
+
+				.porcelinox-page .site-footer .footer-grid > div,
+				.porcelinox-page .site-footer .footer-brand,
+				.porcelinox-page .site-footer .footer-grid > div:last-child {
+					grid-column: auto;
+					align-items: center !important;
+					width: 100% !important;
+					text-align: center !important;
+				}
+
+				.porcelinox-page .site-footer .footer-brand .logo-footer {
+					justify-content: center;
+					max-width: 190px;
+				}
+
+				.porcelinox-page .site-footer .footer-brand > div:nth-of-type(2) {
+					justify-content: center;
+				}
+
+				.porcelinox-page .site-footer .footer-brand .btn_excl {
+					align-self: center;
+					margin: 20px auto 0;
+				}
+
+				.porcelinox-page .site-footer h3,
+				.porcelinox-page .site-footer ul,
+				.porcelinox-page .site-footer .newsletter-form,
+				.porcelinox-page .site-footer .newsletter-form li,
+				.porcelinox-page .site-footer .footer-grid > div :where(a, p, li, span, strong) {
+					text-align: center;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.porcelinox-carousel + .section > .porcelinox-feature,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3),
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) {
+					display: grid;
+					grid-template-columns: 1fr !important;
+					gap: 6px !important;
+					width: calc(100% - 20px) !important;
+					margin: 22px auto !important;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature > img,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3) > img,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) > img {
+					grid-column: auto !important;
+					grid-row: auto !important;
+					width: 100% !important;
+					height: auto !important;
+					min-height: 0 !important;
+					max-height: none !important;
+					object-fit: contain !important;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy,
+				.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy5 {
+					grid-column: auto !important;
+					grid-row: auto !important;
+					padding: 12px 8px !important;
+				}
+			}
+			@media (max-width: 768px) {
+				body.porcelinox-page .page-hero {
+					margin-top: -40% !important;
+					padding: 126px 12px 18px !important;
+				}
+
+				body.porcelinox-page .page-hero-inner {
+					width: 100% !important;
+					max-width: none !important;
+					min-height: 142px !important;
+					margin-left: -10% !important;
+					padding: 0 !important;
+				}
+
+				body.porcelinox-page .porcelinox-description {
+					display: grid !important;
+					grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) !important;
+					gap: 8px !important;
+					align-items: center !important;
+					width: 100% !important;
+					margin: 0 !important;
+				}
+
+				body.porcelinox-page .porcelinox-title-frame {
+					box-sizing: border-box;
+					width: 100% !important;
+					margin: 0 0 0 10% !important;
+					padding: 10px 8px !important;
+					transform: none !important;
+				}
+
+				body.porcelinox-page .porcelinox-title-frame strong {
+					width: 100% !important;
+					max-width: 100% !important;
+					margin: 0 !important;
+					font-size: clamp(.65rem, 3.2vw, .9rem) !important;
+					line-height: 1.25 !important;
+					text-align: center !important;
+					white-space: nowrap !important;
+					transform: none !important;
+				}
+
+				body.porcelinox-page .porcelinox-subtitle {
+					position: static !important;
+					width: auto !important;
+					min-width: 0 !important;
+					max-width: none !important;
+					margin: 0 0 0 10% !important;
+					font-size: clamp(.5rem, 2.8vw, .72rem) !important;
+					line-height: 1.3 !important;
+					text-align: left !important;
+					white-space: normal !important;
+					transform: none !important;
+				}
+			}
+			@media (min-width: 769px) {
+				body.porcelinox-page .porcelinox-title-frame strong {
+					font-family: "Inter", sans-serif !important;
+					font-size: clamp(1.8rem, 2.6vw, 2.8rem) !important;
+					font-weight: 400 !important;
+					line-height: 1.7 !important;
+					letter-spacing: normal !important;
+					text-transform: uppercase !important;
+				}
+			}
+			@media (min-width: 769px) {
+				html body.products-page-body.porcelinox-page .site-header.scrolled {
+					background: #111 !important;
+					background-image: none !important;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+				}
+
+				html body.products-page-body.porcelinox-page .site-header.scrolled .main-nav,
+				html body.products-page-body.porcelinox-page .site-header.scrolled .main-nav a {
+					color: #fff !important;
+				}
+
+				html body.products-page-body.porcelinox-page .site-header.scrolled .main-nav a::after {
+					background: #fff !important;
+				}
+			}
+		</style>
+	</head>
+	<body class="products-page-body porcelinox-page">
+		<header class="site-header">
+			<div class="container nav-wrap">
+				<nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
+					<a href="produtos.html">Produtos</a>
+					<a href="industria.html">Indústria</a>
+					<a href="arquitetura.html">Arquitetura</a>
+					<a href="residencial.html">Residencial</a>
+				</nav>
+				<a href="index.html" class="brand-item" aria-label="Inoxcolor Home">
+					<img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor" />
+					<span class="brand-tagline"></span>
+				</a>
+				<nav class="main-nav nav-right" aria-label="Menu principal direito">
+					<a href="ainoxcolor.html">A Inoxcolor</a>
+					<a href="downloads.html">Download</a>
+					<a href="na_midia.html">Na Mídia</a>
+					<a href="Blog.html">Blog</a>
+				</nav>
+				<div class="nav-actions">
+					<a href="contato.html" class="btn btn-primary">Orçamento</a>
+					<button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+						<span></span><span></span><span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="page-hero">
+				<div class="container page-hero-inner">
+					<div class="porcelinox-description">
+						<div class="porcelinox-title-frame"><strong>Letras e Números</strong></div>
+						<p class="porcelinox-subtitle">Leveza e requinte que transformam a superfície!</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="porcelinox-carousel" aria-label="Galeria de aplicações Porcelinox">
+					<div class="porcelinox-feature-copy"><p>Letras e números deixam de ser simples elementos de identificação e passam a compor o ambiente com personalidade, exclusividade e o requinte dos projetos mais sofisticados.</p></div>
+					<div class="porcelinox-carousel-inner">
+						<button class="slider-btn prev" type="button" aria-label="Imagem anterior">&#10094;</button>
+						<div class="porcelinox-carousel-viewport">
+							<div class="porcelinox-carousel-track">
+								<img src="Letras e numeros/carrossel/1n.jpg" alt="Letras chapadas douradas em aço inox" loading="lazy" />
+								<img src="Letras e numeros/carrossel/2n.jpg" alt="Placa residencial decorativa com número 230" loading="lazy" />
+								<img src="Letras e numeros/carrossel/3n.jpg" alt="Número residencial 1441 em placa metálica" loading="lazy" />
+								<img src="Letras e numeros/carrossel/4n.jpg" alt="Placa residencial com os números 1237" loading="lazy" />
+								<img src="Letras e numeros/carrossel/5n.jpg" alt="Números residenciais pretos em aço inox" loading="lazy" />
+								<img src="Letras e numeros/carrossel/6n.jpg" alt="Placa residencial dourada com número 337" loading="lazy" />
+								<img src="Letras e numeros/carrossel/7n.jpg" alt="Placa residencial dourada com o número 22" loading="lazy" />
+								<img src="Letras e numeros/carrossel/8n.jpg" alt="Placa residencial decorativa com número 47" loading="lazy" />
+								<img src="Letras e numeros/carrossel/9n.jpg" alt="Letras chapadas em aço inox" loading="lazy" />
+								<img src="Letras e numeros/carrossel/10n.jpg" alt="Letras em aço inox aplicadas em fachada" loading="lazy" />
+								<img src="Letras e numeros/carrossel/11n.jpg" alt="Letras-caixa douradas em ambiente interno" loading="lazy" />
+							</div>
+						</div>
+						<button class="slider-btn next" type="button" aria-label="Próxima imagem">&#10095;</button>
+					</div>
+					<div class="porcelinox-feature-copy2"><p>A cor nasce na própria superfície do material: não é pintura, não descasca e não desbota. É o luxo do aço inox colorido traduzido em beleza, resistência e permanência.</p></div>
+				</section>
+			<section class="section">
+				<div class="container porcelinox-gallery">
+				</div>
+				<div class="porcelinox-feature">
+					<img class="imagem-esquerda" src="Letras e numeros/letra chapada.webp" alt="Letras chapadas em aço inox em painel de recepção" loading="lazy" />
+					<div class="porcelinox-feature-copy5"><p>As letras chapadas são recortadas diretamente da chapa, sem laterais ou composição em seu perímetro, criando uma presença plana, precisa e minimalista sobre a superfície.</p></div>
+				</div>
+				<div class="porcelinox-feature">
+				 <img class="imagem-direita" src="Letras e numeros/2g.jpg" alt="Letras chapadas em aço inox escovado" loading="lazy" />
+					<div class="porcelinox-feature-copy"><p>Com linhas limpas e acabamento sofisticado, as letras chapadas integram-se elegantemente a paredes, fachadas, recepções e ambientes que valorizam uma estética contemporânea.</p></div>
+				</div>
+				<div class="porcelinox-feature">
+					<img class="imagem-esquerda" src="Letras e numeros/letracaixa.webp" alt="Letra-caixa alta aplicada na fachada de um edifício" loading="lazy" />
+					<div class="porcelinox-feature-copy"><p>As letras-caixa possuem laterais que criam profundidade e volumetria, proporcionando maior imponência, presença visual e destaque à identidade apresentada.</p></div>
+				</div>
+				<div class="porcelinox-feature">
+					<img class="imagem-direita" src="Letras e numeros/numresidencial1.webp" alt="Número residencial em placa decorativa na fachada" loading="lazy" />
+					<div class="porcelinox-feature-copy"><p>Os números residenciais podem ser desenvolvidos em diferentes tipografias, dimensões e proporções, acompanhando a linguagem de cada fachada e valorizando a identidade do projeto.</p></div>
+				</div>
+				<div class="porcelinox-feature">
+					<img class="imagem-esquerda" src="Letras e numeros/numresidencial.webp" alt="Número residencial dourado em placa decorativa" loading="lazy" />
+					<div class="porcelinox-feature-copy porcelinox-final-copy"><p>Os números residenciais ganham design de alto luxo e passam a compor a arquitetura da fachada, oferecendo uma identificação elegante que valoriza a entrada antes mesmo de a porta ser aberta.</p></div>
+				</div>
+				<div class="porcelinox-feature">
+					<img class="imagem-direita" src="Letras e numeros/1f.jpg" alt="Aplicação Porcelinox 8" loading="lazy" />
+					<div class="porcelinox-feature-copy"><p>Em acabamentos polidos ou escovados, letras e números interagem com a luz e acrescentam cor, reflexo e distinção a residências, edifícios e espaços comerciais de alto padrão.</p></div>
+				</div>
+				<div class="porcelinox-feature">
+					<img class="imagem-esquerda" src="Letras e numeros/2f.jpg" alt="Aplicação Porcelinox 7" loading="lazy" />
+					<div class="porcelinox-feature-copy porcelinox-final-copy"><p>Descubra novas possibilidades para criar letras e números que expressem a identidade e a sofisticação de cada projeto. Solicite seu catálogo de cores e acabamentos.</p><a class="btn btn-primary porcelinox-architecture-btn" href="arquitetura.html">Explore nossas soluções para Arquitetura</a></div>
+					
+				</div>
+			</section>
+		</main>
+
+		 <!-- Rodapé do site: reúne links úteis, endereço e formulário de contato -->
+    <footer class="site-footer" id="contato">
+      <div class="container footer-grid">
+        <!-- Logo e texto institucional do rodapé -->
+        <div class="footer-brand">
+          <a href="#" class="logo logo-footer" aria-label="Inoxcolor Home">
+            <span class="logo-mark">I</span>
+            <span class="logo-text">Inoxcolor</span>
+          </a>
+          <div class="logo-footer">
+            <img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor">
+          </div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="instagram"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#d3b77f" d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z"/></svg><a href="https://www.instagram.com/inoxcolor/" target="_blank" rel="noopener noreferrer"></a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#d3b77f" d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/></svg><a href="https://www.facebook.com/inoxcolor" target="_blank" rel="noopener noreferrer"></a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#d3b77f" d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z"/></svg><a href="youtube"></a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#d3b77f" d="M568 320C568 457 457 568 320 568C294.4 568 269.8 564.1 246.6 556.9C256.7 540.4 271.8 513.4 277.4 491.9C280.4 480.3 292.8 432.9 292.8 432.9C300.9 448.3 324.5 461.4 349.6 461.4C424.4 461.4 478.3 392.6 478.3 307.1C478.3 225.2 411.4 163.9 325.4 163.9C218.4 163.9 161.5 235.7 161.5 314C161.5 350.4 180.9 395.7 211.8 410.1C216.5 412.3 219 411.3 220.1 406.8C220.9 403.4 225.1 386.5 227 378.7C227.6 376.2 227.3 374 225.3 371.6C215.2 359.1 207 336.3 207 315C207 260.3 248.4 207.4 319 207.4C379.9 207.4 422.6 248.9 422.6 308.3C422.6 375.4 388.7 421.9 344.6 421.9C320.3 421.9 302 401.8 307.9 377.1C314.9 347.6 328.4 315.8 328.4 294.5C328.4 275.5 318.2 259.6 297 259.6C272.1 259.6 252.1 285.3 252.1 319.8C252.1 341.8 259.5 356.6 259.5 356.6C259.5 356.6 235 460.4 230.5 479.8C225.5 501.2 227.5 531.4 229.6 551C137.4 514.9 72 425.1 72 320C72 183 183 72 320 72C457 72 568 183 568 320z"/></svg><a href="pinterest"></a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#d3b77f" d="M544.5 273.9C500.5 274 457.5 260.3 421.7 234.7L421.7 413.4C421.7 446.5 411.6 478.8 392.7 506C373.8 533.2 347.1 554 316.1 565.6C285.1 577.2 251.3 579.1 219.2 570.9C187.1 562.7 158.3 545 136.5 520.1C114.7 495.2 101.2 464.1 97.5 431.2C93.8 398.3 100.4 365.1 116.1 336C131.8 306.9 156.1 283.3 185.7 268.3C215.3 253.3 248.6 247.8 281.4 252.3L281.4 342.2C266.4 337.5 250.3 337.6 235.4 342.6C220.5 347.6 207.5 357.2 198.4 369.9C189.3 382.6 184.4 398 184.5 413.8C184.6 429.6 189.7 444.8 199 457.5C208.3 470.2 221.4 479.6 236.4 484.4C251.4 489.2 267.5 489.2 282.4 484.3C297.3 479.4 310.4 469.9 319.6 457.2C328.8 444.5 333.8 429.1 333.8 413.4L333.8 64L421.8 64C421.7 71.4 422.4 78.9 423.7 86.2C426.8 102.5 433.1 118.1 442.4 131.9C451.7 145.7 463.7 157.5 477.6 166.5C497.5 179.6 520.8 186.6 544.6 186.6L544.6 274z"/></svg><a href="tiktok"></a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#d3b77f" d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z"/></svg><a href="linkedin"></a></div>
+        <div><a href="contato.html" class="btn_excl">Atendimento Exclusivo</a></div>
+          <p>
+          </p>
+        </div>
+
+        <!-- Lista de navegação do rodapé -->
+        <div class="letras">
+          <h3>Produtos</h3>
+          <ul>
+			<li class="letraf"><a href="sobre.html">Portfólio de cores</a> <br><a href="colecoes.html">Chapas</a> <br> <a href="produtos.html">Revestimentos</a> <br> <a href="produtos.html">Brises</a> <br> <a href="ralos.html">Ralos</a> <br> <a href="projetos.html">Obras de arte</a> <br> <a href="projetos.html">Perfil e Listelos</a> <br> <a href="projetos.html">Quadros Decorativos</a> <br> <a href="projetos.html">Letras e Desenhos</a> <br> <a href="projetos.html">Aplicações externas</a></li>
+          </ul>
+        </div>
+        
+        <!-- Informações de contato e endereço da empresa -->
+        <div>
+          <h3>Contatos</h3>
+          <ul>
+            <li>E-mail: comercial@inoxcolor.com.br</li>
+            <li>Whatsapp (31) 99125-7328</li>
+            <li>Telefone 1 (31) 3224-8666</li>
+            <li>Telefone 2 (31) 3224-6534</li>
+          </ul>
+        </div>
+         
+        <!-- Formulário para capturar e-mail e gerar leads -->
+        <div>
+         <div class="newsletter-form">
+             <li><h3>Endereço</h3>Av.Alveres Cabral 593 sala 1602 Lourdes</li>
+            <li>Belo Horizonte MG Cep 30170-002</li>
+            <br>
+            <h3>Horário de Atendimento</h3>
+            <li>Atendimento de segunda a sexta-feira das 8h às 11:30h e de 13h às 17h</li>
+          </div>
+        </div>
+      </div>
+     
+      <!-- Linha final do rodapé com direitos e redes sociais -->
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados.  2026 © Inoxcolor.</span>
+          <span></span>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5531991257328?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Inoxcolor."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar com a Inoxcolor pelo WhatsApp"
+    >
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="rgb(255, 255, 255)" d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg>
+
+
+    </a>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<script src="Proteção.js" defer></script>
