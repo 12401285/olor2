@@ -775,7 +775,7 @@ main .btn span { font-size: 1rem; }
 <div class="image-carousel-nav">
 <span id="color-carousel-status" role="status" aria-live="polite" aria-atomic="true">01 / 10</span>
 <div class="carousel-controls">
-<button type="button" id="colors-prev" aria-label="Imagem anterior" aria-controls="color-carousel" disabled>‹</button>
+<button type="button" id="colors-prev" aria-label="Imagem anterior" aria-controls="color-carousel">‹</button>
 <button type="button" id="colors-next" aria-label="Próxima imagem" aria-controls="color-carousel">›</button>
 </div>
 </div>
@@ -1421,19 +1421,20 @@ Seu navegador não oferece suporte à reprodução deste vídeo.
       });
     }
   }
-  const bindCarousel = ({trackId, previousId, nextId, slideSelector, gap, statusId}) => {
+  const bindCarousel = ({trackId, previousId, nextId, slideSelector, gap, statusId, autoplay = false}) => {
     const carouselTrack = document.getElementById(trackId);
     const previous = document.getElementById(previousId);
     const next = document.getElementById(nextId);
     const status = statusId ? document.getElementById(statusId) : null;
     if (!carouselTrack || !previous || !next) return;
+    let autoplayId;
     const distance = () => {
       const card = carouselTrack.querySelector(slideSelector);
       return card ? card.getBoundingClientRect().width + gap : carouselTrack.clientWidth;
     };
     const refreshCarousel = () => {
-      previous.disabled = carouselTrack.scrollLeft < 2;
-      next.disabled = carouselTrack.scrollLeft + carouselTrack.clientWidth >= carouselTrack.scrollWidth - 2;
+      previous.disabled = !autoplay && carouselTrack.scrollLeft < 2;
+      next.disabled = !autoplay && carouselTrack.scrollLeft + carouselTrack.clientWidth >= carouselTrack.scrollWidth - 2;
       if (status) {
         const count = carouselTrack.querySelectorAll(slideSelector).length;
         const index = Math.min(count, Math.max(1, Math.round(carouselTrack.scrollLeft / distance()) + 1));
@@ -1443,10 +1444,28 @@ Seu navegador não oferece suporte à reprodução deste vídeo.
     };
     const stepCarousel = direction => {
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      carouselTrack.scrollBy({left: direction * distance(), behavior: reducedMotion ? 'auto' : 'smooth'});
+      if (autoplay) {
+        const count = carouselTrack.querySelectorAll(slideSelector).length;
+        const currentIndex = Math.round(carouselTrack.scrollLeft / distance());
+        const nextIndex = (currentIndex + direction + count) % count;
+        carouselTrack.scrollTo({left: nextIndex * distance(), behavior: reducedMotion ? 'auto' : 'smooth'});
+      } else {
+        carouselTrack.scrollBy({left: direction * distance(), behavior: reducedMotion ? 'auto' : 'smooth'});
+      }
     };
-    previous.addEventListener('click', () => stepCarousel(-1));
-    next.addEventListener('click', () => stepCarousel(1));
+    const restartAutoplay = () => {
+      if (!autoplay) return;
+      window.clearInterval(autoplayId);
+      autoplayId = window.setInterval(() => stepCarousel(1), 4000);
+    };
+    previous.addEventListener('click', () => {
+      stepCarousel(-1);
+      restartAutoplay();
+    });
+    next.addEventListener('click', () => {
+      stepCarousel(1);
+      restartAutoplay();
+    });
     carouselTrack.addEventListener('scroll', refreshCarousel, {passive: true});
     carouselTrack.addEventListener('keydown', event => {
       if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
@@ -1454,9 +1473,12 @@ Seu navegador não oferece suporte à reprodução deste vídeo.
       }
     });
     window.addEventListener('resize', refreshCarousel, {passive: true});
-    requestAnimationFrame(refreshCarousel);
+    requestAnimationFrame(() => {
+      refreshCarousel();
+      restartAutoplay();
+    });
   };
-  bindCarousel({trackId: 'color-carousel', previousId: 'colors-prev', nextId: 'colors-next', slideSelector: '.image-slide', gap: 0, statusId: 'color-carousel-status'});
+  bindCarousel({trackId: 'color-carousel', previousId: 'colors-prev', nextId: 'colors-next', slideSelector: '.image-slide', gap: 0, statusId: 'color-carousel-status', autoplay: true});
   bindCarousel({trackId: 'product-carousel', previousId: 'products-prev', nextId: 'products-next', slideSelector: '.product-card', gap: 24});
   document.querySelectorAll('.products-link').forEach(link => link.addEventListener('click', () => track('industry_products_open')));
   document.querySelectorAll('.lead-trigger').forEach(link => link.addEventListener('click', event => {
