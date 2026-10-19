@@ -562,6 +562,68 @@ main .btn:focus-visible {
 main .btn span { font-size: 1rem; }
 </style>
 <style>
+.home-page .image-carousel-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-page .image-carousel-viewport > .image-track {
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.home-page .image-carousel-viewport > .image-track::-webkit-scrollbar {
+  display: none;
+}
+
+.home-page .image-carousel-viewport .slider-btn {
+  position: absolute;
+  top: calc((100% - 31px) / 2);
+  z-index: 4;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  background: rgba(11, 11, 11, 0.28);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-page .image-carousel-viewport .slider-btn.prev {
+  left: 24px;
+}
+
+.home-page .image-carousel-viewport .slider-btn.next {
+  right: 24px;
+}
+
+.home-page .image-carousel-viewport .slider-btn:hover {
+  transform: translateY(-50%) scale(1.04);
+  background: rgba(11, 11, 11, 0.55);
+}
+
+@media (max-width: 640px) {
+  .home-page .image-carousel-viewport .slider-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.15rem;
+  }
+
+  .home-page .image-carousel-viewport .slider-btn.prev {
+    left: 12px;
+  }
+
+  .home-page .image-carousel-viewport .slider-btn.next {
+    right: 12px;
+  }
+}
+
 @media (min-width: 981px) {
   .home-page .site-header {
     background: rgba(0, 0, 0, 0);
@@ -709,6 +771,7 @@ main .btn span { font-size: 1rem; }
 <p>Não descasca. Não desbota. As chapas coloridas são resistentes e duradouras e podem ser utilizadas em ambientes internos e externos mais agressivos. É a resistência do aço inox colorido para durar.</p>
 </div>
 <div class="image-carousel" role="region" aria-roledescription="carrossel" aria-label="Processos e possibilidades industriais Inoxcolor">
+<div class="image-carousel-viewport">
 <div class="image-track" id="color-carousel" tabindex="0" aria-label="Imagens dos processos e acabamentos industriais Inoxcolor">
 <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="1 de 10: Precisão no processo de coloração">
 <div class="image-carousel-media">
@@ -772,12 +835,13 @@ main .btn span { font-size: 1rem; }
 <figcaption>Sete cores no acabamento escovado</figcaption>
 </figure>
 </div>
+<div class="carousel-controls image-carousel-overlay">
+<button class="slider-btn prev" type="button" id="colors-prev" aria-label="Imagem anterior" aria-controls="color-carousel">&#10094;</button>
+<button class="slider-btn next" type="button" id="colors-next" aria-label="Próxima imagem" aria-controls="color-carousel">&#10095;</button>
+</div>
+</div>
 <div class="image-carousel-nav">
 <span id="color-carousel-status" role="status" aria-live="polite" aria-atomic="true">01 / 10</span>
-<div class="carousel-controls">
-<button type="button" id="colors-prev" aria-label="Imagem anterior" aria-controls="color-carousel">‹</button>
-<button type="button" id="colors-next" aria-label="Próxima imagem" aria-controls="color-carousel">›</button>
-</div>
 </div>
 </div>
 <div class="finish-grid">
