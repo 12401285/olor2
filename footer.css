@@ -124,6 +124,10 @@ html body .site-footer.site-footer .newsletter-form h3 {
 	margin: 0 0 4px !important;
 }
 
+html body .site-footer.site-footer .newsletter-form > h3 {
+	margin-top: 16px !important;
+}
+
 html body .site-footer.site-footer .newsletter-form br {
 	display: none !important;
 }
