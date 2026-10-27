@@ -7,11 +7,35 @@ const brandItem = document.querySelector('.brand-item');
 
 // Reúne os dois grupos de links em um único painel apenas no comportamento mobile.
 let mobileMenuPanel = null;
-if (navWrap && brandItem && navs.length) {
+if (navWrap && navs.length) {
   mobileMenuPanel = document.createElement('div');
   mobileMenuPanel.className = 'mobile-menu-panel';
-  navWrap.insertBefore(mobileMenuPanel, brandItem);
+  navWrap.insertBefore(mobileMenuPanel, brandItem || navs[0]);
   navs.forEach(nav => mobileMenuPanel.appendChild(nav));
+
+  const mobileBudgetLink = document.createElement('a');
+  mobileBudgetLink.className = 'mobile-budget-link';
+  const contactPageLink = Array.from(navWrap.querySelectorAll('a[href]')).find(link =>
+    new URL(link.href).pathname.endsWith('/contato.html')
+  );
+  mobileBudgetLink.href = contactPageLink ? contactPageLink.getAttribute('href') : 'contato.html';
+  mobileBudgetLink.textContent = 'Orçamento';
+  navs[navs.length - 1].appendChild(mobileBudgetLink);
+
+  const mobileContactLinks = Array.from(mobileMenuPanel.querySelectorAll('a')).filter(link =>
+    link !== mobileBudgetLink &&
+    new URL(link.href).pathname.endsWith('/contato.html') &&
+    link.textContent.trim().toLowerCase() === 'contato'
+  );
+  const updateMobileBudgetVisibility = () => {
+    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+    mobileBudgetLink.style.display = isMobile ? '' : 'none';
+    mobileContactLinks.forEach(link => {
+      link.style.display = isMobile ? 'none' : '';
+    });
+  };
+  updateMobileBudgetVisibility();
+  window.addEventListener('resize', updateMobileBudgetVisibility);
 }
 
 // Muda a cor do header após passar pelo carrossel
@@ -182,4 +206,3 @@ document.querySelectorAll('.footer-bottom-inner').forEach((footerBottom) => {
   note.textContent = 'As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.';
   footerBottom.insertBefore(note, footerBottom.firstChild);
 });
-

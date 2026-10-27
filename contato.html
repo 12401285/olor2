@@ -17,8 +17,160 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="footer.css" />
+    <style>
+      .contact-page-body > .intro {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        align-items: end;
+        gap: 68px;
+        width: min(1160px, calc(100% - 42px));
+        margin: 0 auto 16px;
+        padding-top: 126px;
+      }
+
+      .contact-page-body > .intro .eyebrow {
+        margin: 0 0 15px;
+        color: #9b6538;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .contact-page-body > .intro h1 {
+        margin: 0;
+        color: #171613;
+        font: 400 clamp(36px, 3.8vw, 54px) / 0.98 Georgia, "Times New Roman", serif;
+        letter-spacing: -0.035em;
+      }
+
+      .intro-copy {
+        max-width: 620px;
+        padding-bottom: 5px;
+      }
+
+      .intro-copy p {
+        margin: 0;
+        color: #6d675d;
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .intro-copy strong {
+        display: block;
+        margin-top: 18px;
+        padding-left: 15px;
+        border-left: 2px solid #c99344;
+        color: #171613;
+        font: italic 17px/1.5 Georgia, serif;
+      }
+
+      .contact-page-body .contact-section {
+        padding-top: 0;
+      }
+
+      .contact-page-body .contact-wrap {
+        margin: 0 auto;
+        transform: none;
+      }
+
+      .contact-page-body .intro-copy {
+        text-align: center;
+      }
+
+      @media (min-width: 1025px) {
+        .contact-page-body > .intro {
+          width: min(1160px, calc(100% - 42px));
+          grid-template-columns: 1fr;
+          align-items: center;
+          gap: 16px;
+          text-align: left;
+        }
+
+        .contact-page-body .intro-copy {
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        .contact-page-body > .intro > div:first-child {
+          text-align: center;
+        }
+
+        .contact-page-body > .intro h1 {
+          white-space: nowrap;
+          font-size: clamp(36px, 3.8vw, 54px);
+        }
+
+        .contact-page-body .intro-copy strong {
+          margin-top: 8px;
+          padding-left: 0;
+          border-left: 0;
+        }
+      }
+
+      .contact-page-body .contact-card {
+        padding: 24px 22px;
+      }
+
+      .contact-page-body .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 12px;
+      }
+
+      .contact-page-body .contact-form > .contact-options,
+      .contact-page-body .contact-form > .contact-purpose,
+      .contact-page-body .contact-form > textarea,
+      .contact-page-body .contact-form > button {
+        grid-column: 1 / -1;
+      }
+
+      .contact-page-body .contact-form input:not([type="radio"]),
+      .contact-page-body .contact-form textarea,
+      .contact-page-body .contact-dropdown summary {
+        padding: 10px 14px;
+      }
+
+      .contact-page-body .contact-form input:not([type="radio"]) {
+        height: 46px;
+      }
+
+      .contact-page-body .contact-form textarea {
+        min-height: 100px;
+      }
+
+      @media (max-width: 768px) {
+        .contact-page-body .contact-form {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .contact-page-body > .intro {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-bottom: 12px;
+          padding-top: 32px;
+        }
+
+      .contact-page-body > .intro > div:first-child {
+    text-align: center;
+    white-space: nowrap;
+    width: max-content;
+    margin-inline: auto;
+}
+
+        .contact-page-body > .intro h1 {
+          font-size: clamp(35px, 11vw, 2px);
+        }
+
+        .contact-page-body .contact-section {
+          padding-top: 0;
+        }
+      }
+    </style>
 </head>
-  <body class="products-page-body contact-page-body">
+  <body class="products-page-body contact-page-body" style="background-color: rgb(238, 226, 208);">
     <header class="site-header">
       <div class="container nav-wrap">
         <nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
@@ -47,12 +199,17 @@
         </div>
       </div>
     </header>
+  <div class="intro" style="@media (min-width: 768px) { margin-top: -50%; }">
+        <div style="margin-top: -2%;"><h1>Fale com a Inoxcolor.</h1><p class="eyebrow">Atendimento especializado</p></div>
+        <div class="intro-copy" style="margin-top: -2%;"><p></p><strong>Diferenciação criativa com segurança para realizar.</strong></div>
+      </div>
     <section class="section contact-section">
         <div class="container contact-wrap">
           <div class="contact-card">
-            <h3>Fale com a Inoxcolor</h3>
+
             <form class="contact-form">
               <input type="text" placeholder="Nome" />
+              <input type="text" placeholder="Cidade/Estado" />
               <input type="email" placeholder="E-mail" />
               <input type="tel" placeholder="Telefone / WhatsApp" />
               <div class="contact-options">
@@ -89,6 +246,7 @@
               </fieldset>
               <textarea placeholder="Mensagem"></textarea>
               <button type="submit" class="btn btn-primary-cont">Enviar</button>
+              <p style="text-align: right; margin-right: -20%; font-size: 14px; color: #6d675d;">Resposta em até 1 dia útil</p>
             </form>
           </div>
 

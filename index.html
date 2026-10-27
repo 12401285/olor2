@@ -17,6 +17,57 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="footer.css" />
+    <style>
+      @media (max-width: 768px) {
+        .home-page .section-title {
+          text-align: justify !important;
+          text-justify: inter-word;
+        }
+
+        .home-page main > .pure-slider {
+          margin-top: 0;
+        }
+
+        .home-page main .test-products.section {
+          padding-block: 20px 8px;
+        }
+
+        .home-page main .texto_foto {
+          margin-top: 4px;
+        }
+
+        .home-page main > .cta-banner {
+          padding: 0;
+        }
+
+        .home-page main .btn-CAT {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 32px auto 0 !important;
+          padding: 10px 16px;
+          line-height: 1.25;
+          text-align: center;
+        }
+
+        .home-page .site-footer {
+          margin-top: -1300px !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .home-page .section-title {
+          padding-right: 8px !important;
+          padding-left: 8px !important;
+          font-size: clamp(0.76rem, 3.2vw, 0.92rem) !important;
+          letter-spacing: 0 !important;
+        }
+
+        .home-page .section-title br {
+          display: none;
+        }
+      }
+    </style>
 </head>
   <body class="home-page">
     <!-- Cabeçalho fixo do site: contém a identidade, o topo de contato e a navegação principal -->
@@ -127,18 +178,18 @@
         <div class="container">
           <div class="products-grid-3">
             <article class="product-3-card1">
-              <img src="carrosel%20home/desktop(index1).jpeg" alt="Produto 1" />
+              <a href="industria.html"><img src="carrosel%20home/desktop(index1).jpeg" alt="Produto 1" /></a>
             </article>
             <article class="product-3-card2">
-              <img src="carrosel%20home/desktop(index2).jpeg" alt="Produto 2" />
+              <a href="arquitetura.html"><img src="carrosel%20home/desktop(index2).jpeg" alt="Produto 2" /></a>
             </article>
             <article class="product-3-card3">
-              <img src="troca_home.jpeg" alt="Produto 3" />
+              <a href="residencial.html"><img src="troca_home.jpeg" alt="Produto 3" /></a>
             </article>
           </div>
         </div>
       </section>
-      <p CLASS="texto_foto">Conheça de perto as cores, acabamentos e possibilidades do <span class="highlight">Aço Inox Colorido.</p>
+      <p CLASS="texto_foto">Conheça de perto as cores, acabamentos, produtos e possibilidades do <span class="highlight">Aço Inox Colorido.</p>
          <a href="contato.html" class="btn-CAT">Solicite seu catálogo de amostras</a>
       <section class="cta-banner">
         </div>

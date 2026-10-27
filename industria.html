@@ -816,7 +816,7 @@ main .btn span { font-size: 1rem; }
   }
 }
 
-.home-page main .lead-trigger {
+.home-page main .form-page-link {
   display: flex;
   width: fit-content;
   max-width: 100%;
@@ -1111,6 +1111,23 @@ body.home-page main#conteudo > .technology {
   }
 }
 </style>
+<style>
+#lead-dialog{max-width:760px}
+#lead-dialog .fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#lead-dialog .field.full{grid-column:1/-1}
+#lead-dialog .dialog-dropdown{min-width:0}
+#lead-dialog .dialog-dropdown summary{list-style:none;cursor:pointer;border:1px solid #b6afa1;background:#fff;padding:12px;color:#524a3b}
+#lead-dialog .dialog-dropdown summary::-webkit-details-marker{display:none}
+#lead-dialog .dialog-dropdown summary::after{content:"▾";float:right;color:#8b633b}
+#lead-dialog .dialog-dropdown[open] summary{border-radius:0}
+#lead-dialog .dialog-dropdown-content{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px;border:1px solid #b6afa1;border-top:0;background:#fff}
+#lead-dialog .dialog-dropdown-content label,#lead-dialog .dialog-purpose label{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:400}
+#lead-dialog input[type=radio],#lead-dialog input[type=checkbox]{width:auto;min-height:0;margin:0;accent-color:#8b633b}
+#lead-dialog .dialog-purpose{display:flex;flex-wrap:wrap;gap:10px 18px;margin:0;padding:0;border:0}
+#lead-dialog .dialog-purpose legend{width:100%;margin-bottom:2px;font-size:12px;font-weight:700}
+#lead-dialog .dialog-purpose label{cursor:pointer}
+@media(max-width:760px){#lead-dialog{padding:40px 20px 24px}#lead-dialog .fields{grid-template-columns:1fr;gap:10px}#lead-dialog .field.full{grid-column:auto}#lead-dialog .dialog-dropdown-content{grid-template-columns:1fr 1fr}}
+</style>
 </head>
 <body id="top" class="home-page">
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
@@ -1181,7 +1198,7 @@ body.home-page main#conteudo > .technology {
 <p class="lead">Para conhecer cores, acabamentos, especificações e possibilidades antes de apresentar a oportunidade à sua equipe.</p>
 <p class="cta-context"></p>
 <div class="actions">
-<a class="btn primary lead-trigger" data-intent="catalogo" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20receber%20o%20Cat%C3%A1logo%20T%C3%A9cnico%20Industrial%20Inoxcolor.">Receber catálogo técnico industrial<span aria-hidden="true">↗</span>
+<a class="btn primary form-page-link" href="formulario_industria.html">Receber catálogo técnico industrial<span aria-hidden="true">↗</span>
 </a>
 </div>
 <p class="authority-line">Única empresa na América Latina especializada na coloração de chapas em aço inox.</p>
@@ -1618,7 +1635,7 @@ Cozinhas residenciais e industriais</h4>
 </div>
 <p class="application-note">Cada aplicação é avaliada conforme o ambiente e os requisitos de uso.</p>
 <p class="cta-context centered">Já possui produto, desenho ou demanda concreta? Leve a aplicação diretamente para uma avaliação inicial.</p>
-<a class="btn dark-btn lead-trigger" data-intent="analise" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20apresentar%20uma%20aplica%C3%A7%C3%A3o%20industrial%20para%20an%C3%A1lise.">Solicitar avaliação técnica da aplicação<span aria-hidden="true">↗</span>
+<a class="btn dark-btn form-page-link" href="formulario_industria.html">Solicitar avaliação técnica da aplicação<span aria-hidden="true">↗</span>
 </a>
 </div>
 </section>
@@ -1631,7 +1648,7 @@ Cozinhas residenciais e industriais</h4>
 <p>Nossa estrutura de corte a laser, dobra, calandragem e fotogravação permite integrar etapas e transformar o material em uma solução pronta para avançar dentro da sua operação.</p>
 <div class="decision-box"><p>Apresente uma ideia, um desenho ou um produto existente. Nossa equipe fará a leitura inicial da aplicação e indicará as informações necessárias para o próximo passo.</p></div>
 <p class="cta-context light">Para demandas em desenvolvimento que já precisam de direcionamento técnico.</p>
-<a class="btn primary lead-trigger" data-intent="analise" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20apresentar%20uma%20aplica%C3%A7%C3%A3o%20industrial%20para%20an%C3%A1lise.">Receber atendimento exclusivo<span aria-hidden="true">↗</span>
+<a class="btn primary form-page-link" href="formulario_industria.html">Receber atendimento exclusivo<span aria-hidden="true">↗</span>
 </a>
 </div>
 </div>
@@ -1675,7 +1692,7 @@ Cozinhas residenciais e industriais</h4>
 </div>
 </dl>
 <p class="fine">A disponibilidade e a combinação de liga, espessura, cor, acabamento e processo são confirmadas na análise da demanda.</p>
-<a class="btn dark-btn lead-trigger" data-intent="catalogo" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20receber%20o%20Cat%C3%A1logo%20T%C3%A9cnico%20Industrial%20Inoxcolor.">Falar com um especialista<span aria-hidden="true">↗</span>
+<a class="btn dark-btn form-page-link" href="formulario_industria.html">Falar com um especialista<span aria-hidden="true">↗</span>
 </a>
 </div>
 </div>
@@ -1725,7 +1742,7 @@ Cozinhas residenciais e industriais</h4>
 </ul>
 </div>
 <p class="catalogue-outcome">Uma ferramenta para sua equipe sair da inspiração e avançar para uma decisão industrial mais bem fundamentada.</p>
-<a class="btn dark-btn lead-trigger" data-intent="catalogo" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20receber%20o%20Cat%C3%A1logo%20T%C3%A9cnico%20Industrial%20Inoxcolor.">Receber catálogo técnico industrial<span aria-hidden="true">↗</span>
+<a class="btn dark-btn form-page-link" href="formulario_industria.html">Receber catálogo técnico industrial<span aria-hidden="true">↗</span>
 </a>
 </div>
 </div>
@@ -1780,7 +1797,7 @@ Cozinhas residenciais e industriais</h4>
 <p class="closing-urgency">Antecipe a avaliação técnica para incluir o aço inox colorido no próximo ciclo de desenvolvimento do seu produto.</p>
 <p class="closing-assurance">Sua aplicação é avaliada tecnicamente antes da produção, garantindo compatibilidade entre material, processo e resultado esperado.</p>
 <div class="closing-actions">
-<a class="btn primary lead-trigger" data-intent="analise" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20apresentar%20uma%20aplica%C3%A7%C3%A3o%20industrial%20para%20an%C3%A1lise.">Solicitar avaliação técnica da aplicação<span aria-hidden="true">↗</span></a>
+<a class="btn primary form-page-link" href="formulario_industria.html">Solicitar avaliação técnica da aplicação<span aria-hidden="true">↗</span></a>
 </div>
 </div>
 </section>
@@ -1791,35 +1808,67 @@ Cozinhas residenciais e industriais</h4>
 <input type="hidden" name="intencao" value="catalogo">
 <p class="eyebrow" id="dialog-eyebrow">Catálogo Técnico Industrial</p>
 <h2 id="dialog-title">Receba referências para avaliar com a sua equipe.</h2>
-<p class="intro" id="dialog-intro">Preencha em menos de um minuto e continue pelo WhatsApp com a equipe técnica da Inoxcolor para solicitar o catálogo.</p>
+<p class="intro" id="dialog-intro">Preencha seus dados e indique o que deseja conhecer. Nossa equipe continuará o atendimento pelo WhatsApp.</p>
 <div class="fields">
 <div class="field">
 <label for="nome">Nome completo</label>
 <input id="nome" name="nome" autocomplete="name" required maxlength="100">
 </div>
 <div class="field">
-<label for="empresa">Empresa</label>
-<input id="empresa" name="empresa" autocomplete="organization" required maxlength="120">
+<label for="cidade">Cidade/Estado</label>
+<input id="cidade" name="cidade" autocomplete="address-level2" maxlength="100">
 </div>
 <div class="field">
-<label for="whatsapp">WhatsApp</label>
-<input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" placeholder="DDD + número">
-</div>
-<div class="field">
-<label for="email">E-mail profissional <span class="optional">(opcional)</span>
-</label>
+<label for="email">E-mail <span class="optional">(opcional)</span></label>
 <input id="email" name="email" type="email" autocomplete="email" maxlength="150">
 </div>
+<div class="field">
+<label for="whatsapp">Telefone / WhatsApp</label>
+<input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" placeholder="DDD + número">
+</div>
 <div class="field full">
-<label for="aplicacao">Qual produto ou aplicação deseja avaliar? <span class="optional" id="application-optional">(opcional)</span>
-</label>
-<textarea id="aplicacao" name="aplicacao" maxlength="1200" placeholder="Conte sua ideia, o que pretende desenvolver ou o produto que deseja valorizar.">
-</textarea>
+<label>Segmento de interesse</label>
+<details class="dialog-dropdown">
+<summary>Selecione um segmento</summary>
+<div class="dialog-dropdown-content">
+<label><input type="radio" name="segmento" value="Residencial"> Residencial</label>
+<label><input type="radio" name="segmento" value="Arquitetura"> Arquitetura</label>
+<label><input type="radio" name="segmento" value="Indústria" checked> Indústria</label>
+<label><input type="radio" name="segmento" value="Outros"> Outros</label>
+</div>
+</details>
+</div>
+<div class="field full">
+<label>Produtos de interesse</label>
+<details class="dialog-dropdown">
+<summary>Selecione um ou mais produtos</summary>
+<div class="dialog-dropdown-content">
+<label><input type="checkbox" name="produtos" value="Chapas"> Chapas</label>
+<label><input type="checkbox" name="produtos" value="Revestimentos"> Revestimentos</label>
+<label><input type="checkbox" name="produtos" value="Brises"> Brises</label>
+<label><input type="checkbox" name="produtos" value="Ralos"> Ralos</label>
+<label><input type="checkbox" name="produtos" value="Obras de arte"> Obras de arte</label>
+<label><input type="checkbox" name="produtos" value="Perfis e listelos"> Perfis e listelos</label>
+<label><input type="checkbox" name="produtos" value="Quadros decorativos"> Quadros decorativos</label>
+<label><input type="checkbox" name="produtos" value="Letras e Números"> Letras e Números</label>
+<label><input type="checkbox" name="produtos" value="Aplicações externas"> Aplicações externas</label>
+</div>
+</details>
+</div>
+<fieldset class="dialog-purpose field full">
+<legend>Como podemos ajudar?</legend>
+<label><input type="radio" name="assunto" value="Dúvidas"> Dúvidas</label>
+<label><input type="radio" name="assunto" value="Catálogo" checked> Catálogo</label>
+<label><input type="radio" name="assunto" value="Orçamento"> Orçamento</label>
+</fieldset>
+<div class="field full">
+<label for="mensagem">Mensagem <span class="optional" id="message-optional">(opcional)</span></label>
+<textarea id="mensagem" name="mensagem" maxlength="1200" placeholder="Conte um pouco sobre o que precisa."></textarea>
 </div>
 <button class="btn dark-btn field full" type="submit">Continuar no WhatsApp <span aria-hidden="true">↗</span>
 </button>
 </div>
-<p class="form-note">Seus dados serão usados para responder a esta solicitação. No WhatsApp, revise a mensagem e toque em enviar para concluir o contato.</p>
+<p class="form-note">Seus dados serão usados apenas para responder a esta solicitação. No WhatsApp, revise a mensagem e toque em enviar para concluir o contato.</p>
 <p class="form-state" id="form-state" role="status" aria-live="polite">
 </p>
 <noscript>
@@ -2011,10 +2060,11 @@ Cozinhas residenciais e industriais</h4>
     event.preventDefault();
     activeTrigger = link;
     const analysis = link.dataset.intent === 'analise';
-    if (link.dataset.product) form.elements.aplicacao.value = 'Gostaria de informações sobre ' + link.dataset.product + '.';
+    form.reset();
+    if (link.dataset.product) form.elements.mensagem.value = 'Gostaria de informações sobre ' + link.dataset.product + '.';
     form.elements.intencao.value = analysis ? 'analise' : 'catalogo';
-    form.elements.aplicacao.required = analysis;
-    document.getElementById('application-optional').hidden = analysis;
+    form.elements.mensagem.required = analysis;
+    document.getElementById('message-optional').hidden = analysis;
     document.getElementById('dialog-eyebrow').textContent = analysis ? 'Análise inicial da aplicação' : 'Catálogo Técnico Industrial';
     document.getElementById('dialog-title').textContent = analysis ? 'Apresente sua ideia ou o produto que deseja desenvolver.' : 'Receba referências para avaliar com a sua equipe.';
     document.getElementById('dialog-intro').textContent = analysis ? 'Conte sua necessidade e continue pelo WhatsApp com a equipe técnica da Inoxcolor. Imagens e desenhos podem ser enviados na conversa.' : 'Preencha em menos de um minuto e continue pelo WhatsApp com a equipe técnica da Inoxcolor para solicitar o catálogo.';
@@ -2039,9 +2089,14 @@ Cozinhas residenciais e industriais</h4>
     const values = new FormData(form);
     const read = name => String(values.get(name) || '').trim();
     const intent = read('intencao');
-    const lines = [intent === 'analise' ? 'Olá! Quero apresentar uma aplicação industrial para análise.' : 'Olá! Quero receber o Catálogo Técnico Industrial Inoxcolor.', '', 'Nome: ' + read('nome'), 'Empresa: ' + read('empresa'), 'WhatsApp: ' + read('whatsapp')];
+    const lines = [intent === 'analise' ? 'Olá! Quero apresentar uma aplicação industrial para análise.' : 'Olá! Quero receber o Catálogo Técnico Industrial Inoxcolor.', '', 'Nome: ' + read('nome'), 'Telefone / WhatsApp: ' + read('whatsapp')];
+    if (read('cidade')) lines.push('Cidade/Estado: ' + read('cidade'));
     if (read('email')) lines.push('E-mail: ' + read('email'));
-    if (read('aplicacao')) lines.push('Produto/aplicação: ' + read('aplicacao'));
+    if (read('segmento')) lines.push('Segmento: ' + read('segmento'));
+    const products = values.getAll('produtos').map(value => String(value).trim()).filter(Boolean);
+    if (products.length) lines.push('Produtos de interesse: ' + products.join(', '));
+    if (read('assunto')) lines.push('Como podemos ajudar: ' + read('assunto'));
+    if (read('mensagem')) lines.push('Mensagem: ' + read('mensagem'));
     const search = new URLSearchParams(window.location.search);
     const campaign = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].filter(key => search.has(key)).map(key => key + ': ' + search.get(key).slice(0,180));
     if (campaign.length) lines.push('', 'Origem da campanha:', ...campaign);
