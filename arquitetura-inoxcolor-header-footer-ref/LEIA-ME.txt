@@ -1,0 +1,5 @@
+ARQUITETURA — HEADER/FOOTER COPIADOS DA REFERÊNCIA NOVA
+
+Os blocos <header> e <footer> foram copiados literalmente do arquivo de referência mais recente. O restante do HTML de arquitetura, incluindo imagens e conteúdo, foi mantido. As imagens e vídeos em Base64 foram apenas movidos para assets/ sem recompressão; vídeos em preload=none.
+
+IMPORTANTE: a referência carrega styles.css, footer.css, script.js, Proteção.js e o logo+fundo+sitw-640w.webp como arquivos separados, que não vieram anexados. Para reproduzir o visual exato do site, coloque esses arquivos existentes na pasta de publicação (ao lado de index.html), ou envie-os para incluí-los no pacote. A estrutura e os links de referência estão preservados.

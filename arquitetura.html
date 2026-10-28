@@ -1,51 +1,1875 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Inoxcolor - móveis e soluções em aço inoxidável com design premium e excelência em acabamento."
-    />
-  <link rel="icon" href="site_favicon_16_1787921832250.ico" type="image/x-icon">
-    <title>Inoxcolor |Aço Inoxidável Colorido</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="footer.css" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inoxcolor para Arquitetura — Transformando projetos em assinaturas</title>
+  <meta name="description" content="Produtos em aço inox colorido para transformar a visão do arquiteto em uma assinatura autoral, exclusiva e tecnicamente segura.">
+  <style>
+    :root {
+      --ink: #161614;
+      --ink-2: #23231f;
+      --paper: #fbfaf7;
+      --cream: #f2eee6;
+      --sand: #ded4c4;
+      --bronze: #a67c4e;
+      --gold: #c8a36a;
+      --line: rgba(22,22,20,.14);
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+    img { display: block; width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+    .container { width: min(1200px, calc(100% - 48px)); margin: 0 auto; }
+    .eyebrow { margin: 0 0 18px; color: var(--bronze); font-size: 12px; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
+    .display { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -.035em; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 52px; padding: 0 24px; border: 1px solid var(--gold); background: var(--gold); color: #15130f; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: .2s ease; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); background: #d5b579; }
+    .btn-dark { background: var(--ink); border-color: var(--ink); color: var(--white); }
+    .btn-outline { background: transparent; border-color: rgba(255,255,255,.48); color: var(--white); }
+    .btn-block { width: 100%; }
+
+    .topbar { background: #0d0d0c; color: rgba(255,255,255,.65); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+    .topbar .container { height: 34px; display: flex; align-items: center; justify-content: space-between; }
+    .nav { position: absolute; z-index: 20; left: 0; right: 0; top: 34px; color: var(--white); border-bottom: 1px solid rgba(255,255,255,.16); }
+    .nav .container { height: 82px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark { width: 35px; height: 35px; border: 1px solid var(--gold); display: grid; place-items: center; transform: rotate(45deg); }
+    .brand-mark::after { content: ''; width: 12px; height: 12px; border: 1px solid var(--gold); }
+    .brand-name { display: grid; gap: 2px; }
+    .brand-name strong { font: 600 20px/1 Georgia, serif; letter-spacing: .08em; }
+    .brand-name span { color: var(--gold); font-size: 8px; letter-spacing: .25em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 29px; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .nav-links a { opacity: .82; }
+    .nav-cta { padding: 13px 17px; border: 1px solid rgba(255,255,255,.45); }
+
+    .hero { position: relative; min-height: 815px; color: var(--white); background: #161616 url('assets/9ec6089dcd74852647fe.png') center/cover no-repeat; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,8,7,.88) 0%, rgba(8,8,7,.70) 42%, rgba(8,8,7,.29) 70%, rgba(8,8,7,.37) 100%); }
+    .hero .container { position: relative; z-index: 2; min-height: 781px; padding-top: 160px; display: grid; grid-template-columns: 1.25fr .75fr; align-items: center; gap: 72px; }
+    .hero-copy { max-width: 720px; padding: 52px 0 70px; }
+    .hero h1 { max-width: 760px; margin: 0; font-size: clamp(48px, 5.2vw, 78px); line-height: .98; }
+    .hero h1 em { color: var(--gold); font-style: italic; }
+    .hero-copy > p:not(.eyebrow) { max-width: 640px; margin: 27px 0 34px; color: rgba(255,255,255,.78); font-size: 17px; line-height: 1.72; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-note { display: flex; align-items: center; gap: 12px; margin-top: 28px; color: rgba(255,255,255,.64); font-size: 11px; line-height: 1.5; letter-spacing: .02em; }
+    .hero-note::before { content: '✓'; flex: 0 0 24px; width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; color: var(--gold); }
+    .lead-card { align-self: end; margin-bottom: -62px; padding: 38px 36px; color: var(--ink); background: rgba(249,247,241,.97); box-shadow: 0 25px 70px rgba(0,0,0,.28); }
+    .lead-card h2 { margin: 0 0 11px; font-size: 30px; line-height: 1.08; }
+    .lead-card > p { margin: 0 0 25px; color: #5b584f; font-size: 13px; line-height: 1.65; }
+    .form-grid { display: grid; gap: 11px; }
+    .field { display: grid; gap: 6px; }
+    .field label { font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .field input, .field select { width: 100%; height: 47px; padding: 0 13px; border: 1px solid #d2cbbf; background: #fff; color: var(--ink); outline: none; }
+    .field input:focus, .field select:focus { border-color: var(--bronze); }
+    .privacy { margin: 10px 0 0 !important; font-size: 9px !important; line-height: 1.45 !important; color: #777167 !important; }
+
+    .proofbar { background: var(--cream); border-bottom: 1px solid var(--line); }
+    .proofbar .container { min-height: 122px; display: grid; grid-template-columns: repeat(4,1fr); align-items: center; padding-top: 33px; }
+    .proof { padding: 0 28px; border-left: 1px solid var(--line); }
+    .proof:first-child { padding-left: 0; border-left: 0; }
+    .proof strong { display: block; font: 400 27px/1 Georgia, serif; color: var(--bronze); }
+    .proof span { display: block; margin-top: 7px; color: #656158; font-size: 10px; line-height: 1.4; letter-spacing: .09em; text-transform: uppercase; }
+
+    .statement { padding: 135px 0 118px; overflow: hidden; }
+    .statement-grid { display: grid; grid-template-columns: .92fr 1.08fr; gap: 92px; align-items: center; }
+    .statement-media { position: relative; }
+    .statement-media img { height: 625px; object-fit: cover; }
+    .statement-media::before { content: ''; position: absolute; width: 68%; height: 77%; left: -31px; bottom: -31px; border: 1px solid var(--gold); z-index: -1; }
+    .statement-tag { position: absolute; right: -35px; bottom: 39px; max-width: 235px; padding: 25px 27px; background: var(--ink); color: #fff; font: italic 20px/1.4 Georgia, serif; }
+    .statement-copy h2, .section-head h2 { margin: 0; font-size: clamp(42px,4.3vw,64px); line-height: 1.02; }
+    .statement-copy .lead { margin: 28px 0 0; color: #555148; font-size: 18px; line-height: 1.78; }
+    .statement-copy .body { margin: 19px 0 0; color: #787268; font-size: 14px; line-height: 1.85; }
+    .quote-line { margin: 35px 0 0; padding: 25px 0 2px 25px; border-left: 1px solid var(--gold); font: italic 24px/1.4 Georgia, serif; }
+
+    .benefits { padding: 110px 0; background: var(--ink); color: white; }
+    .section-head { max-width: 820px; }
+    .section-head.light p { color: rgba(255,255,255,.63); }
+    .section-head > p:not(.eyebrow) { max-width: 720px; margin: 23px 0 0; color: #6e685f; font-size: 16px; line-height: 1.7; }
+    .benefit-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 62px; background: rgba(255,255,255,.16); }
+    .benefit { min-height: 238px; padding: 34px 31px; background: var(--ink); }
+    .benefit .num { color: var(--gold); font: 400 15px/1 Georgia,serif; }
+    .benefit h3 { margin: 31px 0 13px; font: 400 25px/1.15 Georgia, serif; }
+    .benefit p { margin: 0; color: rgba(255,255,255,.6); font-size: 13px; line-height: 1.72; }
+
+    .applications { padding: 122px 0 132px; }
+    .applications .head-row { display: flex; justify-content: space-between; align-items: end; gap: 40px; }
+    .applications .head-row .btn { flex: 0 0 auto; }
+    .app-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; grid-template-rows: 310px 310px; gap: 16px; margin-top: 58px; }
+    .app-card { position: relative; overflow: hidden; color: white; }
+    .app-card:first-child { grid-row: span 2; }
+    .app-card:nth-child(4) { grid-column: span 2; }
+    .app-card img { height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .app-card:hover img { transform: scale(1.035); }
+    .app-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,transparent 42%,rgba(8,8,8,.78)); }
+    .app-label { position: absolute; z-index: 2; left: 24px; right: 24px; bottom: 21px; display: flex; align-items: end; justify-content: space-between; gap: 16px; }
+    .app-label span { display: block; margin-bottom: 7px; color: rgba(255,255,255,.68); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+    .app-label strong { font: 400 24px/1.05 Georgia,serif; }
+    .arrow { width: 36px; height: 36px; flex: 0 0 36px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; }
+
+    .custom { min-height: 690px; position: relative; display: grid; align-items: center; background: #292521 url('assets/0c7dc19e1bc649d60bf0.jpg') center/cover no-repeat; color: white; }
+    .custom::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(10,10,9,.9),rgba(10,10,9,.65) 48%,rgba(10,10,9,.18)); }
+    .custom .container { position: relative; z-index: 2; }
+    .custom-copy { max-width: 610px; padding: 100px 0; }
+    .custom h2 { margin: 0; font-size: clamp(46px,4.8vw,70px); line-height: .98; }
+    .custom p:not(.eyebrow) { max-width: 555px; margin: 28px 0 34px; color: rgba(255,255,255,.73); font-size: 16px; line-height: 1.78; }
+
+    .technical { padding: 115px 0; background: var(--cream); }
+    .technical-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 92px; }
+    .technical-intro h2 { margin: 0; font-size: 51px; line-height: 1.05; }
+    .technical-intro p:not(.eyebrow) { margin: 25px 0 32px; color: #68635a; font-size: 15px; line-height: 1.78; }
+    .spec-list { border-top: 1px solid var(--line); }
+    .spec { display: grid; grid-template-columns: 155px 1fr; gap: 25px; padding: 23px 0; border-bottom: 1px solid var(--line); }
+    .spec strong { font: 400 18px/1.2 Georgia,serif; }
+    .spec span { color: #6b665c; font-size: 13px; line-height: 1.65; }
+
+    .process { padding: 122px 0; background: var(--paper); }
+    .process-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); margin-top: 62px; border-top: 1px solid var(--line); }
+    .step { position: relative; padding: 34px 28px 0 0; }
+    .step::before { content: ''; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; background: var(--gold); border-radius: 50%; }
+    .step span { color: var(--bronze); font: 400 18px/1 Georgia,serif; }
+    .step h3 { margin: 28px 0 13px; font: 400 23px/1.15 Georgia,serif; }
+    .step p { margin: 0; color: #6d685f; font-size: 13px; line-height: 1.72; }
+
+    .gallery { padding: 115px 0; background: #171716; color: white; }
+    .gallery-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; }
+    .gallery h2 { margin: 0; font-size: 54px; line-height: 1.03; }
+    .gallery-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 265px 265px; gap: 14px; margin-top: 50px; }
+    .gallery-grid figure { position: relative; overflow: hidden; margin: 0; }
+    .gallery-grid figure:first-child { grid-row: span 2; }
+    .gallery-grid figure:last-child { grid-column: span 2; }
+    .gallery-grid img { height: 100%; object-fit: cover; filter: saturate(.84); transition: .4s ease; }
+    .gallery-grid figure:hover img { filter: saturate(1); transform: scale(1.025); }
+
+    .catalogue { padding: 118px 0; background: var(--cream); }
+    .catalogue-wrap { display: grid; grid-template-columns: .96fr 1.04fr; background: var(--paper); box-shadow: 0 20px 70px rgba(37,29,18,.11); }
+    .catalogue-image { min-height: 690px; background: url('assets/fd0ec9c02ff6f95fb657.jpg') center/cover no-repeat; }
+    .catalogue-form { padding: 63px 66px; }
+    .catalogue-form h2 { margin: 0; font-size: 50px; line-height: 1.02; }
+    .catalogue-form > p:not(.eyebrow) { margin: 21px 0 30px; color: #6b665d; font-size: 14px; line-height: 1.72; }
+    .catalogue-form .form-grid { grid-template-columns: 1fr 1fr; }
+    .catalogue-form .field.full, .catalogue-form .btn, .catalogue-form .privacy { grid-column: 1/-1; }
+
+    .faq { padding: 115px 0; }
+    .faq-wrap { display: grid; grid-template-columns: .72fr 1.28fr; gap: 100px; }
+    .faq h2 { margin: 0; font-size: 51px; line-height: 1.04; }
+    .faq-list { border-top: 1px solid var(--line); }
+    details { border-bottom: 1px solid var(--line); }
+    summary { position: relative; padding: 23px 45px 23px 0; cursor: pointer; list-style: none; font: 400 19px/1.35 Georgia,serif; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; position: absolute; top: 20px; right: 3px; color: var(--bronze); font: 300 25px/1 Arial,sans-serif; }
+    details[open] summary::after { content: '−'; }
+    details p { margin: 0; padding: 0 46px 24px 0; color: #6c675e; font-size: 13px; line-height: 1.75; }
+
+    .final-cta { position: relative; min-height: 560px; display: grid; place-items: center; text-align: center; color: white; background: url('assets/e9bd94a40c7a157220c5.png') center/cover no-repeat; }
+    .final-cta::before { content: ''; position: absolute; inset: 0; background: rgba(8,8,7,.73); }
+    .final-cta .container { position: relative; z-index: 2; max-width: 840px; }
+    .final-cta h2 { margin: 0; font-size: clamp(48px,5.5vw,78px); line-height: .98; }
+    .final-cta p:not(.eyebrow) { max-width: 620px; margin: 27px auto 33px; color: rgba(255,255,255,.73); font-size: 16px; line-height: 1.7; }
+    .final-actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+    footer { padding: 52px 0 30px; background: #0f0f0e; color: rgba(255,255,255,.62); }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .footer-links { display: flex; gap: 26px; font-size: 10px; letter-spacing: .11em; text-transform: uppercase; }
+    .copyright { display: flex; justify-content: space-between; gap: 20px; padding-top: 24px; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+    .success { display: none; padding: 16px; border: 1px solid #cab991; background: #f6f1e4; font-size: 13px; line-height: 1.5; }
+
+    /* Camada didática do mockup. O botão flutuante permite ocultá-la e ver a página limpa. */
+    .guide-toolbar { position: fixed; z-index: 100; right: 18px; bottom: 18px; display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(20,20,18,.96); color: white; box-shadow: 0 10px 35px rgba(0,0,0,.28); }
+    .guide-toolbar span { max-width: 190px; font-size: 10px; line-height: 1.4; letter-spacing: .06em; text-transform: uppercase; }
+    .guide-toggle { min-height: 36px; padding: 0 14px; border: 1px solid var(--gold); background: var(--gold); color: var(--ink); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+    .implementation-note { width: min(1200px, calc(100% - 48px)); margin: 28px auto; padding: 25px 28px; display: grid; grid-template-columns: 180px 1fr 1fr; gap: 28px; border: 1px dashed var(--bronze); background: #fffaf0; box-shadow: 0 10px 30px rgba(88,65,37,.07); }
+    .implementation-note.first { margin-top: 105px; }
+    .implementation-note .fold { color: var(--bronze); font: 400 19px/1.2 Georgia,serif; }
+    .implementation-note strong { display: block; margin-bottom: 7px; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+    .implementation-note p { margin: 0; color: #615b52; font-size: 12px; line-height: 1.62; }
+    .guides-off .implementation-note { display: none; }
+    .guides-off .guide-toolbar span { display: none; }
+
+    .video-story { padding: 118px 0 122px; background: var(--paper); }
+    .video-intro { max-width: 900px; margin: 0 auto 48px; text-align: center; }
+    .video-intro h2 { margin: 0; font-size: clamp(44px,4.8vw,68px); line-height: 1.02; }
+    .video-intro > p:not(.eyebrow) { max-width: 740px; margin: 24px auto 0; color: #69645b; font-size: 16px; line-height: 1.74; }
+    .video-frame { position: relative; width: min(1060px,100%); aspect-ratio: 16/9; margin: 0 auto; overflow: hidden; background: #111 url('assets/e9bd94a40c7a157220c5.png') center/cover no-repeat; box-shadow: 0 28px 65px rgba(20,16,10,.2); }
+    .video-frame::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(9,9,8,.58),rgba(9,9,8,.12)); }
+    .video-frame::after { content: 'VÍDEO DA INOXCOLOR'; position: absolute; left: 28px; bottom: 25px; color: rgba(255,255,255,.72); font-size: 9px; font-weight: 800; letter-spacing: .18em; }
+    .play { position: absolute; z-index: 2; top: 50%; left: 50%; width: 92px; height: 92px; transform: translate(-50%,-50%); display: grid; place-items: center; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; background: rgba(183,139,80,.9); color: white; font-size: 27px; text-indent: 5px; box-shadow: 0 15px 35px rgba(0,0,0,.25); }
+    .video-caption { max-width: 1060px; margin: 0 auto; padding: 18px 23px; border: 1px solid var(--line); border-top: 0; color: #716b61; background: white; font-size: 11px; line-height: 1.6; text-align: center; }
+    .post-video { max-width: 940px; margin: 55px auto 0; padding: 43px 48px; display: grid; grid-template-columns: 1fr auto; gap: 42px; align-items: center; border-left: 3px solid var(--gold); background: var(--cream); }
+    .post-video h3 { margin: 0 0 13px; font: 400 31px/1.1 Georgia,serif; }
+    .post-video p { margin: 0; color: #656057; font-size: 13px; line-height: 1.72; }
+
+    .cases { padding: 115px 0; background: #171716; color: white; }
+    .cases-head { max-width: 820px; }
+    .cases-head h2 { margin: 0; font-size: 54px; line-height: 1.02; }
+    .cases-head > p:not(.eyebrow) { margin: 22px 0 0; color: rgba(255,255,255,.62); font-size: 15px; line-height: 1.7; }
+    .case-feature { display: grid; grid-template-columns: 1.15fr .85fr; margin-top: 52px; background: #242421; }
+    .case-image { min-height: 570px; position: relative; overflow: hidden; background: radial-gradient(circle at 25% 20%,rgba(199,163,106,.35),transparent 28%), linear-gradient(135deg,#0e0e0d,#282723 45%,#0f0f0e); }
+    .case-image::before { content: 'ARENA MRV'; position: absolute; left: 46px; bottom: 50px; color: rgba(255,255,255,.92); font: 400 65px/1 Georgia,serif; letter-spacing: -.04em; }
+    .case-image::after { content: 'GALO INOX APERAM • ENGENHARIA, TRANSFORMAÇÃO E INSTALAÇÃO'; position: absolute; left: 50px; bottom: 25px; color: var(--gold); font-size: 8px; font-weight: 800; letter-spacing: .13em; }
+    .case-copy { padding: 51px 45px; }
+    .case-copy h3 { margin: 0 0 30px; font: 400 35px/1.08 Georgia,serif; }
+    .case-line { padding: 18px 0; border-top: 1px solid rgba(255,255,255,.14); }
+    .case-line strong { display: block; margin-bottom: 7px; color: var(--gold); font-size: 8px; letter-spacing: .14em; text-transform: uppercase; }
+    .case-line p { margin: 0; color: rgba(255,255,255,.68); font-size: 12px; line-height: 1.65; }
+    .case-thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+    .case-thumb { min-height: 275px; position: relative; overflow: hidden; }
+    .case-thumb img { height: 100%; object-fit: cover; filter: brightness(.74); }
+    .case-thumb div { position: absolute; inset: auto 22px 20px; }
+    .case-thumb span { color: var(--gold); font-size: 8px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .case-thumb h4 { margin: 7px 0 0; font: 400 23px/1.1 Georgia,serif; }
+    .case-thumb p { max-width: 520px; margin: 8px 0 0; color: rgba(255,255,255,.7); font-size: 11px; line-height: 1.55; }
+    .case-thumb.typographic { background: radial-gradient(circle at 78% 24%,rgba(198,160,96,.35),transparent 22%), linear-gradient(135deg,#16284e,#101115 58%,#6c4a19); }
+    .case-thumb.typographic::before { content: 'BBB 26'; position: absolute; right: 25px; top: 22px; color: rgba(255,255,255,.12); font: 400 70px/1 Georgia,serif; }
+
+    @media (max-width: 980px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero .container { grid-template-columns: 1fr; gap: 0; padding-top: 130px; }
+      .hero-copy { padding-bottom: 20px; }
+      .lead-card { width: min(530px,100%); margin: 0 0 -60px; }
+      .proofbar .container { padding-top: 80px; grid-template-columns: 1fr 1fr; }
+      .proof { padding: 22px; border-bottom: 1px solid var(--line); }
+      .statement-grid, .technical-grid, .faq-wrap { grid-template-columns: 1fr; gap: 65px; }
+      .benefit-grid { grid-template-columns: 1fr 1fr; }
+      .app-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(2,330px); }
+      .app-card:first-child { grid-row: auto; }
+      .app-card:nth-child(4) { grid-column: auto; }
+      .process-row { grid-template-columns: 1fr 1fr; row-gap: 50px; }
+      .catalogue-wrap { grid-template-columns: 1fr; }
+      .catalogue-image { min-height: 480px; }
+      .implementation-note { grid-template-columns: 145px 1fr; }
+      .implementation-note > div:last-child { grid-column: 2; }
+      .post-video { grid-template-columns: 1fr; }
+      .case-feature { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 660px) {
+      .container { width: min(100% - 30px, 1200px); }
+      .topbar .container span:last-child { display: none; }
+      .nav .container { height: 70px; }
+      .nav-cta { display: none !important; }
+      .hero { min-height: 970px; }
+      .hero .container { padding-top: 112px; }
+      .hero h1 { font-size: 48px; }
+      .hero-copy > p:not(.eyebrow) { font-size: 15px; }
+      .hero-actions .btn { width: 100%; }
+      .lead-card { padding: 31px 24px; }
+      .proofbar .container { grid-template-columns: 1fr 1fr; }
+      .proof { padding: 18px 10px; }
+      .statement { padding: 100px 0; }
+      .statement-grid { gap: 70px; }
+      .statement-media img { height: 500px; }
+      .statement-tag { right: 12px; }
+      .benefit-grid { grid-template-columns: 1fr; }
+      .applications .head-row, .gallery-head { align-items: start; flex-direction: column; }
+      .app-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4,330px); }
+      .custom { background-position: 65% center; }
+      .spec { grid-template-columns: 1fr; gap: 10px; }
+      .process-row { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4,290px); }
+      .gallery-grid figure:first-child { grid-row: auto; }
+      .gallery-grid figure:last-child { grid-column: auto; }
+      .catalogue-image { min-height: 360px; }
+      .catalogue-form { padding: 45px 25px; }
+      .catalogue-form .form-grid { grid-template-columns: 1fr; }
+      .catalogue-form .field, .catalogue-form .btn, .catalogue-form .privacy { grid-column: 1/-1; }
+      .footer-row, .copyright { align-items: start; flex-direction: column; }
+      .footer-links { flex-wrap: wrap; }
+      .implementation-note { width: calc(100% - 30px); grid-template-columns: 1fr; gap: 15px; }
+      .implementation-note.first { margin-top: 90px; }
+      .implementation-note > div:last-child { grid-column: auto; }
+      .guide-toolbar span { display: none; }
+      .post-video { padding: 32px 24px; }
+      .case-thumbs { grid-template-columns: 1fr; }
+      .case-copy { padding: 39px 25px; }
+    }
+  
+    /* Ajustes da versão compacta de alta conversão */
+    .hero .container { grid-template-columns: 1.12fr .88fr; }
+    .hero h1 { font-size: clamp(47px,4.7vw,72px); }
+    .lead-card { align-self: center; margin-bottom: 0; }
+    .lead-card .field input, .lead-card .field select { background: #fff; }
+    .reward-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 55px; background: rgba(255,255,255,.16); }
+    .reward-card { min-height: 220px; padding: 31px 29px; background: var(--ink); }
+    .reward-card span { color: var(--gold); font: 400 15px/1 Georgia,serif; }
+    .reward-card h3 { margin: 27px 0 12px; font: 400 24px/1.15 Georgia,serif; }
+    .reward-card p { margin: 0; color: rgba(255,255,255,.62); font-size: 13px; line-height: 1.7; }
+    .video-position { display: inline-flex; margin-bottom: 22px; padding: 9px 13px; border: 1px solid var(--gold); color: var(--bronze); font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .video-frame::after { content: 'INSERIR AQUI O VÍDEO FINAL DA INOXCOLOR'; }
+    .video-caption { font-size: 12px; }
+    .post-video { grid-template-columns: 1fr auto; }
+    .post-video-copy p + p { margin-top: 12px; }
+    .technical .process-inline { margin-top: 75px; padding-top: 62px; border-top: 1px solid var(--line); }
+    .technical .process-row { margin-top: 45px; }
+    .case-image { background: linear-gradient(180deg,rgba(8,8,7,.1),rgba(8,8,7,.72)), url('assets/957a02918b23977967a7.png') center/cover no-repeat; }
+    .case-image::before { content: 'ARENA MRV'; }
+    .case-image::after { content: 'GALO INOX APERAM • TRANSFORMAÇÃO E INSTALAÇÃO'; }
+    .capture-return { scroll-margin-top: 24px; }
+    @media (max-width: 980px) {
+      .hero .container { grid-template-columns: 1fr; }
+      .lead-card { margin: 0 0 -60px; }
+      .reward-grid { grid-template-columns: 1fr 1fr; }
+      .post-video { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 660px) {
+      .hero { min-height: 1120px; }
+      .reward-grid { grid-template-columns: 1fr; }
+      .video-position { margin-bottom: 16px; }
+      .video-intro h2 { font-size: 42px; }
+      .case-image::before { left: 24px; font-size: 47px; }
+      .case-image::after { left: 27px; right: 22px; line-height: 1.45; }
+    }
+  
+
+    /* Bloco unificado de diferenciais */
+    .proof-pair{display:block;padding:0;background:#f1eee5}
+    .catalog-facts-section{padding:58px 0;background:#f1eee5}
+    .proof-pair .catalog-facts-section .container{display:block;width:min(1280px,calc(100% - 48px));max-width:1280px;padding:0;background:transparent}
+    .facts-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));border-top:1px solid rgba(83,72,55,.22);border-left:1px solid rgba(83,72,55,.22);background:#f3efe5}
+    .fact-card{min-width:0;padding:38px 34px;border-right:1px solid rgba(83,72,55,.22);border-bottom:1px solid rgba(83,72,55,.22)}
+    .fact-card-top{grid-column:span 3;min-height:250px}
+    .fact-card-bottom{grid-column:span 3;min-height:290px}
+    .fact-card h3{margin:0 0 24px;color:#9b6239;font:400 clamp(20px,2vw,34px)/1.08 Georgia,serif;letter-spacing:-.015em;overflow-wrap:normal;word-break:normal;hyphens:none;white-space:nowrap}
+    .fact-card-bottom h3{font-size:clamp(20px,1.7vw,30px)}
+    .fact-card p{margin:0;color:#24231f;font-size:15px;line-height:1.75;letter-spacing:.03em}
+    .fact-card-top p{text-transform:none;font-size:16px;line-height:1.65;letter-spacing:.025em}.fact-card-finish p{text-transform:none;font-size:14px;line-height:1.65;letter-spacing:.015em}
+    .proof-pair .technology-proof-screen{display:block;padding:0 0 58px;background:#f1eee5}
+    .proof-pair .technology-proof-screen .container{display:block;width:min(1280px,calc(100% - 48px));max-width:1280px;padding:0;background:transparent}
+    .proof-pair .technology-proof-screen img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+    @media(max-width:980px){
+      .fact-card-top,.fact-card-bottom{grid-column:span 3;min-height:240px}
+    }
+    @media(max-width:600px){
+      .catalog-facts-section{padding:32px 0}
+      .proof-pair .catalog-facts-section .container,.proof-pair .technology-proof-screen .container{width:calc(100% - 24px)}
+      .fact-card-top,.fact-card-bottom{grid-column:span 3;min-height:0;padding:20px 10px}.fact-card h3,.fact-card-bottom h3{font-size:clamp(16px,4.6vw,20px);line-height:1.12;margin-bottom:16px}
+      .fact-card-top p{font-size:14px}
+      .proof-pair .technology-proof-screen{padding-bottom:32px}
+    }
+
+    .application-link-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 18px;margin-top:44px}
+    .application-link-card{display:flex;flex-direction:column;color:#171614;text-decoration:none;background:#fff;border:1px solid rgba(55,43,29,.12);transition:transform .25s ease,box-shadow .25s ease}
+    .application-link-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(48,35,21,.13)}
+    .application-link-media{display:block;aspect-ratio:1.38/1;overflow:hidden;background:#e7e0d6}
+    .application-link-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+    .application-link-card:hover img{transform:scale(1.025)}
+    .application-link-copy{display:flex;flex-direction:column;gap:9px;padding:20px 18px 22px}
+    .application-link-copy strong{font-family:Georgia,'Times New Roman',serif;font-size:1.24rem;font-weight:500;color:#9a653d}
+    .application-link-copy>span{font-size:.9rem;line-height:1.55;color:#5b554d}
+    @media(max-width:980px){.application-link-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 12px}}
+    @media(max-width:620px){.application-link-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 7px}.application-link-copy{padding:10px 7px 12px;gap:5px}.application-link-copy strong{font-size:.76rem;line-height:1.15}.application-link-copy>span{font-size:.64rem;line-height:1.3}}
+  
+/* Ajustes fornecidos para o rodapé e cabeçalho, escopados à página de arquitetura */
+.architecture-page .site-footer .footer-grid {
+  grid-template-columns: 1.3fr 0.8fr 0.9fr 1.2fr;
+  gap: 34px;
+  align-items: start;
+}
+.architecture-page .site-footer .footer-brand .btn_excl {
+  position: static;
+  transform: none;
+  margin: 24px 0 0;
+}
+@media (max-width: 1100px) {
+  .architecture-page .site-footer .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    width: min(calc(100% - 32px), 420px) !important;
+    padding: 42px 0 30px !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+  .architecture-page .site-footer .footer-grid > div,
+  .architecture-page .site-footer .footer-brand,
+  .architecture-page .site-footer .footer-grid > div:last-child {
+    grid-column: auto;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .architecture-page .site-footer .footer-brand .logo-footer {
+    justify-content: center;
+    max-width: 190px;
+  }
+  .architecture-page .site-footer .footer-brand > div:nth-of-type(2) {
+    justify-content: center;
+  }
+  .architecture-page .site-footer .footer-brand .btn_excl {
+    align-self: center;
+    margin: 20px auto 0;
+  }
+  .architecture-page .site-footer h3,
+  .architecture-page .site-footer ul,
+  .architecture-page .site-footer .newsletter-form,
+  .architecture-page .site-footer .newsletter-form li,
+  .architecture-page .site-footer .footer-grid > div :where(a, p, li, span, strong) {
+    text-align: center;
+  }
+}
+.architecture-page .site-header { background: rgba(10, 10, 10, 0.315); }
+@media (max-width: 768px) {
+  .architecture-page .site-header {
+    background: #fff;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    backdrop-filter: blur(12px);
+  }
+  .architecture-page .site-header .main-nav a { color: #222; }
+  .architecture-page .site-header .menu-toggle { color: #222; border-color: #bbb; }
+}
+</style>
+
+  <style>
+    .real-video{max-width:1120px;margin:38px auto 24px;border-radius:22px;overflow:hidden;background:#080808;box-shadow:0 28px 70px rgba(0,0,0,.26)}
+    .real-video video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#080808}
+    .testimonials{padding:112px 0;background:#111;color:#fff}
+    .testimonial-head{max-width:850px;margin-bottom:42px}.testimonial-head p{color:#c8c3b9}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+    .testimonial-card{display:grid;grid-template-columns:minmax(220px,.82fr) 1fr;min-height:390px;background:#1a1a1a;border:1px solid rgba(210,166,84,.32);border-radius:22px;overflow:hidden}
+    .testimonial-media{background:#050505;min-height:390px}.testimonial-media video{width:100%;height:100%;min-height:390px;display:block;object-fit:cover;background:#050505}
+    .testimonial-copy{padding:38px 32px;display:flex;flex-direction:column;justify-content:center}
+    .testimonial-copy span{color:#d8ae61;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .testimonial-copy blockquote{font-family:Georgia,serif;font-size:clamp(22px,2.1vw,34px);line-height:1.23;margin:22px 0 30px;color:#fff}
+    .testimonial-copy strong{font-size:17px}.testimonial-copy small{color:#aaa;margin-top:6px;font-size:14px}
+    .testimonial-card.testimonial-card-stacked{grid-column:1/-1;grid-template-columns:1fr;width:100%;max-width:900px;margin:0 auto}
+    .testimonial-card-stacked .testimonial-media{min-height:0;aspect-ratio:9/16;max-height:720px;background:#050505}
+    .testimonial-card-stacked .testimonial-media video{width:100%;height:100%;min-height:0;object-fit:contain;background:#050505}
+    .testimonial-card-stacked .testimonial-copy{text-align:center;align-items:center;padding:36px 32px 42px}
+
+    .assurance{max-width:780px!important;margin:22px auto 28px!important;color:#eee!important;font-weight:600}
+    @media(max-width:900px){.testimonial-grid{grid-template-columns:1fr}.testimonial-card{grid-template-columns:1fr}.testimonial-media,.testimonial-media video{min-height:0;aspect-ratio:16/10}.testimonials{padding:80px 0}}
+    @media(max-width:600px){.testimonial-copy{padding:28px 22px}.testimonial-copy blockquote{font-size:24px}}
+  </style>
+
+  <style>
+    .hero-with-video{min-height:auto;padding:0;background:#111;color:#fff}
+    .hero-with-video::before{background:linear-gradient(90deg,rgba(7,7,7,.96),rgba(7,7,7,.78))}
+    .hero-with-video .hero-stage{min-height:790px;padding-top:112px;padding-bottom:82px;display:grid;grid-template-columns:minmax(0,.94fr) minmax(420px,1.06fr);gap:58px;align-items:center}
+    .hero-with-video .hero-copy{max-width:660px;padding:36px 0}
+    .hero-with-video h1{font-size:clamp(41px,4.15vw,65px);line-height:1.04;word-spacing:normal;text-wrap:balance}
+    .hero-subheadline{max-width:610px!important;margin:26px 0 32px!important;color:rgba(255,255,255,.76)!important;font-size:17px!important;line-height:1.68!important}
+    .hero-video-shell{margin:0;border:1px solid rgba(215,173,97,.45);background:#070707;box-shadow:0 30px 80px rgba(0,0,0,.48);overflow:hidden}
+    .hero-video-shell video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#070707}
+    .capture-band{position:relative;padding:82px 0 92px;background:var(--cream);border-bottom:1px solid var(--line)}
+    .capture-wrap{display:block;max-width:900px;text-align:center}.capture-intro>p:not(.eyebrow){margin-left:auto!important;margin-right:auto!important}
+    .capture-intro h2{margin:0;font-size:clamp(38px,4vw,58px);line-height:1.04}
+    .capture-intro>p:not(.eyebrow){max-width:520px;margin:22px 0 0;color:#6b655b;font-size:16px;line-height:1.72}
+    .capture-band .lead-card{align-self:auto;margin:0;box-shadow:0 22px 60px rgba(45,36,22,.14);border:1px solid rgba(183,139,80,.28)}
+    @media(max-width:980px){.hero-with-video .hero-stage{grid-template-columns:1fr;padding-top:92px;gap:28px}.hero-with-video .hero-copy{padding-bottom:10px}.capture-wrap{grid-template-columns:1fr;gap:35px}}
+    @media(max-width:600px){.hero-with-video .hero-stage{padding-top:72px;padding-bottom:58px}.hero-with-video h1{font-size:40px}.capture-band{padding:64px 0}.hero-video-shell{width:100%}}
+  </style>
+
+  <style>
+    .hero-media-column{display:flex;flex-direction:column;align-items:stretch;gap:0}
+    .hero-media-column .hero-subheadline{margin:25px 0 20px!important;max-width:none!important;text-align:left}
+    .hero-media-column .hero-actions{margin:0;justify-content:flex-start}
+    .hero-media-column .hero-actions .btn{min-width:310px;justify-content:center}
+    .hero-mechanism{max-width:820px;margin:18px 0 0;color:var(--gold);font-size:15px;font-weight:700;line-height:1.5;letter-spacing:.02em;text-align:left;text-shadow:0 1px 16px rgba(190,139,62,.16)}
+    .closing-signature{margin-top:18px!important;color:var(--bronze)!important;font:italic 400 21px/1.35 Georgia,serif!important}
+    @media(max-width:980px){.hero-media-column .hero-subheadline{margin-top:22px!important}.hero-media-column .hero-actions .btn{min-width:0;width:100%}}
+  </style>
+
+  <style>
+    .architecture-portfolio{margin-top:34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .architecture-portfolio article{min-height:210px;padding:30px 28px;border:1px solid var(--line);background:#fff;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+    .architecture-portfolio article:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 18px 40px rgba(45,36,22,.09)}
+    .architecture-portfolio span{color:var(--bronze);font-size:11px;font-weight:800;letter-spacing:.16em}
+    .architecture-portfolio h3{margin:22px 0 12px;font:400 25px/1.08 Georgia,serif;color:var(--ink)}
+    .architecture-portfolio p{margin:0;color:#706a60;font-size:13px;line-height:1.65}
+    @media(max-width:900px){.architecture-portfolio{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.architecture-portfolio{grid-template-columns:1fr}.architecture-portfolio article{min-height:0}}
+  </style>
+
+  <style>
+    .catalog-proof-screen,.technology-proof-screen{padding:72px 0;background:#f1eee5}
+    .technology-proof-screen{padding-top:0}
+    .catalog-proof-screen .container,.technology-proof-screen .container{max-width:1280px}
+    .catalog-proof-screen img,.technology-proof-screen img{display:block;width:100%;height:auto;box-shadow:0 20px 55px rgba(45,36,22,.10)}
+    @media(max-width:600px){.catalog-proof-screen,.technology-proof-screen{padding:38px 0}.technology-proof-screen{padding-top:0}.catalog-proof-screen .container,.technology-proof-screen .container{width:calc(100% - 24px)}}
+  </style>
+
+  <style id="conversion-compact-v1">
+    #captura{scroll-margin-top:92px}
+    .proof-pair{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;padding:52px max(24px,calc((100vw - 1280px)/2));background:#f1eee5;align-items:stretch}.proof-pair-single{display:block}.proof-pair-single .catalog-facts-section{width:100%}
+    .proof-pair .catalog-proof-screen,.proof-pair .technology-proof-screen{padding:0;background:transparent;min-width:0;display:flex}
+    .proof-pair .container{width:100%;max-width:none;padding:0;display:flex;background:#eee9dd}
+    .proof-pair img{width:100%;height:100%;max-height:720px;object-fit:contain;box-shadow:0 16px 40px rgba(45,36,22,.10)}
+    .capture-band{padding:64px 0 70px}
+    .benefits{padding:82px 0}
+    .benefit-grid{margin-top:44px}
+    .benefit{min-height:205px;padding:28px 27px}
+    .applications{padding:88px 0 96px}
+    .app-grid{grid-template-rows:250px 250px;margin-top:42px}
+    .technical{padding:84px 0}
+    .cases{padding:84px 0}
+    .testimonials{padding:82px 0}
+    .testimonial-card{min-height:340px}
+    .testimonial-media,.testimonial-media video{min-height:340px}
+    .faq{padding:82px 0}
+    .final-cta{min-height:470px}
+    @media(max-width:900px){
+      .proof-pair{grid-template-columns:1fr;padding:38px 24px;gap:20px}
+      .proof-pair img{height:auto;max-height:none}
+      .app-grid{grid-template-rows:260px 260px}
+    }
+    @media(max-width:600px){
+      .proof-pair{padding:28px 12px}
+      .proof-pair .catalog-proof-screen,.proof-pair .technology-proof-screen{padding:0}
+      .capture-band,.benefits,.applications,.technical,.cases,.testimonials,.faq{padding-top:62px;padding-bottom:62px}
+      .final-cta{min-height:430px}
+    }
+  </style>
+<style>
+    .product-explorer{margin-top:78px;padding-top:62px;border-top:1px solid var(--line)}
+    .product-explorer-head{display:flex;align-items:flex-end;justify-content:space-between;gap:42px;margin-bottom:30px}
+    .product-explorer-head>div:first-child{max-width:850px}
+    .product-explorer-head h2{margin:12px 0 18px;font-size:clamp(36px,4.2vw,60px);line-height:1.02}
+    .product-explorer-head>div:first-child>p:last-child{max-width:720px;margin:0;color:#6e685f;font-size:15px;line-height:1.72}
+    .product-explorer-controls{display:flex;gap:10px;flex:0 0 auto}
+    .product-explorer-controls button{width:50px;height:50px;border:1px solid #b99a66;border-radius:50%;background:transparent;color:var(--ink);font-size:21px;cursor:pointer;transition:.25s ease}
+    .product-explorer-controls button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .product-link-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding:2px 1px 18px}
+    .product-link-track::-webkit-scrollbar{display:none}
+    .product-link-card{flex:0 0 calc((100% - 36px)/3);min-width:0;color:inherit;text-decoration:none;background:#fff;border:1px solid var(--line);scroll-snap-align:start;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+    .product-link-card:hover{transform:translateY(-6px);border-color:#b78b50;box-shadow:0 24px 52px rgba(45,36,22,.12)}
+    .product-link-media{aspect-ratio:16/10;overflow:hidden;background:#191817}\n    .product-link-placeholder{display:grid;place-items:center;background:linear-gradient(135deg,#171614,#29251f);color:#b89461;text-transform:uppercase;letter-spacing:.16em;font-size:.72rem}.product-link-placeholder span{opacity:.78}
+    .product-link-image{display:block;width:100%;height:100%;object-fit:contain;background:#191817;transition:transform .55s ease}
+    .product-link-card:hover .product-link-image{transform:scale(1.035)}
+    .product-link-copy{min-height:280px;padding:25px 25px 27px;display:flex;flex-direction:column}
+    .product-link-copy>span{color:var(--bronze);font-size:10px;font-weight:800;letter-spacing:.18em}
+    .product-link-copy h3{margin:18px 0 11px;font:400 27px/1.08 Georgia,serif;color:var(--ink)}
+    .product-link-copy p{margin:0 0 24px;color:#706a60;font-size:13px;line-height:1.65}
+    .product-link-copy b{margin-top:auto;color:var(--ink);font-size:11px;letter-spacing:.11em;text-transform:uppercase}
+    .product-link-copy b i{margin-left:7px;color:var(--bronze);font-style:normal}
+    .product-explorer-foot{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:8px;color:#777066;font-size:12px;line-height:1.6}
+    .product-progress{width:220px;height:2px;background:#d9d2c6;flex:0 0 auto;overflow:hidden}.product-progress i{display:block;width:25%;height:100%;background:var(--bronze);transition:transform .25s ease;transform-origin:left}
+    @media(max-width:980px){.product-link-card{flex-basis:calc((100% - 18px)/2)}.product-explorer{margin-top:58px}.product-explorer-head{align-items:center}}
+    @media(max-width:640px){.product-explorer-head{display:block}.product-explorer-controls{margin-top:24px}.product-link-card{flex-basis:88%}.product-link-copy{min-height:270px}.product-explorer-foot{display:block}.product-progress{width:100%;margin-top:18px}}
+</style>
+
+<style>
+  .product-showcase{padding:86px 0;background:#f8f5ef}
+  .product-showcase .product-explorer{margin-top:0;padding-top:0;border-top:0}
+  @media(max-width:760px){.product-showcase{padding:62px 0}}
+</style>
+  <style id="architecture-final-adjustments">
+    .application-link-card{position:relative}
+    .application-link-card::after{content:'↗';position:absolute;top:12px;right:12px;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:#b78342;color:#fff;font-size:20px;line-height:1;box-shadow:0 8px 22px rgba(74,47,20,.25);transition:transform .25s ease,background .25s ease}
+    .application-link-card:hover::after{transform:translate(2px,-2px);background:#8f6030}
+    .app-grid a.app-card{display:block;color:#fff;text-decoration:none}
+    .colors-feature{margin-top:68px;padding:52px;background:#171614;color:#fff}
+    .colors-feature-copy{max-width:900px;margin:0 auto 34px;text-align:center}
+    .colors-feature-copy .eyebrow{color:#d7ae6d}
+    .colors-feature-copy h3{margin:13px 0 18px;font:400 clamp(30px,4vw,54px)/1.08 Georgia,serif;color:#fff}
+    .colors-feature-copy>p:last-child{max-width:790px;margin:0 auto;color:rgba(255,255,255,.72);font-size:16px;line-height:1.75}
+    .colors-catalog-link{max-width:760px;margin:0 auto}
+    .colors-catalog-link .application-link-card{background:#f3efe5;border-color:rgba(215,174,109,.5)}
+    .colors-catalog-link .application-link-media{aspect-ratio:1.7/1}
+    @media(max-width:980px){
+      .fact-card{padding:26px 18px}.fact-card h3,.fact-card-bottom h3{white-space:normal;font-size:clamp(16px,2.35vw,24px)}
+      .fact-card p,.fact-card-top p{font-size:13px;line-height:1.55}
+    }
+    @media(max-width:600px){
+      .hero-mechanism{font-size:13px}
+      .facts-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .fact-card-top,.fact-card-bottom{grid-column:span 1!important;padding:14px 7px!important;min-height:210px!important}
+      .fact-card h3,.fact-card-bottom h3{font-size:12px!important;line-height:1.15;margin-bottom:10px;white-space:normal}
+      .fact-card p,.fact-card-top p,.fact-card-finish p{font-size:9px;line-height:1.42;letter-spacing:0}
+      .application-link-card::after{top:6px;right:6px;width:25px;height:25px;font-size:14px}
+      .colors-feature{margin-top:38px;padding:32px 18px}
+      .colors-feature-copy h3{font-size:28px}
+      .colors-feature-copy>p:last-child{font-size:14px}
+    }
+  </style>
+  <style id="architecture-grid-arrow-fix">
+    /* Mantém os títulos inteiros dentro de cada coluna da grade. */
+    .fact-card-bottom h3{
+      font-size:clamp(14px,1.35vw,22px)!important;
+      line-height:1.14!important;
+      letter-spacing:-.015em;
+      overflow-wrap:normal!important;
+      word-break:normal!important;
+      hyphens:none!important;
+      white-space:normal!important;
+      max-width:100%;
+    }
+    .fact-card{padding-left:22px;padding-right:22px}
+
+    /* A indicação de link passa do topo para o canto inferior direito da imagem. */
+    .application-link-card::after{content:none!important;display:none!important}
+    .application-link-media{position:relative}
+    .application-link-media::after{
+      content:'↗';
+      position:absolute;
+      right:12px;
+      bottom:12px;
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#b78342;
+      color:#fff;
+      font-size:20px;
+      line-height:1;
+      box-shadow:0 8px 22px rgba(74,47,20,.25);
+      transition:transform .25s ease,background .25s ease;
+      z-index:2;
+    }
+    .application-link-card:hover .application-link-media::after{
+      transform:translate(2px,2px);
+      background:#8f6030;
+    }
+    @media(max-width:980px){
+      .fact-card{padding-left:12px;padding-right:12px}
+      .fact-card-bottom h3{font-size:clamp(12px,1.9vw,17px)!important}
+    }
+    @media(max-width:600px){
+      .fact-card{padding-left:6px!important;padding-right:6px!important}
+      .fact-card-bottom h3{font-size:clamp(8px,2.3vw,11px)!important;line-height:1.18!important}
+      .application-link-media::after{right:6px;bottom:6px;width:25px;height:25px;font-size:14px}
+    }
+  </style>
+  <style id="finish-heading-column-fix">
+    .fact-card-finish h3{
+      width:100%;
+      max-width:100%;
+      margin-right:0;
+      padding-right:0;
+      font-size:clamp(13px,1.25vw,21px)!important;
+      line-height:1.12!important;
+      letter-spacing:-.025em!important;
+      white-space:normal!important;
+      overflow-wrap:normal!important;
+      word-break:normal!important;
+      hyphens:none!important;
+    }
+    @media(max-width:980px){
+      .fact-card-finish h3{font-size:clamp(11px,1.65vw,15px)!important}
+    }
+    @media(max-width:600px){
+      .fact-card-finish h3{font-size:clamp(7.5px,2.15vw,10px)!important;letter-spacing:-.035em!important}
+    }
+  </style>
+  <style id="all-fact-headings-standardized">
+    .facts-grid .fact-card h3,
+    .facts-grid .fact-card-top h3,
+    .facts-grid .fact-card-bottom h3,
+    .facts-grid .fact-card-finish h3{
+      width:100%;
+      max-width:100%;
+      margin-right:0;
+      padding-right:0;
+      font-size:clamp(13px,1.25vw,21px)!important;
+      line-height:1.12!important;
+      letter-spacing:-.025em!important;
+      white-space:normal!important;
+      overflow-wrap:normal!important;
+      word-break:normal!important;
+      hyphens:none!important;
+    }
+    @media(max-width:980px){
+      .facts-grid .fact-card h3,
+      .facts-grid .fact-card-top h3,
+      .facts-grid .fact-card-bottom h3,
+      .facts-grid .fact-card-finish h3{font-size:clamp(11px,1.65vw,15px)!important}
+    }
+    @media(max-width:600px){
+      .facts-grid .fact-card h3,
+      .facts-grid .fact-card-top h3,
+      .facts-grid .fact-card-bottom h3,
+      .facts-grid .fact-card-finish h3{font-size:clamp(7.5px,2.15vw,10px)!important;letter-spacing:-.035em!important}
+    }
+  
+    /* Casos reais trazidos da pagina industrial - prova social completa */
+    .social-cases{padding:112px 0;background:#171716;color:#fff}
+    .social-cases-head{max-width:900px;margin-bottom:48px}
+    .social-cases-head h2{margin:0;font-size:clamp(40px,5vw,64px);line-height:1.02}
+    .social-cases-head>p:not(.eyebrow){max-width:780px;margin:22px 0 0;color:rgba(255,255,255,.66);font-size:16px;line-height:1.72}
+    .proof-case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .proof-case-grid article{display:flex;flex-direction:column;min-width:0;border:1px solid rgba(210,166,84,.34);background:#20201e;overflow:hidden}
+    .proof-case-grid article>p,.proof-case-grid article>h3,.proof-case-grid article>dl{margin-left:30px;margin-right:30px}
+    .proof-case-name{margin-top:30px!important;margin-bottom:13px!important;color:#d8ae61!important;font-size:11px!important;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .proof-case-grid h3{margin-top:0;margin-bottom:22px;font:400 clamp(27px,2.6vw,38px)/1.12 Georgia,serif;color:#fff}
+    .proof-case-details{display:grid;gap:15px;margin-top:0;margin-bottom:28px}
+    .proof-case-detail{padding-left:14px;border-left:2px solid #d8ae61}
+    .proof-case-detail dt{margin-bottom:5px;color:#d8ae61;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .proof-case-detail dd{margin:0;color:rgba(255,255,255,.73);font-size:14px;line-height:1.62}
+    .proof-case-image{display:block;width:100%;height:300px;margin-top:auto;object-fit:cover;border-top:1px solid rgba(210,166,84,.26)}
+    .proof-case-image--volleyball{object-position:center 10%}
+    @media(max-width:900px){.proof-case-grid{grid-template-columns:1fr}.social-cases{padding:80px 0}.proof-case-image{height:250px}}
+    @media(max-width:600px){.proof-case-grid article>p,.proof-case-grid article>h3,.proof-case-grid article>dl{margin-left:22px;margin-right:22px}.proof-case-name{margin-top:24px!important}.proof-case-image{height:220px}}
+
+  </style>
+
+<style>
+  /* Padronização dos vídeos da prova social */
+  .testimonial-grid{align-items:stretch}
+  .testimonial-card,
+  .testimonial-card.testimonial-card-stacked{
+    display:flex;
+    flex-direction:column;
+    grid-column:auto;
+    grid-template-columns:1fr;
+    width:100%;
+    max-width:none;
+    min-height:0;
+    margin:0;
+  }
+  .testimonial-media,
+  .testimonial-card-stacked .testimonial-media{
+    width:100%;
+    height:420px;
+    min-height:420px;
+    max-height:420px;
+    aspect-ratio:auto;
+    background:#050505;
+  }
+  .testimonial-media video,
+  .testimonial-card-stacked .testimonial-media video{
+    display:block;
+    width:100%;
+    height:420px;
+    min-height:420px;
+    max-height:420px;
+    aspect-ratio:auto;
+    object-fit:contain;
+    background:#050505;
+  }
+  .testimonial-copy,
+  .testimonial-card-stacked .testimonial-copy{
+    flex:1;
+    text-align:center;
+    align-items:center;
+  }
+  @media(max-width:600px){
+    .testimonial-media,
+    .testimonial-card-stacked .testimonial-media,
+    .testimonial-media video,
+    .testimonial-card-stacked .testimonial-media video{
+      height:340px;
+      min-height:340px;
+      max-height:340px;
+    }
+  }
+</style>
+
+  <style>
+    .btn,.nav-cta{
+      border:1px solid var(--gold)!important;
+      border-radius:999px!important;
+      background:var(--gold)!important;
+      color:#17140f!important;
+      box-shadow:0 10px 26px rgba(125,86,31,.22);
+      text-decoration:none;
+    }
+    .btn:hover,.nav-cta:hover{background:#d7b875!important;border-color:#d7b875!important;transform:translateY(-2px)}
+    .nav-cta{padding:10px 17px!important;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+    .applications .head-row{display:block;text-align:center}
+    .applications .section-head{max-width:850px;margin:0 auto}
+    .app-carousel-shell{position:relative;margin-top:58px;padding:0 48px}
+    .app-carousel-track{
+      display:flex!important;
+      grid-template-columns:none!important;
+      grid-template-rows:none!important;
+      gap:18px;
+      margin:0!important;
+      overflow-x:auto;
+      overscroll-behavior-inline:contain;
+      scroll-snap-type:x mandatory;
+      scrollbar-width:none;
+      -ms-overflow-style:none;
+    }
+    .app-carousel-track::-webkit-scrollbar{display:none}
+    .app-carousel-track .app-card,
+    .app-carousel-track .app-card:first-child,
+    .app-carousel-track .app-card:nth-child(4){
+      flex:0 0 calc((100% - 18px)/2);
+      width:auto;
+      height:520px;
+      grid-row:auto;
+      grid-column:auto;
+      scroll-snap-align:start;
+    }
+    .app-carousel-control{
+      position:absolute;
+      z-index:5;
+      top:50%;
+      width:46px;
+      height:46px;
+      border:1px solid var(--gold);
+      border-radius:50%;
+      background:var(--gold);
+      color:#17140f;
+      display:grid;
+      place-items:center;
+      font:400 30px/1 Georgia,serif;
+      box-shadow:0 12px 30px rgba(25,20,13,.2);
+      cursor:pointer;
+      transform:translateY(-50%);
+    }
+    .app-carousel-control:hover{background:#d7b875}
+    .app-prev{left:0}.app-next{right:0}
+    .applications-actions{display:flex;justify-content:center;margin-top:34px}
+    .applications-actions .btn{min-width:310px}
+    @media(max-width:760px){
+      .app-carousel-shell{margin-top:40px;padding:0 30px}
+      .app-carousel-track{gap:12px}
+      .app-carousel-track .app-card,
+      .app-carousel-track .app-card:first-child,
+      .app-carousel-track .app-card:nth-child(4){flex-basis:100%;height:470px}
+      .app-carousel-control{width:38px;height:38px;font-size:25px}
+      .applications-actions{margin-top:26px}
+      .applications-actions .btn{width:100%;min-width:0}
+    }
+  </style>
+  <style>
+    .app-carousel-track .app-card,
+    .app-carousel-track .app-card:first-child,
+    .app-carousel-track .app-card:nth-child(4){
+      aspect-ratio:6/5;
+      height:auto!important;
+      min-height:0!important;
+    }
+    .app-carousel-track .app-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+    }
+    @media(max-width:760px){
+      .app-carousel-track .app-card,
+      .app-carousel-track .app-card:first-child,
+      .app-carousel-track .app-card:nth-child(4){aspect-ratio:6/5;height:auto!important}
+    }
+  </style>
+
+<style>
+  /* Frases de apoio aos botões do catálogo profissional */
+  .architecture-cta-context { max-width: 640px; margin: 0 0 14px; color: #68635a; font-size: 14px; line-height: 1.6; }
+  .hero .architecture-cta-context { color: rgba(255,255,255,.78); }
+  .applications-actions { flex-direction: column; align-items: center; }
+  .applications-actions .architecture-cta-context { text-align: center; }
+  .technical-intro p.architecture-cta-context { margin: 0 0 14px; font-size: 14px; line-height: 1.6; }
+  @media (max-width: 600px) { .architecture-cta-context { font-size: 13px; } }
+</style>
+
+
+<style>
+  /* Bloco final de orçamento após as dúvidas frequentes */
+  .budget-closing { padding: 82px 0 88px; background: #171716; color: #fff; text-align: center; border-top: 1px solid rgba(200,163,106,.24); }
+  .budget-closing h2 { max-width: 820px; margin: 0 auto; font-size: clamp(34px,4.3vw,56px); line-height: 1.08; }
+  .budget-closing p { max-width: 660px; margin: 22px auto 28px; color: rgba(255,255,255,.76); font-size: 17px; line-height: 1.65; }
+  .budget-closing .btn { min-width: 270px; max-width: 100%; }
+  @media (max-width: 600px) { .budget-closing { padding: 58px 0 62px; } .budget-closing p { font-size: 15px; } .budget-closing .btn { width: 100%; min-width: 0; } }
+</style>
+
+<style>
+  /* Etapas da inspiração à assinatura em duas linhas de dois tópicos */
+  .technical .process-inline .process-row { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; row-gap: 40px; border-top: 0; }
+  .technical .process-inline .step { min-width: 0; padding: 28px 0 0; border-top: 1px solid var(--line); }
+  @media (max-width: 600px) {
+    .technical .process-inline .process-row { column-gap: 18px; row-gap: 30px; }
+    .technical .process-inline .step h3 { margin-top: 20px; font-size: 20px; }
+  }
+</style>
+
+<style>
+  /* Chamada ao orçamento imediatamente após a última pergunta */
+  .faq-budget-cta { padding-top: 32px; text-align: center; }
+  .faq .faq-budget-cta p { max-width: 560px; margin: 0 auto 18px; color: #68635a; font-size: 16px; line-height: 1.65; }
+  .faq-budget-cta .btn { min-width: 250px; max-width: 100%; }
+  @media (max-width: 600px) { .faq-budget-cta .btn { width: 100%; min-width: 0; } .faq .faq-budget-cta p { font-size: 15px; } }
+</style>
+
+<style>
+  /* Título do quadro de diferenciais */
+  .catalog-facts-section .facts-section-title { max-width: 980px; margin: 0 auto 34px; color: var(--ink); font-size: clamp(28px,3.6vw,46px); line-height: 1.14; text-align: center; text-wrap: balance; word-spacing: normal; }
+  @media (max-width: 600px) { .catalog-facts-section .facts-section-title { margin-bottom: 26px; font-size: 28px; } }
+</style>
+
+<style>
+  /* Respiro acima do título Quando o projeto se torna uma assinatura */
+  .final-cta { padding-top: 80px; }
+  @media (max-width: 600px) { .final-cta { padding-top: 64px; } }
+</style>
+
+<style>
+  /* Espaço reduzido antes de Produtos para arquitetura autoral */
+  #aplicacoes.applications { padding-top: 64px; }
+  @media (max-width: 600px) { #aplicacoes.applications { padding-top: 42px; } }
+</style>
+
+<style>
+  /* Espaço reduzido abaixo do botão do catálogo, antes do próximo bloco */
+  #aplicacoes.applications { padding-bottom: 64px; }
+  @media (max-width: 600px) { #aplicacoes.applications { padding-bottom: 40px; } }
+</style>
+
+<style>
+  /* Orientação para selecionar os produtos abaixo */
+  #captura .capture-intro > p.product-selection-prompt { margin: 22px auto 0; color: var(--bronze); font-size: 16px; font-weight: 700; line-height: 1.5; text-align: center; }
+</style>
+
+<style id="architecture-carousel-ordered-images">
+  /* Cada legenda pertence à sua foto e acompanha o mesmo movimento. */
+  .app-carousel-shell { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 12px; padding: 0; }
+  .app-carousel-track { grid-column: 1 / -1; order: 0; align-items: start; }
+  .app-carousel-track .app-card,
+  .app-carousel-track .app-card:first-child,
+  .app-carousel-track .app-card:nth-child(4) { display: flex; flex-direction: column; flex: 0 0 calc((100% - 18px) / 2); aspect-ratio: auto; height: auto !important; isolation: isolate; background: transparent; }
+  .app-carousel-track .app-card::after { display: none; }
+  .app-carousel-track .app-card img { display: block; width: 100%; height: 300px; flex: none; object-fit: cover; object-position: center; transform: none; }
+  .app-carousel-track .app-label { position: static; display: block; margin: 0; padding: 14px 2px 2px; pointer-events: none; text-align: left; }
+  .app-carousel-track .app-label strong { display: block; color: var(--ink); font: 500 17px/1.4 Arial, Helvetica, sans-serif; letter-spacing: .025em; text-shadow: none; text-wrap: balance; }
+  .app-carousel-track .app-card:focus-visible { outline: 2px solid var(--gold); outline-offset: -3px; }
+  .app-carousel-shell .app-carousel-control { position: static; order: 1; transform: none; width: 42px; height: 42px; }
+  .app-carousel-shell .app-prev { justify-self: end; }
+  .app-carousel-shell .app-next { justify-self: start; }
+  #aplicacoes.applications { padding-bottom: 44px; }
+  #captura.capture-band { padding-top: 44px; }
+  @media(max-width:900px) {
+    .app-carousel-track .app-card,
+    .app-carousel-track .app-card:first-child,
+    .app-carousel-track .app-card:nth-child(4) { flex-basis: 100%; }
+    .app-carousel-track .app-card img { height: 250px; }
+  }
+  @media(max-width:760px) {
+    .app-carousel-shell { padding: 0; gap: 16px 10px; }
+    .app-carousel-track .app-label strong { font-size: 15px; }
+  }
+  @media(max-width:600px) {
+    .app-carousel-track .app-card img { height: 220px; }
+    #aplicacoes.applications { padding-bottom: 28px; }
+    #captura.capture-band { padding-top: 30px; }
+  }
+</style>
+
+<style id="architecture-carousel-counter">
+  .app-carousel-shell { grid-template-columns: 1fr auto 1fr; }
+  .app-carousel-counter { order: 1; align-self: center; justify-self: center; min-width: 50px; color: #625c52; font: 400 14px/1.4 Arial, Helvetica, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: .08em; text-align: center; }
+</style>
+
+<style id="architecture-last-photos-full-frame">
+  .app-carousel-track .app-card[data-carousel-order="13"] img,
+  .app-carousel-track .app-card[data-carousel-order="14"] img { object-fit: contain; object-position: center; background: var(--paper); }
+</style>
+
+<style id="architecture-spacing-and-square-videos">
+  /* Respiros menores nos pontos indicados, com a mesma hierarquia visual. */
+  .hero-with-video .hero-stage { min-height: 0; padding-bottom: 40px; gap: 40px; }
+  .hero-with-video .hero-copy { padding-top: 24px; padding-bottom: 24px; }
+  .proof-pair.proof-pair-single { padding: 0; }
+  .catalog-facts-section { padding: 34px 0; }
+  .catalog-facts-section .facts-section-title { margin-bottom: 24px; }
+  .final-cta { min-height: 0; padding: 46px 0; }
+  .final-cta p:not(.eyebrow) { margin-top: 20px; margin-bottom: 22px; }
+  .final-cta .assurance { margin-top: 16px !important; margin-bottom: 18px !important; }
+  .final-cta .closing-signature { margin-top: 14px !important; margin-bottom: 0 !important; }
+  #aplicacoes.applications { padding-top: 40px; padding-bottom: 28px; }
+  .app-carousel-shell { margin-top: 32px; }
+  .applications-actions { margin-top: 24px; }
+  #captura.capture-band { padding-top: 32px; padding-bottom: 40px; }
+  .application-link-grid { margin-top: 28px; }
+  .colors-feature { margin-top: 36px; padding: 32px; }
+  .colors-feature-copy { margin-bottom: 24px; }
+  .colors-feature-copy h3 { margin-top: 8px; margin-bottom: 14px; }
+  .technical { padding: 48px 0; }
+  .technical-grid { gap: 48px; }
+  .technical .process-inline { margin-top: 32px; padding-top: 28px; }
+  .technical .process-row { margin-top: 28px; }
+  .technical .process-inline .process-row { row-gap: 28px; }
+  .social-cases { padding: 56px 0; }
+  .social-cases-head { margin-bottom: 28px; }
+  .social-cases-head > p:not(.eyebrow) { margin-top: 16px; }
+  .proof-case-grid { gap: 20px; }
+  .testimonials { padding: 48px 0; }
+  .testimonial-head { margin-bottom: 26px; }
+  .testimonial-grid { gap: 20px; }
+  .testimonial-card .testimonial-copy { padding: 24px 24px 28px; }
+  .testimonial-copy blockquote { margin-top: 14px; margin-bottom: 18px; }
+  .faq { padding: 48px 0; }
+  .faq-wrap { gap: 56px; }
+  .faq-budget-cta { padding-top: 20px; }
+  .faq .faq-budget-cta p { margin-bottom: 14px; }
+  .budget-closing { padding: 44px 0 48px; }
+  .budget-closing p { margin-top: 16px; margin-bottom: 20px; }
+  footer { padding: 36px 0 22px; }
+  .footer-row { padding-bottom: 24px; }
+  .copyright { padding-top: 18px; }
+
+  /* Formato quadrado do primeiro depoimento da TV Globo em todos os vídeos. */
+  main .hero-video-shell,
+  main .testimonial-card .testimonial-media { aspect-ratio: 1 / 1; height: auto; min-height: 0; max-height: none; background: #050505; }
+  main .hero-video-shell video,
+  main .testimonial-card .testimonial-media video { display: block; width: 100%; aspect-ratio: 1 / 1; height: auto; min-height: 0; max-height: none; object-fit: contain; background: #050505; }
+
+  @media(max-width:980px) {
+    .hero-with-video .hero-stage { gap: 22px; }
+    .technical-grid { gap: 32px; }
+  }
+  @media(max-width:600px) {
+    .hero-with-video .hero-stage { padding-bottom: 28px; gap: 18px; }
+    .hero-with-video .hero-copy { padding-top: 20px; padding-bottom: 10px; }
+    .catalog-facts-section { padding: 24px 0; }
+    .catalog-facts-section .facts-section-title { margin-bottom: 20px; }
+    .final-cta { padding: 32px 0; }
+    #aplicacoes.applications { padding-top: 28px; padding-bottom: 20px; }
+    .app-carousel-shell { margin-top: 24px; }
+    .applications-actions { margin-top: 18px; }
+    #captura.capture-band { padding-top: 24px; padding-bottom: 28px; }
+    .application-link-grid { margin-top: 24px; }
+    .colors-feature { margin-top: 28px; padding: 24px 18px; }
+    .colors-feature-copy { margin-bottom: 22px; }
+    .technical { padding: 32px 0; }
+    .technical .process-inline { margin-top: 24px; padding-top: 24px; }
+    .technical .process-row { margin-top: 24px; }
+    .technical .process-inline .process-row { row-gap: 24px; }
+    .social-cases { padding: 32px 0; }
+    .social-cases-head { margin-bottom: 24px; }
+    .testimonials { padding: 32px 0; }
+    .testimonial-head { margin-bottom: 22px; }
+    .testimonial-card .testimonial-copy { padding: 22px 18px 24px; }
+    .faq { padding: 32px 0; }
+    .faq-wrap { gap: 30px; }
+    .faq-budget-cta { padding-top: 18px; }
+    .budget-closing { padding: 30px 0 34px; }
+    footer { padding: 28px 0 20px; }
+  }
+</style>
+
+<style id="architecture-single-fan-and-options">
+  .colors-catalog-link .application-link-media { aspect-ratio: 1750 / 901; background: #eee4d4; }
+  .colors-catalog-link .application-link-media img { object-fit: contain; transform: none; }
+  .colors-options-cta { display: flex; align-items: center; justify-content: center; min-height: 44px; max-width: 760px; margin: 14px auto 0; color: #fff; font-size: 15px; line-height: 1.6; text-align: center; text-decoration: none; font-weight: 400; }
+  .colors-options-cta:hover, .colors-options-cta:focus-visible { color: #d7ae6d; }
+  @media(max-width:600px) { .colors-options-cta { margin-top: 12px; font-size: 14px; } }
+</style>
+
+<style id="architecture-catalogue-conversion-copy">
+  .hero-actions .btn, .applications-actions .btn, .technical-intro .btn { text-align: center; }
+  .applications-actions .catalogue-benefit-title { max-width: 760px; margin: 0 auto 12px; color: var(--ink); font: 400 clamp(22px,2.1vw,28px)/1.25 Georgia, 'Times New Roman', serif; text-align: center; text-wrap: balance; }
+  .applications-actions .architecture-cta-context { max-width: 640px; margin-bottom: 16px; }
+  @media(max-width:600px) {
+    .applications-actions .catalogue-benefit-title { font-size: 22px; margin-bottom: 10px; }
+    .applications-actions .architecture-cta-context { margin-bottom: 14px; }
+  }
+</style>
+
+<style id="architecture-product-grid-final-row">
+  .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"]:last-child { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .42fr) minmax(0, .58fr); align-items: center; text-align: left; }
+  .application-link-grid > .application-link-card:last-child .application-link-media { width: 100%; aspect-ratio: auto; min-height: 0; }
+  .application-link-grid > .application-link-card:last-child .application-link-media img { position: static; display: block; width: 100%; height: auto; object-fit: contain; transform: none; }
+  .application-link-grid > .application-link-card:last-child .application-link-copy { justify-content: center; padding: 24px 28px; gap: 10px; }
+  .application-link-grid > .application-link-card:last-child .application-link-copy strong { font-size: 28px; line-height: 1.15; }
+  .application-link-grid > .application-link-card:last-child .application-link-copy > span { max-width: 50ch; font-size: 15px; line-height: 1.6; }
+  @media(max-width:620px) {
+    .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"]:last-child { grid-template-columns: minmax(0, 1fr); text-align: center; }
+    .application-link-grid > .application-link-card:last-child .application-link-copy { padding: 16px 18px 18px; gap: 8px; }
+    .application-link-grid > .application-link-card:last-child .application-link-copy strong { font-size: 18px; line-height: 1.2; }
+    .application-link-grid > .application-link-card:last-child .application-link-copy > span { font-size: 12.5px; line-height: 1.5; }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* Layout do header: classes e estrutura do arquivo de referência */
+.architecture-page .site-header { position:absolute; z-index:50; top:34px; left:0; right:0; color:#fff; background:rgba(10,10,10,.315); border-bottom:1px solid rgba(255,255,255,.18); }
+.architecture-page .site-header .nav-wrap { width:min(1200px,calc(100% - 48px)); min-height:82px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto; align-items:center; column-gap:clamp(10px,1.5vw,22px); }
+.architecture-page .site-header .mobile-menu-panel { display:contents; }
+.architecture-page .site-header .main-nav { display:flex; align-items:center; gap:clamp(9px,1.15vw,18px); }
+.architecture-page .site-header .nav-left { grid-column:1; justify-content:flex-end; }
+.architecture-page .site-header .nav-right { grid-column:3; justify-content:flex-start; }
+.architecture-page .site-header .main-nav a { color:#fff; white-space:nowrap; font-size:9px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+.architecture-page .site-header .brand-item { grid-column:2; grid-row:1; display:flex; align-items:center; justify-content:center; max-width:160px; }
+.architecture-page .site-header .brand-item img { display:block; width:145px; max-height:54px; object-fit:contain; }
+.architecture-page .site-header .brand-tagline { display:none; }
+.architecture-page .site-header .nav-actions { grid-column:4; display:flex; align-items:center; gap:8px; }
+.architecture-page .site-header .btn-primary { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:0 17px; border:1px solid var(--gold); color:#161614; background:var(--gold); font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.architecture-page .site-header .menu-toggle { display:none; }
+@media(max-width:1100px) {
+ .architecture-page .site-header .nav-wrap { grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto; column-gap:9px; }
+ .architecture-page .site-header .main-nav { gap:7px; }
+ .architecture-page .site-header .main-nav a { font-size:8px; }
+ .architecture-page .site-header .btn-primary { padding:0 10px; font-size:8px; }
+}
+@media(max-width:900px) {
+ .architecture-page .site-header { background:#fff; border-bottom:1px solid rgb(240,240,240); backdrop-filter:blur(12px); }
+ .architecture-page .site-header .nav-wrap { display:flex; min-height:72px; justify-content:space-between; }
+ .architecture-page .site-header .mobile-menu-panel { display:none; }
+ .architecture-page .site-header .mobile-menu-panel.open { display:flex; position:absolute; z-index:60; top:100%; left:0; right:0; padding:12px 24px 22px; flex-direction:column; gap:0; background:#fff; border-bottom:1px solid #eee; box-shadow:0 12px 24px rgba(0,0,0,.10); }
+ .architecture-page .site-header .mobile-menu-panel .main-nav { display:flex; position:static; flex-direction:column; align-items:stretch; gap:0; }
+ .architecture-page .site-header .mobile-menu-panel .main-nav a { display:block; padding:11px 0; color:#222; border-bottom:1px solid #eee; font-size:11px; }
+ .architecture-page .site-header .brand-item { order:0; max-width:145px; margin-right:auto; }
+ .architecture-page .site-header .brand-item img { width:130px; max-height:48px; }
+ .architecture-page .site-header .nav-actions { position:static; margin-left:auto; }
+ .architecture-page .site-header .btn-primary { display:none; }
+ .architecture-page .site-header .menu-toggle { display:block; width:42px; height:40px; padding:8px; border:1px solid #bbb; background:transparent; color:#222; cursor:pointer; }
+ .architecture-page .site-header .menu-toggle span { display:block; height:1px; margin:5px 0; background:currentColor; }
+ .architecture-page .site-header .mobile-budget-link { display:block; padding:12px; margin-top:12px; background:var(--gold); color:#161614; text-align:center; font-weight:700; }
+}
+
+/* CSS de rodapé do anexo pasted_content_3.txt */
+html body .site-footer.site-footer {
+	box-sizing: border-box !important;
+	background: #171615 !important;
+	color: rgba(255, 250, 240, 0.82) !important;
+	padding: 4px 0 0 !important;
+	margin-top: -3% !important;
+	font-family: "Inter", sans-serif !important;
+	font-size: 1rem !important;
+	line-height: 1.7 !important;
+}
+
+html body .site-footer.site-footer .footer-grid {
+	display: grid !important;
+	grid-template-columns: 1.3fr 0.8fr 0.9fr 1.2fr !important;
+	gap: 48px !important;
+	width: min(1200px, calc(100% - 64px)) !important;
+	max-width: none !important;
+	margin: 0 auto !important;
+	padding: 32px 0 28px !important;
+	text-align: left !important;
+}
+
+html body .site-footer.site-footer .footer-grid > div {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	justify-content: flex-start !important;
+	grid-column: auto !important;
+	width: 100% !important;
+	text-align: left !important;
+}
+
+html body .site-footer.site-footer .footer-brand {
+	grid-column: auto !important;
+	align-items: flex-start !important;
+}
+
+html body .site-footer.site-footer .footer-brand .logo-footer {
+	justify-content: flex-start !important;
+	width: 100% !important;
+	max-width: 220px !important;
+	margin: 0 !important;
+}
+
+html body .site-footer.site-footer .footer-brand .logo-footer img {
+	display: block !important;
+	width: 100% !important;
+	height: auto !important;
+	margin: 0 !important;
+	object-fit: contain !important;
+}
+
+html body .site-footer.site-footer .footer-brand > div:nth-of-type(2) {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 6px !important;
+	width: 266px !important;
+	margin-top: 8px !important;
+}
+
+html body .site-footer.site-footer .footer-brand > div:nth-of-type(2) svg {
+	display: block !important;
+	width: 30px !important;
+	height: 30px !important;
+	flex: 0 0 30px !important;
+}
+
+html body .site-footer.site-footer .footer-brand .btn_excl {
+	position: static !important;
+	left: auto !important;
+	align-self: center !important;
+	width: 266px !important;
+	min-width: 266px !important;
+	max-width: 100% !important;
+	min-height: 44px !important;
+	margin: 20px 0 0 !important;
+	padding: 0 24px !important;
+	transform: none !important;
+	color: rgba(255, 250, 240, 0.86) !important;
+	font-family: "Inter", sans-serif !important;
+	font-size: 0.7rem !important;
+	line-height: 1.25 !important;
+	letter-spacing: 0.14em !important;
+	text-align: center !important;
+	white-space: nowrap !important;
+}
+
+html body .site-footer.site-footer h3 {
+	margin: 0 0 12px !important;
+	color: #d3b77f !important;
+	font-family: "Inter", sans-serif !important;
+	font-size: 0.9rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.02em !important;
+	line-height: 1.4 !important;
+	text-align: left !important;
+	text-transform: uppercase !important;
+}
+
+html body .site-footer.site-footer ul {
+	display: grid !important;
+	gap: 0 !important;
+	align-items: start !important;
+	justify-items: start !important;
+	width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+	text-align: left !important;
+}
+
+html body .site-footer.site-footer .newsletter-form {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	gap: 0 !important;
+	width: 100% !important;
+	margin: 0 !important;
+	text-align: left !important;
+}
+
+html body .site-footer.site-footer .newsletter-form h3 {
+	margin: 0 0 4px !important;
+}
+
+html body .site-footer.site-footer .newsletter-form > h3 {
+	margin-top: 16px !important;
+}
+
+html body .site-footer.site-footer .newsletter-form br {
+	display: none !important;
+}
+
+html body .site-footer.site-footer :where(p, a, li, span, strong) {
+	font-family: "Inter", sans-serif !important;
+	font-size: 1rem !important;
+	line-height: 1.7 !important;
+	text-align: left !important;
+}
+
+html body .site-footer.site-footer a {
+	color: rgba(255, 250, 240, 0.86) !important;
+}
+
+html body .site-footer.site-footer .footer-bottom {
+	border-top: 1px solid rgba(211, 183, 127, 0.28) !important;
+}
+
+html body .site-footer.site-footer .footer-bottom-inner {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: 0 !important;
+	width: 100% !important;
+	max-width: none !important;
+	margin: 0 !important;
+	padding: 12px 72px 16px 24px !important;
+	text-align: center !important;
+}
+
+html body .site-footer.site-footer .footer-note {
+	flex: 1 1 auto !important;
+	max-width: none !important;
+	margin: 0 auto !important;
+	color: rgba(255, 250, 240, 0.62) !important;
+	font-size: 0.72rem !important;
+	line-height: 1.5 !important;
+	text-align: center !important;
+	white-space: nowrap !important;
+}
+
+@media (max-width: 1100px) {
+	html body .site-footer.site-footer .footer-grid {
+		grid-template-columns: 1fr !important;
+		gap: 30px !important;
+		width: min(calc(100% - 32px), 420px) !important;
+		padding: 42px 0 30px !important;
+		text-align: center !important;
+	}
+
+	html body .site-footer.site-footer .footer-grid > div,
+	html body .site-footer.site-footer .footer-brand {
+		align-items: center !important;
+		text-align: center !important;
+	}
+
+	html body .site-footer.site-footer .footer-brand .logo-footer {
+		justify-content: center !important;
+		width: 190px !important;
+		max-width: 100% !important;
+	}
+
+	html body .site-footer.site-footer .footer-brand > div:nth-of-type(2) {
+		width: 266px !important;
+		gap: 6px !important;
+		margin-top: 8px !important;
+	}
+
+	html body .site-footer.site-footer .footer-brand .btn_excl {
+		width: 266px !important;
+		min-height: 44px !important;
+		margin: 20px auto 0 !important;
+		letter-spacing: 0.14em !important;
+	}
+
+	html body .site-footer.site-footer h3 {
+		margin: 0 0 12px !important;
+		font-size: 0.9rem !important;
+		letter-spacing: 0.02em !important;
+		line-height: 1.4 !important;
+		text-align: center !important;
+	}
+
+	html body .site-footer.site-footer ul,
+	html body .site-footer.site-footer .newsletter-form {
+		align-items: center !important;
+		justify-items: center !important;
+		width: 100% !important;
+		gap: 0 !important;
+		text-align: center !important;
+	}
+
+	html body .site-footer.site-footer :where(p, a, li, span, strong) {
+		font-size: 1rem !important;
+		line-height: 1.7 !important;
+		text-align: center !important;
+	}
+
+	html body .site-footer.site-footer .footer-bottom-inner {
+		flex-direction: row !important;
+		width: 100% !important;
+		min-height: 0 !important;
+		padding: 12px 72px 16px 24px !important;
+		font-size: 0.78rem !important;
+		letter-spacing: normal !important;
+	}
+
+	html body .site-footer.site-footer .footer-note {
+		width: auto !important;
+		margin: 0 !important;
+		font-size: 0.72rem !important;
+		white-space: nowrap !important;
+	}
+}
+
+@media (max-width: 768px) {
+	html body .site-footer.site-footer {
+		padding-bottom: 36px !important;
+	}
+
+	html body .site-footer.site-footer .footer-grid {
+		width: calc(100% - 32px) !important;
+		gap: 30px !important;
+		padding: 42px 0 30px !important;
+	}
+
+	html body .site-footer.site-footer .footer-brand .logo-footer {
+		width: 190px !important;
+	}
+
+	html body .site-footer.site-footer .footer-brand > div:nth-of-type(2) {
+		width: 266px !important;
+		gap: 16px !important;
+		margin-top: 8px !important;
+	}
+
+	html body .site-footer.site-footer .footer-brand > div:nth-of-type(2) svg {
+		width: 28px !important;
+		height: 28px !important;
+		flex-basis: 28px !important;
+	}
+
+	html body .site-footer.site-footer .footer-brand .btn_excl {
+		width: 266px !important;
+		min-width: 266px !important;
+		min-height: 44px !important;
+		margin: 20px auto 0 !important;
+		padding: 0 24px !important;
+		font-size: 0.7rem !important;
+	}
+
+	html body .site-footer.site-footer h3 {
+		margin: 0 0 20px !important;
+		font-size: 1.12rem !important;
+		line-height: 1.4 !important;
+	}
+
+	html body .site-footer.site-footer ul {
+		align-items: center !important;
+		justify-items: center !important;
+	}
+
+	html body .site-footer.site-footer .newsletter-form {
+		margin-top: 8px !important;
+	}
+
+	html body .site-footer.site-footer .footer-bottom-inner {
+		flex-direction: column !important;
+		width: 100% !important;
+		padding: 12px 16px 18px !important;
+	}
+
+	html body .site-footer.site-footer .footer-note {
+		width: 100% !important;
+		margin: 0 !important;
+		white-space: normal !important;
+	}
+}
+</style>
+<style>.architecture-page .brand-logo-fallback{display:inline-block;color:#fff;font:600 20px/1 Georgia,serif;letter-spacing:.09em;text-transform:uppercase}.architecture-page .site-header .brand-logo-fallback{font-size:20px}.architecture-page .site-footer .brand-logo-fallback{font-size:20px}</style>
+<style>
+
+/* Cabeçalho fiel ao print de referência: barra única, logo central, grupos laterais */
+.architecture-page .topbar { display:none !important; }
+.architecture-page .site-header {
+  position:fixed !important;
+  z-index:1000 !important;
+  top:0 !important; left:0 !important; right:0 !important;
+  height:85px !important;
+  color:#fff !important;
+  background:rgba(8,8,9,.76) !important;
+  border:0 !important;
+  backdrop-filter:blur(16px) !important;
+  -webkit-backdrop-filter:blur(16px) !important;
+}
+.architecture-page .site-header .nav-wrap {
+  width:min(1420px,calc(100% - 64px)) !important;
+  max-width:none !important;
+  height:85px !important; min-height:85px !important;
+  margin:0 auto !important; padding:0 !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto !important;
+  align-items:center !important; column-gap:22px !important;
+}
+.architecture-page .site-header .mobile-menu-panel { display:contents !important; }
+.architecture-page .site-header .nav-left { grid-column:1 !important; grid-row:1 !important; justify-content:flex-end !important; }
+.architecture-page .site-header .brand-item { grid-column:2 !important; grid-row:1 !important; justify-self:center !important; display:flex !important; width:190px !important; max-width:190px !important; margin:0 !important; }
+.architecture-page .site-header .brand-item img { display:block !important; width:185px !important; max-width:185px !important; max-height:58px !important; height:auto !important; object-fit:contain !important; }
+.architecture-page .site-header .nav-right { grid-column:3 !important; grid-row:1 !important; justify-content:flex-start !important; }
+.architecture-page .site-header .main-nav { display:flex !important; flex-direction:row !important; align-items:center !important; gap:18px !important; }
+.architecture-page .site-header .main-nav a { display:inline-block !important; padding:0 !important; color:#f8f6f1 !important; border:0 !important; background:transparent !important; font-family:Arial,Helvetica,sans-serif !important; font-size:11px !important; font-weight:500 !important; line-height:1 !important; letter-spacing:.105em !important; text-transform:uppercase !important; white-space:nowrap !important; }
+.architecture-page .site-header .nav-actions { grid-column:4 !important; grid-row:1 !important; position:static !important; display:flex !important; align-items:center !important; justify-content:flex-end !important; margin:0 !important; }
+.architecture-page .site-header .btn-primary { display:inline-flex !important; align-items:center !important; justify-content:center !important; min-width:140px !important; min-height:49px !important; padding:0 24px !important; border:0 !important; border-radius:28px !important; color:#211c12 !important; background:#d3b77f !important; font-family:Arial,Helvetica,sans-serif !important; font-size:11px !important; font-weight:700 !important; letter-spacing:.13em !important; text-transform:uppercase !important; box-shadow:none !important; }
+.architecture-page .site-header .menu-toggle { display:none !important; }
+.architecture-page .site-header .brand-logo-fallback { color:#d3b77f !important; font-size:24px !important; }
+@media(max-width:1100px) and (min-width:901px) {
+ .architecture-page .site-header .nav-wrap { width:calc(100% - 40px) !important; column-gap:12px !important; }
+ .architecture-page .site-header .main-nav { gap:10px !important; }
+ .architecture-page .site-header .main-nav a { font-size:9px !important; }
+ .architecture-page .site-header .brand-item { width:150px !important; max-width:150px !important; }
+ .architecture-page .site-header .brand-item img { width:150px !important; max-width:150px !important; }
+ .architecture-page .site-header .btn-primary { min-width:116px !important; padding:0 14px !important; }
+}
+@media(max-width:900px) {
+ .architecture-page .site-header { height:72px !important; background:rgba(255,255,255,.96) !important; border-bottom:1px solid #eee !important; }
+ .architecture-page .site-header .nav-wrap { display:flex !important; width:calc(100% - 32px) !important; height:72px !important; min-height:72px !important; justify-content:space-between !important; }
+ .architecture-page .site-header .mobile-menu-panel { display:none !important; }
+ .architecture-page .site-header .mobile-menu-panel.open { display:flex !important; position:absolute !important; top:72px !important; left:0 !important; right:0 !important; padding:12px 24px 20px !important; flex-direction:column !important; align-items:stretch !important; gap:0 !important; background:#fff !important; border-bottom:1px solid #e6e6e6 !important; box-shadow:0 12px 24px rgba(0,0,0,.12) !important; }
+ .architecture-page .site-header .mobile-menu-panel .main-nav { display:flex !important; position:static !important; flex-direction:column !important; align-items:stretch !important; gap:0 !important; }
+ .architecture-page .site-header .mobile-menu-panel .main-nav a { display:block !important; padding:13px 0 !important; color:#242320 !important; border-bottom:1px solid #eceae6 !important; font-size:12px !important; line-height:1.2 !important; }
+ .architecture-page .site-header .brand-item { order:0 !important; width:auto !important; max-width:170px !important; margin:0 auto 0 0 !important; }
+ .architecture-page .site-header .brand-item img { width:160px !important; max-width:160px !important; max-height:52px !important; }
+ .architecture-page .site-header .nav-actions { display:flex !important; position:static !important; margin:0 !important; }
+ .architecture-page .site-header .btn-primary { display:none !important; }
+ .architecture-page .site-header .menu-toggle { display:flex !important; width:44px !important; height:42px !important; padding:9px !important; flex-direction:column !important; justify-content:center !important; border:1px solid #d7d4ce !important; border-radius:0 !important; background:transparent !important; color:#242320 !important; cursor:pointer !important; }
+ .architecture-page .site-header .menu-toggle span { display:block !important; width:100% !important; height:1px !important; margin:4px 0 !important; background:currentColor !important; }
+ .architecture-page .site-header .mobile-budget-link { display:block !important; margin-top:12px !important; padding:13px !important; border:0 !important; border-radius:24px !important; background:#d3b77f !important; color:#211c12 !important; text-align:center !important; font-weight:700 !important; }
+}
+
+</style>
+
+<style>
+@media(min-width:901px) {
+ .architecture-page .site-header .nav-wrap { position:relative !important; display:block !important; }
+ .architecture-page .site-header .nav-left { position:absolute !important; top:50% !important; right:calc(50% + 130px) !important; transform:translateY(-50%) !important; }
+ .architecture-page .site-header .brand-item { position:absolute !important; top:50% !important; left:50% !important; transform:translate(-50%,-50%) !important; }
+ .architecture-page .site-header .nav-right { position:absolute !important; top:50% !important; left:calc(50% + 110px) !important; transform:translateY(-50%) !important; }
+ .architecture-page .site-header .nav-actions { position:absolute !important; top:50% !important; right:0 !important; transform:translateY(-50%) !important; }
+ .architecture-page .site-header .mobile-budget-link { display:none !important; }
+}
+</style>
+<style>
+@media(min-width:901px){.architecture-page .site-header .mobile-menu-panel a.mobile-budget-link{display:none!important}}
+@media(max-width:900px){.architecture-page .site-header .mobile-menu-panel a.mobile-budget-link{display:block!important}}
+.architecture-page .brand-logo-fallback{display:inline-block;color:#d3b77f!important;font:700 23px/1 Arial,Helvetica,sans-serif!important;letter-spacing:.08em!important;white-space:nowrap!important}
+.architecture-page .site-footer .brand-logo-fallback{font-family:Georgia,serif!important}
+</style>
+<style>
+@media(max-width:900px){
+ .architecture-page .site-header .menu-toggle{display:flex!important;align-items:stretch!important;justify-content:center!important;gap:5px!important;overflow:visible!important}
+ .architecture-page .site-header .menu-toggle span{position:static!important;display:block!important;width:24px!important;min-width:24px!important;height:2px!important;min-height:2px!important;margin:0 auto!important;padding:0!important;background:#242320!important;opacity:1!important;visibility:visible!important;transform:none!important;border:0!important}
+ .architecture-page .site-header .mobile-menu-panel a.mobile-budget-link{display:block!important;width:100%!important;margin:12px 0 0!important;padding:13px!important;border:0!important;border-radius:24px!important;background:#d3b77f!important;color:#211c12!important;text-align:center!important;font-weight:700!important}
+}
+</style>
 </head>
-  <body>
-    <header class="site-header">
-      <div class="topbar"><div class="container topbar-inner"><span>Atendimento especializado</span><span>+55 (54) 99999-0000</span><span>contato@inoxcolor.com.br</span></div></div>
+<body class="architecture-page">
+<div class="topbar"><div class="container"><span>Soluções exclusivas em aço inox colorido</span><span>Atendimento técnico para todo o Brasil</span></div></div>
+  <header class="site-header">
+      <!-- Topo informativo da marca com slogan, telefone e domínio -->
+   
+      <!-- Bloco da navegação principal da marca -->
       <div class="container nav-wrap">
-        <a href="index.html" class="logo" aria-label="Inoxcolor Home"><span class="logo-mark">I</span><span class="logo-text">INOXCOLOR</span></a>
-        <nav class="main-nav" aria-label="Menu principal">
+        <!-- Grupo esquerda do menu -->
+        <nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
           <a href="produtos.html">Produtos</a>
-          <a href="aplicacoes.html">Aplicações</a>
-          <a href="projetos.html">Projetos</a>
-          <a href="sobre.html">A Inoxcolor</a>
-          <a href="arquitetos.html">Arquitetos</a>
-          <a href="contato.html">Contato</a>
+          <a href="industria.html">Indústria</a>
+          <a href="arquitetura.html">Arquitetura</a>
+          <a href="residencial.html">Residencial</a>
         </nav>
-        <div class="nav-actions"><a href="contato.html" class="btn btn-primary">Solicitar orçamento</a><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+        <!-- Logo central, com slogan abaixo -->
+        <a href="index.html" class="brand-item" aria-label="Inoxcolor Home">
+          <img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor" />
+          <span class="brand-tagline"></span>
+        </a>
+        <!-- Grupo direita do menu -->
+        <nav class="main-nav nav-right" aria-label="Menu principal direito">
+          <a href="ainoxcolor.html">A Inoxcolor</a>
+          <a href="downloads.html">Download</a>
+          <a href="na_midia.html">Na Mídia</a>
+          <a href="Blog.html">Blog</a>
+        </nav>
+
+        <!-- Ações do header: catálogo, orçamento e botão mobile -->
+        <div class="nav-actions">
+          <a href="contato.html" class="btn btn-primary">Orçamento</a>
+          <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
-    <main>
-      <section class="page-hero"><div class="container page-hero-inner"><div><p class="eyebrow">Arquitetos e Designers</p><h1>Suporte técnico para transformar ideias em realidades excepcionais.</h1></div></div></section>
-      <section class="section"><div class="container grid-3"><article class="info-card"><div class="icon">01</div><h3>Especificações</h3><p>Informações técnicas para projeto, aplicação e suporte de execução.</p></article><article class="info-card"><div class="icon">02</div><h3>Catálogos</h3><p>Materiais visuais e referenciais para apresentar soluções ao cliente.</p></article><article class="info-card"><div class="icon">03</div><h3>Amostras</h3><p>Visualização prática de acabamentos e superfícies para decisão de projeto.</p></article></div></section>
-    </main>
-    <footer class="site-footer" id="contato">
+
+
+  <main id="top">
+<section class="hero hero-with-video">
+      <div class="container hero-stage">
+        <div class="hero-copy">
+          <p class="eyebrow">Inoxcolor para arquitetura</p>
+          <h1 class="display" style="text-align: left; text-wrap: balance; word-spacing: normal;">Aço inox colorido para transformar sua criação em uma assinatura única.</h1>
+        </div>
+        <div class="hero-media-column">
+          <figure class="hero-video-shell" id="apresentacao"><video controls playsinline preload="none" poster="assets/b5d575fb31fba494cbb3.jpg" aria-label="Vídeo de Arquitetura da Inoxcolor"><source src="assets/4be26308dadc12476d53.mp4" type="video/mp4"></video></figure>
+          <p class="hero-subheadline">Explore cores, acabamentos e soluções personalizadas para criar ambientes exclusivos. Conte com orientação técnica para escolher a aplicação adequada e preservar a intenção do seu projeto.</p>
+          <div class="hero-actions"><a class="btn" href="#captura">Receber o Catálogo Profissional <span>↗</span></a></div>
+          <p class="hero-mechanism">Única empresa na América Latina especializada na produção de produtos em aço inox colorido.</p>
+        </div>
+      </div>
+    </section>
+    <div class="proof-pair proof-pair-single" aria-label="Diferenciais Inoxcolor">
+    <section class="catalog-facts-section" id="catalogo" aria-label="Diferenciais da Inoxcolor">
+      <div class="container">
+
+        <h2 class="display facts-section-title">Liberdade para criar, segurança para realizar e inovação para aplicar!</h2>
+
+        <div class="facts-grid">
+          <article class="fact-card fact-card-top"><h3>Desde 2000</h3><p>Tecnologia brasileira e<br>atendimento nacional</p></article>
+          <article class="fact-card fact-card-top"><h3>7 cores</h3><p>Novas possibilidades<br>visuais</p></article>
+          <article class="fact-card fact-card-top fact-card-finish"><h3>2 acabamentos</h3><p>Linha Polida revela presença e brilho intenso.<br>Linha Escovada, de aspecto acetinado e textura linear sutil.</p></article>
+          <article class="fact-card fact-card-top"><h3>Resistente</h3><p>Durabilidade com material e acabamento adequados ao ambiente.</p></article>
+          <article class="fact-card fact-card-bottom"><h3>Produtos para arquitetura</h3><p>Revestimentos, brises, ralos, obras de arte, perfis, quadros, letras, números e letreiros para composições autorais.</p></article>
+          <article class="fact-card fact-card-bottom"><h3>Personalização</h3><p>Você desenha a expressão do produto, e a Inoxcolor estuda sua aplicação para criar uma solução exclusiva, personalizada para o seu cliente.</p></article>
+          <article class="fact-card fact-card-bottom"><h3>Maior valor percebido</h3><p>Escolhas exclusivas tornam o projeto menos comparável e sustentam propostas de maior valor.</p></article>
+          <article class="fact-card fact-card-bottom"><h3>Segurança para especificar</h3><p>Orientação técnica para preservar a intenção do conceito à execução e reduzir dúvidas, retrabalho e riscos.</p></article>
+        </div>
+      </div>
+    </section>
+    
+    </div>
+
+<section class="final-cta"><div class="container"><h2 class="display">Exclusividade que valoriza o seu projeto.</h2><p>Cores, reflexos e desenhos personalizados diferenciam o ambiente e reforçam o valor percebido da sua criação. Uma escolha que torna seu trabalho reconhecível nos detalhes.</p></div></section>
+
+    <section class="applications" id="aplicacoes">
+      <div class="container">
+        <div class="head-row"><div class="section-head"><p class="eyebrow">Produtos para arquitetura autoral</p><h2 class="display">Novas possibilidades para a sua arquitetura.</h2><p>Explore aplicações em aço inox colorido e descubra como transformar superfícies, detalhes e elementos do ambiente.</p></div></div>
+        <div class="app-carousel-shell">
+          <button class="app-carousel-control app-prev" type="button" aria-label="Aplicação anterior">‹</button>
+          <div class="app-grid app-carousel-track">
+          <a class="app-card" href="/arquitetura/revestimentos" aria-label="Conhecer Revestimento Water Ripple" data-carousel-order="1"><img src="assets/926e9c4a144e6edaf5b1.jpg" alt="Revestimento Water Ripple em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Revestimento Water Ripple</strong></div></a>
+          <a class="app-card" href="/arquitetura/brises" aria-label="Conhecer Brises" data-carousel-order="2"><img src="assets/fedbe06fa7ee7cc7f96c.jpg" alt="Brises em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Brises</strong></div></a>
+          <a class="app-card" href="/arquitetura/colunas" aria-label="Conhecer Colunas" data-carousel-order="3"><img src="assets/0a6aea69713823fdf07e.jpg" alt="Colunas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Colunas</strong></div></a>
+          <a class="app-card" href="/arquitetura/elevadores" aria-label="Conhecer Elevadores" data-carousel-order="4"><img src="assets/3591860fd9994322f60f.jpg" alt="Elevadores em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Elevadores</strong></div></a>
+          <a class="app-card" href="/arquitetura/moveis" aria-label="Conhecer Móveis" data-carousel-order="5"><img src="assets/bb60d364473c93bca11c.jpg" alt="Móveis em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Móveis</strong></div></a>
+          <a class="app-card" href="/arquitetura/portas" aria-label="Conhecer Portas" data-carousel-order="6"><img src="assets/72839cbf3a3d41bb8e0f.jpg" alt="Portas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Portas</strong></div></a>
+          <a class="app-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Paredes" data-carousel-order="7"><img src="assets/97a515c009e6c2df96fb.jpg" alt="Paredes em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Paredes</strong></div></a>
+          <a class="app-card" href="/arquitetura/ralos" aria-label="Conhecer Ralos" data-carousel-order="8"><img src="assets/46155280a66a4c7c7ff6.jpg" alt="Ralos em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Ralos</strong></div></a>
+          <a class="app-card" href="/arquitetura/perfis-e-listelos" aria-label="Conhecer Perfis e listelos" data-carousel-order="9"><img src="assets/50a6dbf63876ca614b9b.jpg" alt="Perfis e listelos em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Perfis e listelos</strong></div></a>
+          <a class="app-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Quadros e Esculturas" data-carousel-order="10"><img src="assets/0fd480dc635a4024f4e6.jpg" alt="Quadros e Esculturas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Quadros e Esculturas</strong></div></a>
+          <a class="app-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Obras de arte" data-carousel-order="11"><img src="assets/5f25f89adde98e0b2b94.jpg" alt="Obras de arte em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Obras de arte</strong></div></a>
+          <a class="app-card" href="/arquitetura/aplicacoes-externas" aria-label="Conhecer Aplicações Externas" data-carousel-order="12"><img src="assets/3faecfe559dc29fec5a9.jpg" alt="Aplicações Externas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Aplicações Externas</strong></div></a>
+          <a class="app-card" href="/arquitetura/letras-e-numeros" aria-label="Conhecer Letras e Números" data-carousel-order="13"><img src="assets/0283ad194fa67dabb86f.jpg" alt="Letras e Números em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Letras e Números</strong></div></a>
+          <a class="app-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Fachadas" data-carousel-order="14"><img src="assets/afb6267a05e6c0a8547c.jpg" alt="Fachadas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Fachadas</strong></div></a>
+          </div>
+          <output class="app-carousel-counter" aria-live="polite" aria-atomic="true" aria-label="Imagem 1 de 14">1/14</output>
+          <button class="app-carousel-control app-next" type="button" aria-label="Próxima aplicação">›</button>
+        </div>
+        <div class="applications-actions"><h3 class="catalogue-benefit-title">Escolha cores, compare acabamentos e descubra aplicações para o seu projeto.</h3><p class="architecture-cta-context">Encontre no Catálogo Profissional as possibilidades para orientar suas escolhas e avançar na especificação.</p><a class="btn" href="#captura">Receber o Catálogo Profissional</a></div>
+      </div>
+    </section>
+
+
+    <section class="capture-band" id="captura" aria-label="Catálogo Profissional">
+      <div class="container capture-wrap">
+        <div class="capture-intro"><p class="eyebrow">Produtos para uma arquitetura autoral</p><h2 class="display">Encontre a solução para o seu projeto.</h2><p>Conheça os produtos e explore as possibilidades de aplicação, cores, acabamentos e personalização.</p><p class="product-selection-prompt">Clique abaixo e escolha o seu produto.</p></div>
+        
+        <div class="application-link-grid" aria-label="Aplicações e produtos Inoxcolor">
+          <a class="application-link-card" href="/arquitetura/porcelinox" aria-label="Conhecer Revestimento Porcelinox">
+            <span class="application-link-media"><img src="assets/f5152ecac6a9fdb6adaf.jpg" alt="Revestimento Porcelinox em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Revestimento Porcelinox</strong><span>Revestimentos modulares que levam cor, brilho e identidade às superfícies.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/colunas" aria-label="Conhecer Colunas">
+            <span class="application-link-media"><img src="assets/e4b17c591c356273a2df.jpg" alt="Colunas em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Colunas</strong><span>Elementos estruturais transformados em pontos de presença e sofisticação.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/elevadores" aria-label="Conhecer Elevadores">
+            <span class="application-link-media"><img src="assets/fb17fa6f5abcf90cf37a.jpg" alt="Elevadores em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Elevadores</strong><span>Revestimentos que valorizam cabines e halls com acabamento exclusivo.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Fachadas e Paredes">
+            <span class="application-link-media"><img src="assets/c990c28164dbe975eab0.jpg" alt="Fachadas e Paredes em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Fachadas e Paredes</strong><span>Composições que unem identidade arquitetônica, resistência e valor visual.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/moveis" aria-label="Conhecer Móveis">
+            <span class="application-link-media"><img src="assets/eebf755343a2ae9fec8c.jpg" alt="Móveis em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Móveis</strong><span>Desenho, cor e acabamento aplicados a mobiliários de linguagem autoral.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/portas" aria-label="Conhecer Portas">
+            <span class="application-link-media"><img src="assets/5fb475a0d908e4172961.jpg" alt="Portas em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Portas</strong><span>Acessos com presença arquitetônica que anunciam a identidade do projeto.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/brises" aria-label="Conhecer Brises">
+            <span class="application-link-media"><img src="assets/003807faba0ee19e2787.jpg" alt="Brises em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Brises</strong><span>Ritmo, profundidade e expressão visual para ambientes de alto padrão.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/ralos" aria-label="Conhecer Ralos">
+            <span class="application-link-media"><img src="assets/dc3e77089ea6a63a00ed.jpg" alt="Ralos em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Ralos</strong><span>Funcionalidade e precisão transformadas em um detalhe elegante de design.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Obras de Arte">
+            <span class="application-link-media"><img src="assets/c60045f6de3d674c319c.jpg" alt="Obras de Arte em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Obras de Arte</strong><span>Formas, movimentos e cores concebidos para atravessar o tempo.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/perfis-e-listelos" aria-label="Conhecer Perfis e Listelos">
+            <span class="application-link-media"><img src="assets/d4b3ee2544b035bbad32.jpg" alt="Perfis e Listelos em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Perfis e Listelos</strong><span>Detalhes que valorizam encontros, quinas, terminações e composições.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/quadros-decorativos" aria-label="Conhecer Quadros Decorativos">
+            <span class="application-link-media"><img src="assets/c85eb710774bb335ac34.jpg" alt="Quadros Decorativos em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Quadros Decorativos</strong><span>Peças que convertem paredes em espaços de contemplação e elegância.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/letras-e-numeros" aria-label="Conhecer Letras e Números">
+            <span class="application-link-media"><img src="assets/077b18780f5379c46723.jpg" alt="Letras e Números em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Letras e Números</strong><span>Identificação personalizada convertida em presença e valor estético.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/aplicacoes-externas" aria-label="Conhecer Aplicações Externas">
+            <span class="application-link-media"><img src="assets/1e1deb035037b82bcdad.jpg" alt="Aplicações Externas em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Aplicações Externas</strong><span>Soluções resistentes que preservam cor e imponência em áreas externas.</span></span>
+          </a>
+        </div>
+        <section class="colors-feature" aria-labelledby="cores-inoxcolor">
+          <div class="colors-feature-copy">
+            <p class="eyebrow">Cores Inoxcolor</p>
+            <h3 id="cores-inoxcolor">Sete cores. Dois acabamentos. Novas possibilidades para a sua linguagem.</h3>
+            <p>Explore uma paleta criada para ampliar o repertório do arquiteto. A Linha Polida revela presença e brilho intenso; a Linha Escovada oferece aspecto acetinado e textura linear sutil. Em cada aplicação, cor, luz e reflexão trabalham juntas para imprimir identidade ao ambiente.</p>
+          </div>
+          <div class="colors-catalog-link">
+          <a class="application-link-card" href="/arquitetura/catalogo-de-cores" aria-label="Conhecer Catálogo de Cores">
+            <span class="application-link-media"><img src="assets/64c91cc929a06d905b6f.png" alt="Catálogo de Cores em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Catálogo de Cores</strong><span>Explore as sete cores Inoxcolor e escolha a expressão ideal para o seu projeto.</span></span>
+          </a>
+          </div>
+          <a class="colors-options-cta" href="/arquitetura/catalogo-de-cores">Clique na imagem</a>
+        </section>
+      </div>
+    </section>
+
+    <section class="technical" id="especificacao">
+      <div class="container technical-grid">
+        <div class="technical-intro"><p class="eyebrow">Sua criação, tecnicamente amparada</p><h2 class="display">Sua ideia, com viabilidade técnica.</h2><p>Conte com orientação para definir material, acabamento e processos compatíveis com a aplicação, preservando a intenção estética do seu desenho.</p><p class="architecture-cta-context">Explore as possibilidades do catálogo e conte com nossa equipe para alinhar material, acabamento e aplicação à sua ideia.</p><a class="btn btn-dark" href="#captura">Receber o Catálogo Profissional</a></div>
+        <div class="spec-list">
+          <div class="spec"><strong>Material</strong><span>Ligas 304 e 316, selecionadas conforme aplicação e condições do projeto.</span></div>
+          <div class="spec"><strong>Projetos personalizados</strong><span>Produtos e soluções desenvolvidos de acordo com as dimensões, a linguagem e as necessidades de cada projeto.</span></div>
+          
+          
+          <div class="spec"><strong>Transformação</strong><span>Corte a laser, dobra, calandragem, fotogravação e soluções especiais.</span></div>
+          <div class="spec"><strong>Personalização</strong><span>O arquiteto ou designer pode desenvolver desenhos, grafismos e padrões exclusivos para aplicação nos produtos, personalizando cada projeto para o seu cliente.</span></div><div class="spec"><strong>Acompanhamento técnico</strong><span>Orientação especializada para alinhar produto, acabamento, aplicação e intenção estética antes da execução.</span></div><div class="spec"><strong>Durabilidade</strong><span>Produtos resistentes, que não descascam nem desbotam, para aplicações internas e externas conforme a especificação adequada.</span></div>
+        </div>
+      </div>
+      <div class="container process-inline"><div class="section-head"><p class="eyebrow">Como funciona</p><h2 class="display">Da inspiração à assinatura realizada.</h2></div><div class="process-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));">
+        <article class="step"><span>01</span><h3>Receba o catálogo</h3><p>Explore produtos, cores, acabamentos e aplicações capazes de ampliar o seu repertório.</p></article>
+        <article class="step"><span>02</span><h3>Apresente a ideia</h3><p>Compartilhe seu projeto, desenho, referência, medidas ou uma breve descrição da ideia que deseja materializar.</p></article>
+        <article class="step"><span>03</span><h3>Receba orientação</h3><p>Avaliamos as possibilidades técnicas para que a solução respeite a intenção original da sua criação.</p></article>
+        <article class="step"><span>04</span><h3>Avance ao orçamento</h3><p>Com a solução alinhada, o projeto avança para orçamento com mais clareza e segurança.</p></article>
+      </div></div>
+    </section>
+
+<section class="social-cases" id="casos-reais">
+<div class="container">
+<div class="social-cases-head">
+<p class="eyebrow">Experiência em soluções especiais</p>
+<h2>Projetos reais. Capacidade comprovada.</h2>
+<p>Grandes marcas, obras de referência e aplicações de alta complexidade demonstram a capacidade da Inoxcolor em unir coloração, transformação e acabamento com precisão.</p>
+</div>
+<div class="proof-case-grid">
+<article>
+<p class="proof-case-name">Galo Inox Aperam · Arena MRV</p>
+<h3>Transformação e acabamento em grande escala.</h3>
+<dl class="proof-case-details">
+<div class="proof-case-detail">
+<dt>Desafio</dt>
+<dd>Materializar uma escultura monumental formada por peças de geometria complexa, preservando precisão, presença visual e uniformidade de acabamento.</dd>
+</div>
+<div class="proof-case-detail">
+<dt>Atuação da Inoxcolor</dt>
+<dd>Coordenação do projeto, corte a laser, dobra, calandragem, conformação das peças e coloração em aço inox preto.</dd>
+</div>
+<div class="proof-case-detail">
+<dt>Resultado</dt>
+<dd>Peças aplicadas nos gomos da bola e no escudo da escultura instalada na Arena MRV, demonstrando a capacidade da Inoxcolor em integrar transformação e acabamento em projetos de grande escala.</dd>
+</div>
+</dl>
+<img class="proof-case-image" src="assets/51f05c1c3c7d3c3193a8.png" alt="Galo Inox Aperam diante da Arena MRV, Estádio do Atlético Mineiro" loading="lazy" decoding="async">
+</article>
+<article>
+<p class="proof-case-name">Cúpula da Igreja Nossa Senhora do Líbano</p>
+<h3>Coloração e acabamento para uma obra marcante.</h3>
+<dl class="proof-case-details">
+<div class="proof-case-detail">
+<dt>Desafio</dt>
+<dd>Aplicar acabamento dourado em uma cúpula de grande destaque arquitetônico.</dd>
+</div>
+<div class="proof-case-detail">
+<dt>Atuação da Inoxcolor</dt>
+<dd>Aplicação de peças em aço inox dourado na cúpula da Igreja Nossa Senhora do Líbano.</dd>
+</div>
+<div class="proof-case-detail">
+<dt>Resultado</dt>
+<dd>Cúpula com acabamento dourado na Igreja Nossa Senhora do Líbano, em Carmo do Cajuru, Minas Gerais.</dd>
+</div>
+</dl>
+<img class="proof-case-image" src="assets/3faecfe559dc29fec5a9.jpg" alt="Vista aérea da cúpula dourada da Igreja Nossa Senhora do Líbano" loading="lazy" decoding="async">
+</article>
+
+<article>
+<p class="proof-case-name">BBB 20 · TV Globo</p>
+<h3>A cor como protagonista de um cenário icônico.</h3>
+<dl class="proof-case-details">
+<div class="proof-case-detail"><dt>Desafio</dt><dd>Criar uma cozinha cenográfica com identidade marcante, capaz de unir funcionalidade, brilho e forte presença visual diante das câmeras.</dd></div>
+<div class="proof-case-detail"><dt>Atuação da Inoxcolor</dt><dd>Desenvolvimento de aplicações em aço inox colorido azul para bancadas, painéis e elementos do ambiente, alinhando acabamento e linguagem visual do programa.</dd></div>
+<div class="proof-case-detail"><dt>Resultado</dt><dd>Um cenário contemporâneo, reconhecível e de alto impacto visual, no qual a intensidade do azul reforçou a personalidade da cozinha do BBB 20.</dd></div>
+</dl>
+<img class="proof-case-image" src="assets/b0abb50ca5397361e6b6.jpg" alt="Cozinha do BBB 20 da TV Globo com aplicações em aço inox colorido azul" loading="lazy" decoding="async">
+</article>
+<article>
+<p class="proof-case-name">BBB 25 · TV Globo</p>
+<h3>Dourado, ritmo e profundidade em uma composição autoral.</h3>
+<dl class="proof-case-details">
+<div class="proof-case-detail"><dt>Desafio</dt><dd>Criar uma composição decorativa sofisticada, com ritmo, profundidade e impacto visual para um ambiente de grande exposição.</dd></div>
+<div class="proof-case-detail"><dt>Atuação da Inoxcolor</dt><dd>Desenvolvimento e aplicação de peças em aço inox colorido dourado, combinadas a elementos escuros em uma trama geométrica personalizada.</dd></div>
+<div class="proof-case-detail"><dt>Resultado</dt><dd>Um painel de presença marcante, valorizado pelo brilho e pelos reflexos do dourado, que conferiu exclusividade ao ambiente do BBB 25.</dd></div>
+</dl>
+<img class="proof-case-image" src="assets/9f6b059ed415509a35cf.jpg" alt="Painel decorativo do BBB 25 da TV Globo com aplicações em aço inox colorido dourado" loading="lazy" decoding="async">
+</article>
+<article>
+<p class="proof-case-name">BBB 26 · TV Globo</p>
+<h3>Soluções especiais com identidade própria.</h3>
+<dl class="proof-case-details">
+<div class="proof-case-detail">
+<dt>Desafio</dt>
+<dd>Criar elementos com forte presença visual para cenários de grande exposição.</dd>
+</div>
+<div class="proof-case-detail">
+<dt>Atuação da Inoxcolor</dt>
+<dd>Desenvolvimento de peças em diferentes cores, formatos e acabamentos para ambientes do programa.</dd>
+</div>
+<div class="proof-case-detail">
+<dt>Resultado</dt>
+<dd>Soluções percebidas pela equipe de parcerias como diferenciadas, sofisticadas e capazes de produzir um resultado visual marcante.</dd>
+</div>
+</dl>
+<img class="proof-case-image" src="assets/c223fd0e539ac9b9e8f1.jpg" alt="Ambiente da casa BBB 26 da TV Globo com aplicações decorativas em aço inox" loading="lazy" decoding="async">
+</article>
+
+<article>
+<p class="proof-case-name">Novela Três Graças · TV Globo</p>
+<h3>Uma identidade cenográfica com presença institucional.</h3>
+<dl class="proof-case-details">
+<div class="proof-case-detail"><dt>Desafio</dt><dd>Traduzir a identidade da Fundação Ferette em um cenário corporativo contemporâneo, sofisticado e visualmente marcante para a novela Três Graças.</dd></div>
+<div class="proof-case-detail"><dt>Atuação da Inoxcolor</dt><dd>Desenvolvimento de aplicações em aço inox colorido para a recepção e a sinalização, integrando acabamento metálico, iluminação e precisão construtiva à linguagem cenográfica.</dd></div>
+<div class="proof-case-detail"><dt>Resultado</dt><dd>Um ambiente de forte presença cênica, no qual o brilho e a tonalidade do aço inox valorizam a arquitetura e tornam a Fundação Ferette imediatamente reconhecível em cena.</dd></div>
+</dl>
+<img class="proof-case-image" src="assets/6e24c5a552754f6b8ea6.jpg" alt="Recepção da Fundação Ferette na novela Três Graças da TV Globo com aplicações em aço inox colorido" loading="lazy" decoding="async">
+</article>
+
+</div>
+</div>
+</section>
+
+    <section class="testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-head testimonial-head"><p class="eyebrow">Depoimentos e parcerias</p><h2 class="display">Projetos que impressionam começam com parceiros que realizam.</h2><p>A confiança nasce quando liberdade criativa, excelência de execução e responsabilidade técnica caminham juntas.</p></div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-media"><video controls playsinline preload="none" poster="assets/6f753bbfb41defc15acb.jpg" aria-label="Depoimento de Roberta Azevedo"><source src="assets/eefbd19244f62ac77d26.mp4" type="video/mp4"></video></div>
+            <div class="testimonial-copy"><span>TV Globo</span><blockquote>“A Inoxcolor é super diferenciada, deixa o ambiente super sofisticado e tem um resultado incrível.”</blockquote><strong>Roberta Azevedo</strong><small>Executiva de Parcerias</small></div>
+          </article>
+          
+          <article class="testimonial-card testimonial-card-stacked">
+            <div class="testimonial-media"><video controls playsinline preload="none" poster="assets/c44ac8e83997bf3da1d0.jpg" aria-label="Depoimento de Camila Costa, Arquiteta Cenógrafa Chefe"><source src="assets/e22f891df4bdd0076a1d.mp4" type="video/mp4"></video></div>
+            <div class="testimonial-copy"><span>TV Globo</span><blockquote>“O resultado sai além das nossas expectativas.”</blockquote><strong>Camila Costa</strong><small>Arquiteta Cenógrafa Chefe</small></div>
+          </article>
+
+          <article class="testimonial-card testimonial-card-stacked">
+            <div class="testimonial-media"><video controls playsinline preload="none" poster="assets/67a2b637dddaeb816f82.jpg" aria-label="Depoimento de João Lobato, Produtor de Arte"><source src="assets/cd68d5bc6f9c4743bbc5.mp4" type="video/mp4"></video></div>
+            <div class="testimonial-copy"><span>TV Globo</span><blockquote>“Aprendi com vocês mais porque tem sempre uma demanda e vocês nos trouxeram alternativas para viabilidade esta demanda. Foi incrível.”</blockquote><strong>João Lobato</strong><small>Produtor de Arte</small></div>
+          </article>
+<article class="testimonial-card">
+            <div class="testimonial-media"><video controls playsinline preload="none" poster="assets/4ec34a2ccd50af06b093.jpg" aria-label="Depoimento de Reginaldo Pinto Barbosa"><source src="assets/b661c9a0fb700763e860.mp4" type="video/mp4"></video></div>
+            <div class="testimonial-copy"><span>Galo Inox Aperam</span><blockquote>“Uma equipe altamente profissional.”</blockquote><strong>Reginaldo Pinto Barbosa</strong><small>Consultor · Aperam</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container faq-wrap"><div><p class="eyebrow">Dúvidas frequentes</p><h2 class="display">Especifique com confiança.</h2></div><div class="faq-list">
+        <details open><summary>O aço inox colorido é pintado?</summary><p>Não. A coloração é obtida por processo eletroquímico. Não utilizamos tintas nem pigmentos. Não desbota, não enferruja e não descasca. É um material super resistente.</p></details>
+        <details><summary>O material realmente é resistente?</summary><p>Sim. O aço inox colorido mantém as características de resistência e durabilidade do aço inoxidável, com coloração obtida por processo eletroquímico. Não desbota, não descasca e não enferruja. É um material super resistente. Para manter as características de resistência, é necessário realizar regularmente as limpezas e manutenções necessárias, de acordo com as orientações especificadas.</p></details>
+        <details><summary>É possível executar exatamente o que eu desenhei?</summary><p>Seu desenho é o ponto de partida para uma solução autoral. Nossa equipe avalia formas, medidas, detalhes, acabamento e processos de fabricação para buscar a maior fidelidade possível à sua proposta. A viabilidade é analisada antes da produção e, se algum ajuste técnico for necessário, ele é alinhado com você para preservar a intenção estética e a identidade do projeto.</p></details>
+        <details><summary>O material pode ser utilizado em áreas externas?</summary><p>Sim. O material é super resistente e duradouro, portanto pode ser utilizado em áreas externas. É importante realizar as manutenções regularmente, de acordo com nossas especificações. É um material super seguro para ser utilizado em áreas externas.</p></details>
+        <details><summary>É possível personalizar o material?</summary><p>Sim. Desenhos, grafismos e composições autorais podem ser avaliados para aplicação por processos como a fotogravação.</p></details>
+        <details><summary>A Inoxcolor ajuda na especificação?</summary><p>Sim. A equipe orienta sobre cores, acabamentos, ligas, espessuras, formatos e processos conforme as informações do projeto.</p></details>
+        <details><summary>Como solicitar um orçamento?</summary><p>Depois do cadastro, envie desenho, medidas, aplicação, quantidade, cidade de destino e referências disponíveis para uma análise inicial.</p></details>
+        <div class="faq-budget-cta">
+          <p>Dê o próximo passo para realizar seu projeto: receba um orçamento personalizado para a sua ideia.</p>
+          <a class="btn" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20um%20projeto%20de%20arquitetura%20com%20produtos%20em%20a%C3%A7o%20inox%20colorido." target="_blank" rel="noopener noreferrer">Solicite seu orçamento <span aria-hidden="true">↗</span></a>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="budget-closing" id="solicitar-orcamento" aria-labelledby="budget-closing-title">
+      <div class="container">
+        <h2 class="display" id="budget-closing-title">Seu próximo projeto merece uma assinatura única.</h2>
+        <p>Apresente sua ideia e receba um orçamento personalizado para torná-la realidade.</p>
+        <a class="btn" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20um%20projeto%20de%20arquitetura%20com%20produtos%20em%20a%C3%A7o%20inox%20colorido." target="_blank" rel="noopener noreferrer">Solicite seu orçamento <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
       <div class="container footer-grid">
         <!-- Logo e texto institucional do rodapé -->
         <div class="footer-brand">
           <a href="index.html" class="logo logo-footer" aria-label="Inoxcolor Home">
-            <span class="logo-mark">I</span>
-            <span class="logo-text">Inoxcolor</span>
-          </a>
+           </a>
           <div class="logo-footer">
             <img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor">
           </div>
@@ -94,9 +1918,211 @@
         </div>
       </div>
     </footer>
-    <script src="script.js"></script>
-    
-  </body>
-</html>
 
-<script src="Proteção.js" defer></script>
+  <script>
+    const guideToggle = document.querySelector('.guide-toggle');
+    if (guideToggle) guideToggle.addEventListener('click', () => {
+      document.body.classList.toggle('guides-off');
+      guideToggle.textContent = document.body.classList.contains('guides-off') ? 'Mostrar orientações' : 'Ocultar orientações';
+    });
+    document.querySelectorAll('.mock-form').forEach(form => form.addEventListener('submit', e => {
+      e.preventDefault();
+      const grid = form.querySelector('.form-grid');
+      if (grid) grid.style.display = 'none';
+      const privacy = form.querySelector('.privacy');
+      if (privacy) privacy.style.display = 'none';
+      const success = form.querySelector('.success');
+      if (success) success.style.display = 'block';
+    }));
+  </script>
+
+  <script>
+    (() => {
+      const track = document.querySelector('.product-link-track');
+      if (!track) return;
+      const step = () => {
+        const card = track.querySelector('.product-link-card');
+        return card ? card.getBoundingClientRect().width + 18 : track.clientWidth * .85;
+      };
+      document.querySelector('.product-prev')?.addEventListener('click', () => track.scrollBy({left:-step(),behavior:'smooth'}));
+      document.querySelector('.product-next')?.addEventListener('click', () => track.scrollBy({left:step(),behavior:'smooth'}));
+      const progress = document.querySelector('.product-progress i');
+      const update = () => {
+        const max = Math.max(1, track.scrollWidth - track.clientWidth);
+        if (progress) progress.style.transform = `scaleX(${.25 + .75 * Math.min(1, track.scrollLeft / max)})`;
+      };
+      track.addEventListener('scroll', update, {passive:true});
+      update();
+    })();
+  </script>
+<script>
+  (() => {
+    const track = document.querySelector('.app-carousel-track');
+    if (!track) return;
+    const cards = [...track.querySelectorAll('.app-card')];
+    const counter = document.querySelector('.app-carousel-counter');
+    if (!cards.length || !counter) return;
+    let currentIndex = 0;
+    let pendingIndex = null;
+    const position = index => Math.min(
+      cards[index].getBoundingClientRect().left - cards[0].getBoundingClientRect().left,
+      Math.max(0, track.scrollWidth - track.clientWidth)
+    );
+    const render = () => {
+      counter.textContent = `${currentIndex + 1}/${cards.length}`;
+      counter.setAttribute('aria-label', `Imagem ${currentIndex + 1} de ${cards.length}`);
+      cards.forEach((card, i) => {
+        if (i === currentIndex) card.setAttribute('aria-current', 'true');
+        else card.removeAttribute('aria-current');
+      });
+    };
+    const update = () => {
+      if (pendingIndex !== null) {
+        if (Math.abs(track.scrollLeft - position(pendingIndex)) > 2) return;
+        currentIndex = pendingIndex;
+        pendingIndex = null;
+        render();
+        return;
+      }
+      let nearest = currentIndex;
+      let distance = Math.abs(track.scrollLeft - position(nearest));
+      cards.forEach((_, i) => {
+        const candidate = Math.abs(track.scrollLeft - position(i));
+        if (candidate < distance - 1) { nearest = i; distance = candidate; }
+      });
+      currentIndex = nearest;
+      render();
+    };
+    const go = direction => {
+      currentIndex = Math.max(0, Math.min(cards.length - 1, currentIndex + direction));
+      pendingIndex = currentIndex;
+      render();
+      track.scrollTo({left: position(currentIndex), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+      update();
+    };
+    document.querySelector('.app-prev')?.addEventListener('click', () => go(-1));
+    document.querySelector('.app-next')?.addEventListener('click', () => go(1));
+    track.addEventListener('scroll', update, {passive: true});
+    ['pointerdown', 'touchstart', 'wheel'].forEach(event => track.addEventListener(event, () => { pendingIndex = null; }, {passive: true}));
+    new ResizeObserver(() => {
+      pendingIndex = null;
+      track.scrollTo({left: position(currentIndex), behavior: 'instant'});
+      render();
+    }).observe(track);
+    render();
+  })();
+</script>
+
+<script>
+// Seleciona o botão do menu mobile e o menu principal.
+const menuToggle = document.querySelector('.menu-toggle');
+const navs = document.querySelectorAll('.main-nav');
+const siteHeader = document.querySelector('.site-header');
+const navWrap = document.querySelector('.nav-wrap');
+const brandItem = document.querySelector('.brand-item');
+// Fallback se o arquivo do logotipo não estiver junto do HTML.
+document.querySelectorAll('img[src*="logo+fundo+sitw-640w.webp"]').forEach(image => {
+  const useFallback = () => {
+    if (!image.isConnected) return;
+    const fallback = document.createElement('span');
+    fallback.className = 'brand-logo-fallback';
+    fallback.textContent = 'INOXCOLOR';
+    image.replaceWith(fallback);
+  };
+  image.addEventListener('error', useFallback, { once: true });
+  if (image.complete && image.naturalWidth === 0) useFallback();
+});
+
+// Evita ícone quebrado se o logo externo não acompanhar a página.
+document.querySelectorAll('img[src*="logo+fundo+sitw-640w.webp"]').forEach(image => {
+  image.addEventListener('error', () => {
+    const fallback = document.createElement('span');
+    fallback.className = 'brand-logo-fallback';
+    fallback.textContent = 'INOXCOLOR';
+    image.replaceWith(fallback);
+  }, { once: true });
+});
+
+// Reúne os dois grupos de links em um único painel apenas no comportamento mobile.
+let mobileMenuPanel = null;
+if (navWrap && navs.length) {
+  mobileMenuPanel = document.createElement('div');
+  mobileMenuPanel.className = 'mobile-menu-panel';
+  navWrap.insertBefore(mobileMenuPanel, brandItem || navs[0]);
+  navs.forEach(nav => mobileMenuPanel.appendChild(nav));
+
+  const mobileBudgetLink = document.createElement('a');
+  mobileBudgetLink.className = 'mobile-budget-link';
+  const contactPageLink = Array.from(navWrap.querySelectorAll('a[href]')).find(link =>
+    new URL(link.href).pathname.endsWith('/contato.html')
+  );
+  mobileBudgetLink.href = contactPageLink ? contactPageLink.getAttribute('href') : 'contato.html';
+  mobileBudgetLink.textContent = 'Orçamento';
+  navs[navs.length - 1].appendChild(mobileBudgetLink);
+
+  const mobileContactLinks = Array.from(mobileMenuPanel.querySelectorAll('a')).filter(link =>
+    link !== mobileBudgetLink &&
+    new URL(link.href).pathname.endsWith('/contato.html') &&
+    link.textContent.trim().toLowerCase() === 'contato'
+  );
+  const updateMobileBudgetVisibility = () => {
+    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+    mobileBudgetLink.style.display = isMobile ? '' : 'none';
+    mobileContactLinks.forEach(link => {
+      link.style.display = isMobile ? 'none' : '';
+    });
+  };
+  updateMobileBudgetVisibility();
+  window.addEventListener('resize', updateMobileBudgetVisibility);
+}
+
+// Muda a cor do header após passar pelo carrossel
+window.addEventListener('scroll', () => {
+  if (siteHeader) {
+    if (window.scrollY > window.innerHeight * 0.1) {
+      siteHeader.classList.add('scrolled');
+    } else {
+      siteHeader.classList.remove('scrolled');
+    }
+  }
+});
+
+// Só executa a lógica se os elementos existirem na página.
+if (menuToggle && navs.length && mobileMenuPanel) {
+  // Quando o botão for clicado, alterna o estado do menu.
+  menuToggle.addEventListener('click', () => {
+    // Toggle adiciona ou remove a classe 'open' no menu.
+    const isOpen = !navs[0].classList.contains('open');
+    navs.forEach(nav => nav.classList.toggle('open', isOpen));
+    mobileMenuPanel.classList.toggle('open', isOpen);
+    menuToggle.classList.toggle('is-open', isOpen);
+    // Atualiza o atributo aria-expanded para acessibilidade.
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+
+  });
+
+  navs.forEach(nav => nav.addEventListener('click', (event) => {
+    if (event.target.closest('a')) {
+      navs.forEach(item => item.classList.remove('open'));
+      mobileMenuPanel.classList.remove('open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu');
+    }
+  }));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navs[0].classList.contains('open')) {
+      navs.forEach(nav => nav.classList.remove('open'));
+      mobileMenuPanel.classList.remove('open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menu');
+      menuToggle.focus();
+    }
+  });
+}
+</script>
+</body>
+</html>
