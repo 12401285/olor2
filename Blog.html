@@ -55,9 +55,8 @@
     }
 
     .blog-featured {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-      min-height: 340px;
+      display: flex;
+      flex-direction: column;
       margin-bottom: 30px;
       overflow: hidden;
       background: #fff;
@@ -92,8 +91,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: center;
-      padding: clamp(32px, 5vw, 72px);
+      padding: clamp(24px, 3vw, 42px) clamp(32px, 5vw, 72px) 20px;
     }
 
     .blog-featured-label {
@@ -106,7 +104,7 @@
     }
 
     .blog-featured h2 {
-      margin: 0 0 28px;
+      margin: 0;
       color: #171717;
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: clamp(2.4rem, 4vw, 3.8rem);
@@ -115,6 +113,8 @@
     }
 
     .blog-featured .blog-card-link {
+      align-self: flex-start;
+      margin: 0 clamp(32px, 5vw, 72px) 32px;
       padding-bottom: 8px;
       border-bottom: 1px solid #b49968;
     }
@@ -172,20 +172,23 @@
 
     .blog-card-copy {
       display: flex;
-      flex: 1;
       flex-direction: column;
       align-items: flex-start;
-      padding: 22px 22px 24px;
+      padding: 22px 22px 14px;
     }
 
     .blog-card h2 {
-      margin-bottom: 22px;
+      margin-bottom: 0;
       color: #121212;
       font-family: "Cormorant Garamond", Georgia, serif;
       font-size: 1.55rem;
       font-weight: 600;
       letter-spacing: 0;
       line-height: 1.15;
+    }
+
+    .blog-card > .blog-card-link {
+      margin: auto 22px 24px;
     }
 
     .blog-card-link {
@@ -195,15 +198,6 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-    }
-
-    .blog-list-heading {
-      margin: 0 0 20px;
-      color: #24211c;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(1.7rem, 3vw, 2.2rem);
-      font-weight: 600;
-      letter-spacing: 0;
     }
 
     .blog-featured:focus-visible,
@@ -307,15 +301,6 @@
       }
 
       .blog-featured {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
-        min-height: 290px;
-      }
-
-      .blog-featured-media {
-        height: 290px;
-      }
-
-      .blog-featured-media img {
         min-height: 0;
       }
 
@@ -394,12 +379,12 @@
         min-height: 0;
       }
 
-      .blog-list-heading {
-        margin-bottom: 16px;
+      .blog-card-copy {
+        padding: 18px 18px 14px;
       }
 
-      .blog-card-copy {
-        padding: 18px 18px 20px;
+      .blog-card > .blog-card-link {
+        margin: auto 18px 20px;
       }
     }
   </style>
@@ -449,52 +434,51 @@
 <main class="blog-page">
   <section class="blog-gallery" aria-label="Artigos do blog">
     <a class="blog-featured" href="blog/artigo.html?post=fachadas">
+      <div class="blog-featured-copy">
+        <span class="blog-featured-label">Artigo em destaque</span>
+        <h2>O aço inoxidável tem cor?</h2>
+      </div>
       <picture class="blog-featured-media">
         <source media="(max-width: 560px)" srcset="blog/capa-aco-inox-mobile.jpg" />
         <img src="blog/capa-aco-inox.jpg" alt="Edifício com revestimento em aço inox colorido em Fortaleza" loading="eager" />
       </picture>
-      <div class="blog-featured-copy">
-        <span class="blog-featured-label">Artigo em destaque</span>
-        <h2>O aço inoxidável tem cor?</h2>
-        <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
-      </div>
+      <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
     </a>
-    <h2 class="blog-list-heading">Mais artigos</h2>
     <div class="blog-grid">
       <a class="blog-card" href="blog/artigo.html?post=aco-inoxidavel">
-        <img src="blog/paradigma.png" alt="Revestimento metálico em aço inox colorido" loading="lazy" />
         <div class="blog-card-copy">
           <h2>Quebrando o paradigma</h2>
-          <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
         </div>
+        <img src="blog/paradigma.png" alt="Revestimento metálico em aço inox colorido" loading="lazy" />
+        <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
       </a>
       <a class="blog-card" href="blog/artigo.html?post=galo-inox">
-        <img src="blog/blog3-1920w.webp" alt="Resort da Universal em Orlando com arquitetura colorida" loading="lazy" />
         <div class="blog-card-copy">
           <h2>A terra encantada dos parques</h2>
-          <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
         </div>
+        <img src="blog/blog3-1920w.webp" alt="Resort da Universal em Orlando com arquitetura colorida" loading="lazy" />
+        <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
       </a>
       <a class="blog-card" href="blog/artigo.html?post=interiores">
-        <img src="blog/BBB26_BLOG5-1920w.webp" alt="Sala do Big Brother Brasil com aço inox dourado" loading="lazy" />
         <div class="blog-card-copy">
           <h2>O novo protagonista da TV Globo no BBB 2026</h2>
-          <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
         </div>
+        <img src="blog/BBB26_BLOG5-1920w.webp" alt="Sala do Big Brother Brasil com aço inox dourado" loading="lazy" />
+        <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
       </a>
       <a class="blog-card" href="blog/artigo.html?post=revestimentos">
-        <img src="blog/erros.png" alt="Fachada com revestimento metálico em aço inox" loading="lazy" />
         <div class="blog-card-copy">
           <h2>Os dois erros fatais mais comuns</h2>
-          <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
         </div>
+        <img src="blog/erros.png" alt="Fachada com revestimento metálico em aço inox" loading="lazy" />
+        <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
       </a>
       <a class="blog-card" href="blog/artigo.html?post=tipos-aco">
-        <img src="blog/304VS200png-1920w.webp" alt="Comparação ilustrada entre aço inox 304 e aço inox 200" loading="lazy" />
         <div class="blog-card-copy">
           <h2>Não caia na grande cilada</h2>
-          <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
         </div>
+        <img src="blog/304VS200png-1920w.webp" alt="Comparação ilustrada entre aço inox 304 e aço inox 200" loading="lazy" />
+        <span class="blog-card-link">Ler artigo <span aria-hidden="true">→</span></span>
       </a>
     </div>
   </section>
