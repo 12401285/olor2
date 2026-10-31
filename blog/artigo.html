@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Artigo do blog Inoxcolor sobre aço inox colorido, arquitetura e aplicações." />
+  <title>Blog Inoxcolor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../footer.css" />
+  <style>
+    .blog-article-page {
+      min-height: 100vh;
+      background: #fff;
+      color: #121212;
+    }
+
+    .blog-article-page .site-header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+    }
+
+    .blog-article-page .main-nav,
+    .blog-article-page .main-nav a {
+      color: #121212;
+    }
+
+    .blog-article-page .main-nav a::after {
+      background: #121212;
+    }
+
+    .blog-article-page .nav-wrap {
+      justify-content: space-between;
+      gap: clamp(6px, 1vw, 14px);
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    .blog-article-page .nav-left,
+    .blog-article-page .nav-right {
+      position: static;
+      left: auto;
+      flex: 0 1 auto;
+      gap: clamp(6px, 0.8vw, 12px);
+      margin-left: 0;
+      font-size: clamp(0.58rem, 0.72vw, 0.72rem);
+    }
+
+    .blog-article-page .brand-item {
+      width: clamp(130px, 14vw, 180px);
+      min-width: 0;
+      margin: 0;
+    }
+
+    .blog-article-page .brand-item img {
+      width: 100%;
+    }
+
+    .blog-article-page .nav-actions {
+      gap: 8px;
+    }
+
+    .blog-article-page .nav-actions .btn-primary {
+      position: static;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    @media (min-width: 761px) {
+      .blog-article-page .nav-left { order: 0; }
+      .blog-article-page .brand-item { order: 1; }
+      .blog-article-page .nav-right { order: 2; }
+      .blog-article-page .nav-actions { order: 3; }
+    }
+
+    @media (max-width: 1100px) and (min-width: 761px) {
+      .blog-article-page .nav-left,
+      .blog-article-page .nav-right {
+        gap: 6px;
+        font-size: 0.58rem;
+      }
+
+      .blog-article-page .brand-item {
+        width: 130px;
+      }
+
+      .blog-article-page .nav-actions .btn-primary {
+        min-height: 42px;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 0.62rem;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .blog-article-page .mobile-menu-panel .main-nav a {
+        color: #fff;
+      }
+
+      .blog-article-page .mobile-menu-panel .main-nav a::after {
+        background: #fff;
+      }
+    }
+
+    .blog-article {
+      width: min(920px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 128px 0 96px;
+    }
+
+    .blog-article-back {
+      display: flex;
+      width: fit-content;
+      margin-bottom: 24px;
+      color: #735936;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .blog-article > .eyebrow {
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .blog-article h1 {
+      margin: 0 0 14px;
+      color: #121212;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+    }
+
+    #article-lead {
+      max-width: 760px;
+      margin-bottom: 26px;
+      color: #5f5f5f;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .blog-article-image {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .blog-article-hero {
+      margin: 0;
+    }
+
+    .blog-article-hero figcaption,
+    .blog-article-figure figcaption {
+      margin-top: 10px;
+      color: #735936;
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .blog-article-content {
+      max-width: 760px;
+      margin: 30px auto 0;
+      color: #5f5f5f;
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .blog-article-figure {
+      margin: 30px 0;
+    }
+
+    .blog-article-figure img {
+      display: block;
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      background: #f7f6f2;
+    }
+
+    .blog-article-quote {
+      margin: 32px 0;
+      padding: 4px 0 4px 22px;
+      border-left: 3px solid #b49968;
+      color: #38342e;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .blog-article-quote cite {
+      display: block;
+      margin-top: 14px;
+      color: #735936;
+      font-family: "Inter", sans-serif;
+      font-size: 0.82rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    .blog-article-signature {
+      margin-top: 28px !important;
+      color: #735936;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: right !important;
+    }
+
+    #article-content p {
+      margin: 0 0 20px;
+      text-align: left;
+    }
+
+    #article-content h2 {
+      margin: 32px 0 14px;
+      color: #24211c;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.65rem, 3vw, 2.15rem);
+      line-height: 1.15;
+    }
+
+    @media (max-width: 760px) {
+      .blog-article {
+        width: calc(100% - 36px);
+        padding-top: 82px;
+      }
+
+      .blog-article-image {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
+</head>
+<body class="products-page-body blog-article-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
+        <a href="../produtos.html">Produtos</a>
+        <a href="../industria.html">Indústria</a>
+        <a href="../arquitetura.html">Arquitetura</a>
+        <a href="../residencial.html">Residencial</a>
+      </nav>
+      <a href="../index.html" class="brand-item" aria-label="Inoxcolor Home">
+        <img src="../logo+fundo+sitw-640w.webp" alt="Inoxcolor" />
+        <span class="brand-tagline"></span>
+      </a>
+      <nav class="main-nav nav-right" aria-label="Menu principal direito">
+        <a href="../ainoxcolor.html">A Inoxcolor</a>
+        <a href="../downloads.html">Download</a>
+        <a href="../na_midia.html">Na Mídia</a>
+        <a href="../Blog.html" aria-current="page">Blog</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="../contato.html" class="btn btn-primary">Orçamento</a>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <article class="blog-article">
+      <a class="blog-article-back" href="../Blog.html">← Voltar ao blog</a>
+      <p class="eyebrow dark">Blog Inoxcolor</p>
+      <h1 id="article-title">Artigo do blog</h1>
+      <p id="article-lead" class="blog-article-lead"></p>
+      <figure class="blog-article-hero">
+        <img id="article-image" class="blog-article-image" src="capa-aco-inox.jpg" alt="Edifício com revestimento em aço inox colorido em Fortaleza" />
+        <figcaption id="article-image-caption" hidden></figcaption>
+      </figure>
+      <div id="article-content" class="blog-article-content"></div>
+      <p id="article-note" class="blog-article-content">O conteúdo completo deste artigo será publicado em breve.</p>
+    </article>
+  </main>
+  <script>
+    const articles = {
+      fachadas: {
+        title: "O aço inoxidável tem cor?",
+        lead: "Além do acabamento prateado, o inox pode receber cores sem perder suas propriedades.",
+        image: "capa-aco-inox.jpg",
+        alt: "Edifício com revestimento em aço inox colorido em Fortaleza",
+        heroCaption: "Revestimento de grande porte em aço inoxidável colorido, com peças conformadas.",
+        sections: [
+          {
+            type: "paragraph",
+            text: "Quando pensamos em aço inox, o que geralmente vem à mente é a aparência clássica e elegante de um material prateado, neutro e sofisticado. Essa imagem consolidada, presente no imaginário de arquitetos, engenheiros, designers e consumidores, é compreensível: por décadas, o inox foi amplamente utilizado em sua forma natural. Mas, afinal, o aço inoxidável pode ter cor?"
+          },
+          {
+            type: "paragraph",
+            text: "Essa dúvida é comum e, muitas vezes, alimentada por experiências frustrantes. Muitos profissionais já se decepcionaram com empresas que tentaram pintar o aço inox por métodos convencionais, como tintas ou vernizes. O resultado pode ser baixa resistência, perda rápida da coloração e até oxidação precoce. O que poucos sabem é que o aço inox pode, sim, ser colorido — não por pintura, mas por uma tecnologia que preserva suas propriedades originais."
+          },
+          {
+            type: "paragraph",
+            text: "A coloração do aço inoxidável é feita por um processo eletroquímico a frio. Diferentemente da aplicação de pigmentos ou do uso de tintas superficiais, esse método transforma a superfície do aço por meio de pulsos elétricos controlados, inseridos em uma composição química específica. Desenvolvido no Brasil e produzido pela empresa mineira Inoxcolor, o processo cria uma nanocamada de óxido sobre a superfície do inox. Essa camada interfere na forma como a luz é refletida, gerando diferentes tonalidades — como dourado, bronze, azul, verde, púrpura, marrom e preto — sem comprometer a estrutura ou a resistência do material."
+          },
+          {
+            type: "paragraph",
+            text: "Ao contrário da pintura, essa coloração não desbota, não descasca e não oxida. O aço inox colorido mantém suas características técnicas, inclusive a capacidade de ser cortado, dobrado, calandrado ou conformado com precisão. Isso amplia suas possibilidades em projetos que exigem sofisticação, durabilidade e identidade visual. Seu uso já é realidade em fachadas arquitetônicas, esculturas urbanas, mobiliário, elevadores, sinalização, revestimentos internos e externos e na fabricação de máquinas e equipamentos."
+          },
+          {
+            type: "figure",
+            image: "imagem 2 de blog 1.webp",
+            alt: "Amostras de aço inoxidável com diferentes cores e texturas",
+            caption: "Cores aplicadas em aço inoxidável."
+          },
+          {
+            type: "figure",
+            image: "imagem 3 de blog 1.webp",
+            alt: "Cúpula dourada da Igreja Nossa Senhora do Líbano",
+            caption: "Cúpula da Igreja Nossa Senhora do Líbano, revestida em aço inox colorido."
+          },
+          {
+            type: "figure",
+            image: "3.webp",
+            alt: "Escultura do Galo Inox Aperam na Arena MRV",
+            caption: "Escultura Galo Inox Aperam, em aço inox preto, instalada no estádio do Atlético Mineiro, em Belo Horizonte/MG. Obra do arquiteto Joel Lima."
+          },
+          {
+            type: "figure",
+            image: "imagem 4 de blog 1.webp",
+            alt: "Torradeira de café revestida em aço inox dourado",
+            caption: "Torradeira de café em aço inox 304 dourado, produzida pela Leogap."
+          },
+          {
+            type: "figure",
+            image: "imagem 5 de blog 1.webp",
+            alt: "Hall de entrada revestido em aço inox dourado",
+            caption: "Hall de entrada em aço inox dourado, em prédio de São Paulo/SP."
+          },
+          {
+            type: "paragraph",
+            text: "Além do apelo estético, o aço inox colorido oferece vantagens práticas. É sustentável, 100% reciclável e tem longa vida útil. Sua resistência e durabilidade ajudam a reduzir custos de manutenção e substituição de peças a longo prazo. Além disso, as cores exclusivas permitem criar ambientes que fortalecem a identidade visual de marcas, instituições e espaços públicos."
+          },
+          {
+            type: "figure",
+            image: "imagem 6 de blog 1.webp",
+            alt: "Móvel de exposição em aço inox escovado bronze",
+            caption: "Móvel em aço inox escovado bronze, na loja conceito da rede Tania Bulhões, em São Paulo/SP."
+          },
+          {
+            type: "paragraph",
+            text: "O aço inoxidável colorido também pode ser tratado quimicamente para revelar imagens, fotografias e desenhos exclusivos, transformando superfícies em verdadeiras obras de arte e unindo luxo, beleza e sofisticação."
+          },
+          {
+            type: "figure",
+            image: "imagem 7 de blog 1.webp",
+            alt: "Cozinha do Big Brother Brasil com revestimento azul desenhado em aço inox",
+            caption: "Revestimento desenhado em aço inox azul, projeto do arquiteto Joel Lima para a cozinha do Big Brother Brasil 2020, da Rede Globo, no Rio de Janeiro/RJ."
+          },
+          {
+            type: "quote",
+            text: "A coloração do aço inox não é apenas um modismo ou uma curiosidade de mercado. Trata-se de uma verdadeira revolução, que vem transformando a forma como vemos, sentimos e aplicamos esse material tão nobre. É inovação aplicada ao design, à arte, à arquitetura e à indústria — uma evolução que veio para ficar, encantar e inspirar.",
+            author: "Emmanuel Lacerda",
+            role: "Colunista da Papo de Inox · @emmanuelplacerda"
+          }
+        ]
+      },
+      "aco-inoxidavel": {
+        title: "Quebrando o paradigma do alto custo do inox: revelando a realidade de uma economia duradoura",
+        lead: "Uma análise do custo total de propriedade mostra por que o aço inox pode ser um investimento econômico a longo prazo.",
+        image: "paradigma.png",
+        alt: "Comparação entre um material oxidado e uma peça em aço inox",
+        sections: [
+          {
+            type: "paragraph",
+            text: "Ao longo dos anos, consolidou-se no imaginário coletivo a ideia de que o aço inoxidável é um material caro, restrito a aplicações de alto padrão ou projetos de elevado orçamento. Entretanto, uma análise criteriosa demonstra que essa percepção não corresponde à realidade."
+          },
+          {
+            type: "paragraph",
+            text: "O conceito de “custo” não pode ser avaliado apenas pelo preço inicial de aquisição, mas pelo custo total de propriedade (TCO – Total Cost of Ownership). Nesse aspecto, o aço inox apresenta desempenho superior quando comparado a outros materiais. Sua elevada resistência à corrosão, durabilidade comprovada e reduzida necessidade de manutenção resultam em uma vida útil significativamente maior. Em muitos casos, a escolha pelo inox elimina gastos recorrentes com reparos, substituições e tratamentos superficiais."
+          },
+          {
+            type: "figure",
+            image: "blog2_money-1920w.webp",
+            alt: "Ilustração de análise financeira, economia e crescimento de investimento",
+            caption: "O custo total de propriedade considera todo o ciclo de vida do material."
+          },
+          {
+            type: "paragraph",
+            text: "Por isso, no momento da decisão, é fundamental adotar uma análise ampla. Mais do que observar o valor imediato da aquisição, é preciso considerar o ciclo completo de uso do material. Essa visão revela que o aço inox oferece vantagens expressivas ao longo do tempo, garantindo durabilidade, estabilidade de desempenho e melhor aproveitamento do investimento inicial."
+          },
+          {
+            type: "figure",
+            image: "outro_metalb2-1920w.webp",
+            alt: "Comparação entre um tubo de outro material corroído e um tubo de aço inoxidável",
+            caption: "A durabilidade do inox ajuda a evitar substituições e reparos frequentes."
+          },
+          {
+            type: "paragraph",
+            text: "Outro aspecto muitas vezes negligenciado é que a análise de custos também deve considerar os custos indiretos. Materiais menos resistentes e duráveis geram gastos adicionais não apenas com manutenção e substituição, mas também com paradas de produção, retrabalho e uso intensivo de mão de obra. Cada intervenção corretiva representa perda de tempo, eficiência e produtividade. Nesse cenário, o inox se consolida como uma escolha racional, pois minimiza riscos operacionais e aumenta a confiabilidade dos processos."
+          },
+          {
+            type: "paragraph",
+            text: "Além da economia direta, o inox agrega valor intangível aos projetos. Sua estética atemporal, a percepção de qualidade e a imagem de inovação associada ao material contribuem para a valorização de empreendimentos, produtos e marcas. Trata-se de uma solução que transcende o aspecto funcional e alcança dimensões estratégicas de diferenciação e competitividade."
+          },
+          {
+            type: "paragraph",
+            text: "Não por acaso, setores como as indústrias alimentícia, farmacêutica e hospitalar adotam o inox como padrão, justamente por aliar desempenho, segurança e eficiência econômica. O aço inox não deve ser classificado simplesmente como caro, mas como um investimento racional e sustentável: analisada ao longo de todo o ciclo de vida, sua durabilidade superior reduz custos de manutenção, evita substituições frequentes e pode gerar economia real com o passar dos anos."
+          },
+          {
+            type: "figure",
+            image: "cozinha-1920w.webp",
+            alt: "Linha de produção de alimentos em uma cozinha industrial equipada em aço inox",
+            caption: "Na indústria alimentícia, o inox alia desempenho, segurança e eficiência."
+          },
+          {
+            type: "paragraph",
+            text: "Em síntese, o verdadeiro paradigma a ser superado é a visão limitada ao custo inicial. Longe de ser necessariamente oneroso, o aço inox pode representar uma escolha inteligente de longo prazo, alinhada às exigências de qualidade e durabilidade do mundo contemporâneo."
+          },
+          {
+            type: "signature",
+            text: "Emmanuel Lacerda · 05/09/2025"
+          }
+        ]
+      },
+      "galo-inox": {
+        title: "Assim como no Brasil, Orlando, a terra encantada dos parques da Disney e da Universal, rende-se ao aço inox colorido",
+        lead: "No resort da Universal, em Orlando, o aço inox colorido ajuda a criar uma arquitetura imersiva, durável e cheia de vida.",
+        image: "blog3-1920w.webp",
+        alt: "Vista aérea do resort da Universal em Orlando, com arquitetura contemporânea e piscina",
+        hideHero: true,
+        sections: [
+          {
+            type: "paragraph",
+            text: "A indústria do entretenimento sempre soube provocar encantamento, mas agora encontrou um aliado que redefine experiência, estética, requinte e longevidade: o aço inox colorido. Em visita ao novo resort do Parque Universal, em Orlando, nos Estados Unidos, encontramos uma arquitetura moderna em que o material se torna protagonista e contribui para a atmosfera imersiva do projeto. Superfícies vibrantes, tons iridescentes e um brilho que se transforma com a luz criam um impacto visual tão forte quanto durável."
+          },
+          {
+            type: "paragraph",
+            text: "Nas áreas externas do resort, painéis e elementos arquitetônicos em aço inox colorido ganham vida em tonalidades de azul, verde, púrpura e dourado, criando um visual futurista que evolui conforme o sol se move. No interior, detalhes refinados aparecem em mobiliários, corrimãos, revestimentos e peças decorativas, reforçando a identidade premium do projeto."
+          },
+          {
+            type: "figure",
+            image: "blog3-1920w.webp",
+            alt: "Vista aérea do resort da Universal em Orlando, com piscina e fachada colorida",
+            caption: "É um espetáculo de cores que dá vida ao resort da Universal."
+          },
+          {
+            type: "paragraph",
+            text: "O que vemos no resort é uma tendência global: projetos modernos que valorizam luxo, sustentabilidade e durabilidade, atributos associados ao aço inoxidável colorido."
+          },
+          {
+            type: "paragraph",
+            text: "O aço inox colorido não é apenas design; é também a capacidade de transformar espaços em experiências sensoriais completas, algo essencial para quem visita Orlando, onde tudo precisa ser memorável."
+          },
+          {
+            type: "paragraph",
+            text: "Ambientes de alta circulação e expostos às intempéries, como o resort da Universal, exigem materiais resistentes ao clima, à umidade, ao toque e à luz intensa."
+          },
+          {
+            type: "figure",
+            image: "Emmanuel_blog3-1920w.webp",
+            alt: "Emmanuel Lacerda em frente à fachada colorida do resort da Universal",
+            caption: "Emmanuel Lacerda durante visita ao resort da Universal, em Orlando."
+          },
+          {
+            type: "paragraph",
+            text: "Os revestimentos em aço inox colorido, com resistência à corrosão e baixa necessidade de manutenção, foram uma excelente escolha para o projeto."
+          },
+          {
+            type: "paragraph",
+            text: "Mas o que muitos ainda não sabem é que o Brasil também apresenta essa tendência em projetos icônicos, colocando o país no mesmo nível — e, muitas vezes, à frente — dos grandes centros globais."
+          },
+          {
+            type: "paragraph",
+            text: "Obras brasileiras mostram que os aços coloridos estão conquistando espaço na arquitetura e na engenharia, elevando o inox ao status de arte. Destacamos duas dessas obras."
+          },
+          {
+            type: "paragraph",
+            text: "A escultura do Galo Inox Aperam tem oito metros de altura, foi assinada pelo arquiteto mineiro Joel Lima e está instalada na Arena MRV, estádio do Clube Atlético Mineiro. Representando o mascote do clube, tornou-se uma das obras emblemáticas da arquitetura esportiva brasileira. O revestimento exclusivo em inox preto da bola e do escudo é um dos destaques da escultura. Ponto turístico de visitação, a obra une arte, engenharia e identidade cultural. Com formas imponentes e superfícies que refletem luz e movimento, tornou-se símbolo de força, modernidade e inovação, referência na transformação do inox em obra de arte."
+          },
+          {
+            type: "figure",
+            image: "Galoinox_blog3-1920w.webp",
+            alt: "Escultura do Galo Inox Aperam em frente à Arena MRV, em Belo Horizonte",
+            caption: "Galo Inox Aperam, escultura de oito metros de altura criada pelo arquiteto Joel Lima e instalada na Arena MRV."
+          },
+          {
+            type: "paragraph",
+            text: "Outra obra icônica em aço colorido é a cúpula da Igreja Nossa Senhora do Líbano, em Carmo do Cajuru, Minas Gerais."
+          },
+          {
+            type: "paragraph",
+            text: "Um dos projetos religiosos mais impressionantes do país, a cúpula em aço inox dourado se destaca pela imponência, pelo brilho contínuo e pela mutação natural de cor, chamada pelos arquitetos de efeito furta-cor, além da engenharia precisa. A escolha pelo inox garantiu longevidade, resistência ao tempo e uma estética contemporânea que valoriza a arquitetura sacra."
+          },
+          {
+            type: "figure",
+            image: "CupulaNsblog3-1920w.webp",
+            alt: "Cúpula dourada e furta-cor da Igreja Nossa Senhora do Líbano",
+            caption: "Cúpula da Igreja Nossa Senhora do Líbano, em Carmo do Cajuru/MG, revestida em aço inox dourado."
+          },
+          {
+            type: "paragraph",
+            text: "É o aço inox colorido transformando cenários e compondo ambientes. Por sua capacidade de inovar e transformar espaços, seja na indústria, com novos designs para produtos e equipamentos, seja na arquitetura e na engenharia, o material vem conquistando seu espaço no cenário nacional e despertando o interesse de vários segmentos."
+          },
+          {
+            type: "paragraph",
+            text: "Muitos se perguntam: o aço inoxidável colorido é acessível no Brasil? E qual tecnologia é aplicada? Sim: uma empresa mineira, a Inoxcolor, disponibiliza o aço inox colorido por meio de tecnologia eletroquímica. Esse será o assunto das próximas publicações. Fiquem ligados. Até a próxima."
+          }
+        ]
+      },
+      interiores: {
+        title: "O Novo Protagonista da TV Globo no Big Brother Brasil 2026",
+        lead: "O aço inoxidável colorido marca presença em ambientes internos e externos da casa mais vigiada do Brasil.",
+        image: "BBB26_BLOG5-1920w.webp",
+        alt: "Sala do Big Brother Brasil decorada com aço inox dourado",
+        hideHero: true,
+        sections: [
+          {
+            type: "paragraph",
+            text: "Parceiras em grandes projetos, como o Galo Inox Aperam — escultura em aço inox do mascote do Clube Atlético Mineiro, instalada na Arena MRV, em Belo Horizonte —, Inoxcolor e Aperam se unem novamente e levam o aço inoxidável a se tornar protagonista dentro do Big Brother Brasil 2026, programa da TV Globo."
+          },
+          {
+            type: "paragraph",
+            text: "Forte, resistente e duradouro — atributos importantes para uma conquista de reality show —, o aço inox está presente em vários ambientes da casa mais vigiada do Brasil. Seja na sala, nos quartos, nos banheiros ou até mesmo na área externa, sua presença é marcante."
+          },
+          {
+            type: "paragraph",
+            text: "Durante muitos anos, o aço inox esteve associado a aplicações como corrimãos, guarda-corpos, estruturas industriais e equipamentos técnicos. Agora, a arquitetura também se rendeu ao material: ele deixa de ser apenas funcional e passa a conduzir a identidade dos ambientes, evidenciando sua versatilidade."
+          },
+          {
+            type: "paragraph",
+            text: "Na sala, elementos decorativos em tonalidades douradas — como moedas, cifrões, painéis e perfis — ajudam a compor um cenário de forte identidade visual. No confessionário, revestimentos em inox dourado ampliam a sensação de profundidade e sofisticação. Nos quartos, a combinação entre tons de azul e dourado reforça contrastes e cria atmosferas distintas. Já nos banheiros, as aplicações douradas nos boxes evidenciam tanto a estética quanto a funcionalidade do material."
+          },
+          {
+            type: "figure",
+            image: "BBB26_BLOG5-1920w.webp",
+            alt: "Sala do Big Brother Brasil 2026 com painéis e detalhes em aço inox dourado",
+            caption: "O aço inox dourado compõe a identidade visual da sala do BBB 2026."
+          },
+          {
+            type: "paragraph",
+            text: "Fora dos ambientes internos da casa, também é possível encontrar o aço inox nos ralos lineares bronze instalados ao redor da área da piscina."
+          },
+          {
+            type: "paragraph",
+            text: "Os tradicionais Big Fones, instalados na área externa, ganharam ainda mais destaque com acabamentos em inox colorido e natural, em diálogo com o portal revestido em aço inox natural escovado da Aperam."
+          },
+          {
+            type: "figure",
+            image: "TELEFONEBBB6-1920w.webp",
+            alt: "Big Fones e portal revestido em aço inox na área externa do BBB 2026",
+            caption: "Big Fones e portal em aço inox na área externa da casa."
+          },
+          {
+            type: "paragraph",
+            text: "Essas aplicações externas são possíveis graças às características do aço inox já mencionadas — resistência e durabilidade —, aliadas à capacidade de adaptação a diferentes condições."
+          },
+          {
+            type: "paragraph",
+            text: "E assim o aço inoxidável está em cada paredão, resistindo a tudo e a todos para ser campeão!"
+          }
+        ]
+      },
+      revestimentos: {
+        title: "Os dois erros fatais mais comuns na aplicação do aço inoxidável",
+        lead: "Escolher a liga correta e evitar materiais incompatíveis é essencial para o desempenho e a durabilidade do inox.",
+        image: "erros.png",
+        alt: "Comparação entre uma fachada deteriorada e uma fachada contemporânea",
+        sections: [
+          {
+            type: "paragraph",
+            text: "O aço inoxidável é um dos materiais mais desejados da arquitetura contemporânea, da indústria e do design. É durável, sustentável, elegante e tecnicamente superior em inúmeras aplicações."
+          },
+          {
+            type: "paragraph",
+            text: "Existem dois erros recorrentes cometidos por alguns profissionais que trabalham com aço inox. Eles não estão nos materiais em si, mas na forma como são escolhidos e aplicados."
+          },
+          {
+            type: "paragraph",
+            text: "O primeiro erro, e também o mais recorrente, é tratar todo aço inox como se fosse igual, sem considerar a liga adequada para cada aplicação e ambiente. Essa generalização leva a escolhas equivocadas, que comprometem o desempenho, a durabilidade e a estética ao longo do tempo."
+          },
+          {
+            type: "paragraph",
+            text: "Na prática, muitos profissionais ainda especificam o aço inox como se fosse um produto único, com a ideia de que, por ser inox, basta instalar e está tudo resolvido. Esse é um grande equívoco."
+          },
+          {
+            type: "paragraph",
+            text: "O aço inoxidável é uma solução técnica para inúmeras aplicações por sua resistência à corrosão. Mas seu desempenho depende de uma especificação técnica criteriosa e assertiva."
+          },
+          {
+            type: "paragraph",
+            text: "Existem diversos tipos de aço inox — ligas das séries 300 e 400, além dos duplex — com características e composições químicas diferentes, que determinam a resistência mecânica e à corrosão. Quando a escolha não é adequada, podem surgir corrosão prematura, manchas e peças empenadas ou deformadas."
+          },
+          {
+            type: "heading",
+            text: "O que analisar antes de especificar o aço inoxidável?"
+          },
+          {
+            type: "paragraph",
+            text: "Uma boa especificação começa com perguntas simples e essenciais: onde o material será aplicado — em ambiente interno ou externo, urbano, industrial ou litorâneo? Há presença de umidade, salinidade ou agentes químicos? Qual é a função da peça: estrutural, decorativa ou funcional? Ela necessita de resistência mecânica? Qual é a expectativa estética ao longo do tempo: manter o brilho ou usar acabamento escovado, polido ou colorido?"
+          },
+          {
+            type: "paragraph",
+            text: "Essas perguntas são essenciais para definir quais ligas de aço devem ser utilizadas."
+          },
+          {
+            type: "figure",
+            image: "reuniãoblog4-1920w.webp",
+            alt: "Profissionais analisam amostras e desenhos técnicos de aço inoxidável",
+            caption: "A especificação começa pela análise do projeto, do ambiente e dos materiais."
+          },
+          {
+            type: "paragraph",
+            text: "Veja as principais famílias de aço inox e suas características:"
+          },
+          {
+            type: "heading",
+            text: "Austenítica — série 300"
+          },
+          {
+            type: "paragraph",
+            text: "As ligas 304, 304L, 316 e 316L oferecem alta resistência à corrosão, excelente resistência à variação de temperatura, conformabilidade e soldabilidade. São não magnéticas e indicadas também para exposições mais agressivas. A série 300 é muito utilizada na indústria alimentícia, na construção civil e arquitetura, em hospitais e na indústria farmacêutica, entre outras aplicações."
+          },
+          {
+            type: "heading",
+            text: "Ferrítica — série 400"
+          },
+          {
+            type: "paragraph",
+            text: "As ligas 409, 430, 439 e 444 têm estrutura ferrítica e são magnéticas. São resistentes, mas em geral apresentam menor resistência à corrosão do que as ligas da série 300, sendo indicadas para exposições menos agressivas e moderadas, como ambientes internos. A série 400 é utilizada em cutelaria e ferramentas, na indústria automotiva, em eletrodomésticos e em componentes industriais."
+          },
+          {
+            type: "heading",
+            text: "Duplex"
+          },
+          {
+            type: "paragraph",
+            text: "A liga 2205 é a mais utilizada da família duplex. Com estrutura mista austenítica-ferrítica, é indicada para ambientes muito agressivos e oferece elevada resistência mecânica e excelente resistência à corrosão, superior à série 300 em diversos ambientes. É utilizada na mineração, na indústria química, em óleo e gás, papel e celulose e nas indústrias marítima e naval. A família também inclui ligas como a 2304 e outras variações, que podem ser abordadas em outras publicações."
+          },
+          {
+            type: "paragraph",
+            text: "Na hora de especificar, é importante lembrar: nem sempre o “mais caro” é o mais adequado, e nem o mais simples será suficiente."
+          },
+          {
+            type: "paragraph",
+            text: "O segundo erro comum ocorre quando o aço inox é instalado em conjunto com materiais incompatíveis. Um exemplo típico é fixar peças de inox com parafusos de aço carbono. O aço carbono pode transferir partículas para a superfície do inox, contaminando-a e gerando pontos de corrosão, mesmo que o inox, isoladamente, seja resistente."
+          },
+          {
+            type: "figure",
+            image: "predioblog4-1920w.webp",
+            alt: "Comparação entre fachada deteriorada e fachada contemporânea em aço inox",
+            caption: "A escolha e a instalação corretas dos materiais ajudam a evitar deterioração e preservar o acabamento."
+          },
+          {
+            type: "paragraph",
+            text: "Esse tipo de problema não é falha do material, mas pode resultar de especificação e execução inadequadas. A correta identificação dos materiais, o uso de elementos de fixação compatíveis e a atenção aos detalhes de instalação são decisivos para garantir o desempenho, a durabilidade e a estética do aço inox."
+          },
+          {
+            type: "paragraph",
+            text: "Quando o inox é instalado junto a materiais com características diferentes, pode ser necessário um tratamento especial na peça ou o isolamento entre eles."
+          },
+          {
+            type: "paragraph",
+            text: "Uma especificação correta reduz a manutenção, aumenta a vida útil e preserva a estética, gerando longevidade, beleza e confiabilidade."
+          },
+          {
+            type: "paragraph",
+            text: "Para evitar esses erros, busque fornecedores e parceiros com conhecimento técnico e entenda o ambiente e o objetivo da aplicação. O aço inox deve ser especificado como solução, e não como detalhe. Quando bem especificado, entrega excelência e não decepciona."
+          }
+        ]
+      },
+      "tipos-aco": {
+        title: "Não Caia na Grande Cilada! O que é Preciso Saber Antes de Comprar Aço Inoxidável no Brasil",
+        lead: "O teste do ímã não confirma a liga do aço inox: veja as diferenças entre as linhas 200 e 304 e como verificar o material.",
+        image: "cilada.png",
+        alt: "Comparação visual entre aço inox 304 e aço inox 200",
+        hideHero: true,
+        sections: [
+          {
+            type: "paragraph",
+            text: "O mercado nacional de aço inoxidável recebeu muitos aços da linha 200 importados, oferecidos por preços aparentemente atrativos em comparação ao aço inox 304. Chapas e tubos dessa linha atraíram prestadores de serviços que os utilizam em revestimentos e corrimãos. Depois das primeiras aplicações, surgiram reclamações de peças manchadas precocemente, pontos de corrosão inesperados e perda de estética e durabilidade. Vieram então as dúvidas dos consumidores: “Compramos aço inox 304, resistente à corrosão. Por que estamos tendo esses problemas?”"
+          },
+          {
+            type: "figure",
+            image: "304VS200png-1920w.webp",
+            alt: "Comparação ilustrada entre aço inox 304 e aço inox 200",
+            caption: "A aparência e o comportamento diante de um ímã não bastam para confirmar a liga."
+          },
+          {
+            type: "paragraph",
+            text: "A comunidade de manufatura de produtos em aço inox revisou seus processos e identificou casos em que o problema estava na matéria-prima: o material comprado não correspondia à especificação esperada. Por muito tempo, um teste simples foi usado na hora da aquisição: aproximar um ímã do aço inox e, se não houvesse atração, concluir que era um material de qualidade, como o 304. O chamado “mito do ímã” nunca foi um método adequado para verificar ou certificar a liga."
+          },
+          {
+            type: "paragraph",
+            text: "Tanto o aço inox 304 quanto ligas da linha 200 pertencem à família dos austeníticos e podem apresentar comportamento não magnético. Portanto, o fato de o material não “grudar” no ímã não comprova que ele é 304. A estrutura austenítica é influenciada por elementos como níquel e, em algumas ligas da linha 200, por substituições com manganês e nitrogênio. Materiais diferentes podem reagir de forma semelhante ao ímã, embora tenham composições e desempenhos distintos."
+          },
+          {
+            type: "paragraph",
+            text: "Para entender melhor, veja a comparação de composição química entre as ligas:"
+          },
+          {
+            type: "figure",
+            image: "especificaçõesbg6-1920w.webp",
+            alt: "Tabela comparativa dos teores de cromo, níquel, manganês, carbono e nitrogênio nos aços inox 304 e 200",
+            caption: "A composição química ajuda a explicar as diferenças entre as ligas 304 e 200."
+          },
+          {
+            type: "paragraph",
+            text: "O aço inox 304 tem teor mais elevado de níquel e oferece boa resistência à corrosão em aplicações adequadas. A composição de ligas da linha 200 pode incluir menos níquel e mais manganês; o desempenho depende da liga específica e das condições de uso. Elas têm aplicações próprias. O problema ocorre quando são vendidas ou especificadas como se fossem aço 304."
+          },
+          {
+            type: "paragraph",
+            text: "A aparência, por si só, não permite distinguir com segurança essas ligas. A análise por espectrometria é um método para verificar a composição química, incluindo elementos como níquel, cromo, manganês e molibdênio. O equipamento costuma estar disponível em laboratórios, indústrias e centros de controle de qualidade."
+          },
+          {
+            type: "figure",
+            image: "mediçãobg6-1920w.webp",
+            alt: "Equipamento portátil de análise de composição de aço inoxidável por espectrometria",
+            caption: "A espectrometria auxilia na identificação da composição química do material."
+          },
+          {
+            type: "paragraph",
+            text: "Há também testes químicos de triagem usados por profissionais, que podem ajudar a diferenciar ligas pela reação na superfície. Esses procedimentos envolvem reagentes e devem ser realizados por pessoas capacitadas, seguindo as instruções do fabricante e as medidas de segurança. O resultado deve ser interpretado como uma indicação; para confirmar a composição, use documentação de rastreabilidade ou análise laboratorial apropriada."
+          },
+          {
+            type: "figure",
+            image: "comparação304-200-1920w.webp",
+            alt: "Comparação visual da reação superficial em amostras de aço inox 200 e 304",
+            caption: "Testes de triagem podem indicar diferenças entre amostras, mas não substituem a confirmação da composição."
+          },
+          {
+            type: "paragraph",
+            text: "Antes de comprar, confirme a especificação da liga com o fornecedor e verifique se ela atende ao ambiente e à aplicação. Não confie apenas na aparência ou no teste do ímã."
+          },
+          {
+            type: "paragraph",
+            text: "E você? Adota procedimentos de verificação ao receber aço inoxidável especificado como 304?"
+          },
+          {
+            type: "paragraph",
+            text: "É, caro leitor: não caia na grande cilada. Nem tudo que reluz é ouro!"
+          },
+          {
+            type: "signature",
+            text: "Emmanuel Lacerda · Papo de Inox"
+          }
+        ]
+      }
+    };
+
+    const article = articles[new URLSearchParams(window.location.search).get("post")] || articles.fachadas;
+    document.title = `${article.title} | Blog Inoxcolor`;
+    document.getElementById("article-title").textContent = article.title;
+    document.getElementById("article-lead").textContent = article.lead;
+    document.getElementById("article-image").src = article.image;
+    document.getElementById("article-image").alt = article.alt;
+    document.querySelector(".blog-article-hero").hidden = Boolean(article.hideHero);
+    if (article.heroCaption) {
+      const caption = document.getElementById("article-image-caption");
+      caption.textContent = article.heroCaption;
+      caption.hidden = false;
+    }
+    if (article.sections || article.content) {
+      const content = document.getElementById("article-content");
+      if (article.sections) {
+        for (const section of article.sections) {
+          if (section.type === "paragraph") {
+            const element = document.createElement("p");
+            element.textContent = section.text;
+            content.append(element);
+          } else if (section.type === "figure") {
+            const figure = document.createElement("figure");
+            figure.className = "blog-article-figure";
+            const image = document.createElement("img");
+            image.src = section.image;
+            image.alt = section.alt;
+            image.loading = "lazy";
+            const caption = document.createElement("figcaption");
+            caption.textContent = section.caption;
+            figure.append(image, caption);
+            content.append(figure);
+          } else if (section.type === "quote") {
+            const quote = document.createElement("blockquote");
+            quote.className = "blog-article-quote";
+            quote.textContent = `“${section.text}”`;
+            const attribution = document.createElement("cite");
+            attribution.textContent = `${section.author} · ${section.role}`;
+            quote.append(attribution);
+            content.append(quote);
+          } else if (section.type === "signature") {
+            const signature = document.createElement("p");
+            signature.className = "blog-article-signature";
+            signature.textContent = section.text;
+            content.append(signature);
+          } else if (section.type === "heading") {
+            const heading = document.createElement("h2");
+            heading.textContent = section.text;
+            content.append(heading);
+          }
+        }
+      } else {
+        for (const paragraph of article.content) {
+          const element = document.createElement("p");
+          element.textContent = paragraph;
+          content.append(element);
+        }
+      }
+      document.getElementById("article-note").hidden = true;
+    }
+  </script>
+  <script src="../script.js" defer></script>
+  <script src="../Prote%C3%A7%C3%A3o.js" defer></script>
+</body>
+</html>
