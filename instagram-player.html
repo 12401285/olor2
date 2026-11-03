@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Reel Mockup</title>
+    <style>
+      :root {
+        --bg: #ece7e2;
+        --panel: #f4f1ee;
+        --card: #f2efe9;
+        --ink: #101010;
+        --muted: #595959;
+        --line: #d4d0cb;
+        --button: #5a6fe8;
+      }
+
+      * { box-sizing: border-box; }
+
+      html, body {
+        margin: 0;
+        height: 100%;
+        font-family: Inter, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 28px;
+      }
+
+      .instagram-layout {
+        width: min(780px, 100%);
+        background: var(--panel);
+        border: 1px solid rgba(0,0,0,0.08);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+        padding: 22px 26px 18px 26px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #3d3d3d;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.5rem, 2vw + 1.8rem, 4.1rem);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+        font-weight: 800;
+        max-width: 420px;
+      }
+
+      .account-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+      }
+
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #f8b04b, #a33d3d 52%, #5d2666 100%);
+        position: relative;
+        overflow: hidden;
+        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.7);
+      }
+
+      .avatar::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 10px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: rgba(245, 214, 175, 0.95);
+      }
+
+      .avatar::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        right: 5px;
+        bottom: 0;
+        height: 20px;
+        border-radius: 25px 25px 0 0;
+        background: rgba(255,255,255,0.15);
+      }
+
+      .account-label {
+        flex: 1;
+        font-size: 15px;
+        font-weight: 700;
+        color: #1f1f1f;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .account-label span {
+        color: #5f5f5f;
+        font-weight: 500;
+      }
+
+      .primary-btn {
+        appearance: none;
+        border: 0;
+        border-radius: 12px;
+        background: linear-gradient(180deg, #6a7df6, #5a6fe8);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 13px 22px;
+        min-width: 128px;
+        box-shadow: 0 5px 18px rgba(92, 111, 232, 0.3);
+        cursor: pointer;
+      }
+
+      .video-card {
+        position: relative;
+        width: 100%;
+        height: 360px;
+        background: #000;
+        border: 1px solid rgba(0,0,0,0.08);
+        overflow: hidden;
+      }
+
+      .video-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url("file:///C:/Users/carlo/AppData/Roaming/Code/agentSessionData/2107ce08-e7de-490c-b6c2-6920dfa288ab/attachments/a975ccd3-15fc-4a71-b350-8a4f4f354403/Pasted%20Image.png");
+        background-size: cover;
+        background-position: center center;
+        filter: contrast(1.1) saturate(0.8) brightness(0.98);
+      }
+
+      .video-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(0,0,0,0.24),
+          rgba(0,0,0,0.05),
+          rgba(0,0,0,0.24)
+        );
+      }
+
+      .video-card .player-overlay {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        z-index: 2;
+      }
+
+      .play-btn {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.5);
+        border: 2px solid rgba(255,255,255,0.72);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        position: relative;
+      }
+
+      .play-btn::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 54%;
+        transform: translate(-38%, -50%);
+        width: 0;
+        height: 0;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        border-left: 22px solid rgba(255,255,255,0.96);
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 18px;
+        font-size: 14px;
+      }
+
+      .meta strong {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .meta .pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: rgba(0,0,0,0.06);
+        color: #555;
+        font-weight: 600;
+      }
+
+      .description {
+        margin: 16px 0 0;
+        font-size: 15px;
+        color: #2d2d2d;
+        line-height: 1.45;
+        max-width: 560px;
+      }
+
+      .watch-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 26px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        font-size: 15px;
+        color: #2c2c2c;
+      }
+
+      .watch-row .arrow {
+        font-size: 30px;
+        line-height: 1;
+        transform: rotate(-45deg);
+      }
+
+      @media (max-width: 640px) {
+        body { padding: 14px; }
+        .instagram-layout { padding: 16px 18px 14px; }
+        h1 { max-width: none; }
+        .primary-btn { min-width: 110px; padding: 12px 18px; }
+        .video-card { height: 270px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="instagram-layout" aria-label="Reel do Instagram em destaque">
+      <div class="eyebrow">Instagram • Reel</div>
+      <h1>Inoxcolor em destaque no Instagram</h1>
+
+      <div class="account-row">
+        <div class="avatar" aria-label="Avatar da conta"></div>
+        <div class="account-label">aperamnobrasil and inox<span>...</span></div>
+        <button class="primary-btn" type="button">View profile</button>
+      </div>
+
+      <div class="video-card" aria-label="Vídeo do Instagram">
+        <div class="video-bg"></div>
+        <div class="player-overlay" aria-hidden="true">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div class="meta">
+        <strong>Instagram</strong>
+        <span class="pill">Reel</span>
+      </div>
+
+      <p class="description">Confira o reel da Inoxcolor e conheça mais sobre nossas novidades.</p>
+
+      <div class="watch-row">
+        <span>Assistir ao reel</span>
+        <span class="arrow">↗</span>
+      </div>
+    </main>
+  </body>
+</html>

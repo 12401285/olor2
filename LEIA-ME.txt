@@ -1,0 +1,1 @@
+Arquivo principal: residencial.html. Mantenha residencial.html e a pasta assets juntos ao publicar. Imagens e vídeos foram preservados sem recompressão.
