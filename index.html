@@ -67,6 +67,33 @@
           display: none;
         }
       }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .home-page .slider-desktop {
+          display: block;
+          height: clamp(360px, 47vw, 620px) !important;
+        }
+
+        .home-page .slider-desktop .pure-slider-inner,
+        .home-page .slider-desktop .pure-slider-viewport,
+        .home-page .slider-desktop .pure-slider-track,
+        .home-page .slider-desktop .pure-slider-track img {
+          height: clamp(360px, 47vw, 620px) !important;
+        }
+
+        .home-page .slider-mobile {
+          display: none;
+        }
+
+        .home-page .test-products.section {
+          padding-block: 32px 12px;
+        }
+
+        .home-page .products-grid-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: clamp(12px, 2vw, 20px);
+        }
+      }
     </style>
 </head>
   <body class="home-page">

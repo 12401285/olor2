@@ -138,69 +138,6 @@
     background: #fff;
   }
 }
-.media-page-body .nav-actions .btn-primary {
-  position: static;
-}
-.media-page-body .nav-wrap {
-  justify-content: space-between;
-  gap: clamp(6px, 1vw, 14px);
-  padding-right: 12px;
-  padding-left: 12px;
-}
-@media (min-width: 761px) {
-  .media-page-body .nav-left {
-    order: 0;
-  }
-  .media-page-body .brand-item {
-    order: 1;
-  }
-  .media-page-body .nav-right {
-    order: 2;
-  }
-  .media-page-body .nav-actions {
-    order: 3;
-  }
-}
-.media-page-body .nav-left,
-.media-page-body .nav-right {
-  position: static;
-  left: auto;
-  flex: 0 1 auto;
-  gap: clamp(6px, 0.8vw, 12px);
-  margin-left: 0;
-  font-size: clamp(0.58rem, 0.72vw, 0.72rem);
-}
-.media-page-body .brand-item {
-  width: clamp(130px, 14vw, 180px);
-  min-width: 0;
-  margin: 0;
-}
-.media-page-body .brand-item img {
-  width: 100%;
-}
-.media-page-body .nav-actions {
-  gap: 8px;
-}
-.media-page-body .nav-actions .btn-primary {
-  padding-right: 16px;
-  padding-left: 16px;
-}
-@media (max-width: 1100px) and (min-width: 761px) {
-  .media-page-body .nav-left,
-  .media-page-body .nav-right {
-    gap: 6px;
-    font-size: 0.58rem;
-  }
-  .media-page-body .brand-item {
-    width: 130px;
-  }
-  .media-page-body .nav-actions .btn-primary {
-    min-height: 42px;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 0.62rem;
-  }
-}
 .instagram-reel-card .feature-media {
   position: relative;
   isolation: isolate;
@@ -209,32 +146,9 @@
   justify-content: center;
   background: #000;
 }
-.instagram-reel-embed {
-  width: 100% !important;
-  min-width: 0 !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: hidden;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: #000 !important;
-  box-shadow: none !important;
-}
-.instagram-reel-embed iframe {
-  display: block;
-  width: 100% !important;
-  min-width: 0 !important;
-  max-width: 100% !important;
-  height: 100% !important;
-  border: 0;
-}
-.instagram-reel-card .feature-media.is-preview .instagram-reel-embed,
-.instagram-reel-card .feature-media.is-preview .instagram-reel-embed iframe {
-  filter: blur(12px);
-  transform: scale(1.08);
-  pointer-events: none;
+.instagram-reel-card .feature-media img {
+  object-fit: cover;
+  object-position: center 10%;
 }
 .instagram-reel-preview-button {
   position: absolute;
@@ -279,14 +193,6 @@
   .media-content-grid .instagram-reel-card .feature-media {
     flex-basis: auto;
     aspect-ratio: 6240 / 4138;
-  }
-  .media-content-grid .instagram-reel-embed {
-    position: absolute;
-    inset: 0;
-  }
-  .media-content-grid .instagram-reel-embed iframe {
-    position: absolute;
-    inset: 0;
   }
 }
 .products-cta h2 { color: #171a14; }
@@ -409,7 +315,11 @@
     </a>
     <script>
       document.querySelectorAll('.instagram-reel-card .feature-media').forEach((media) => {
-        media.classList.add('is-preview');
+        const image = document.createElement('img');
+        image.src = 'c6062546-dc26-47a7-ac07-d3f820daa1be.jpg';
+        image.alt = 'Representante da Inoxcolor ao lado de uma chapa colorida';
+        image.loading = 'lazy';
+        media.replaceChildren(image);
 
         const link = document.createElement('a');
         link.className = 'instagram-reel-preview-button';
@@ -421,7 +331,6 @@
         media.append(link);
       });
     </script>
-    <script async src="https://www.instagram.com/embed.js"></script>
     <script src="script.js"></script>
     <script src="Proteção.js" defer></script>
   </body>
