@@ -786,10 +786,9 @@
       overflow-x:auto;
       overscroll-behavior-inline:contain;
       scroll-snap-type:x mandatory;
-      scrollbar-width:none;
-      -ms-overflow-style:none;
+      scrollbar-width:thin;
+      -ms-overflow-style:auto;
     }
-    .app-carousel-track::-webkit-scrollbar{display:none}
     .app-carousel-track .app-card,
     .app-carousel-track .app-card:first-child,
     .app-carousel-track .app-card:nth-child(4){
@@ -800,25 +799,6 @@
       grid-column:auto;
       scroll-snap-align:start;
     }
-    .app-carousel-control{
-      position:absolute;
-      z-index:5;
-      top:50%;
-      width:46px;
-      height:46px;
-      border:1px solid var(--gold);
-      border-radius:50%;
-      background:var(--gold);
-      color:#17140f;
-      display:grid;
-      place-items:center;
-      font:400 30px/1 Georgia,serif;
-      box-shadow:0 12px 30px rgba(25,20,13,.2);
-      cursor:pointer;
-      transform:translateY(-50%);
-    }
-    .app-carousel-control:hover{background:#d7b875}
-    .app-prev{left:0}.app-next{right:0}
     .applications-actions{display:flex;justify-content:center;margin-top:34px}
     .applications-actions .btn{min-width:310px}
     @media(max-width:760px){
@@ -827,7 +807,6 @@
       .app-carousel-track .app-card,
       .app-carousel-track .app-card:first-child,
       .app-carousel-track .app-card:nth-child(4){flex-basis:100%;height:470px}
-      .app-carousel-control{width:38px;height:38px;font-size:25px}
       .applications-actions{margin-top:26px}
       .applications-actions .btn{width:100%;min-width:0}
     }
@@ -932,9 +911,6 @@
   .app-carousel-track .app-label { position: static; display: block; margin: 0; padding: 14px 2px 2px; pointer-events: none; text-align: left; }
   .app-carousel-track .app-label strong { display: block; color: var(--ink); font: 500 17px/1.4 Arial, Helvetica, sans-serif; letter-spacing: .025em; text-shadow: none; text-wrap: balance; }
   .app-carousel-track .app-card:focus-visible { outline: 2px solid var(--gold); outline-offset: -3px; }
-  .app-carousel-shell .app-carousel-control { position: static; order: 1; transform: none; width: 42px; height: 42px; }
-  .app-carousel-shell .app-prev { justify-self: end; }
-  .app-carousel-shell .app-next { justify-self: start; }
   #aplicacoes.applications { padding-bottom: 44px; }
   #captura.capture-band { padding-top: 44px; }
   @media(max-width:900px) {
@@ -1579,6 +1555,7 @@ html body .site-footer.site-footer .footer-note {
   }
 }
 </style>
+  <link rel="stylesheet" href="segment-pages.css" />
 </head>
 <body class="architecture-page">
 <div class="topbar"><div class="container"><span>Soluções exclusivas em aço inox colorido</span><span>Atendimento técnico para todo o Brasil</span></div></div>
@@ -1635,7 +1612,8 @@ html body .site-footer.site-footer .footer-note {
         </div>
       </div>
     </section>
-    <div class="proof-pair proof-pair-single" aria-label="Diferenciais Inoxcolor">
+
+<div class="proof-pair proof-pair-single proofbar" aria-label="Diferenciais Inoxcolor">
     <section class="catalog-facts-section" id="catalogo" aria-label="Diferenciais da Inoxcolor">
       <div class="container">
 
@@ -1653,99 +1631,10 @@ html body .site-footer.site-footer .footer-note {
         </div>
       </div>
     </section>
-    
+
     </div>
 
-<section class="final-cta"><div class="container"><h2 class="display">Exclusividade que valoriza o seu projeto.</h2><p>Cores, reflexos e desenhos personalizados diferenciam o ambiente e reforçam o valor percebido da sua criação. Uma escolha que torna seu trabalho reconhecível nos detalhes.</p></div></section>
-
-    <section class="applications" id="aplicacoes">
-      <div class="container">
-        <div class="head-row"><div class="section-head"><p class="eyebrow">Produtos para arquitetura autoral</p><h2 class="display">Novas possibilidades para a sua arquitetura.</h2><p>Explore aplicações em aço inox colorido e descubra como transformar superfícies, detalhes e elementos do ambiente.</p></div></div>
-        <div class="app-carousel-shell">
-          <button class="app-carousel-control app-prev" type="button" aria-label="Aplicação anterior">‹</button>
-          <div class="app-grid app-carousel-track">
-          <a class="app-card" href="/arquitetura/revestimentos" aria-label="Conhecer Revestimento Water Ripple" data-carousel-order="1"><img src="assets/926e9c4a144e6edaf5b1.jpg" alt="Revestimento Water Ripple em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Revestimento Water Ripple</strong></div></a>
-          <a class="app-card" href="/arquitetura/brises" aria-label="Conhecer Brises" data-carousel-order="2"><img src="assets/fedbe06fa7ee7cc7f96c.jpg" alt="Brises em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Brises</strong></div></a>
-          <a class="app-card" href="/arquitetura/colunas" aria-label="Conhecer Colunas" data-carousel-order="3"><img src="assets/0a6aea69713823fdf07e.jpg" alt="Colunas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Colunas</strong></div></a>
-          <a class="app-card" href="/arquitetura/elevadores" aria-label="Conhecer Elevadores" data-carousel-order="4"><img src="assets/3591860fd9994322f60f.jpg" alt="Elevadores em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Elevadores</strong></div></a>
-          <a class="app-card" href="/arquitetura/moveis" aria-label="Conhecer Móveis" data-carousel-order="5"><img src="assets/bb60d364473c93bca11c.jpg" alt="Móveis em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Móveis</strong></div></a>
-          <a class="app-card" href="/arquitetura/portas" aria-label="Conhecer Portas" data-carousel-order="6"><img src="assets/72839cbf3a3d41bb8e0f.jpg" alt="Portas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Portas</strong></div></a>
-          <a class="app-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Paredes" data-carousel-order="7"><img src="assets/97a515c009e6c2df96fb.jpg" alt="Paredes em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Paredes</strong></div></a>
-          <a class="app-card" href="/arquitetura/ralos" aria-label="Conhecer Ralos" data-carousel-order="8"><img src="assets/46155280a66a4c7c7ff6.jpg" alt="Ralos em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Ralos</strong></div></a>
-          <a class="app-card" href="/arquitetura/perfis-e-listelos" aria-label="Conhecer Perfis e listelos" data-carousel-order="9"><img src="assets/50a6dbf63876ca614b9b.jpg" alt="Perfis e listelos em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Perfis e listelos</strong></div></a>
-          <a class="app-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Quadros e Esculturas" data-carousel-order="10"><img src="assets/0fd480dc635a4024f4e6.jpg" alt="Quadros e Esculturas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Quadros e Esculturas</strong></div></a>
-          <a class="app-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Obras de arte" data-carousel-order="11"><img src="assets/5f25f89adde98e0b2b94.jpg" alt="Obras de arte em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Obras de arte</strong></div></a>
-          <a class="app-card" href="/arquitetura/aplicacoes-externas" aria-label="Conhecer Aplicações Externas" data-carousel-order="12"><img src="assets/3faecfe559dc29fec5a9.jpg" alt="Aplicações Externas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Aplicações Externas</strong></div></a>
-          <a class="app-card" href="/arquitetura/letras-e-numeros" aria-label="Conhecer Letras e Números" data-carousel-order="13"><img src="assets/0283ad194fa67dabb86f.jpg" alt="Letras e Números em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Letras e Números</strong></div></a>
-          <a class="app-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Fachadas" data-carousel-order="14"><img src="assets/afb6267a05e6c0a8547c.jpg" alt="Fachadas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Fachadas</strong></div></a>
-          </div>
-          <output class="app-carousel-counter" aria-live="polite" aria-atomic="true" aria-label="Imagem 1 de 14">1/14</output>
-          <button class="app-carousel-control app-next" type="button" aria-label="Próxima aplicação">›</button>
-        </div>
-        <div class="applications-actions"><h3 class="catalogue-benefit-title">Escolha cores, compare acabamentos e descubra aplicações para o seu projeto.</h3><p class="architecture-cta-context">Encontre no Catálogo Profissional as possibilidades para orientar suas escolhas e avançar na especificação.</p><a class="btn" href="#captura">Receber o Catálogo Profissional</a></div>
-      </div>
-    </section>
-
-
-    <section class="capture-band" id="captura" aria-label="Catálogo Profissional">
-      <div class="container capture-wrap">
-        <div class="capture-intro"><p class="eyebrow">Produtos para uma arquitetura autoral</p><h2 class="display">Encontre a solução para o seu projeto.</h2><p>Conheça os produtos e explore as possibilidades de aplicação, cores, acabamentos e personalização.</p><p class="product-selection-prompt">Clique abaixo e escolha o seu produto.</p></div>
-        
-        <div class="application-link-grid" aria-label="Aplicações e produtos Inoxcolor">
-          <a class="application-link-card" href="/arquitetura/porcelinox" aria-label="Conhecer Revestimento Porcelinox">
-            <span class="application-link-media"><img src="assets/f5152ecac6a9fdb6adaf.jpg" alt="Revestimento Porcelinox em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Revestimento Porcelinox</strong><span>Revestimentos modulares que levam cor, brilho e identidade às superfícies.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/colunas" aria-label="Conhecer Colunas">
-            <span class="application-link-media"><img src="assets/e4b17c591c356273a2df.jpg" alt="Colunas em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Colunas</strong><span>Elementos estruturais transformados em pontos de presença e sofisticação.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/elevadores" aria-label="Conhecer Elevadores">
-            <span class="application-link-media"><img src="assets/fb17fa6f5abcf90cf37a.jpg" alt="Elevadores em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Elevadores</strong><span>Revestimentos que valorizam cabines e halls com acabamento exclusivo.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Fachadas e Paredes">
-            <span class="application-link-media"><img src="assets/c990c28164dbe975eab0.jpg" alt="Fachadas e Paredes em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Fachadas e Paredes</strong><span>Composições que unem identidade arquitetônica, resistência e valor visual.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/moveis" aria-label="Conhecer Móveis">
-            <span class="application-link-media"><img src="assets/eebf755343a2ae9fec8c.jpg" alt="Móveis em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Móveis</strong><span>Desenho, cor e acabamento aplicados a mobiliários de linguagem autoral.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/portas" aria-label="Conhecer Portas">
-            <span class="application-link-media"><img src="assets/5fb475a0d908e4172961.jpg" alt="Portas em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Portas</strong><span>Acessos com presença arquitetônica que anunciam a identidade do projeto.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/brises" aria-label="Conhecer Brises">
-            <span class="application-link-media"><img src="assets/003807faba0ee19e2787.jpg" alt="Brises em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Brises</strong><span>Ritmo, profundidade e expressão visual para ambientes de alto padrão.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/ralos" aria-label="Conhecer Ralos">
-            <span class="application-link-media"><img src="assets/dc3e77089ea6a63a00ed.jpg" alt="Ralos em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Ralos</strong><span>Funcionalidade e precisão transformadas em um detalhe elegante de design.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Obras de Arte">
-            <span class="application-link-media"><img src="assets/c60045f6de3d674c319c.jpg" alt="Obras de Arte em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Obras de Arte</strong><span>Formas, movimentos e cores concebidos para atravessar o tempo.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/perfis-e-listelos" aria-label="Conhecer Perfis e Listelos">
-            <span class="application-link-media"><img src="assets/d4b3ee2544b035bbad32.jpg" alt="Perfis e Listelos em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Perfis e Listelos</strong><span>Detalhes que valorizam encontros, quinas, terminações e composições.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/quadros-decorativos" aria-label="Conhecer Quadros Decorativos">
-            <span class="application-link-media"><img src="assets/c85eb710774bb335ac34.jpg" alt="Quadros Decorativos em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Quadros Decorativos</strong><span>Peças que convertem paredes em espaços de contemplação e elegância.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/letras-e-numeros" aria-label="Conhecer Letras e Números">
-            <span class="application-link-media"><img src="assets/077b18780f5379c46723.jpg" alt="Letras e Números em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Letras e Números</strong><span>Identificação personalizada convertida em presença e valor estético.</span></span>
-          </a>
-          <a class="application-link-card" href="/arquitetura/aplicacoes-externas" aria-label="Conhecer Aplicações Externas">
-            <span class="application-link-media"><img src="assets/1e1deb035037b82bcdad.jpg" alt="Aplicações Externas em aço inox colorido"></span>
-            <span class="application-link-copy"><strong>Aplicações Externas</strong><span>Soluções resistentes que preservam cor e imponência em áreas externas.</span></span>
-          </a>
-        </div>
-        <section class="colors-feature" aria-labelledby="cores-inoxcolor">
+<section class="colors-feature technology section" aria-labelledby="cores-inoxcolor">
           <div class="colors-feature-copy">
             <p class="eyebrow">Cores Inoxcolor</p>
             <h3 id="cores-inoxcolor">Sete cores. Dois acabamentos. Novas possibilidades para a sua linguagem.</h3>
@@ -1759,30 +1648,10 @@ html body .site-footer.site-footer .footer-note {
           </div>
           <a class="colors-options-cta" href="/arquitetura/catalogo-de-cores">Clique na imagem</a>
         </section>
-      </div>
-    </section>
 
-    <section class="technical" id="especificacao">
-      <div class="container technical-grid">
-        <div class="technical-intro"><p class="eyebrow">Sua criação, tecnicamente amparada</p><h2 class="display">Sua ideia, com viabilidade técnica.</h2><p>Conte com orientação para definir material, acabamento e processos compatíveis com a aplicação, preservando a intenção estética do seu desenho.</p><p class="architecture-cta-context">Explore as possibilidades do catálogo e conte com nossa equipe para alinhar material, acabamento e aplicação à sua ideia.</p><a class="btn btn-dark" href="#captura">Receber o Catálogo Profissional</a></div>
-        <div class="spec-list">
-          <div class="spec"><strong>Material</strong><span>Ligas 304 e 316, selecionadas conforme aplicação e condições do projeto.</span></div>
-          <div class="spec"><strong>Projetos personalizados</strong><span>Produtos e soluções desenvolvidos de acordo com as dimensões, a linguagem e as necessidades de cada projeto.</span></div>
-          
-          
-          <div class="spec"><strong>Transformação</strong><span>Corte a laser, dobra, calandragem, fotogravação e soluções especiais.</span></div>
-          <div class="spec"><strong>Personalização</strong><span>O arquiteto ou designer pode desenvolver desenhos, grafismos e padrões exclusivos para aplicação nos produtos, personalizando cada projeto para o seu cliente.</span></div><div class="spec"><strong>Acompanhamento técnico</strong><span>Orientação especializada para alinhar produto, acabamento, aplicação e intenção estética antes da execução.</span></div><div class="spec"><strong>Durabilidade</strong><span>Produtos resistentes, que não descascam nem desbotam, para aplicações internas e externas conforme a especificação adequada.</span></div>
-        </div>
-      </div>
-      <div class="container process-inline"><div class="section-head"><p class="eyebrow">Como funciona</p><h2 class="display">Da inspiração à assinatura realizada.</h2></div><div class="process-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));">
-        <article class="step"><span>01</span><h3>Receba o catálogo</h3><p>Explore produtos, cores, acabamentos e aplicações capazes de ampliar o seu repertório.</p></article>
-        <article class="step"><span>02</span><h3>Apresente a ideia</h3><p>Compartilhe seu projeto, desenho, referência, medidas ou uma breve descrição da ideia que deseja materializar.</p></article>
-        <article class="step"><span>03</span><h3>Receba orientação</h3><p>Avaliamos as possibilidades técnicas para que a solução respeite a intenção original da sua criação.</p></article>
-        <article class="step"><span>04</span><h3>Avance ao orçamento</h3><p>Com a solução alinhada, o projeto avança para orçamento com mais clareza e segurança.</p></article>
-      </div></div>
-    </section>
+<section class="final-cta opportunity section"><div class="container"><h2 class="display">Exclusividade que valoriza o seu projeto.</h2><p>Cores, reflexos e desenhos personalizados diferenciam o ambiente e reforçam o valor percebido da sua criação. Uma escolha que torna seu trabalho reconhecível nos detalhes.</p></div></section>
 
-<section class="social-cases" id="casos-reais">
+<section class="social-cases experience section" id="casos-reais">
 <div class="container">
 <div class="social-cases-head">
 <p class="eyebrow">Experiência em soluções especiais</p>
@@ -1884,7 +1753,7 @@ html body .site-footer.site-footer .footer-note {
 </div>
 </section>
 
-    <section class="testimonials" id="depoimentos">
+<section class="testimonials testimonial-section section" id="depoimentos">
       <div class="container">
         <div class="section-head testimonial-head"><p class="eyebrow">Depoimentos e parcerias</p><h2 class="display">Projetos que impressionam começam com parceiros que realizam.</h2><p>A confiança nasce quando liberdade criativa, excelência de execução e responsabilidade técnica caminham juntas.</p></div>
         <div class="testimonial-grid">
@@ -1892,7 +1761,7 @@ html body .site-footer.site-footer .footer-note {
             <div class="testimonial-media"><video controls playsinline preload="none" poster="assets/6f753bbfb41defc15acb.jpg" aria-label="Depoimento de Roberta Azevedo"><source src="assets/eefbd19244f62ac77d26.mp4" type="video/mp4"></video></div>
             <div class="testimonial-copy"><span>TV Globo</span><blockquote>“A Inoxcolor é super diferenciada, deixa o ambiente super sofisticado e tem um resultado incrível.”</blockquote><strong>Roberta Azevedo</strong><small>Executiva de Parcerias</small></div>
           </article>
-          
+
           <article class="testimonial-card testimonial-card-stacked">
             <div class="testimonial-media"><video controls playsinline preload="none" poster="assets/c44ac8e83997bf3da1d0.jpg" aria-label="Depoimento de Camila Costa, Arquiteta Cenógrafa Chefe"><source src="assets/e22f891df4bdd0076a1d.mp4" type="video/mp4"></video></div>
             <div class="testimonial-copy"><span>TV Globo</span><blockquote>“O resultado sai além das nossas expectativas.”</blockquote><strong>Camila Costa</strong><small>Arquiteta Cenógrafa Chefe</small></div>
@@ -1910,7 +1779,117 @@ html body .site-footer.site-footer .footer-note {
       </div>
     </section>
 
-    <section class="faq" id="faq">
+<section class="applications product-access section" id="aplicacoes">
+      <div class="container">
+        <div class="head-row"><div class="section-head"><p class="eyebrow">Produtos para arquitetura autoral</p><h2 class="display">Novas possibilidades para a sua arquitetura.</h2><p>Explore aplicações em aço inox colorido e descubra como transformar superfícies, detalhes e elementos do ambiente.</p></div></div>
+        <div class="app-carousel-shell industry-product-carousel">
+          <div class="app-grid app-carousel-track product-track" id="architecture-applications-carousel" role="region" aria-roledescription="carrossel" aria-label="Aplica&#231;&#245;es para arquitetura Inoxcolor" tabindex="0">
+          <a class="app-card product-card" href="/arquitetura/revestimentos" aria-label="Conhecer Revestimento Water Ripple" data-carousel-order="1"><img src="assets/926e9c4a144e6edaf5b1.jpg" alt="Revestimento Water Ripple em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Revestimento Water Ripple</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/brises" aria-label="Conhecer Brises" data-carousel-order="2"><img src="assets/fedbe06fa7ee7cc7f96c.jpg" alt="Brises em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Brises</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/colunas" aria-label="Conhecer Colunas" data-carousel-order="3"><img src="assets/0a6aea69713823fdf07e.jpg" alt="Colunas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Colunas</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/elevadores" aria-label="Conhecer Elevadores" data-carousel-order="4"><img src="assets/3591860fd9994322f60f.jpg" alt="Elevadores em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Elevadores</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/moveis" aria-label="Conhecer Móveis" data-carousel-order="5"><img src="assets/bb60d364473c93bca11c.jpg" alt="Móveis em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Móveis</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/portas" aria-label="Conhecer Portas" data-carousel-order="6"><img src="assets/72839cbf3a3d41bb8e0f.jpg" alt="Portas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Portas</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Paredes" data-carousel-order="7"><img src="assets/97a515c009e6c2df96fb.jpg" alt="Paredes em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Paredes</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/ralos" aria-label="Conhecer Ralos" data-carousel-order="8"><img src="assets/46155280a66a4c7c7ff6.jpg" alt="Ralos em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Ralos</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/perfis-e-listelos" aria-label="Conhecer Perfis e listelos" data-carousel-order="9"><img src="assets/50a6dbf63876ca614b9b.jpg" alt="Perfis e listelos em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Perfis e listelos</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Quadros e Esculturas" data-carousel-order="10"><img src="assets/0fd480dc635a4024f4e6.jpg" alt="Quadros e Esculturas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Quadros e Esculturas</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Obras de arte" data-carousel-order="11"><img src="assets/5f25f89adde98e0b2b94.jpg" alt="Obras de arte em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Obras de arte</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/aplicacoes-externas" aria-label="Conhecer Aplicações Externas" data-carousel-order="12"><img src="assets/3faecfe559dc29fec5a9.jpg" alt="Aplicações Externas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Aplicações Externas</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/letras-e-numeros" aria-label="Conhecer Letras e Números" data-carousel-order="13"><img src="assets/0283ad194fa67dabb86f.jpg" alt="Letras e Números em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Letras e Números</strong></div></a>
+          <a class="app-card product-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Fachadas" data-carousel-order="14"><img src="assets/afb6267a05e6c0a8547c.jpg" alt="Fachadas em aço inox colorido Inoxcolor" loading="lazy" decoding="async"><div class="app-label"><strong>Fachadas</strong></div></a>
+          </div>
+          <div class="carousel-pagination app-carousel-pagination" role="group" aria-label="Selecionar aplicação"></div>
+          <output class="app-carousel-counter" aria-live="polite" aria-atomic="true" aria-label="Aplicação 1 de 14">1/14</output>
+
+        </div>
+        <div class="applications-actions"><h3 class="catalogue-benefit-title">Escolha cores, compare acabamentos e descubra aplicações para o seu projeto.</h3><p class="architecture-cta-context">Encontre no Catálogo Profissional as possibilidades para orientar suas escolhas e avançar na especificação.</p><a class="btn" href="#captura">Receber o Catálogo Profissional</a></div>
+      </div>
+    </section>
+
+<section class="capture-band service-banner section" id="captura" aria-label="Catálogo Profissional">
+      <div class="container capture-wrap">
+        <div class="capture-intro"><p class="eyebrow">Produtos para uma arquitetura autoral</p><h2 class="display">Encontre a solução para o seu projeto.</h2><p>Conheça os produtos e explore as possibilidades de aplicação, cores, acabamentos e personalização.</p><p class="product-selection-prompt">Clique abaixo e escolha o seu produto.</p></div>
+
+        <div class="application-link-grid" aria-label="Aplicações e produtos Inoxcolor">
+          <a class="application-link-card" href="/arquitetura/porcelinox" aria-label="Conhecer Revestimento Porcelinox">
+            <span class="application-link-media"><img src="assets/f5152ecac6a9fdb6adaf.jpg" alt="Revestimento Porcelinox em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Revestimento Porcelinox</strong><span>Revestimentos modulares que levam cor, brilho e identidade às superfícies.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/colunas" aria-label="Conhecer Colunas">
+            <span class="application-link-media"><img src="assets/e4b17c591c356273a2df.jpg" alt="Colunas em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Colunas</strong><span>Elementos estruturais transformados em pontos de presença e sofisticação.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/elevadores" aria-label="Conhecer Elevadores">
+            <span class="application-link-media"><img src="assets/fb17fa6f5abcf90cf37a.jpg" alt="Elevadores em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Elevadores</strong><span>Revestimentos que valorizam cabines e halls com acabamento exclusivo.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/fachadas-e-paredes" aria-label="Conhecer Fachadas e Paredes">
+            <span class="application-link-media"><img src="assets/c990c28164dbe975eab0.jpg" alt="Fachadas e Paredes em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Fachadas e Paredes</strong><span>Composições que unem identidade arquitetônica, resistência e valor visual.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/moveis" aria-label="Conhecer Móveis">
+            <span class="application-link-media"><img src="assets/eebf755343a2ae9fec8c.jpg" alt="Móveis em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Móveis</strong><span>Desenho, cor e acabamento aplicados a mobiliários de linguagem autoral.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/portas" aria-label="Conhecer Portas">
+            <span class="application-link-media"><img src="assets/5fb475a0d908e4172961.jpg" alt="Portas em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Portas</strong><span>Acessos com presença arquitetônica que anunciam a identidade do projeto.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/brises" aria-label="Conhecer Brises">
+            <span class="application-link-media"><img src="assets/003807faba0ee19e2787.jpg" alt="Brises em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Brises</strong><span>Ritmo, profundidade e expressão visual para ambientes de alto padrão.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/ralos" aria-label="Conhecer Ralos">
+            <span class="application-link-media"><img src="assets/dc3e77089ea6a63a00ed.jpg" alt="Ralos em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Ralos</strong><span>Funcionalidade e precisão transformadas em um detalhe elegante de design.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/obras-de-arte" aria-label="Conhecer Obras de Arte">
+            <span class="application-link-media"><img src="assets/c60045f6de3d674c319c.jpg" alt="Obras de Arte em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Obras de Arte</strong><span>Formas, movimentos e cores concebidos para atravessar o tempo.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/perfis-e-listelos" aria-label="Conhecer Perfis e Listelos">
+            <span class="application-link-media"><img src="assets/d4b3ee2544b035bbad32.jpg" alt="Perfis e Listelos em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Perfis e Listelos</strong><span>Detalhes que valorizam encontros, quinas, terminações e composições.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/quadros-decorativos" aria-label="Conhecer Quadros Decorativos">
+            <span class="application-link-media"><img src="assets/c85eb710774bb335ac34.jpg" alt="Quadros Decorativos em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Quadros Decorativos</strong><span>Peças que convertem paredes em espaços de contemplação e elegância.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/letras-e-numeros" aria-label="Conhecer Letras e Números">
+            <span class="application-link-media"><img src="assets/077b18780f5379c46723.jpg" alt="Letras e Números em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Letras e Números</strong><span>Identificação personalizada convertida em presença e valor estético.</span></span>
+          </a>
+          <a class="application-link-card" href="/arquitetura/aplicacoes-externas" aria-label="Conhecer Aplicações Externas">
+            <span class="application-link-media"><img src="assets/1e1deb035037b82bcdad.jpg" alt="Aplicações Externas em aço inox colorido"></span>
+            <span class="application-link-copy"><strong>Aplicações Externas</strong><span>Soluções resistentes que preservam cor e imponência em áreas externas.</span></span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+<section class="technical specification section cream" id="especificacao">
+      <div class="container technical-grid">
+        <div class="technical-intro"><p class="eyebrow">Sua criação, tecnicamente amparada</p><h2 class="display">Sua ideia, com viabilidade técnica.</h2><p>Conte com orientação para definir material, acabamento e processos compatíveis com a aplicação, preservando a intenção estética do seu desenho.</p><p class="architecture-cta-context">Explore as possibilidades do catálogo e conte com nossa equipe para alinhar material, acabamento e aplicação à sua ideia.</p><a class="btn btn-dark" href="#captura">Receber o Catálogo Profissional</a></div>
+        <div class="spec-list">
+          <div class="spec"><strong>Material</strong><span>Ligas 304 e 316, selecionadas conforme aplicação e condições do projeto.</span></div>
+          <div class="spec"><strong>Projetos personalizados</strong><span>Produtos e soluções desenvolvidos de acordo com as dimensões, a linguagem e as necessidades de cada projeto.</span></div>
+
+
+          <div class="spec"><strong>Transformação</strong><span>Corte a laser, dobra, calandragem, fotogravação e soluções especiais.</span></div>
+          <div class="spec"><strong>Personalização</strong><span>O arquiteto ou designer pode desenvolver desenhos, grafismos e padrões exclusivos para aplicação nos produtos, personalizando cada projeto para o seu cliente.</span></div><div class="spec"><strong>Acompanhamento técnico</strong><span>Orientação especializada para alinhar produto, acabamento, aplicação e intenção estética antes da execução.</span></div><div class="spec"><strong>Durabilidade</strong><span>Produtos resistentes, que não descascam nem desbotam, para aplicações internas e externas conforme a especificação adequada.</span></div>
+        </div>
+      </div>
+      <div class="container process-inline"><div class="section-head"><p class="eyebrow">Como funciona</p><h2 class="display">Da inspiração à assinatura realizada.</h2></div><div class="process-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));">
+        <article class="step"><span>01</span><h3>Receba o catálogo</h3><p>Explore produtos, cores, acabamentos e aplicações capazes de ampliar o seu repertório.</p></article>
+        <article class="step"><span>02</span><h3>Apresente a ideia</h3><p>Compartilhe seu projeto, desenho, referência, medidas ou uma breve descrição da ideia que deseja materializar.</p></article>
+        <article class="step"><span>03</span><h3>Receba orientação</h3><p>Avaliamos as possibilidades técnicas para que a solução respeite a intenção original da sua criação.</p></article>
+        <article class="step"><span>04</span><h3>Avance ao orçamento</h3><p>Com a solução alinhada, o projeto avança para orçamento com mais clareza e segurança.</p></article>
+      </div></div>
+    </section>
+
+<section class="faq section" id="faq">
       <div class="container faq-wrap"><div><p class="eyebrow">Dúvidas frequentes</p><h2 class="display">Especifique com confiança.</h2></div><div class="faq-list">
         <details open><summary>O aço inox colorido é pintado?</summary><p>Não. A coloração é obtida por processo eletroquímico. Não utilizamos tintas nem pigmentos. Não desbota, não enferruja e não descasca. É um material super resistente.</p></details>
         <details><summary>O material realmente é resistente?</summary><p>Sim. O aço inox colorido mantém as características de resistência e durabilidade do aço inoxidável, com coloração obtida por processo eletroquímico. Não desbota, não descasca e não enferruja. É um material super resistente. Para manter as características de resistência, é necessário realizar regularmente as limpezas e manutenções necessárias, de acordo com as orientações especificadas.</p></details>
@@ -1926,14 +1905,14 @@ html body .site-footer.site-footer .footer-note {
       </div></div>
     </section>
 
-    <section class="budget-closing" id="solicitar-orcamento" aria-labelledby="budget-closing-title">
+<section class="budget-closing closing section" id="solicitar-orcamento" aria-labelledby="budget-closing-title">
       <div class="container">
         <h2 class="display" id="budget-closing-title">Seu próximo projeto merece uma assinatura única.</h2>
         <p>Apresente sua ideia e receba um orçamento personalizado para torná-la realidade.</p>
         <a class="btn" href="https://wa.me/5531991257328?text=Ol%C3%A1%21%20Quero%20solicitar%20um%20or%C3%A7amento%20para%20um%20projeto%20de%20arquitetura%20com%20produtos%20em%20a%C3%A7o%20inox%20colorido." target="_blank" rel="noopener noreferrer">Solicite seu orçamento <span aria-hidden="true">↗</span></a>
       </div>
     </section>
-  </main>
+</main>
 
   <footer class="site-footer" id="contato">
       <div class="container footer-grid">
@@ -2098,29 +2077,47 @@ html body .site-footer.site-footer .footer-note {
     if (!track) return;
     const cards = [...track.querySelectorAll('.app-card')];
     const counter = document.querySelector('.app-carousel-counter');
-    if (!cards.length || !counter) return;
+    const pagination = document.querySelector('.app-carousel-pagination');
+    if (!cards.length || !counter || !pagination) return;
     let currentIndex = 0;
-    let pendingIndex = null;
+    const step = () => {
+      const card = cards[0];
+      return card ? card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || '0') : track.clientWidth;
+    };
     const position = index => Math.min(
       cards[index].getBoundingClientRect().left - cards[0].getBoundingClientRect().left,
       Math.max(0, track.scrollWidth - track.clientWidth)
     );
+    const maxPageIndex = () => Math.max(0, Math.ceil((track.scrollWidth - track.clientWidth - 1) / step()));
+    const pageIndex = () => Math.min(maxPageIndex(), Math.max(0, Math.round(track.scrollLeft / step())));
+    const rebuildPagination = () => {
+      const pageCount = maxPageIndex() + 1;
+      if (pagination.childElementCount === pageCount) return;
+      pagination.replaceChildren();
+      for (let index = 0; index < pageCount; index += 1) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Ir para a página ${index + 1}`);
+        dot.addEventListener('click', () => {
+          const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+          track.scrollTo({left: Math.min(index * step(), track.scrollWidth - track.clientWidth), behavior});
+        });
+        pagination.appendChild(dot);
+      }
+    };
     const render = () => {
       counter.textContent = `${currentIndex + 1}/${cards.length}`;
-      counter.setAttribute('aria-label', `Imagem ${currentIndex + 1} de ${cards.length}`);
+      counter.setAttribute('aria-label', `Aplicação ${currentIndex + 1} de ${cards.length}`);
       cards.forEach((card, i) => {
         if (i === currentIndex) card.setAttribute('aria-current', 'true');
         else card.removeAttribute('aria-current');
       });
+      pagination.querySelectorAll('button').forEach((dot, index) => {
+        if (index === pageIndex()) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
     };
     const update = () => {
-      if (pendingIndex !== null) {
-        if (Math.abs(track.scrollLeft - position(pendingIndex)) > 2) return;
-        currentIndex = pendingIndex;
-        pendingIndex = null;
-        render();
-        return;
-      }
       let nearest = currentIndex;
       let distance = Math.abs(track.scrollLeft - position(nearest));
       cards.forEach((_, i) => {
@@ -2130,22 +2127,13 @@ html body .site-footer.site-footer .footer-note {
       currentIndex = nearest;
       render();
     };
-    const go = direction => {
-      currentIndex = Math.max(0, Math.min(cards.length - 1, currentIndex + direction));
-      pendingIndex = currentIndex;
-      render();
-      track.scrollTo({left: position(currentIndex), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
-      update();
-    };
-    document.querySelector('.app-prev')?.addEventListener('click', () => go(-1));
-    document.querySelector('.app-next')?.addEventListener('click', () => go(1));
     track.addEventListener('scroll', update, {passive: true});
-    ['pointerdown', 'touchstart', 'wheel'].forEach(event => track.addEventListener(event, () => { pendingIndex = null; }, {passive: true}));
     new ResizeObserver(() => {
-      pendingIndex = null;
-      track.scrollTo({left: position(currentIndex), behavior: 'instant'});
+      rebuildPagination();
+      track.scrollTo({left: position(currentIndex), behavior: 'auto'});
       render();
     }).observe(track);
+    rebuildPagination();
     render();
   })();
 </script>

@@ -1,0 +1,711 @@
+body.architecture-page,
+body.residential-page {
+  --segment-ink: #171615;
+  --segment-paper: #fbfaf7;
+  --segment-cream: #f2eee6;
+  --segment-gold: #b58a5b;
+  background: var(--paper) !important;
+  color: var(--segment-ink) !important;
+}
+
+body.architecture-page .mobile-menu-panel .main-nav a,
+body.residential-page .mobile-menu-panel .main-nav a {
+  color: #fff !important;
+}
+
+body.architecture-page main,
+body.residential-page main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .hero.hero-with-video,
+body.residential-page .hero.hero-with-video {
+  min-height: 0 !important;
+  padding: clamp(112px, 12vw, 150px) 24px clamp(60px, 7vw, 84px) !important;
+  background: #111 !important;
+  color: #fff !important;
+}
+
+body.architecture-page .hero-stage,
+body.residential-page .hero-stage {
+  display: flex !important;
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 0 !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .hero-copy,
+body.residential-page .hero-copy {
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: 0 auto 28px !important;
+  text-align: center !important;
+}
+
+body.architecture-page .hero-copy .eyebrow,
+body.residential-page .hero-copy .eyebrow {
+  margin: 0 0 16px !important;
+  color: #e0b56d !important;
+  text-align: center !important;
+}
+
+body.architecture-page .hero-copy h1,
+body.residential-page .hero-copy h1 {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  color: #fff !important;
+  font-size: clamp(2.4rem, 5.2vw, 4.5rem) !important;
+  line-height: 1.04 !important;
+  text-align: center !important;
+  text-wrap: balance;
+}
+
+body.architecture-page .hero-media-column,
+body.residential-page .hero-media-column {
+  display: flex !important;
+  width: min(920px, 100%) !important;
+  max-width: 920px !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 22px !important;
+  margin: 0 auto !important;
+}
+
+body.architecture-page .hero-video-shell,
+body.residential-page .hero-video-shell {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(23, 22, 21, 0.14) !important;
+  background: #171615 !important;
+}
+
+body.architecture-page .hero-video-shell video,
+body.residential-page .hero-video-shell video {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+}
+
+body.architecture-page .hero-subheadline,
+body.residential-page .hero-subheadline {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: clamp(0.98rem, 1.5vw, 1.12rem) !important;
+  line-height: 1.75 !important;
+  text-align: center !important;
+}
+
+body.architecture-page .hero-actions,
+body.residential-page .hero-actions {
+  justify-content: center !important;
+  margin: 0 auto !important;
+}
+
+body.architecture-page .hero-mechanism,
+body.residential-page .hero-mechanism {
+  margin: 0 auto !important;
+  color: rgba(255, 255, 255, 0.82) !important;
+  text-align: center !important;
+}
+
+body.architecture-page .proof-pair,
+body.residential-page .proof-pair {
+  background: #f1eee5 !important;
+}
+
+body.architecture-page .catalog-facts-section,
+body.residential-page .catalog-facts-section {
+  padding: clamp(40px, 6vw, 68px) 24px !important;
+  background: transparent !important;
+}
+
+body.architecture-page .catalog-facts-section .container,
+body.residential-page .catalog-facts-section .container {
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .facts-section-title,
+body.residential-page .facts-section-title {
+  margin: 0 0 24px !important;
+  color: var(--segment-ink) !important;
+  font-size: clamp(1.7rem, 3vw, 2.5rem) !important;
+  line-height: 1.12 !important;
+  text-align: left !important;
+}
+
+body.architecture-page .facts-grid,
+body.residential-page .facts-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+body.architecture-page .fact-card,
+body.residential-page .fact-card {
+  grid-column: auto !important;
+  min-width: 0 !important;
+  padding: 22px 18px !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(23, 22, 21, 0.18) !important;
+  background: transparent !important;
+  text-align: left !important;
+}
+
+body.architecture-page .fact-card h3,
+body.residential-page .fact-card h3 {
+  margin: 0 0 8px !important;
+  color: #765d3c !important;
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem) !important;
+  text-align: left !important;
+}
+
+body.architecture-page .fact-card p,
+body.residential-page .fact-card p {
+  margin: 0 !important;
+  color: #625c53 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.6 !important;
+  text-align: left !important;
+}
+
+body.architecture-page .technology.colors-feature,
+body.residential-page .technology.colors-feature {
+  display: grid !important;
+  width: 100% !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr) !important;
+  align-items: center !important;
+  gap: clamp(28px, 6vw, 76px) !important;
+  margin: 0 !important;
+  padding: clamp(64px, 8vw, 96px) max(24px, calc((100% - 1120px) / 2)) !important;
+  background: #171614 !important;
+  color: #fff !important;
+}
+
+body.architecture-page .colors-feature-copy,
+body.residential-page .colors-feature-copy {
+  max-width: 620px !important;
+}
+
+body.architecture-page .colors-feature-copy .eyebrow,
+body.residential-page .colors-feature-copy .eyebrow {
+  color: #e0b56d !important;
+}
+
+body.architecture-page .colors-feature-copy h3,
+body.residential-page .colors-feature-copy h3 {
+  margin: 0 0 18px !important;
+  color: #fff !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(2rem, 3.8vw, 3.35rem) !important;
+  line-height: 1.04 !important;
+}
+
+body.architecture-page .colors-feature-copy p,
+body.residential-page .colors-feature-copy p {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: 0.96rem !important;
+  line-height: 1.8 !important;
+}
+
+body.architecture-page .colors-catalog-link,
+body.residential-page .colors-catalog-link {
+  width: 100% !important;
+  max-width: 480px !important;
+  margin: 0 auto !important;
+}
+
+body.architecture-page .colors-catalog-link .application-link-card,
+body.residential-page .colors-catalog-link .application-link-card {
+  display: block !important;
+  background: #fff !important;
+}
+
+body.architecture-page .colors-catalog-link .application-link-copy strong,
+body.residential-page .colors-catalog-link .application-link-copy strong {
+  color: #765d3c !important;
+}
+
+body.architecture-page .colors-options-cta,
+body.residential-page .colors-options-cta {
+  grid-column: 1 / -1 !important;
+  color: #fff !important;
+}
+
+body.architecture-page .colors-options-cta:hover,
+body.architecture-page .colors-options-cta:focus-visible,
+body.residential-page .colors-options-cta:hover,
+body.residential-page .colors-options-cta:focus-visible {
+  color: #e0b56d !important;
+}
+
+body.architecture-page .opportunity.final-cta,
+body.residential-page .opportunity.final-cta {
+  margin: 0 !important;
+  padding: clamp(56px, 7vw, 84px) 24px !important;
+  color: #fffaf0 !important;
+}
+
+body.architecture-page .opportunity.final-cta .container,
+body.residential-page .opportunity.final-cta .container {
+  width: min(1000px, 100%) !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .opportunity.final-cta h2,
+body.residential-page .opportunity.final-cta h2 {
+  color: #fffaf0 !important;
+}
+
+body.architecture-page .opportunity.final-cta p,
+body.residential-page .opportunity.final-cta p {
+  max-width: 760px !important;
+  color: rgba(255, 250, 240, 0.74) !important;
+  line-height: 1.8 !important;
+}
+
+body.architecture-page .experience.social-cases,
+body.residential-page .experience.social-cases {
+  padding: clamp(64px, 8vw, 96px) 24px !important;
+  background: #171716 !important;
+  color: #fff !important;
+}
+
+body.architecture-page .experience.social-cases .container,
+body.residential-page .experience.social-cases .container {
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .proof-case-grid,
+body.residential-page .proof-case-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+}
+
+body.architecture-page .proof-case-image,
+body.residential-page .proof-case-image {
+  aspect-ratio: 16 / 10 !important;
+  overflow: hidden !important;
+}
+
+body.architecture-page .proof-case-image img,
+body.residential-page .proof-case-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+body.architecture-page .testimonial-section.testimonials,
+body.residential-page .testimonial-section.testimonials {
+  padding: clamp(56px, 7vw, 84px) 24px !important;
+  background: #111 !important;
+  color: #fff !important;
+}
+
+body.architecture-page .testimonial-section.testimonials .container,
+body.residential-page .testimonial-section.testimonials .container {
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+}
+
+body.architecture-page .testimonial-head,
+body.residential-page .testimonial-head {
+  color: #fff !important;
+}
+
+body.architecture-page .testimonial-head h2,
+body.residential-page .testimonial-head h2 {
+  color: #fff !important;
+}
+
+body.architecture-page .testimonial-head p:not(.eyebrow),
+body.residential-page .testimonial-head p:not(.eyebrow) {
+  color: #c8c3b9 !important;
+}
+
+body.architecture-page .testimonial-head .eyebrow,
+body.residential-page .testimonial-head .eyebrow {
+  color: #e0b56d !important;
+}
+
+body.architecture-page .testimonial-card,
+body.residential-page .testimonial-card {
+  color: #fff !important;
+}
+
+body.architecture-page .product-access.applications,
+body.residential-page .product-access.applications {
+  padding: clamp(64px, 8vw, 96px) 24px !important;
+  background: var(--paper) !important;
+}
+
+body.architecture-page .product-access.applications .container,
+body.residential-page .product-access.applications .container {
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .product-access .section-head h2,
+body.residential-page .product-access .section-head h2 {
+  color: var(--segment-ink) !important;
+  font-size: clamp(2rem, 3.8vw, 3.25rem) !important;
+  line-height: 1.08 !important;
+}
+
+body.architecture-page .product-access .section-head > p:last-child,
+body.residential-page .product-access .section-head > p:last-child {
+  max-width: 700px !important;
+  color: #625c53 !important;
+  font-size: 0.96rem !important;
+  line-height: 1.7 !important;
+}
+
+body.architecture-page .app-carousel-shell,
+body.residential-page .app-carousel-shell {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  margin-top: 32px !important;
+}
+
+body.architecture-page .app-carousel-pagination,
+body.residential-page .app-carousel-pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: 0 !important;
+}
+
+body.architecture-page .app-carousel-pagination button,
+body.residential-page .app-carousel-pagination button {
+  width: 8px !important;
+  height: 8px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: #c8c0b3 !important;
+  cursor: pointer !important;
+  transition: transform 0.2s, background-color 0.2s !important;
+}
+
+body.architecture-page .app-carousel-pagination button[aria-current="true"],
+body.residential-page .app-carousel-pagination button[aria-current="true"] {
+  background: var(--segment-gold) !important;
+  transform: scale(1.25) !important;
+}
+
+body.architecture-page .app-carousel-pagination button:focus-visible,
+body.residential-page .app-carousel-pagination button:focus-visible {
+  outline: 2px solid var(--segment-gold) !important;
+  outline-offset: 3px !important;
+}
+
+body.architecture-page .app-carousel-track,
+body.residential-page .app-carousel-track {
+  display: flex !important;
+  width: 100% !important;
+  gap: 24px !important;
+  overflow-x: auto !important;
+  overscroll-behavior-x: contain !important;
+  scroll-snap-type: x mandatory !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--segment-gold) var(--segment-cream) !important;
+}
+
+body.architecture-page .app-card.product-card,
+body.residential-page .app-card.product-card {
+  display: flex !important;
+  min-width: 0 !important;
+  flex: 0 0 calc(50% - 12px) !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(23, 22, 21, 0.12) !important;
+  background: #fff !important;
+  box-shadow: 0 12px 30px rgba(23, 22, 21, 0.07) !important;
+  scroll-snap-align: start !important;
+  text-decoration: none !important;
+}
+
+body.architecture-page .app-card.product-card > img,
+body.residential-page .app-card.product-card > img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  object-fit: cover !important;
+}
+
+body.architecture-page .app-card.product-card .app-label,
+body.residential-page .app-card.product-card .app-label {
+  position: static !important;
+  display: flex !important;
+  min-height: 68px !important;
+  align-items: center !important;
+  padding: 16px 18px !important;
+  background: #fff !important;
+  color: var(--segment-ink) !important;
+}
+
+body.architecture-page .app-card.product-card .app-label strong,
+body.residential-page .app-card.product-card .app-label strong {
+  color: var(--segment-ink) !important;
+  font-size: 0.98rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+}
+
+body.architecture-page .app-carousel-counter,
+body.residential-page .app-carousel-counter {
+  align-self: center !important;
+  margin-top: -8px !important;
+  color: #625c53 !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+body.architecture-page .service-banner.capture-band,
+body.residential-page .service-banner.capture-band {
+  margin: 0 !important;
+  padding: clamp(64px, 8vw, 96px) 24px !important;
+  background: var(--cream) !important;
+  color: var(--segment-ink) !important;
+}
+
+body.architecture-page .service-banner .capture-wrap,
+body.residential-page .service-banner .capture-wrap {
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .service-banner .capture-intro,
+body.residential-page .service-banner .capture-intro {
+  color: var(--segment-ink) !important;
+}
+
+body.architecture-page .service-banner .capture-intro h2,
+body.residential-page .service-banner .capture-intro h2 {
+  color: var(--segment-ink) !important;
+}
+
+body.architecture-page .service-banner .capture-intro > p:not(.eyebrow):not(.product-selection-prompt),
+body.residential-page .service-banner .capture-intro > p:not(.eyebrow):not(.product-selection-prompt) {
+  color: #625c53 !important;
+}
+
+body.architecture-page main .eyebrow,
+body.residential-page main .eyebrow {
+  color: #765d3c !important;
+}
+
+body.architecture-page main .hero-copy .eyebrow,
+body.residential-page main .hero-copy .eyebrow,
+body.architecture-page main .colors-feature-copy .eyebrow,
+body.residential-page main .colors-feature-copy .eyebrow {
+  color: #e0b56d !important;
+}
+
+body.architecture-page .experience.social-cases .eyebrow,
+body.architecture-page .opportunity .eyebrow,
+body.architecture-page .closing .eyebrow,
+body.residential-page .experience.social-cases .eyebrow,
+body.residential-page .opportunity .eyebrow,
+body.residential-page .closing .eyebrow {
+  color: #e0b56d !important;
+}
+
+body.architecture-page .service-banner .eyebrow,
+body.architecture-page .service-banner .product-selection-prompt,
+body.residential-page .service-banner .eyebrow,
+body.residential-page .service-banner .product-selection-prompt {
+  color: #765d3c !important;
+}
+
+body.architecture-page .service-banner .application-link-grid,
+body.residential-page .service-banner .application-link-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+body.architecture-page .service-banner .application-link-card,
+body.residential-page .service-banner .application-link-card {
+  min-width: 0 !important;
+  background: #fff !important;
+}
+
+body.architecture-page .specification.technical,
+body.residential-page .specification.technical {
+  padding: clamp(64px, 8vw, 96px) 24px !important;
+  background: var(--cream) !important;
+}
+
+body.architecture-page .specification.technical > .container,
+body.residential-page .specification.technical > .container {
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .specification.technical .process-inline,
+body.residential-page .specification.technical .process-inline {
+  width: min(1120px, 100%) !important;
+  max-width: 1120px !important;
+  margin: 48px auto 0 !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .specification.technical .process-row .step > span,
+body.residential-page .specification.technical .process-row .step > span {
+  color: #765d3c !important;
+}
+
+body.architecture-page .faq.section,
+body.residential-page .faq.section {
+  padding: clamp(64px, 8vw, 96px) 24px !important;
+  background: var(--paper) !important;
+}
+
+body.architecture-page .faq.section .faq-wrap,
+body.residential-page .faq.section .faq-wrap {
+  width: min(960px, 100%) !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+body.architecture-page .closing.budget-closing,
+body.residential-page .closing.budget-closing {
+  padding: clamp(64px, 8vw, 96px) 24px !important;
+  background: #171716 !important;
+  color: #fffaf0 !important;
+}
+
+body.architecture-page .closing.budget-closing h2,
+body.architecture-page .closing.budget-closing p,
+body.residential-page .closing.budget-closing h2,
+body.residential-page .closing.budget-closing p {
+  color: #fffaf0 !important;
+}
+
+body.residential-page .ref-footer .ref-service {
+  color: var(--segment-ink) !important;
+}
+
+@media (max-width: 900px) {
+  body.architecture-page .facts-grid,
+  body.residential-page .facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.architecture-page .service-banner .application-link-grid,
+  body.residential-page .service-banner .application-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.architecture-page .technology.colors-feature,
+  body.residential-page .technology.colors-feature {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.8fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body.architecture-page .hero.hero-with-video,
+  body.residential-page .hero.hero-with-video {
+    padding: 100px 18px 52px !important;
+  }
+
+  body.architecture-page .hero-copy,
+  body.residential-page .hero-copy {
+    margin-bottom: 22px !important;
+  }
+
+  body.architecture-page .hero-copy h1,
+  body.residential-page .hero-copy h1 {
+    font-size: clamp(2.15rem, 10.2vw, 3.5rem) !important;
+  }
+
+  body.architecture-page .hero-media-column,
+  body.residential-page .hero-media-column {
+    gap: 18px !important;
+  }
+
+  body.architecture-page .hero-video-shell,
+  body.residential-page .hero-video-shell {
+    aspect-ratio: 4 / 3 !important;
+  }
+
+  body.architecture-page .facts-grid,
+  body.residential-page .facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  body.architecture-page .fact-card,
+  body.residential-page .fact-card {
+    padding: 18px 10px !important;
+  }
+
+  body.architecture-page .technology.colors-feature,
+  body.residential-page .technology.colors-feature {
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding: 56px 18px !important;
+  }
+
+  body.architecture-page .colors-catalog-link,
+  body.residential-page .colors-catalog-link {
+    max-width: 100% !important;
+  }
+
+  body.architecture-page .proof-case-grid,
+  body.residential-page .proof-case-grid,
+  body.architecture-page .service-banner .application-link-grid,
+  body.residential-page .service-banner .application-link-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  body.architecture-page .app-carousel-track,
+  body.residential-page .app-carousel-track {
+    gap: 14px !important;
+  }
+
+  body.architecture-page .app-card.product-card,
+  body.residential-page .app-card.product-card {
+    flex-basis: 100% !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.architecture-page *,
+  body.residential-page * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

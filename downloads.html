@@ -3,11 +3,429 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inoxcolor | downloads</title>
+  <meta name="description" content="Acesse os manuais técnicos e guias de instalação da Inoxcolor." />
+  <link rel="icon" href="site_favicon_16_1787921832250.ico" type="image/x-icon" />
+  <title>Manuais e downloads | Inoxcolor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="footer.css" />
+  <style>
+    .downloads-page {
+      --downloads-ink: #171615;
+      --downloads-paper: #f7f5f1;
+      --downloads-gold: #d3b77f;
+      margin: 0;
+      background: var(--downloads-paper);
+      color: var(--downloads-ink);
+      font-family: "Inter", sans-serif;
+    }
+
+    .downloads-page .site-header {
+      background: rgba(17, 17, 17, 0.92);
+    }
+
+    .downloads-main {
+      padding-top: 88px;
+    }
+
+    .downloads-shell {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .downloads-hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(72px, 10vw, 128px) 0 clamp(64px, 8vw, 104px);
+      background:
+        radial-gradient(ellipse at 82% 18%, rgba(211, 183, 127, 0.18), transparent 34%),
+        linear-gradient(125deg, #171615 0%, #23211e 58%, #30291f 100%);
+      color: #fffaf0;
+    }
+
+    .downloads-hero::after {
+      position: absolute;
+      right: -110px;
+      bottom: -240px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(211, 183, 127, 0.22);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .downloads-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 20px;
+      color: var(--downloads-gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .downloads-eyebrow::before {
+      width: 32px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+    }
+
+    .downloads-hero h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.8rem, 6.4vw, 5.4rem);
+      font-weight: 500;
+      letter-spacing: -0.035em;
+      line-height: 0.98;
+    }
+
+    .downloads-hero h1 span {
+      color: var(--downloads-gold);
+    }
+
+    .downloads-intro {
+      max-width: 600px;
+      margin: 24px 0 0;
+      color: rgba(255, 250, 240, 0.72);
+      font-size: clamp(0.98rem, 1.5vw, 1.12rem);
+      line-height: 1.8;
+    }
+
+    .downloads-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .downloads-highlights span {
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 250, 240, 0.2);
+      border-radius: 999px;
+      color: rgba(255, 250, 240, 0.82);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+
+    .manuals-section {
+      padding: clamp(56px, 8vw, 88px) 0 clamp(72px, 9vw, 112px);
+    }
+
+    .manuals-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .manuals-heading .downloads-eyebrow {
+      margin-bottom: 10px;
+      color: #8f6f46;
+    }
+
+    .manuals-heading h2 {
+      margin: 0;
+      color: var(--downloads-ink);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .manuals-heading > p {
+      max-width: 340px;
+      margin: 0 0 4px;
+      color: #6d645f;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    .manuals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .manual-card {
+      position: relative;
+      display: flex;
+      min-height: 310px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(23, 22, 21, 0.09);
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 18px 42px rgba(23, 22, 21, 0.045);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .manual-card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #a98555, #e0c995);
+      content: "";
+    }
+
+    .manual-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(169, 133, 85, 0.38);
+      box-shadow: 0 24px 50px rgba(23, 22, 21, 0.09);
+    }
+
+    .manual-card-top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+    }
+
+    .manual-number {
+      color: #a98555;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .manual-format {
+      padding: 6px 9px;
+      border-radius: 2px;
+      background: #f3eee5;
+      color: #765d3c;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+    }
+
+    .manual-card h3 {
+      margin: 0;
+      color: var(--downloads-ink);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(1.55rem, 2.2vw, 1.9rem);
+      font-weight: 600;
+      line-height: 1.12;
+    }
+
+    .manual-card p {
+      margin: 12px 0 24px;
+      color: #6d645f;
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+
+    .manual-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding: 0 0 5px;
+      border: 0;
+      border-bottom: 1px solid #a98555;
+      background: transparent;
+      color: #765d3c;
+      font: inherit;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 180ms ease, gap 180ms ease;
+    }
+
+    .manual-download:hover,
+    .manual-download:focus-visible {
+      gap: 15px;
+      color: #171615;
+    }
+
+    .manual-download svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .downloads-page .site-footer {
+      margin-top: 0 !important;
+    }
+
+    @media (max-width: 800px) {
+      .manuals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .manuals-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .downloads-main {
+        padding-top: 72px;
+      }
+
+      .downloads-shell {
+        width: min(100% - 36px, 460px);
+      }
+
+      .downloads-hero {
+        padding: 68px 0 62px;
+      }
+
+      .downloads-hero h1 {
+        font-size: clamp(2.7rem, 13vw, 4.2rem);
+      }
+
+      .downloads-highlights {
+        gap: 8px;
+        margin-top: 24px;
+      }
+
+      .downloads-highlights span {
+        padding: 7px 10px;
+        font-size: 0.68rem;
+      }
+
+      .manuals-section {
+        padding: 54px 0 68px;
+      }
+
+      .manuals-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .manual-card {
+        min-height: 270px;
+        padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .manual-card,
+      .manual-download {
+        transition: none;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="downloads-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
+        <a href="produtos.html">Produtos</a>
+        <a href="industria.html">Indústria</a>
+        <a href="arquitetura.html">Arquitetura</a>
+        <a href="Residencial.html">Residencial</a>
+      </nav>
+      <a href="index.html" class="brand-item" aria-label="Inoxcolor Home">
+        <img src="logo+fundo+sitw-640w.webp" alt="Inoxcolor" />
+        <span class="brand-tagline"></span>
+      </a>
+      <nav class="main-nav nav-right" aria-label="Menu principal direito">
+        <a href="ainoxcolor.html">A Inoxcolor</a>
+        <a href="downloads.html" aria-current="page">Download</a>
+        <a href="na_midia.html">Na Mídia</a>
+        <a href="Blog.html">Blog</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contato.html" class="btn btn-primary">Orçamento</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main class="downloads-main">
+    <section class="downloads-hero" aria-labelledby="downloads-title">
+      <div class="downloads-shell">
+        <p class="downloads-eyebrow">Biblioteca Inoxcolor</p>
+        <h1 id="downloads-title">Informação para <span>construir melhor.</span></h1>
+        <p class="downloads-intro">
+          Consulte nossos manuais técnicos e encontre orientações para especificar,
+          instalar e aproveitar cada solução Inoxcolor.
+        </p>
+        <div class="downloads-highlights" aria-label="Informações dos materiais">
+          <span>Manuais técnicos</span>
+          <span>Guias de instalação</span>
+          <span>Arquivos em PDF</span>
+        </div>
+      </div>
+    </section>
+    <section class="manuals-section" id="manuais" aria-labelledby="manuals-title">
+      <div class="downloads-shell">
+        <div class="manuals-heading">
+          <div>
+            <p class="downloads-eyebrow">Materiais para consulta</p>
+            <h2 id="manuals-title">Manuais e downloads</h2>
+          </div>
+          <p>Baixe o material desejado e consulte as informações com calma, onde estiver.</p>
+        </div>
+        <div class="manuals-grid">
+          <article class="manual-card">
+            <div class="manual-card-top">
+              <span class="manual-number">01</span>
+              <span class="manual-format">PDF · 2026</span>
+            </div>
+            <h3>Manual Técnico Inoxcolor</h3>
+            <p>Informações técnicas e orientações para conhecer e especificar nossas soluções.</p>
+            <a class="manual-download" href="Download/Manual%20Tecnico%202026%20marca%20d%27agua.pdf" download>
+              Baixar manual
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </article>
+          <article class="manual-card">
+            <div class="manual-card-top">
+              <span class="manual-number">02</span>
+              <span class="manual-format">PDF</span>
+            </div>
+            <h3>Instalação Porcelinox</h3>
+            <p>Confira os cuidados e as instruções para instalar os revestimentos Porcelinox.</p>
+            <a class="manual-download" href="Download/Manual%20de%20Intala%C3%A7%C3%A3o%20Porcelinox.pdf" download>
+              Baixar manual
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </article>
+          <article class="manual-card">
+            <div class="manual-card-top">
+              <span class="manual-number">03</span>
+              <span class="manual-format">PDF · 2026</span>
+            </div>
+            <h3>Instalação de Perfis e Listelos</h3>
+            <p>Orientações para a instalação dos perfis e listelos Inoxcolor.</p>
+            <a class="manual-download" href="Download/Manual%20de%20instala%C3%A7%C3%A3o%20Perfis%20Listelos%202026.pdf" download>
+              Baixar manual
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 <footer class="site-footer" id="contato">
       <div class="container footer-grid">
         <!-- Logo e texto institucional do rodapé -->
@@ -67,6 +485,6 @@
       </div>
     </footer>
   <script src="script.js" defer></script>
-  <script src="Prote??o.js" defer></script>
+  <script src="Prote%C3%A7%C3%A3o.js" defer></script>
 </body>
 </html>
