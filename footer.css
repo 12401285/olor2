@@ -296,6 +296,10 @@ html body .site-footer.site-footer .footer-note {
 		margin-top: 8px !important;
 	}
 
+	html body .site-footer.site-footer .newsletter-form > h3 {
+		margin-top: 32px !important;
+	}
+
 	html body .site-footer.site-footer .footer-bottom-inner {
 		flex-direction: column !important;
 		width: 100% !important;

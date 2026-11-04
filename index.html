@@ -36,8 +36,9 @@
           margin-top: 4px;
         }
 
-        .home-page main > .cta-banner {
+        .home-page .cta-banner {
           padding: 0;
+          display: none;
         }
 
         .home-page main .btn-CAT {
@@ -50,8 +51,8 @@
           text-align: center;
         }
 
-        .home-page .site-footer {
-          margin-top: -1300px !important;
+        .home-page .site-footer.site-footer {
+          margin-top: 5% !important;
         }
       }
 
@@ -92,6 +93,22 @@
         .home-page .products-grid-3 {
           grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: clamp(12px, 2vw, 20px);
+        }
+      }
+
+      .home-page .home-category-prompt {
+        max-width: 900px;
+        margin: 18px auto 0;
+        padding: 0 16px;
+        color: #171717;
+        font-size: clamp(15px, 1.2vw, 18px);
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      @media (min-width: 1025px) {
+        .home-page .products-grid-3 > article {
+          margin-top: calc(-30% + 50px);
         }
       }
     </style>
@@ -199,6 +216,7 @@
         <div class="container strip-grid">
           <div>
             <h2 class="section-title"><br>Na <span class="highlight">INDÚSTRIA</span>, na <span class="highlight">ARQUITETURA</span> e no segmento <span class="highlight">RESIDENCIAL</span>, </BR>possibilidades em aço colorido que inspiram e elevam o nível de sofisticação.</h2>
+            <p class="home-category-prompt"><span class="highlight">Clique</span> em uma das imagens  <span class="highlight">abaixo </span>e explore o <span class="highlight">segmento</span> que mais se alinha ao que você busca.</p>
 
       <!-- Seção de teste: 3 imagens lado a lado -->
       <section class="test-products section" id="teste-produtos">
@@ -266,7 +284,8 @@
              <li><h3>Endereço</h3>Av.Alveres Cabral 593 sala 1602 Lourdes</li>
             <li>Belo Horizonte MG Cep 30170-002</li>
             <br>
-            <h3>Horário de Atendimento</h3>
+            <br>
+            <h3 class="horario de atendimento">Horário de Atendimento</h3>
             <li>Atendimento de segunda a sexta-feira das 8h às 11:30h e de 13h às 17h</li>
           </div>
         </div>

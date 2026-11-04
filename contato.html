@@ -148,24 +148,125 @@
       @media (max-width: 768px) {
         .contact-page-body > .intro {
           grid-template-columns: 1fr;
-          gap: 12px;
+          gap: 6px;
           margin-bottom: 12px;
-          padding-top: 32px;
+          padding-top: 8px;
         }
 
-      .contact-page-body > .intro > div:first-child {
-    text-align: center;
-    white-space: nowrap;
-    width: max-content;
-    margin-inline: auto;
-}
+        .contact-page-body > .intro > div:first-child {
+          width: 100%;
+          min-width: 0;
+          margin-inline: auto;
+          text-align: center;
+          white-space: normal;
+        }
 
         .contact-page-body > .intro h1 {
-          font-size: clamp(35px, 11vw, 2px);
+          margin-bottom: 4px;
+          font-size: clamp(24px, 8vw, 35px);
+          line-height: 1.05;
+        }
+
+        .contact-page-body > .intro .eyebrow {
+          margin-bottom: 0;
+        }
+
+        .contact-page-body .intro-copy strong {
+          margin-top: 8px;
         }
 
         .contact-page-body .contact-section {
           padding-top: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .contact-page-body .intro-copy strong {
+          padding-left: 12px;
+          font-size: 15px;
+          line-height: 1.4;
+        }
+
+        .contact-page-body .contact-section {
+          padding-bottom: 20px;
+        }
+
+        .contact-page-body .site-footer.site-footer {
+          margin-top: 0 !important;
+        }
+
+        .contact-page-body .contact-card {
+          padding: 14px 12px;
+          border-radius: 18px;
+        }
+
+        .contact-page-body .contact-form {
+          gap: 6px;
+        }
+
+        .contact-page-body .contact-form input:not([type="radio"]),
+        .contact-page-body .contact-dropdown summary {
+          box-sizing: border-box;
+          height: 32px;
+          min-height: 32px;
+          padding: 6px 10px;
+          border-radius: 12px;
+          font-size: 12px;
+        }
+
+        .contact-page-body .contact-options {
+          gap: 6px;
+        }
+
+        .contact-page-body .contact-purpose {
+          display: grid;
+          grid-template-columns: repeat(3, max-content);
+          justify-content: space-between;
+          gap: 4px;
+        }
+
+        .contact-page-body .contact-purpose legend {
+          grid-column: 1 / -1;
+          margin-bottom: 0;
+          font-size: 12px;
+          line-height: 1.3;
+        }
+
+        .contact-page-body .contact-purpose label {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          white-space: nowrap;
+          font-size: 10px;
+          line-height: 1.3;
+        }
+
+        .contact-page-body .contact-purpose input {
+          width: 11px;
+          height: 11px;
+          margin: 0;
+          flex: 0 0 11px;
+        }
+
+        .contact-page-body .contact-form textarea {
+          min-height: 64px;
+          padding: 8px 10px;
+          border-radius: 12px;
+          font-size: 12px;
+        }
+
+        .contact-page-body .contact-form button {
+          height: 34px;
+          min-height: 34px;
+          margin-top: 0;
+          padding: 0 16px;
+        }
+
+        .contact-page-body .contact-form > p {
+          width: 100%;
+          margin: 0 !important;
+          font-size: 10px !important;
+          line-height: 1.3;
         }
       }
     </style>
