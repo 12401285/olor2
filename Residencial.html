@@ -1025,6 +1025,72 @@
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="segment-pages.css" />
+<style id="industry-text-format">
+  body.residential-page,
+  html body.residential-page.residential-page * {
+    font-family: "Inter", sans-serif !important;
+  }
+
+  body.residential-page h1 { text-align: center !important; }
+  body.residential-page :is(h2, h3, h4) { text-align: left !important; }
+  body.residential-page p:not(.eyebrow) {
+    text-align: justify !important;
+    text-align-last: left !important;
+    text-justify: inter-word;
+  }
+  body.residential-page .eyebrow { text-align: left !important; }
+  body.residential-page .hero-copy > .eyebrow { text-align: center !important; }
+  body.residential-page .hero-with-video .hero-stage {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: start;
+    gap: 20px;
+  }
+  body.residential-page .hero-with-video .hero-copy,
+  body.residential-page .hero-with-video .hero-media-column {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  body.residential-page .hero-with-video h1 {
+    max-width: 920px;
+    font-size: clamp(32px, 2.35vw, 36px) !important;
+    line-height: 1.15;
+  }
+  body.residential-page .hero-subheadline {
+    font-size: clamp(15px, 1.2vw, 17.28px) !important;
+  }
+  body.residential-page main .eyebrow { font-size: 11px !important; }
+  body.residential-page main h2:not(.facts-section-title) {
+    font-size: clamp(32.8px, 3.4vw, 48.96px) !important;
+  }
+  body.residential-page main .social-cases-head h2 {
+    font-size: clamp(32px, 2.92vw, 42px) !important;
+  }
+  body.residential-page main .experience.social-cases h3 {
+    font-size: clamp(20px, 1.74vw, 25px) !important;
+  }
+  body.residential-page .hero-media-column .hero-subheadline { order: -1; }
+  body.residential-page .technology.colors-feature {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  body.residential-page .colors-feature-copy {
+    max-width: 900px;
+    margin: 0 auto 24px;
+  }
+  body.residential-page .colors-feature-copy h3 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: clamp(26px, 2.2vw, 32px) !important;
+    line-height: 1.08;
+  }
+  @media (max-width: 760px) {
+    body.residential-page .hero-with-video h1 {
+      font-size: clamp(28px, 7vw, 34px) !important;
+    }
+  }
+</style>
 </head>
 <body class="residential-page">
   
@@ -1075,7 +1141,7 @@
           <h1 class="display" style="text-align: center; text-align-last: center; text-wrap: pretty; word-spacing: normal;">Uma casa sofisticada, com detalhes exclusivos que expressam seu estilo.</h1>
         </div>
         <div class="hero-media-column">
-          <figure class="hero-video-shell" id="apresentacao"><video controls playsinline preload="none" poster="assets/image-07.jpg" aria-label="Vídeo de Arquitetura da Inoxcolor"><source src="assets/video-01.mp4" type="video/mp4"></video></figure>
+          <figure class="hero-video-shell" id="apresentacao"><video controls playsinline preload="none" poster="assets/residencial-video-poster.png" aria-label="Vídeo residencial da Inoxcolor"><source src="residencial/Residencial vd1.mp4" type="video/mp4"></video></figure>
           <p class="hero-subheadline">Descubra produtos em aço inox colorido para valorizar os ambientes da sua casa. Escolha cores, acabamentos e detalhes que combinam com você, com orientação para encontrar a solução adequada ao seu espaço.</p>
           <div class="hero-actions"><a class="btn" href="#captura">Conheça nossos produtos <span>↗</span></a></div>
           <p class="hero-mechanism">Cores e acabamentos em aço inox para dar personalidade aos seus ambientes.</p>
@@ -1116,7 +1182,7 @@
             <span class="application-link-copy"><strong>Catálogo de Cores</strong><span>Compare as sete cores Inoxcolor e encontre a combinação que expressa o seu estilo.</span></span>
           </a>
           </div>
-          <a class="colors-options-cta" href="/arquitetura/catalogo-de-cores">Clique na imagem</a>
+          <a class="colors-options-cta" href="portifolio_cores.html">Clique na imagem</a>
         </section>
 
 <section class="final-cta opportunity section"><div class="container"><h2 class="display">O seu estilo merece fazer parte da sua casa.</h2><p>Um perfil que destaca o painel. Um quadro que dá vida à parede. Um acabamento que completa o banheiro. Descubra como o aço inox colorido pode valorizar a decoração e expressar o seu jeito de morar.</p></div></section>

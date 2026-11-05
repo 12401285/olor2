@@ -789,9 +789,7 @@
       scrollbar-width:thin;
       -ms-overflow-style:auto;
     }
-    .app-carousel-track .app-card,
-    .app-carousel-track .app-card:first-child,
-    .app-carousel-track .app-card:nth-child(4){
+    .app-carousel-track .app-card {
       flex:0 0 calc((100% - 18px)/2);
       width:auto;
       height:520px;
@@ -804,17 +802,13 @@
     @media(max-width:760px){
       .app-carousel-shell{margin-top:40px;padding:0 30px}
       .app-carousel-track{gap:12px}
-      .app-carousel-track .app-card,
-      .app-carousel-track .app-card:first-child,
-      .app-carousel-track .app-card:nth-child(4){flex-basis:100%;height:470px}
+      .app-carousel-track .app-card{flex-basis:100%;height:470px}
       .applications-actions{margin-top:26px}
       .applications-actions .btn{width:100%;min-width:0}
     }
   </style>
   <style>
-    .app-carousel-track .app-card,
-    .app-carousel-track .app-card:first-child,
-    .app-carousel-track .app-card:nth-child(4){
+    .app-carousel-track .app-card{
       aspect-ratio:6/5;
       height:auto!important;
       min-height:0!important;
@@ -826,9 +820,7 @@
       object-position:center;
     }
     @media(max-width:760px){
-      .app-carousel-track .app-card,
-      .app-carousel-track .app-card:first-child,
-      .app-carousel-track .app-card:nth-child(4){aspect-ratio:6/5;height:auto!important}
+      .app-carousel-track .app-card{aspect-ratio:6/5;height:auto!important}
     }
   </style>
 
@@ -903,9 +895,7 @@
   /* Cada legenda pertence à sua foto e acompanha o mesmo movimento. */
   .app-carousel-shell { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 12px; padding: 0; }
   .app-carousel-track { grid-column: 1 / -1; order: 0; align-items: start; }
-  .app-carousel-track .app-card,
-  .app-carousel-track .app-card:first-child,
-  .app-carousel-track .app-card:nth-child(4) { display: flex; flex-direction: column; flex: 0 0 calc((100% - 18px) / 2); aspect-ratio: auto; height: auto !important; isolation: isolate; background: transparent; }
+  .app-carousel-track .app-card { display: flex; flex-direction: column; flex: 0 0 calc((100% - 18px) / 2); aspect-ratio: auto; height: auto !important; isolation: isolate; background: transparent; }
   .app-carousel-track .app-card::after { display: none; }
   .app-carousel-track .app-card img { display: block; width: 100%; height: 300px; flex: none; object-fit: cover; object-position: center; transform: none; }
   .app-carousel-track .app-label { position: static; display: block; margin: 0; padding: 14px 2px 2px; pointer-events: none; text-align: left; }
@@ -914,9 +904,7 @@
   #aplicacoes.applications { padding-bottom: 44px; }
   #captura.capture-band { padding-top: 44px; }
   @media(max-width:900px) {
-    .app-carousel-track .app-card,
-    .app-carousel-track .app-card:first-child,
-    .app-carousel-track .app-card:nth-child(4) { flex-basis: 100%; }
+    .app-carousel-track .app-card { flex-basis: 100%; }
     .app-carousel-track .app-card img { height: 250px; }
   }
   @media(max-width:760px) {
@@ -934,7 +922,6 @@
   .app-carousel-shell { grid-template-columns: 1fr auto 1fr; }
   .app-carousel-counter { order: 1; align-self: center; justify-self: center; min-width: 50px; color: #625c52; font: 400 14px/1.4 Arial, Helvetica, sans-serif; font-variant-numeric: tabular-nums; letter-spacing: .08em; text-align: center; }
 </style>
-
 <style id="architecture-last-photos-full-frame">
   .app-carousel-track .app-card[data-carousel-order="13"] img,
   .app-carousel-track .app-card[data-carousel-order="14"] img { object-fit: contain; object-position: center; background: var(--paper); }
@@ -1555,7 +1542,74 @@ html body .site-footer.site-footer .footer-note {
   }
 }
 </style>
+
   <link rel="stylesheet" href="segment-pages.css" />
+<style id="industry-text-format">
+body.architecture-page,
+html body.architecture-page.architecture-page * {
+  font-family: "Inter", sans-serif !important;
+}
+
+body.architecture-page h1 { text-align: center !important; }
+body.architecture-page :is(h2, h3, h4) { text-align: left !important; }
+body.architecture-page p:not(.eyebrow) {
+  text-align: justify !important;
+  text-align-last: left !important;
+  text-justify: inter-word;
+}
+body.architecture-page .eyebrow { text-align: left !important; }
+body.architecture-page .hero-copy > .eyebrow { text-align: center !important; }
+body.architecture-page .hero-with-video .hero-stage {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  align-items: start;
+  gap: 20px;
+}
+body.architecture-page .hero-with-video .hero-copy,
+body.architecture-page .hero-with-video .hero-media-column {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+body.architecture-page .hero-with-video h1 {
+  max-width: 920px;
+  font-size: clamp(32px, 2.35vw, 36px) !important;
+  line-height: 1.15;
+}
+body.architecture-page .hero-subheadline {
+  font-size: clamp(15px, 1.2vw, 17.28px) !important;
+}
+body.architecture-page main .eyebrow { font-size: 11px !important; }
+body.architecture-page main h2:not(.facts-section-title) {
+  font-size: clamp(32.8px, 3.4vw, 48.96px) !important;
+}
+body.architecture-page main .social-cases-head h2 {
+  font-size: clamp(32px, 2.92vw, 42px) !important;
+}
+body.architecture-page main .experience.social-cases h3 {
+  font-size: clamp(20px, 1.74vw, 25px) !important;
+}
+body.architecture-page .hero-media-column .hero-subheadline { order: -1; }
+body.architecture-page .technology.colors-feature {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+body.architecture-page .colors-feature-copy {
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+body.architecture-page .colors-feature-copy h3 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(26px, 2.2vw, 32px) !important;
+  line-height: 1.08;
+}
+@media (max-width: 760px) {
+  body.architecture-page .hero-with-video h1 {
+    font-size: clamp(28px, 7vw, 34px) !important;
+  }
+}
+</style>
 </head>
 <body class="architecture-page">
 <div class="topbar"><div class="container"><span>Soluções exclusivas em aço inox colorido</span><span>Atendimento técnico para todo o Brasil</span></div></div>
@@ -1607,7 +1661,7 @@ html body .site-footer.site-footer .footer-note {
         <div class="hero-media-column">
           <figure class="hero-video-shell" id="apresentacao"><video controls playsinline preload="none" poster="assets/b5d575fb31fba494cbb3.jpg" aria-label="Vídeo de Arquitetura da Inoxcolor"><source src="assets/arquitetura-final.mp4" type="video/mp4"></video></figure>
           <p class="hero-subheadline">Explore cores, acabamentos e soluções personalizadas para criar ambientes exclusivos. Conte com orientação técnica para escolher a aplicação adequada e preservar a intenção do seu projeto.</p>
-          <div class="hero-actions"><a class="btn" href="#captura">Receber o Catálogo Profissional <span>↗</span></a></div>
+          <div class="hero-actions"><a class="btn" href="formulario_arquitetura.html">Receber o Catálogo Profissional <span>↗</span></a></div>
           <p class="hero-mechanism">Única empresa na América Latina especializada na produção de produtos em aço inox colorido.</p>
         </div>
       </div>
@@ -1641,12 +1695,12 @@ html body .site-footer.site-footer .footer-note {
             <p>Explore uma paleta criada para ampliar o repertório do arquiteto. A Linha Polida revela presença e brilho intenso; a Linha Escovada oferece aspecto acetinado e textura linear sutil. Em cada aplicação, cor, luz e reflexão trabalham juntas para imprimir identidade ao ambiente.</p>
           </div>
           <div class="colors-catalog-link">
-          <a class="application-link-card" href="/arquitetura/catalogo-de-cores" aria-label="Conhecer Catálogo de Cores">
+          <a class="application-link-card" href="portifolio_cores.html" aria-label="Conhecer Catálogo de Cores">
             <span class="application-link-media"><img src="assets/64c91cc929a06d905b6f.png" alt="Catálogo de Cores em aço inox colorido"></span>
             <span class="application-link-copy"><strong>Catálogo de Cores</strong><span>Explore as sete cores Inoxcolor e escolha a expressão ideal para o seu projeto.</span></span>
           </a>
           </div>
-          <a class="colors-options-cta" href="/arquitetura/catalogo-de-cores">Clique na imagem</a>
+          <a class="colors-options-cta" href="portifolio_cores.html">Clique na imagem</a>
         </section>
 
 <section class="final-cta opportunity section"><div class="container"><h2 class="display">Exclusividade que valoriza o seu projeto.</h2><p>Cores, reflexos e desenhos personalizados diferenciam o ambiente e reforçam o valor percebido da sua criação. Uma escolha que torna seu trabalho reconhecível nos detalhes.</p></div></section>
@@ -1803,7 +1857,7 @@ html body .site-footer.site-footer .footer-note {
           <output class="app-carousel-counter" aria-live="polite" aria-atomic="true" aria-label="Aplicação 1 de 14">1/14</output>
 
         </div>
-        <div class="applications-actions"><h3 class="catalogue-benefit-title">Escolha cores, compare acabamentos e descubra aplicações para o seu projeto.</h3><p class="architecture-cta-context">Encontre no Catálogo Profissional as possibilidades para orientar suas escolhas e avançar na especificação.</p><a class="btn" href="#captura">Receber o Catálogo Profissional</a></div>
+        <div class="applications-actions"><h3 class="catalogue-benefit-title">Escolha cores, compare acabamentos e descubra aplicações para o seu projeto.</h3><p class="architecture-cta-context">Encontre no Catálogo Profissional as possibilidades para orientar suas escolhas e avançar na especificação.</p><a class="btn" href="formulario_arquitetura.html">Receber o Catálogo Profissional</a></div>
       </div>
     </section>
 
@@ -1871,7 +1925,7 @@ html body .site-footer.site-footer .footer-note {
 
 <section class="technical specification section cream" id="especificacao">
       <div class="container technical-grid">
-        <div class="technical-intro"><p class="eyebrow">Sua criação, tecnicamente amparada</p><h2 class="display">Sua ideia, com viabilidade técnica.</h2><p>Conte com orientação para definir material, acabamento e processos compatíveis com a aplicação, preservando a intenção estética do seu desenho.</p><p class="architecture-cta-context">Explore as possibilidades do catálogo e conte com nossa equipe para alinhar material, acabamento e aplicação à sua ideia.</p><a class="btn btn-dark" href="#captura">Receber o Catálogo Profissional</a></div>
+        <div class="technical-intro"><p class="eyebrow">Sua criação, tecnicamente amparada</p><h2 class="display">Sua ideia, com viabilidade técnica.</h2><p>Conte com orientação para definir material, acabamento e processos compatíveis com a aplicação, preservando a intenção estética do seu desenho.</p><p class="architecture-cta-context">Explore as possibilidades do catálogo e conte com nossa equipe para alinhar material, acabamento e aplicação à sua ideia.</p><a class="btn btn-dark" href="formulario_arquitetura.html">Receber o Catálogo Profissional</a></div>
         <div class="spec-list">
           <div class="spec"><strong>Material</strong><span>Ligas 304 e 316, selecionadas conforme aplicação e condições do projeto.</span></div>
           <div class="spec"><strong>Projetos personalizados</strong><span>Produtos e soluções desenvolvidos de acordo com as dimensões, a linguagem e as necessidades de cada projeto.</span></div>
