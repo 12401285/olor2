@@ -107,9 +107,44 @@
         text-align: center;
       }
 
+      .home-page main .texto_foto {
+        width: max-content;
+        max-width: none;
+        white-space: nowrap;
+        font-size: clamp(0.4rem, 2vw, 1.4rem);
+      }
+
       @media (min-width: 1025px) {
         .home-page .products-grid-3 > article {
           margin-top: calc(-30% + 50px);
+        }
+
+        .home-page .site-header {
+          background: #030303 !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+        }
+
+        .home-page .site-header:not(.scrolled) .main-nav,
+        .home-page .site-header:not(.scrolled) .main-nav a {
+          color: #fffdfd !important;
+        }
+
+        .home-page .site-header:not(.scrolled) .main-nav a::after {
+          background: #121010 !important;
+        }
+
+        .home-page .site-header.scrolled {
+          background: #000 !important;
+        }
+
+        .home-page .site-header.scrolled .main-nav,
+        .home-page .site-header.scrolled .main-nav a {
+          color: #fff !important;
+        }
+
+        .home-page .site-header.scrolled .main-nav a::after {
+          background: #fff !important;
         }
       }
     </style>
@@ -235,7 +270,7 @@
           </div>
         </div>
       </section>
-      <p CLASS="texto_foto">Conheça de perto as cores, acabamentos, produtos e possibilidades do <span class="highlight">Aço Inox Colorido.</p>
+      <p class="texto_foto">Conheça de perto as cores, acabamentos, produtos e possibilidades do <span class="highlight">Aço Inox&nbsp;Colorido.</span></p>
          <a href="contato.html" class="btn-CAT">Solicite seu catálogo de amostras</a>
       <section class="cta-banner">
         </div>

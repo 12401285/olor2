@@ -25,3 +25,9 @@ main #especificacao h2 {
   text-align: left;
   text-align-last: left;
 }
+  @media (max-width:1024px) {
+    .site-header .nav-wrap { justify-content:space-between; gap:8px; }
+    .site-header .nav-wrap > .brand-item { order:0; flex:0 1 auto; min-width:0; margin:0; }
+    .site-header .nav-wrap > .header-social-links { position:static!important; top:auto!important; left:auto!important; transform:none!important; order:1; flex:0 0 auto; margin:0 0 0 auto; }
+    .site-header .nav-wrap > .nav-actions { order:2; flex:0 0 auto; margin:0; }
+  }

@@ -46,25 +46,103 @@
     }
 
     .about-intro {
-      margin: 0 auto 48px;
-      max-width: 760px;
-      text-align: center;
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto 36px;
+      text-align: left;
     }
 
     .about-intro h1 {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       color: #121212;
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      text-align: left;
     }
 
-    .about-intro p {
+    .about-intro p,
+    .about-foundation p {
+      max-width: 1000px;
       color: #5f5f5f;
-      font-size: 1rem;
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .about-projects,
+    .about-foundation,
+    .about-feature-image {
+      width: min(1200px, calc(100% - 48px));
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .about-projects {
+      margin-bottom: 42px;
+    }
+
+    .about-projects h2,
+    .about-social-title {
+      margin: 0 0 22px;
+      color: #121212;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      text-align: center;
+    }
+
+    .about-projects-slider,
+    .about-projects-slider .pure-slider-inner,
+    .about-projects-slider .pure-slider-viewport {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .about-projects-slider {
+      height: auto !important;
+      margin: 0;
+      background: transparent !important;
+    }
+
+    .about-projects-slider .pure-slider-viewport {
+      height: auto !important;
+      background: transparent !important;
+    }
+
+    .about-projects-slider .pure-slider-track {
+      display: flex;
+      width: 100%;
+      height: auto !important;
+      transition: transform 0.45s ease;
+    }
+
+    .about-projects-slider .pure-slider-track img {
+      display: block;
+      flex: 0 0 100%;
+      width: 100%;
+      height: auto !important;
+      object-fit: contain;
+      background: transparent !important;
+    }
+
+    .about-projects-slider .slider-btn {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      transform: translateY(-50%);
+    }
+
+    .about-projects-slider .slider-btn.prev { left: 16px; }
+    .about-projects-slider .slider-btn.next { right: 16px; }
+
+    .about-foundation {
+      margin-bottom: 28px;
+    }
+
+    .about-foundation p {
+      margin: 0 auto;
     }
 
     .about-feature-image {
-      width: 100%;
-      margin: 28px auto 32px;
+      margin-top: 0;
+      margin-bottom: 64px;
     }
 
     .about-feature-image img {
@@ -75,8 +153,8 @@
     }
 
     .about-mission {
-      width: min(760px, calc(100% - 40px));
-      margin: 0 auto 56px;
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto 44px;
       text-align: center;
     }
 
@@ -95,20 +173,24 @@
 
     .about-values {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 36px 48px;
-      width: min(1000px, calc(100% - 40px));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: 16px;
+      width: min(1120px, calc(100% - 48px));
       margin: 0 auto 64px;
     }
 
     .about-values article {
-      text-align: left;
+      padding: 18px 20px;
+      border: 1px solid rgba(181, 138, 91, 0.45);
+      border-radius: 14px;
+      text-align: center;
     }
 
     .about-values h2 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #121212;
-      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-size: clamp(1.65rem, 2.3vw, 2.2rem);
       letter-spacing: -0.02em;
     }
 
@@ -118,32 +200,54 @@
       line-height: 1.7;
     }
 
-    .about-gallery {
+    .about-social-title {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto 32px;
+    }
+
+    .about-social-intro {
+      width: min(1000px, calc(100% - 48px));
+      margin: 0 auto 36px;
+      color: #5f5f5f;
+      font-size: 1rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .about-social {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 44px 28px;
-      width: min(1120px, calc(100% - 40px));
+      gap: 32px;
+      width: min(1120px, calc(100% - 48px));
       margin: 0 auto;
     }
 
-    .about-card {
-      margin: 0;
-      color: #121212;
+    .about-social-item {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 36px;
+      align-items: center;
     }
 
-    .about-card img {
+    .about-social-item:nth-child(even) img {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .about-social-item:nth-child(even) .about-social-copy {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .about-social-item img {
+      display: block;
       width: 100%;
       aspect-ratio: 16 / 10;
       object-fit: cover;
       border-radius: 4px;
     }
 
-    .about-card figcaption {
-      padding: 0 4px 20px;
-    }
-
-    .about-card h2 {
-      margin-bottom: 10px;
+    .about-social-copy h3 {
+      margin: 0 0 12px;
       color: #121212;
       font-family: "Inter", sans-serif;
       font-size: 1.25rem;
@@ -152,7 +256,7 @@
       line-height: 1.3;
     }
 
-    .about-card p {
+    .about-social-copy p {
       color: #5f5f5f;
       line-height: 1.7;
     }
@@ -188,10 +292,22 @@
         margin-bottom: 32px;
       }
 
-      .about-gallery {
-        grid-template-columns: 1fr;
-        gap: 32px;
+      .about-projects,
+      .about-foundation,
+      .about-feature-image,
+      .about-social-title,
+      .about-social-intro,
+      .about-social {
         width: calc(100% - 36px);
+      }
+
+      .about-intro p,
+      .about-foundation p {
+        font-size: 1rem;
+      }
+
+      .about-intro h1 {
+        font-size: clamp(2.25rem, 9vw, 3rem);
       }
 
       .about-values {
@@ -203,6 +319,17 @@
 
       .about-values article {
         text-align: center;
+      }
+
+      .about-social-item {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .about-social-item:nth-child(even) img,
+      .about-social-item:nth-child(even) .about-social-copy {
+        grid-column: auto;
+        grid-row: auto;
       }
     }
   </style>
@@ -238,22 +365,39 @@
 </header>
 <main>
   <section class="about-intro" aria-labelledby="about-title">
-    <p class="eyebrow dark">A Inoxcolor</p>
-    <h1 id="about-title">Sobre a Empresa</h1>
-    <p>Fundada pelo engenheiro Pedro Kaechele em abril de 2000, a Inoxcolor é uma empresa 100% brasileira, com instalações industriais de 9.000 m² em Mateus Leme, MG, a cerca de 50 km de Belo Horizonte, e escritório comercial e showroom em Belo Horizonte, MG.</p>
-    <figure class="about-feature-image">
-      <img src="a_inoxcolor/reuniao-inoxcolor.png" alt="Equipe da Inoxcolor apresentando amostras de aço inox colorido" loading="lazy" />
-    </figure>
-    <h2>O que fazemos</h2>
-    <p>Com tecnologia e equipamentos de ponta, fornecemos chapas em aço inox colorido para a indústria e revestimentos e produtos para arquitetura, unindo resistência, durabilidade e acabamento de alto padrão.</p>
-  </section>
-  <section class="about-mission" aria-label="Nosso objetivo e Know How">
-    <h2>Nosso objetivo</h2>
-    <p>Oferecer soluções em aço inox colorido que atendam às necessidades técnicas e estéticas da indústria e da arquitetura, com qualidade, inovação e atendimento especializado.</p>
-    <h2>Know How</h2>
+    <h1 id="about-title">A Inoxcolor</h1>
     <p>Somos a única empresa da América Latina a produzir revestimentos metálicos em aço inox colorido e a realizar a coloração de chapas de aço inoxidável por processo eletroquímico, ampliando as possibilidades de aplicação e personalização de produtos e projetos.</p>
   </section>
-  <section class="about-values" aria-label="Missão, visão, valores e ação social">
+  <section class="about-projects" aria-labelledby="about-projects-title">
+    <h2 id="about-projects-title">Grandes Obras</h2>
+    <div class="pure-slider about-projects-slider" aria-label="Carrossel de grandes obras">
+      <div class="pure-slider-inner">
+        <button class="slider-btn prev" type="button" aria-label="Obra anterior">&#10094;</button>
+        <div class="pure-slider-viewport">
+          <div class="pure-slider-track">
+            <img src="obras/1.jpg" alt="Escultura de galo em inox no Estádio do Atlético Mineiro" loading="eager" />
+            <img src="obras/2.jpg" alt="Escultura abstrata em aço inox dourado e escuro" loading="lazy" />
+            <img src="obras/5.jpg" alt="Escultura de árvore formada por elementos metálicos" loading="lazy" />
+            <img src="obras/6.jpg" alt="Instalação artística do Big Fone no BBB 26" loading="lazy" />
+            <img src="obras/7.jpg" alt="Instalação artística em formato de estrela com telefone vermelho" loading="lazy" />
+            <img src="obras/8.jpg" alt="Escultura colorida de borboleta em ambiente contemporâneo" loading="lazy" />
+          </div>
+        </div>
+        <button class="slider-btn next" type="button" aria-label="Próxima obra">&#10095;</button>
+      </div>
+    </div>
+  </section>
+  <section class="about-foundation" aria-label="História da Inoxcolor">
+    <p>Fundada pelo engenheiro Pedro Kaechele em abril de 2000, a Inoxcolor é uma empresa 100% brasileira, com instalações industriais de 9.000 m² em Mateus Leme, MG, a cerca de 50 km de Belo Horizonte, e escritório comercial e showroom em Belo Horizonte, MG.</p>
+  </section>
+  <figure class="about-feature-image">
+    <img src="a_inoxcolor/reuniao-inoxcolor.png" alt="Equipe da Inoxcolor apresentando amostras de aço inox colorido" loading="lazy" />
+  </figure>
+  <section class="about-mission" aria-label="Nosso objetivo">
+    <h2>Nosso objetivo</h2>
+    <p>Oferecer soluções em aço inox colorido que atendam às necessidades técnicas e estéticas da indústria e da arquitetura, com qualidade, inovação e atendimento especializado.</p>
+  </section>
+  <section class="about-values" aria-label="Missão, visão e valor">
     <article>
       <h2>Missão</h2>
       <p>Ser uma companhia alicerçada em valores éticos e humanos, gerando inovações através do aço inox colorido, visando o desenvolvimento, produção e comercialização de produtos capazes de transformar ambientes, proporcionando conforto, satisfação e bem-estar aos nossos clientes.</p>
@@ -266,40 +410,38 @@
       <h2>Valor</h2>
       <p>Valorização do ser humano, respeito ao meio ambiente, transparência, ética, lealdade a todos os stakeholders, compromisso com a qualidade e busca contínua por inovação.</p>
     </article>
-    <article>
-      <h2>Ação Social</h2>
-      <p>Acreditamos que podemos contribuir para um mundo melhor. Entendemos que o ser humano é a parte mais importante das empresas, pois é o único elemento que consideramos insubstituível. Podemos substituir o cargo, as máquinas e os equipamentos, mas pessoas não. Somos semelhantes, mas não somos iguais.</p>
-    </article>
   </section>
-  <section class="about-gallery" aria-label="Momentos da Inoxcolor">
-    <figure class="about-card">
-      <figcaption>
-        <h2>Horta</h2>
-        <p>A Inoxcolor cultiva em seu terreno uma horta com variedades de hortaliças e disponibiliza aos seus funcionários e familiares verduras e legumes saudáveis, livres de contaminação química e totalmente naturais. Todos os dias, os funcionários colhem alimentos frescos para o almoço e o jantar.</p>
-      </figcaption>
+  <h2 class="about-social-title">Ação Social</h2>
+  <p class="about-social-intro">Acreditamos que podemos contribuir para um mundo melhor. Entendemos que o ser humano é a parte mais importante das empresas, pois é o único elemento que consideramos insubstituível. Podemos substituir o cargo, as máquinas e os equipamentos, mas pessoas não. Somos semelhantes, mas não somos iguais.</p>
+  <section class="about-social" aria-label="Ações sociais da Inoxcolor">
+    <article class="about-social-item">
       <img src="a_inoxcolor/1.jpg" alt="Colaborador cuidando de uma horta da Inoxcolor" />
-    </figure>
-    <figure class="about-card">
-      <figcaption>
-        <h2>Dedicação em cada etapa</h2>
-        <p>O trabalho na horta é feito com dedicação, cuidado e respeito ao ritmo da natureza.</p>
-      </figcaption>
+      <div class="about-social-copy">
+        <h3>Horta</h3>
+        <p>A Inoxcolor cultiva em seu terreno uma horta com variedades de hortaliças e disponibiliza aos seus funcionários e familiares verduras e legumes saudáveis, livres de contaminação química e totalmente naturais. Todos os dias, os funcionários colhem alimentos frescos para o almoço e o jantar.</p>
+      </div>
+    </article>
+    <article class="about-social-item">
       <img src="a_inoxcolor/2.jpg" alt="Colaborador trabalhando entre os canteiros da horta" />
-    </figure>
-    <figure class="about-card">
-      <figcaption>
-        <h2>Educar</h2>
-        <p>Pensando na comunidade local, a Inoxcolor desenvolveu o projeto “Educar”, que disponibiliza aulas preparatórias gratuitas para o Enem a jovens carentes. As aulas acontecem em uma de nossas salas da sede administrativa, localizada em Belo Horizonte. O objetivo é contribuir com a sociedade, acreditando que, com a educação, podemos transformar o mundo!</p>
-      </figcaption>
+      <div class="about-social-copy">
+        <h3>Dedicação em cada etapa</h3>
+        <p>O trabalho na horta é feito com dedicação, cuidado e respeito ao ritmo da natureza.</p>
+      </div>
+    </article>
+    <article class="about-social-item">
       <img src="a_inoxcolor/3.jpg" alt="Professora e estudantes em uma sala de aula" />
-    </figure>
-    <figure class="about-card">
-      <figcaption>
-        <h2>Aprendizado para o futuro</h2>
-        <p>Estudar e desenvolver novas habilidades são passos importantes para alcançar novos objetivos.</p>
-      </figcaption>
+      <div class="about-social-copy">
+        <h3>Educar</h3>
+        <p>Pensando na comunidade local, a Inoxcolor desenvolveu o projeto “Educar”, que disponibiliza aulas preparatórias gratuitas para o Enem a jovens carentes. As aulas acontecem em uma de nossas salas da sede administrativa, localizada em Belo Horizonte. O objetivo é contribuir com a sociedade, acreditando que, com a educação, podemos transformar o mundo!</p>
+      </div>
+    </article>
+    <article class="about-social-item">
       <img src="a_inoxcolor/4.jpg" alt="Estudantes assistindo a uma aula de redação" />
-    </figure>
+      <div class="about-social-copy">
+        <h3>Aprendizado para o futuro</h3>
+        <p>Estudar e desenvolver novas habilidades são passos importantes para alcançar novos objetivos.</p>
+      </div>
+    </article>
   </section>
   <section class="about-cta" aria-label="Conheça nossos produtos">
     <p>Explore soluções em aço inox colorido que dão novas possibilidades aos seus produtos e projetos.</p>

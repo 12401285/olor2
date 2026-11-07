@@ -5,6 +5,25 @@ const siteHeader = document.querySelector('.site-header');
 const navWrap = document.querySelector('.nav-wrap');
 const brandItem = document.querySelector('.brand-item');
 
+if (siteHeader && navWrap && !navWrap.querySelector('.header-social-links')) {
+  const socialLinks = document.createElement('div');
+  socialLinks.className = 'header-social-links';
+  socialLinks.setAttribute('aria-label', 'Redes sociais');
+  socialLinks.style.cssText = 'position:absolute;left:12px;top:50%;transform:translateY(-50%);display:flex;align-items:center;gap:10px;z-index:2;';
+  socialLinks.innerHTML = `
+    <a href="https://instagram.com/inoxcolor" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;color:#d3b77f;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r=".75" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/inoxcolor-a%C3%A7os-inoxidaveis-coloridos-s-a-a86ba4387?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="display:flex;align-items:center;justify-content:center;width:22px;height:22px;color:#d3b77f;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14ZM8.34 18V9.6H5.55V18h2.79ZM6.95 8.45a1.61 1.61 0 1 0 0-3.22 1.61 1.61 0 0 0 0 3.22ZM18.45 18v-4.6c0-2.46-1.31-3.6-3.06-3.6a2.64 2.64 0 0 0-2.38 1.31V9.6h-2.79V18h2.79v-4.16c0-1.1.21-2.17 1.58-2.17 1.36 0 1.38 1.27 1.38 2.24V18h2.48Z"></path>
+      </svg>
+    </a>`;
+  navWrap.insertBefore(socialLinks, navWrap.firstChild);
+}
+
 // Reúne os dois grupos de links em um único painel apenas no comportamento mobile.
 let mobileMenuPanel = null;
 if (navWrap && navs.length) {

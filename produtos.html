@@ -17,6 +17,48 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="footer.css" />
+    <style>
+      .products-page-body .section-title3 {
+        margin-bottom: 20px;
+      }
+
+      .products-finish-description {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto 28px;
+        color: #121212;
+        font-family: "Inter", sans-serif;
+        font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+        line-height: 1.75;
+        text-align: center;
+      }
+
+      .products-finish-description .highlight {
+        color: #c99664;
+      }
+
+      .products-page-body > .product-selection-prompt {
+        margin: 0 auto 28px;
+        color: #6d645f;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .products-root-page .products-grid {
+        margin-top: 0;
+      }
+
+      @media (max-width: 760px) {
+        .products-page-body .section-title3 {
+          margin-bottom: 20px;
+        }
+
+        .products-finish-description {
+          margin-bottom: 24px;
+          text-align: left;
+        }
+      }
+    </style>
 </head>
   <body class="products-page-body products-root-page">
     <!-- Cabeçalho fixo do site: contém a identidade, o topo de contato e a navegação principal -->
@@ -57,21 +99,28 @@
       </div>
     </header>
 
-    <h2 class="section-title3">Soluções em <span class="highlight">Aço Inox Colorido</span> <br> Onde tecnologia, design e exclusividade transformam cada aplicação.<br><br><p class="product-selection-prompt">↓ Clique nas imagens abaixo e explore as aplicações em inox colorido.</p></h2>
+    <h2 class="section-title3">Soluções em <span class="highlight">Aço Inox Colorido</span><br>Onde tecnologia, design e exclusividade transformam cada aplicação.</h2>
+    <p class="products-finish-description">São duas linhas de acabamentos para se deleitar em cores. Linha <span class="highlight">Polida</span> revela presença e brilho intenso. Com superfície perfeitamente lisa e alto poder reflexivo, o acabamento polido intensifica a profundidade cromática e exalta o brilho nobre do aço inox colorido. Linha <span class="highlight">Escovada</span>, de aspecto acetinado e textura linear sutil, proporciona elegância e sofisticação e traduz equilíbrio e precisão estética.</p>
+    <p class="product-selection-prompt">↓ Clique nas imagens abaixo e explore as aplicações em inox colorido.</p>
  
     <main class="products-page">
       <section class="products-gallery" aria-labelledby="products-title">
         <div class="products-grid">
           <a href="portifolio_cores.html"><figure class="product-image"><img src="produtos/1n.jpeg" alt="Portfólio de cores" loading="eager" /><figcaption>Portfólio de cores</figcaption></figure></a>
           <a href="chapas.html"><figure class="product-image"><img src="produtos/2n.jpeg" alt="Chapas" loading="lazy" /><figcaption>Chapas</figcaption></figure></a>
-          <a href="Revestimentos.html"><figure class="product-image"><img src="produtos/3n.jpeg" alt="Revestimentos" loading="lazy" /><figcaption>Revestimentos</figcaption></figure></a>
-          <a href="brises.html"><figure class="product-image"><img src="produtos/brise.jpg" alt="Brises" loading="lazy" /><figcaption>Brises</figcaption></figure></a>
+          <a href="Revestimentos.html"><figure class="product-image"><img src="produtos/3n.jpeg" alt="Revestimento Water Ripple" loading="lazy" /><figcaption>Revestimento Water Ripple</figcaption></figure></a>
+          <a href="porcelainox.html"><figure class="product-image"><img src="carrossel2_revestimento/porcela.jpg" alt="Revestimento Porcelinox" loading="lazy" /><figcaption>Revestimento Porcelinox</figcaption></figure></a>
+          <a href="brises.html"><figure class="product-image"><img src="produtos/brise.jpg" alt="Brise" loading="lazy" /><figcaption>Brise</figcaption></figure></a>
           <a href="ralos.html"><figure class="product-image"><img src="produtos/ralos.jpg" alt="Ralos" loading="lazy" /><figcaption>Ralos</figcaption></figure></a>
-          <a href="projetos.html"><figure class="product-image"><img src="produtos/6n.jpeg" alt="Obras de arte" loading="lazy" /><figcaption>Obras de arte</figcaption></figure></a>
-          <a href="perfis_listelos.html"><figure class="product-image"><img src="produtos/perfis.jpg" alt="Perfis e listelos" loading="lazy" /><figcaption>Perfis e listelos</figcaption></figure></a>
-          <a href="quadros.html"><figure class="product-image"><img src="produtos/8n.jpeg" alt="Quadros" loading="lazy" /><figcaption>Quadros Decorativos</figcaption></figure></a>
+          <a href="colunas.html"><figure class="product-image"><img src="carrossel2_revestimento/colunas.jpg" alt="Revestimento Coluna" loading="lazy" /><figcaption>Revestimento Coluna</figcaption></figure></a>
+          <a href="perfis_listelos.html"><figure class="product-image"><img src="produtos/perfis.jpg" alt="Perfis e filetes" loading="lazy" /><figcaption>Perfis e Filetes</figcaption></figure></a>
+          <a href="fachadas_paredes.html"><figure class="product-image"><img src="carrossel2_revestimento/fachadas.jpg" alt="Revestimento Fachada" loading="lazy" /><figcaption>Revestimento Fachada</figcaption></figure></a>
+          <a href="elevadores.html"><figure class="product-image"><img src="bdrv/3.jpg" alt="Revestimento Elevador" loading="lazy" /><figcaption>Revestimento Elevador</figcaption></figure></a>
+          <a href="moveis.html"><figure class="product-image"><img src="bdrv/5.jpg" alt="Revestimento Móveis" loading="lazy" /><figcaption>Revestimento Móveis</figcaption></figure></a>
+          <a href="portas.html"><figure class="product-image"><img src="carrossel2_revestimento/portas.jpg" alt="Revestimento Porta" loading="lazy" /><figcaption>Revestimento Porta</figcaption></figure></a>
+          <a href="quadros.html"><figure class="product-image"><img src="produtos/8n.jpeg" alt="Quadro" loading="lazy" /><figcaption>Quadro</figcaption></figure></a>
+          <a href="projetos.html"><figure class="product-image"><img src="produtos/6n.jpeg" alt="Obra de Arte" loading="lazy" /><figcaption>Obra de Arte</figcaption></figure></a>
           <a href="Letras_numeros.html"><figure class="product-image"><img src="produtos/9n.jpeg" alt="Letras e Números" loading="lazy" /><figcaption>Letras e Números</figcaption></figure></a>
-          <a href="Aplições Externas.html"><figure class="product-image"><img src="produtos/10n.jpeg" alt="Aplicações externas" loading="lazy" /><figcaption>Aplicações externas</figcaption></figure></a>
         </div>
       </section>
     </main>
