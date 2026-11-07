@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Inoxcolor - móveis e soluções em aço inoxidável com design premium e excelência em acabamento."
+      content="Revestimento Water Ripple em aço inoxidável colorido | Inoxcolor"
     />
   <link rel="icon" href="site_favicon_16_1787921832250.ico" type="image/x-icon">
-    <title>Inoxcolor | Revestimentos</title>
+    <title>Revestimento Water Ripple | Inoxcolor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -139,8 +139,237 @@
         }
       }
     </style>
+    <style id="water-ripple-page-styles">
+      .water-ripple-page {
+        background: #fff;
+        color: #121212;
+      }
+
+      .water-ripple-page .site-header,
+      .water-ripple-page .site-header.scrolled {
+        background: #000;
+      }
+
+      .water-ripple-page .main-nav,
+      .water-ripple-page .main-nav a,
+      .water-ripple-page .menu-toggle span {
+        color: #fff;
+      }
+
+      .water-ripple-page .menu-toggle span {
+        background: #fff;
+      }
+
+      .water-ripple-hero {
+        display: flex;
+        align-items: center;
+        min-height: 220px;
+        padding: 112px 0 28px;
+        color: #fff;
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, .78), rgba(0, 0, 0, .36)),
+          url("Revestimentos Water Ripple/1.jpg") center / cover;
+      }
+
+      .water-ripple-hero > .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+      }
+
+      .water-ripple-hero-content {
+        position: relative;
+        width: 100%;
+      }
+
+      .water-ripple-title {
+        width: min(780px, 65%);
+        margin-left: -160px;
+        padding: 22px 28px 20px;
+        border: 1px solid rgba(255, 255, 255, .7);
+      }
+
+      .water-ripple-title strong {
+        display: block;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+        text-transform: uppercase;
+        transform: translateX(80px);
+      }
+
+      .water-ripple-subtitle {
+        position: absolute;
+        top: 50%;
+        left: calc(min(620px, 52%) + 28px);
+        width: min(520px, calc(100% - min(620px, 52%) - 56px));
+        margin: 0;
+        color: rgba(255, 255, 255, .9);
+        font-family: "Inter", sans-serif;
+        font-size: clamp(.8rem, 1.8vw, 1.2rem);
+        line-height: 1.6;
+        transform: translateY(-50%);
+      }
+
+      .water-ripple-section {
+        padding: 0 0 80px;
+      }
+
+      .water-ripple-main {
+        margin: 0;
+        padding: 0;
+      }
+
+      .water-ripple-page > .chapas-content,
+      .water-ripple-page > .products-page,
+      .water-ripple-page > .products-cta {
+        display: none !important;
+      }
+
+      .water-ripple-intro {
+        width: min(1000px, calc(100% - 48px));
+        margin: 32px auto 36px;
+        color: #121212;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        text-align: center;
+      }
+
+      .water-ripple-feature {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+        gap: 10px;
+        align-items: center;
+        width: min(1240px, calc(100% - 48px));
+        margin: 42px auto 0;
+      }
+
+      .water-ripple-feature .imagem-direita {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .water-ripple-feature .imagem-direita + .water-ripple-copy {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .water-ripple-feature img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .water-ripple-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 28px;
+      }
+
+      .water-ripple-copy p {
+        width: 100%;
+        max-width: 520px;
+        margin: 0;
+        color: #121212;
+        font-family: "Inter", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        text-align: justify;
+        text-align-last: left;
+      }
+
+      .water-ripple-architecture-btn {
+        display: inline-flex;
+        position: static;
+        align-self: center;
+        margin-top: 28px;
+        color: #fff !important;
+        transform: none;
+      }
+
+      @media (max-width: 768px) {
+        .water-ripple-hero {
+          min-height: 0;
+          padding: 98px 16px 30px;
+        }
+
+        .water-ripple-hero-content {
+          display: grid;
+          gap: 14px;
+          width: min(100%, 560px);
+          margin: 0 auto;
+        }
+
+        .water-ripple-title {
+          width: 100%;
+          margin: 0;
+          padding: 12px 14px;
+        }
+
+        .water-ripple-title strong {
+          font-size: clamp(1.05rem, 5vw, 1.5rem);
+          line-height: 1.3;
+          transform: none;
+        }
+
+        .water-ripple-subtitle {
+          position: static;
+          width: auto;
+          margin: 0;
+          font-size: 1rem;
+          line-height: 1.5;
+          text-align: center;
+          transform: none;
+        }
+
+        .water-ripple-intro {
+          width: calc(100% - 36px);
+          margin: 28px auto;
+          font-size: 1rem;
+          text-align: left;
+        }
+
+        .water-ripple-feature {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          width: calc(100% - 32px);
+          margin-top: 30px;
+        }
+
+        .water-ripple-feature .imagem-direita,
+        .water-ripple-feature .imagem-direita + .water-ripple-copy {
+          grid-column: auto;
+          grid-row: auto;
+        }
+
+        .water-ripple-copy {
+          padding: 8px 12px;
+        }
+
+        .water-ripple-copy p {
+          font-size: 1rem;
+          line-height: 1.6;
+          text-align: left;
+        }
+
+        .water-ripple-architecture-btn {
+          width: 100%;
+          min-height: 52px;
+          justify-content: center;
+          padding: 0 16px;
+          border-radius: 999px;
+          font-size: .75rem;
+        }
+      }
+    </style>
 </head>
-  <body class="products-page-body revestimentos-page-body">
+  <body class="products-page-body water-ripple-page">
 		<header class="site-header">
 			<div class="container nav-wrap">
 				<nav class="main-nav nav-left" aria-label="Menu principal esquerdo">
@@ -170,14 +399,63 @@
 			</div>
 		</header>
 
-    <section class="product-subhero" aria-label="Revestimentos">
-      <div class="container product-subhero-inner">
-        <div class="product-subhero-content">
-          <h1 class="product-subhero-title"><strong>Revestimentos</strong></h1>
-          <p class="product-subhero-subtitle">Design, cor e sofisticação.</p>
+    <section class="water-ripple-hero" aria-labelledby="water-ripple-title">
+      <div class="container">
+        <div class="water-ripple-hero-content">
+          <h1 class="water-ripple-title" id="water-ripple-title"><strong>Revestimento Water Ripple</strong></h1>
+          <p class="water-ripple-subtitle">O movimento da água ganha forma no aço inoxidável.</p>
         </div>
       </div>
     </section>
+
+    <main class="water-ripple-main">
+      <section class="section water-ripple-section" aria-label="Aplicações do Revestimento Water Ripple">
+        <p class="water-ripple-intro">Da fachada ao interior, a luz percorre as ondas do Revestimento Water Ripple e revela um novo desenho a cada olhar, imprimindo às superfícies a elegância da água em movimento.</p>
+        <article class="water-ripple-feature">
+          <img class="imagem-esquerda" src="Revestimentos Water Ripple/1.jpg" alt="Painel polido de Water Ripple com reflexos ondulados" loading="lazy" />
+          <div class="water-ripple-copy"><p>Em um painel, o Water Ripple polido devolve o ambiente em reflexos ondulados, criando um efeito que muda conforme o olhar percorre a superfície.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-direita" src="Revestimentos Water Ripple/2.jpg" alt="Water Ripple em inox natural prateado" loading="lazy" />
+          <div class="water-ripple-copy"><p>Em inox natural, o Water Ripple deixa que a luz desenhe cada ondulação sobre o tom prateado do aço, dando profundidade à superfície com elegância.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-esquerda" src="Revestimentos Water Ripple/3.jpg" alt="Comparação dos acabamentos polido e escovado Water Ripple" loading="lazy" />
+          <div class="water-ripple-copy"><p>O mesmo desenho de água pode assumir duas expressões. No polido, ganha reflexos espelhados e luminosos. No escovado, revela uma ondulação mais fosca e delicada.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-direita" src="Revestimentos Water Ripple/4.jpg" alt="Water Ripple escovado aplicado em ambiente interno" loading="lazy" />
+          <div class="water-ripple-copy"><p>Em áreas internas, o Water Ripple escovado realça o desenho das ondas com reflexos contidos, criando uma superfície de presença marcante e brilho discreto.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-esquerda" src="Revestimentos Water Ripple/5.jpg" alt="Percurso arquitetônico revestido com Water Ripple" loading="lazy" />
+          <div class="water-ripple-copy"><p>As ondulações do Water Ripple acompanham o percurso com a fluidez da água. A cada passo, um fragmento do ambiente reaparece no aço sob um novo reflexo.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-direita" src="Revestimentos Water Ripple/6.jpg" alt="Teto com revestimento Water Ripple iluminado" loading="lazy" />
+          <div class="water-ripple-copy"><p>Quando a iluminação percorre o teto, o relevo do Water Ripple se revela aos poucos. As curvas suaves do aço dão movimento às linhas precisas da arquitetura contemporânea.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-esquerda" src="Revestimentos Water Ripple/7.jpg" alt="Aplicação arquitetônica do revestimento Water Ripple" loading="lazy" />
+          <div class="water-ripple-copy"><p>As ondulações do Water Ripple acompanham o percurso com a fluidez da água. A cada passo, um fragmento do ambiente reaparece no aço sob um novo reflexo.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-direita" src="Revestimentos Water Ripple/8.jpg" alt="Parede Water Ripple destacada por iluminação rasante" loading="lazy" />
+          <div class="water-ripple-copy"><p>A iluminação rasante percorre a parede e revela a delicadeza de cada ondulação. No Water Ripple, a luz dá profundidade ao aço e faz do revestimento um ponto de interesse no ambiente.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-esquerda" src="Revestimentos Water Ripple/9.jpg" alt="Superfície Water Ripple em aço inox natural e colorido" loading="lazy" />
+          <div class="water-ripple-copy"><p>Do tom prateado do inox natural às sete cores da Inoxcolor, o Water Ripple permite compor o ambiente com a sutileza de um reflexo ou com a presença de uma superfície escultórica.</p></div>
+        </article>
+        <article class="water-ripple-feature">
+          <img class="imagem-direita" src="Revestimentos Water Ripple/10.jpg" alt="Parede revestida com Water Ripple em ambiente contemporâneo" loading="lazy" />
+          <div class="water-ripple-copy">
+            <p>De perto, a delicadeza de cada onda. À distância, a força de uma parede que define o ambiente.</p>
+            <a href="arquitetura.html" class="btn btn-primary water-ripple-architecture-btn">Explore nossas soluções para Arquitetura</a>
+          </div>
+        </article>
+      </section>
+    </main>
 
 		 <main class="chapas-content">
       <section class="chapas-intro" aria-label="Apresentação das chapas">
@@ -236,12 +514,12 @@
     <main class="products-page">
       <section class="products-gallery" aria-labelledby="products-title">
           <div class="products-grid">
-            <a href="porcelainox.html"><figure class="product-image"><img src="carrossel2_revestimento/porcela.jpg" alt="Brises" loading="lazy" /><figcaption>Porcelinox</figcaption></figure></a>
-            <a href="colunas.html"><figure class="product-image"><img src="carrossel2_revestimento/colunas.jpg" alt="Ralos" loading="lazy" /><figcaption>Colunas</figcaption></figure></a>
-            <a href="elevadores.html"><figure class="product-image"><img src="bdrv/3.jpg" alt="Obras de arte" loading="lazy" /><figcaption>Elevadores</figcaption></figure></a>
-            <a href="fachadas_paredes.html"><figure class="product-image"><img src="carrossel2_revestimento/fachadas.jpg" alt="Perfis e listelos" loading="lazy" /><figcaption>Fachadas e Paredes</figcaption></figure></a>
-            <a href="moveis.html"><figure class="product-image"><img src="bdrv/5.jpg" alt="Quadros e Perfis Decorativos" loading="lazy" /><figcaption>Móveis</figcaption></figure></a>
-            <a href="portas.html"><figure class="product-image"><img src="carrossel2_revestimento/portas.jpg" alt="Letras e Números" loading="lazy" /><figcaption>Portas</figcaption></figure></a>
+            <a href="porcelainox.html"><figure class="product-image"><img src="carrossel2_revestimento/porcela.jpg" alt="Brises" loading="lazy" /><figcaption>Revestimento Porcelinox</figcaption></figure></a>
+            <a href="colunas.html"><figure class="product-image"><img src="carrossel2_revestimento/colunas.jpg" alt="Ralos" loading="lazy" /><figcaption>Revestimento Colunas</figcaption></figure></a>
+            <a href="elevadores.html"><figure class="product-image"><img src="bdrv/3.jpg" alt="Obras de arte" loading="lazy" /><figcaption>Revestimento Elevadores</figcaption></figure></a>
+            <a href="fachadas_paredes.html"><figure class="product-image"><img src="carrossel2_revestimento/fachadas.jpg" alt="Perfis e listelos" loading="lazy" /><figcaption>Revestimento Fachadas e Paredes</figcaption></figure></a>
+            <a href="moveis.html"><figure class="product-image"><img src="bdrv/5.jpg" alt="Quadros e Perfis Decorativos" loading="lazy" /><figcaption>Revestimento Móveis</figcaption></figure></a>
+            <a href="portas.html"><figure class="product-image"><img src="carrossel2_revestimento/portas.jpg" alt="Letras e Números" loading="lazy" /><figcaption>Revestimento Portas</figcaption></figure></a>
           </div>
       </section>
         </main>
