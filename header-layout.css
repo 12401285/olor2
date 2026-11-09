@@ -1,0 +1,307 @@
+@media (min-width: 1025px) {
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) {
+    position: relative !important;
+    display: block !important;
+    width: min(1200px, calc(100% - 32px)) !important;
+    max-width: 1200px !important;
+    height: 88px !important;
+    min-height: 88px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .header-social-links {
+    position: absolute !important;
+    top: 50% !important;
+    left: 12px !important;
+    display: flex !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-left {
+    position: absolute !important;
+    top: 50% !important;
+    right: auto !important;
+    left: 107px !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+    justify-content: flex-start !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-left a,
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-right a {
+    font-family: Inter, sans-serif !important;
+    font-size: 11.52px !important;
+    line-height: 13.824px !important;
+    letter-spacing: 1.3824px !important;
+    padding: 0 0 6px !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-left,
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-right {
+    gap: 12px !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-left {
+    width: 372px !important;
+    flex: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-right {
+    width: 309px !important;
+    flex: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-right {
+    position: absolute !important;
+    top: 50% !important;
+    right: auto !important;
+    left: 720px !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+    justify-content: flex-start !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 220px !important;
+    height: 44px !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item img {
+    display: block !important;
+    width: 180px !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-actions {
+    position: static !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-actions .btn-primary {
+    position: absolute !important;
+    top: 50% !important;
+    right: auto !important;
+    left: 98% !important;
+    display: inline-flex !important;
+    width: 139px !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    margin: 0 !important;
+    padding: 0 22px !important;
+    transform: translateY(-50%) !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .mobile-budget-link {
+    display: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .menu-toggle {
+    display: none !important;
+  }
+
+  html body.architecture-page .site-header .nav-wrap .brand-item img {
+    position: relative !important;
+    top: 2px !important;
+  }
+
+  html body.residential-page .site-header .nav-wrap .brand-item img {
+    position: relative !important;
+    top: 3px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) {
+    position: relative !important;
+    display: block !important;
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+    height: 88px !important;
+    min-height: 88px !important;
+    margin: 0 31px 0 16px !important;
+    padding: 0 !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-left,
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-right {
+    display: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .header-social-links {
+    position: absolute !important;
+    top: 50% !important;
+    right: 68px !important;
+    left: auto !important;
+    display: flex !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item {
+    position: absolute !important;
+    top: 50% !important;
+    right: auto !important;
+    left: 16px !important;
+    width: 180px !important;
+    height: 44px !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item img {
+    width: 180px !important;
+    height: auto !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-actions {
+    position: static !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-actions .btn-primary {
+    display: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .menu-toggle {
+    position: absolute !important;
+    top: 22px !important;
+    right: 16px !important;
+    left: auto !important;
+    display: flex !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  html body.architecture-page .site-header .nav-wrap .brand-item img {
+    position: relative !important;
+    top: 2px !important;
+  }
+
+  html body.residential-page .site-header .nav-wrap .brand-item img {
+    position: relative !important;
+    top: 1px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) {
+    position: relative !important;
+    display: block !important;
+    width: calc(100% - 32px) !important;
+    max-width: none !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    margin: 0 31px 0 16px !important;
+    padding: 0 !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-left,
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-right {
+    display: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .header-social-links {
+    position: absolute !important;
+    top: 50% !important;
+    right: 64px !important;
+    left: auto !important;
+    display: flex !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item {
+    position: absolute !important;
+    top: 50% !important;
+    right: auto !important;
+    left: 12px !important;
+    width: 140px !important;
+    height: 33px !important;
+    margin: 0 !important;
+    transform: translateY(-50%) !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item img {
+    width: 140px !important;
+    height: auto !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-actions {
+    position: static !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .nav-actions .btn-primary {
+    display: none !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .menu-toggle {
+    position: absolute !important;
+    top: 15px !important;
+    right: 12px !important;
+    left: auto !important;
+    display: flex !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+html body.residential-page .site-header .nav-wrap {
+  top: -1px !important;
+}
+
+@media (min-width: 441px) and (max-width: 768px) {
+  html body.residential-page .site-header .nav-wrap .brand-item {
+    top: calc(50% + 1px) !important;
+  }
+}
+
+@media (max-width: 440px) {
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .header-social-links {
+    right: 62px !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item {
+    left: 10px !important;
+    width: 128px !important;
+    height: 30px !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .brand-item img {
+    width: 128px !important;
+  }
+
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .menu-toggle {
+    right: 10px !important;
+  }
+
+  html body.residential-page .site-header .nav-wrap .brand-item img {
+    top: 3px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body.architecture-page .site-header .nav-wrap .brand-item img {
+    top: 1px !important;
+  }
+}

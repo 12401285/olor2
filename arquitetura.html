@@ -1618,6 +1618,168 @@ body.architecture-page .colors-feature-copy h3 {
   .site-header .nav-wrap>.nav-actions{position:static!important;top:auto!important;right:auto!important;transform:none!important;order:2!important;flex:0 0 auto!important;margin:0!important}
 }
 </style>
+<style id="architecture-bbb-highlights-carousel">
+  .architecture-page .bbb-highlights {
+    padding: 50px 0;
+    background: var(--cream);
+  }
+
+  .architecture-page .bbb-highlights .carousel-heading {
+    align-items: center;
+  }
+
+  .architecture-page .bbb-highlights > .wrap {
+    width: calc(100% - 8px);
+    margin: 0 auto;
+  }
+
+  .architecture-page .bbb-highlights .carousel-heading .eyebrow {
+    margin: 0 0 10px;
+  }
+
+  body.architecture-page main .bbb-highlights h2 {
+    max-width: 860px;
+    margin: 0;
+    color: var(--ink);
+    font-size: clamp(28px, 3.8vw, 42px) !important;
+    font-weight: 400 !important;
+    letter-spacing: -.035em !important;
+    line-height: 1.1;
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-viewport {
+    position: relative;
+  }
+
+  .architecture-page .bbb-highlights .image-track {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .architecture-page .bbb-highlights .image-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .architecture-page .bbb-highlights .image-slide {
+    flex: 0 0 calc((100% - 18px) / 2);
+    min-width: 0;
+    margin: 0;
+    scroll-snap-align: start;
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #e9e3d8;
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .architecture-page .bbb-highlights .image-slide figcaption {
+    margin-top: 12px;
+    color: #686156;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    pointer-events: none;
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-overlay .slider-btn {
+    position: absolute;
+    top: 50%;
+    width: 54px;
+    height: 54px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    background: rgba(11, 11, 11, 0.28);
+    color: #fff;
+    font-size: 24px;
+    pointer-events: auto;
+    backdrop-filter: blur(4px);
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-overlay .slider-btn.prev {
+    left: 24px;
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-overlay .slider-btn.next {
+    right: 24px;
+  }
+
+  .architecture-page .bbb-highlights .image-carousel-overlay .slider-btn:hover:not(:disabled) {
+    background: rgba(11, 11, 11, 0.55);
+    transform: translateY(-50%) scale(1.04);
+  }
+
+  .architecture-page .bbb-highlights .carousel-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 16px;
+    color: #6f6658;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  @media (max-width: 760px) {
+    .architecture-page .bbb-highlights {
+      padding: 40px 0;
+    }
+
+    .architecture-page .bbb-highlights .carousel-heading {
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .architecture-page .bbb-highlights > .wrap {
+      width: calc(100% - 6px);
+    }
+
+    body.architecture-page main .bbb-highlights h2 {
+      font-size: clamp(26px, 7vw, 34px) !important;
+    }
+
+    .architecture-page .bbb-highlights .image-slide {
+      flex-basis: 86%;
+    }
+
+    .architecture-page .bbb-highlights .image-carousel-overlay {
+      padding: 0 8px;
+    }
+
+    .architecture-page .bbb-highlights .image-carousel-overlay .slider-btn {
+      width: 40px;
+      height: 40px;
+    }
+
+    .architecture-page .bbb-highlights .image-carousel-overlay .slider-btn.prev {
+      left: 12px;
+    }
+
+    .architecture-page .bbb-highlights .image-carousel-overlay .slider-btn.next {
+      right: 12px;
+    }
+  }
+</style>
 </head>
 <body class="architecture-page">
 <div class="topbar"><div class="container"><span>Soluções exclusivas em aço inox colorido</span><span>Atendimento técnico para todo o Brasil</span></div></div>
@@ -1686,7 +1848,116 @@ body.architecture-page .colors-feature-copy h3 {
 <div class="proof-pair proof-pair-single proofbar" aria-label="Diferenciais Inoxcolor">
     <section class="catalog-facts-section" id="catalogo" aria-label="Diferenciais da Inoxcolor">
       <div class="container">
+        <section class="bbb-highlights" aria-labelledby="bbb-highlights-title">
+  <div class="wrap">
+    <div class="carousel-heading">
+      <div>
+        <p class="eyebrow">BBB 20 · TV Globo</p>
+        <h2 id="bbb-highlights-title">Inoxcolor em obras marcantes e aplicações de destaque</h2>
+      </div>
+    </div>
 
+    <div class="image-carousel" role="region" aria-roledescription="carrossel" aria-label="Obras marcantes da Inoxcolor no BBB 20">
+      <div class="image-carousel-viewport">
+        <div class="image-track" id="bbb-carousel" tabindex="0" aria-label="Imagens de aplicações da Inoxcolor no BBB 20">
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="1 de 21: Bancada e ilha em aço inox colorido azul">
+            <div class="image-carousel-media"><img src="bbb/Cénario bbb 20 tv globo img1.jpg" alt="Bancada e ilha em aço inox colorido azul no cenário do BBB 20" loading="lazy" decoding="async"></div>
+            <figcaption>Bancada e ilha em aço inox colorido azul no cenário bbb 20 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="2 de 21: Revestimento dourado com recortes geométricos">
+            <div class="image-carousel-media"><img src="bbb/Cénario bbb 20 tv globo img2.jpg" alt="Revestimento dourado com recortes geométricos em ambiente do BBB 20" loading="lazy" decoding="async"></div>
+            <figcaption>Revestimento dourado no cenário bbb 20 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="3 de 21: Painel decorativo dourado e azul">
+            <div class="image-carousel-media"><img src="bbb/Cénario bbb 20 tv globo img3.jpg" alt="Painel decorativo dourado e azul em ambiente do BBB 20" loading="lazy" decoding="async"></div>
+            <figcaption>Painel decorativo dourado com impresão em inox no cenário bbb 20 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="4 de 21: Aplicação em aço inox colorido azul">
+            <div class="image-carousel-media"><img src="bbb/4.jpg" alt="Aplicação em aço inox colorido azul no cenário do BBB 20" loading="lazy" decoding="async"></div>
+            <figcaption>Letreiro e estampa na parede com aço inox colorido no cenário bbb 25 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="5 de 21: Detalhe decorativo em dourado">
+            <div class="image-carousel-media"><img src="bbb/5.jpg" alt="Detalhe decorativo em aço inox dourado" loading="lazy" decoding="async"></div>
+            <figcaption>Detalhe decorativo em dourado no cenário bbb 25 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="6 de 21: Visão geral do cenário">
+            <div class="image-carousel-media"><img src="bbb/6.jpg" alt="Visão geral do cenário do BBB 20" loading="lazy" decoding="async"></div>
+            <figcaption>Aplicação de Ralos da Inoxcolor no bbb 25 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="7 de 21: Área externa com acabamento metálico">
+            <div class="image-carousel-media"><img src="bbb/7.jpg" alt="Área externa com acabamento metálico" loading="lazy" decoding="async"></div>
+            <figcaption>cenário bbb 25 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="8 de 21: Composição em inox azul e dourado">
+            <div class="image-carousel-media"><img src="bbb/8.jpg" alt="Composição em inox azul e dourado" loading="lazy" decoding="async"></div>
+            <figcaption>cenário bbb 25 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="9 de 21: Elemento decorativo em aço inox">
+            <div class="image-carousel-media"><img src="bbb/9.jpg" alt="Elemento decorativo em aço inox" loading="lazy" decoding="async"></div>
+            <figcaption>Elemento decorativo em aço inox</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="10 de 21: Detalhe em inox azul">
+            <div class="image-carousel-media"><img src="bbb/10.jpg" alt="Detalhe em inox azul" loading="lazy" decoding="async"></div>
+            <figcaption>cenário bbb 25 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="11 de 21: Detalhe do ambiente com efeito metálico">
+            <div class="image-carousel-media"><img src="bbb/11.jpg" alt="Detalhe do ambiente com efeito metálico" loading="lazy" decoding="async"></div>
+            <figcaption>Detalhe do ambiente com efeito metálico</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="12 de 21: Composição cenográfica em dourado e azul">
+            <div class="image-carousel-media"><img src="bbb/12.jpg" alt="Composição cenográfica em dourado e azul" loading="lazy" decoding="async"></div>
+            <figcaption>Composição cenográfica no cenário bbb 25 tv globo</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="13 de 21: Moveis Tânia Bulhões em SP">
+            <div class="image-carousel-media"><img src="bbb/13.jpg" alt="Peça especial em inox para destaque visual" loading="lazy" decoding="async"></div>
+            <figcaption>Peça especial em inox para destaque visual Tânia Bulhões</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="14 de 21: Moveis Tânia Bulhões em SP">
+            <div class="image-carousel-media"><img src="bbb/14.jpg" alt="Peça especial em inox para destaque visual" loading="lazy" decoding="async"></div>
+            <figcaption>Peça especial em inox para destaque visual Tânia Bulhões</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="15 de 21: Moveis Tânia Bulhões em SP">
+            <div class="image-carousel-media"><img src="bbb/15.jpg" alt="Peça especial em inox para destaque visual" loading="lazy" decoding="async"></div>
+            <figcaption>Peça especial em inox para destaque visual Tânia Bulhões</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="16 de 21: Peça especial em inox para destaque visual">
+            <div class="image-carousel-media"><img src="bbb/img13.png" alt="Peça especial em inox para destaque visual" loading="lazy" decoding="async"></div>
+            <figcaption>Galo Inox Aperam Arena MRV</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="17 de 21: Aplicação em cenário de grande impacto visual">
+            <div class="image-carousel-media"><img src="bbb/14.png" alt="Aplicação em cenário de grande impacto visual" loading="lazy" decoding="async"></div>
+            <figcaption>Galo Inox Aperam Arena MRV</figcaption>
+          </figure>
+          <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="18 de 21: Acabamento final em aço inox">
+            <div class="image-carousel-media"><img src="bbb/15.png" alt="Acabamento final em aço inox" loading="lazy" decoding="async"></div>
+            <figcaption>Galo Inox Aperam Arena MRV</figcaption>
+          </figure>
+           <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="19 de 21: Acabamento final em aço inox">
+            <div class="image-carousel-media"><img src="bbb/18.png" alt="Acabamento final em aço inox" loading="lazy" decoding="async"></div>
+            <figcaption>Cupula nossa senhora do líbano</figcaption>
+          </figure>
+           <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="20 de 21: Acabamento final em aço inox">
+            <div class="image-carousel-media"><img src="bbb/20.png" alt="Acabamento final em aço inox" loading="lazy" decoding="async"></div>
+            <figcaption>Cupula nossa senhora do líbano</figcaption>
+          </figure>
+           <figure class="image-slide" role="group" aria-roledescription="slide" aria-label="21 de 21: Acabamento final em aço inox">
+            <div class="image-carousel-media"><img src="bbb/21.png" alt="Acabamento final em aço inox" loading="lazy" decoding="async"></div>
+            <figcaption>Cupula nossa senhora do líbano</figcaption>
+          </figure>
+        </div>
+        <div class="carousel-controls image-carousel-overlay">
+<button class="slider-btn prev" type="button" id="bbb-prev" aria-label="Imagem anterior" aria-controls="bbb-carousel">&#10094;</button>
+<button class="slider-btn next" type="button" id="bbb-next" aria-label="Próxima imagem" aria-controls="bbb-carousel">&#10095;</button>
+</div>
+      </div>
+
+      <div class="carousel-footer">
+        <span>Explore aplicações marcantes da Inoxcolor.</span>
+        <span id="bbb-carousel-status" role="status" aria-live="polite" aria-atomic="true">01 / 21</span>
+      </div>
+    </div>
+  </div>
+</section>
         <h2 class="display facts-section-title">Liberdade para criar, segurança para realizar e inovação para aplicar!</h2>
 
         <div class="facts-grid">
@@ -2318,6 +2589,60 @@ if (menuToggle && navs.length && mobileMenuPanel) {
     }
   });
 }
+</script>
+<script>
+  (() => {
+    const track = document.getElementById('bbb-carousel');
+    const previous = document.getElementById('bbb-prev');
+    const next = document.getElementById('bbb-next');
+    const status = document.getElementById('bbb-carousel-status');
+    if (!track || !previous || !next || !status) return;
+
+    const slides = Array.from(track.querySelectorAll('.image-slide'));
+    if (!slides.length) return;
+
+    const distance = () => {
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return slides[0].getBoundingClientRect().width + gap;
+    };
+    const maxIndex = () => Math.max(0, Math.round((track.scrollWidth - track.clientWidth) / distance()));
+    const currentIndex = () => Math.min(maxIndex(), Math.max(0, Math.round(track.scrollLeft / distance())));
+    let autoplayId;
+
+    const update = () => {
+      const index = currentIndex();
+      status.textContent = `${String(index + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+    };
+    const goTo = index => {
+      const boundedIndex = (index + maxIndex() + 1) % (maxIndex() + 1);
+      const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+      track.scrollTo({left: boundedIndex * distance(), behavior});
+    };
+    const restartAutoplay = () => {
+      window.clearInterval(autoplayId);
+      autoplayId = window.setInterval(() => goTo(currentIndex() + 1), 4000);
+    };
+
+    previous.addEventListener('click', () => {
+      goTo(currentIndex() - 1);
+      restartAutoplay();
+    });
+    next.addEventListener('click', () => {
+      goTo(currentIndex() + 1);
+      restartAutoplay();
+    });
+    track.addEventListener('scroll', update, {passive: true});
+    track.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+        event.preventDefault();
+        goTo(currentIndex() + (event.key === 'ArrowRight' ? 1 : -1));
+        restartAutoplay();
+      }
+    });
+    window.addEventListener('resize', update, {passive: true});
+    update();
+    restartAutoplay();
+  })();
 </script>
 </body>
 </html>
