@@ -19,9 +19,15 @@
     <link rel="stylesheet" href="footer.css" />
     <style>
       @media (max-width: 768px) {
-        .home-page .section-title {
+        .home-page main p.home-catalog-prompt {
+          font-size: 14px;
           text-align: justify !important;
-          text-justify: inter-word;
+          text-align-last: left !important;
+        }
+
+        .home-page .section-title {
+          text-align: center !important;
+          text-justify: auto;
           padding-top: 14px !important;
         }
 
@@ -107,11 +113,10 @@
         text-align: center;
       }
 
-      .home-page main .texto_foto {
-        width: max-content;
-        max-width: none;
-        white-space: nowrap;
-        font-size: clamp(0.4rem, 2vw, 1.4rem);
+      .home-page .site-header {
+        background: #000 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
       }
 
       @media (min-width: 1025px) {
@@ -120,22 +125,25 @@
         }
 
         .home-page .site-header {
-          background: #030303 !important;
+          background: #000 !important;
           backdrop-filter: none !important;
           -webkit-backdrop-filter: none !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+          transition: background 0.25s ease, border-color 0.25s ease !important;
         }
 
         .home-page .site-header:not(.scrolled) .main-nav,
         .home-page .site-header:not(.scrolled) .main-nav a {
-          color: #fffdfd !important;
+          color: rgba(255, 255, 255, 0.96) !important;
         }
 
         .home-page .site-header:not(.scrolled) .main-nav a::after {
-          background: #121010 !important;
+          background: rgba(255, 255, 255, 0.7) !important;
         }
 
         .home-page .site-header.scrolled {
           background: #000 !important;
+          border-bottom-color: rgba(255, 255, 255, 0.15) !important;
         }
 
         .home-page .site-header.scrolled .main-nav,
@@ -145,6 +153,13 @@
 
         .home-page .site-header.scrolled .main-nav a::after {
           background: #fff !important;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .home-page .mobile-menu-panel .main-nav a {
+          color: #fff !important;
+          border-bottom-color: rgba(255, 255, 255, 0.12) !important;
         }
       }
     </style>
@@ -211,7 +226,7 @@
               <img src="carrosel%20home/teto(teste).jpeg" alt="" />
               <!-- Quinta imagem do slider -->
               <img src="carrosel%20home/camca(teste).jpeg" alt="" />
-               <img src="carrosel%20home/residencial(teste).jpeg" alt="" />
+               <img src="residencial_desk.jpg" alt="" />
             </div>
           </div>
           <!-- Botão para avançar para a próxima imagem -->
@@ -239,7 +254,7 @@
               <img src="carrosel%20home/teto(mobile).jpeg" alt="" />
               <!-- Quinta imagem do slider -->
               <img src="carrosel%20home/quarto(mobile).png" alt="" />
-              <img src="FINALY.png" alt=""/>
+              <img src="residencial_mobile.jpg" alt=""/>
             </div>
           </div>
           <!-- Botão para avançar para a próxima imagem -->
@@ -259,19 +274,21 @@
         <div class="container">
           <div class="products-grid-3">
             <article class="product-3-card1">
-              <a href="industria.html"><img src="carrosel%20home/desktop(index1).jpeg" alt="Produto 1" /></a>
+              <a href="industria.html"><img src="index2.jpg" alt="Produto 1" /></a>
             </article>
             <article class="product-3-card2">
-              <a href="arquitetura.html"><img src="carrosel%20home/desktop(index2).jpeg" alt="Produto 2" /></a>
+              <a href="arquitetura.html"><img src="index1.jpg" alt="Produto 2" /></a>
             </article>
             <article class="product-3-card3">
-              <a href="Residencial.html"><img src="troca_home.jpeg" alt="Produto 3" /></a>
+              <a href="Residencial.html"><img src="index3.jpg" alt="Produto 3" /></a>
             </article>
           </div>
         </div>
       </section>
-      <p class="texto_foto">Conheça de perto as cores, acabamentos, produtos e possibilidades do <span class="highlight">Aço Inox&nbsp;Colorido.</span></p>
-         <a href="contato.html" class="btn-CAT">Solicite seu catálogo de amostras</a>
+      <br>
+      <p class="home-category-prompt home-catalog-prompt">Conheça de perto as cores, acabamentos, produtos e possibilidades do <span class="highlight">Aço Inox&nbsp;Colorido. Clique</span> no botão abaixo e adquira <span class="highlight">o seu catálogo.</span></p>
+      <br>
+      <a href="contato.html" class="btn-CAT">Solicite seu catálogo de amostras</a>
       <section class="cta-banner">
         </div>
       </section>
@@ -301,7 +318,7 @@
         <div class="letras">
           <h3>Produtos</h3>
           <ul>
-			<li class="letraf"><a href="portifolio_cores.html">Portfólio de cores</a> <br><a href="chapas.html">Chapas</a> <br> <a href="Revestimentos.html">Revestimentos</a> <br> <a href="brises.html">Brises</a> <br> <a href="ralos.html">Ralos</a> <br> <a href="projetos.html">Obras de arte</a> <br> <a href="perfis_listelos.html">Perfil e Listelos</a> <br> <a href="quadros.html">Quadros Decorativos</a> <br> <a href="Letras_numeros.html">Letras e Números</a> <br> <a href="Aplições Externas.html">Aplicações externas</a></li>
+			<li class="letraf"><a href="portifolio_cores.html">Portfólio de cores</a> <br><a href="chapas.html">Chapas</a> <br> <a href="Revestimentos.html">Revestimentos Water Ripple</a> <br> <a href="brises.html">Brises</a> <br> <a href="ralos.html">Ralos</a> <br> <a href="projetos.html">Obras de arte</a> <br> <a href="perfis_listelos.html">Perfil e Listelos</a> <br> <a href="quadros.html">Quadros Decorativos</a> <br> <a href="Letras_numeros.html">Letras e Números</a> <br> <a href="Aplições Externas.html">Aplicações externas</a></li>
           </ul>
         </div>
 

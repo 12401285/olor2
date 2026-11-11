@@ -75,11 +75,12 @@
   }
 
   .bbb-highlights h2 {
-    max-width: 860px;
+    max-width: none;
     margin: 0;
     color: var(--ink);
     font-size: clamp(28px, 3.8vw, 42px);
     line-height: 1.1;
+    text-align: left;
   }
 
   .bbb-highlights .image-track {
@@ -206,8 +207,11 @@ dialog{border:1px solid #c8b490;background:var(--paper);color:var(--ink);max-wid
 .carousel-controls button{width:36px;height:36px;border:1px solid var(--bronze);background:transparent;color:var(--ink);font:22px/1 Georgia,serif;cursor:pointer}
 .carousel-controls button:hover:not(:disabled){background:var(--gold)}
 .carousel-controls button:disabled{opacity:.3;cursor:default}
-.product-access .carousel-controls .slider-btn{position:static;transform:none}
-.product-access .carousel-controls .slider-btn:hover{transform:scale(1.04)}
+.product-access .product-carousel-viewport{position:relative}
+.product-access .image-carousel-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 16px;pointer-events:none}
+.product-access .image-carousel-overlay .slider-btn{position:static;width:48px;height:48px;border:1px solid rgba(255,255,255,.6);border-radius:50%;background:rgba(18,18,18,.68);color:#fff;font:24px/1 Georgia,serif;pointer-events:auto;transform:none}
+.product-access .image-carousel-overlay .slider-btn:hover:not(:disabled){background:rgba(18,18,18,.88);transform:none}
+.product-access .image-carousel-overlay .slider-btn:disabled{opacity:.3;cursor:default}
 #oportunidade .split>*{min-width:0}
 .image-carousel{min-width:0}
 .image-track{display:flex;gap:0;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--gold) var(--cream);outline-offset:4px}
@@ -967,8 +971,11 @@ main .btn span { font-size: 1rem; }
   line-height: 1.6;
 }
 
-.product-access .carousel-controls {
-  display: none;
+.product-access .carousel-footer{margin-top:16px}
+.product-access .carousel-footer>span:last-child{color:#6f6658;font-size:11px}
+@media(max-width:760px){
+  .product-access .image-carousel-overlay{padding:0 8px}
+  .product-access .image-carousel-overlay .slider-btn{width:40px;height:40px}
 }
 
 .testimonial-quote {
@@ -1734,11 +1741,8 @@ Seu navegador não oferece suporte à reprodução deste vídeo.
 
 <p>Conheça possibilidades para transformar ou criar seu produto em aço inox colorido.</p>
 </div>
-<div class="carousel-controls">
-<button class="slider-btn prev" type="button" id="products-prev" aria-label="Aplicações anteriores" aria-controls="product-carousel" disabled>&#10094;</button>
-<button class="slider-btn next" type="button" id="products-next" aria-label="Próximas aplicações" aria-controls="product-carousel">&#10095;</button>
 </div>
-</div>
+<div class="product-carousel-viewport">
 <div class="product-track" id="product-carousel" role="region" aria-roledescription="carrossel" aria-label="Aplicações em Inoxcolor" tabindex="0">
 <article class="product-card" role="group" aria-roledescription="slide" aria-label="1 de 12: Máquinas e equipamentos">
 <div class="product-media">
@@ -1850,7 +1854,15 @@ Cozinhas residenciais e industriais</h4>
 </div>
 </article>
 </div>
-<div class="carousel-pagination" id="products-pagination" role="group" aria-label="Selecionar aplicação"></div>
+<div class="carousel-controls image-carousel-overlay">
+<button class="slider-btn prev" type="button" id="products-prev" aria-label="Aplicações anteriores" aria-controls="product-carousel">&#10094;</button>
+<button class="slider-btn next" type="button" id="products-next" aria-label="Próximas aplicações" aria-controls="product-carousel">&#10095;</button>
+</div>
+</div>
+<div class="carousel-footer">
+<span>Explore as aplicações em Inoxcolor.</span>
+<span id="products-carousel-status" role="status" aria-live="polite" aria-atomic="true">01 / 12</span>
+</div>
 </div>
 <p class="application-note">Cada aplicação é avaliada conforme o ambiente e os requisitos de uso.</p>
 <p class="cta-context centered">Já possui produto, desenho ou demanda concreta? Leve a aplicação diretamente para uma avaliação inicial.</p>
@@ -2274,7 +2286,7 @@ Cozinhas residenciais e industriais</h4>
     });
   };
   bindCarousel({trackId: 'color-carousel', previousId: 'colors-prev', nextId: 'colors-next', slideSelector: '.image-slide', gap: 0, statusId: 'color-carousel-status', autoplay: true});
-  bindCarousel({trackId: 'bbb-carousel', previousId: 'bbb-prev', nextId: 'bbb-next', slideSelector: '.image-slide', gap: 18, statusId: 'bbb-carousel-status', autoplay: true}); bindCarousel({trackId: 'product-carousel', previousId: 'products-prev', nextId: 'products-next', slideSelector: '.product-card', gap: 24, paginationId: 'products-pagination', autoplay: true});
+  bindCarousel({trackId: 'bbb-carousel', previousId: 'bbb-prev', nextId: 'bbb-next', slideSelector: '.image-slide', gap: 18, statusId: 'bbb-carousel-status', autoplay: true}); bindCarousel({trackId: 'product-carousel', previousId: 'products-prev', nextId: 'products-next', slideSelector: '.product-card', gap: 24, statusId: 'products-carousel-status', autoplay: true});
   document.querySelectorAll('.products-link').forEach(link => link.addEventListener('click', () => track('industry_products_open')));
   document.querySelectorAll('.lead-trigger').forEach(link => link.addEventListener('click', event => {
     if (!dialog || typeof dialog.showModal !== 'function') return;

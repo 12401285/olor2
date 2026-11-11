@@ -952,21 +952,22 @@
 
 		@media (max-width: 768px) {
 			body.colunas-page .page-hero {
-				margin-top: -40% !important;
+				margin-top: -60% !important;
 				padding: 126px 12px 18px !important;
 			}
 
 			body.colunas-page .page-hero-inner {
-				width: 100% !important;
+				width: 110% !important;
 				max-width: none !important;
 				min-height: 142px !important;
 				margin-left: -10% !important;
+				margin-top: 15% !important;
 				padding: 0 !important;
 			}
 
 			body.colunas-page .colunas-description {
-				display: grid !important;
-				grid-template-columns: minmax(0, 2fr) minmax(0, 3fr) !important;
+				display: flex !important;
+				flex-wrap: nowrap !important;
 				gap: 8px !important;
 				align-items: center !important;
 				width: 100% !important;
@@ -975,17 +976,19 @@
 
 			body.colunas-page .colunas-title-frame {
 				box-sizing: border-box;
-				width: 100% !important;
-				margin: 0 0 0 10% !important;
-				padding: 10px 8px !important;
+				flex: 0 0 115px !important;
+				width: 115px !important;
+				max-width: none !important;
+				margin: 0 0 0 6% !important;
+				padding: 6px 6px !important;
 				transform: none !important;
 			}
 
 			body.colunas-page .colunas-title-frame strong {
-				width: 100% !important;
+				width: auto !important;
 				max-width: 100% !important;
 				margin: 0 !important;
-				font-size: clamp(.65rem, 3.2vw, .9rem) !important;
+				font-size: clamp(.46rem, 2vw, .56rem) !important;
 				line-height: 1.25 !important;
 				text-align: center !important;
 				white-space: nowrap !important;
@@ -994,11 +997,12 @@
 
 			body.colunas-page .colunas-subtitle {
 				position: static !important;
+				flex: 1 1 auto !important;
 				width: auto !important;
 				min-width: 0 !important;
 				max-width: none !important;
-				margin: 0 0 0 10% !important;
-				font-size: clamp(.5rem, 2.8vw, .72rem) !important;
+				margin: 0 !important;
+				font-size: clamp(.42rem, 2.2vw, .56rem) !important;
 				line-height: 1.3 !important;
 				text-align: left !important;
 				white-space: normal !important;
@@ -1033,6 +1037,7 @@
 		}
 	</style>
   <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="mobile-header.css" />
 </head>
 	<body class="products-page-body colunas-page">
 		<header class="site-header">
@@ -1066,7 +1071,7 @@
 		<section class="page-hero">
 			<div class="container page-hero-inner">
 				<div class="colunas-description">
-					<div class="colunas-title-frame"><strong>Revestimento Coluna</strong></div>
+					<div class="colunas-title-frame"><strong>Revestimentos de Colunas</strong></div>
 					<p class="colunas-subtitle">Estrutura e identidade que transformam a arquitetura!</p>
 				</div>
 			</div>

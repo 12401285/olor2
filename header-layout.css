@@ -305,3 +305,21 @@ html body.residential-page .site-header .nav-wrap {
     top: 1px !important;
   }
 }
+
+@media (max-width: 1024px) {
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .mobile-menu-panel.open .nav-left,
+  html body .site-header .nav-wrap:has(.nav-left):has(.nav-right) .mobile-menu-panel.open .nav-right {
+    display: flex !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    flex: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+}

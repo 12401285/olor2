@@ -80,15 +80,48 @@
         transform: translateY(-50%);
       }
 
+      @media (max-width: 1024px) {
+        .chapas-page-body .chapas-cta {
+          display: flex;
+          justify-content: center;
+        }
+
+        .chapas-page-body .chapas-cta-button {
+          display: inline-flex !important;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          width: min(100%, 520px) !important;
+          max-width: 100%;
+        }
+      }
+
+      .chapas-cta-mobile-break {
+        display: none;
+      }
+
       @media (max-width: 768px) {
+        .chapas-page-body .chapas-cta {
+          width: calc(100vw - 24px);
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        .chapas-page-body .chapas-cta-button {
+          width: 100% !important;
+          margin: 0 !important;
+        }
+
         .chapas-page-body .product-subhero {
           padding: 126px 12px 18px;
+          margin-top: -60%;
         }
 
         .chapas-page-body .product-subhero-inner {
           min-height: 142px;
           width: 110%;
           margin-left: -10%;
+          margin-top: 15%;
         }
 
         .chapas-page-body .product-subhero-content {
@@ -127,6 +160,17 @@
           text-align: left;
           white-space: normal;
           transform: none;
+        }
+
+        .chapas-page-body .chapas-cta-button {
+          font-size: clamp(.62rem, 3vw, .72rem);
+          letter-spacing: .06em;
+          line-height: 1.3;
+          text-align: center;
+        }
+
+        .chapas-cta-mobile-break {
+          display: block;
         }
       }
     </style>
@@ -244,7 +288,7 @@
         </p>
          <div class="chapas-cta">
         <a class="btn btn-primary chapas-cta-button" href="industria.html">
-         Conheça as Aplicações na Indústria
+         Conheça as Aplicações<br class="chapas-cta-mobile-break"> na Indústria
         </a>
       </div>
       </section>

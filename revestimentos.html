@@ -294,37 +294,53 @@
       }
 
       @media (max-width: 768px) {
+        .water-ripple-page {
+          padding-top: 104px;
+        }
+
         .water-ripple-hero {
           min-height: 0;
-          padding: 98px 16px 30px;
+          margin-top: -60%;
+          padding: 126px 12px 18px;
         }
 
         .water-ripple-hero-content {
-          display: grid;
-          gap: 14px;
-          width: min(100%, 560px);
-          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 110%;
+          min-height: 142px;
+          margin: 15% 0 0 -10%;
         }
 
         .water-ripple-title {
-          width: 100%;
-          margin: 0;
-          padding: 12px 14px;
+          box-sizing: border-box;
+          flex: 0 0 54%;
+          width: 54%;
+          max-width: none;
+          margin: 0 0 0 6%;
+          padding: 6px 8px;
         }
 
         .water-ripple-title strong {
-          font-size: clamp(1.05rem, 5vw, 1.5rem);
-          line-height: 1.3;
+          margin: 0;
+          font-size: clamp(.48rem, 2.4vw, .66rem);
+          line-height: 1.25;
+          letter-spacing: 0;
+          text-align: center;
+          white-space: nowrap;
           transform: none;
         }
 
         .water-ripple-subtitle {
           position: static;
+          flex: 1;
           width: auto;
           margin: 0;
-          font-size: 1rem;
-          line-height: 1.5;
-          text-align: center;
+          font-size: clamp(.42rem, 2.2vw, .56rem);
+          line-height: 1.3;
+          text-align: left;
+          white-space: normal;
           transform: none;
         }
 
@@ -368,6 +384,7 @@
         }
       }
     </style>
+  <link rel="stylesheet" href="mobile-header.css" />
 </head>
   <body class="products-page-body water-ripple-page">
 		<header class="site-header">

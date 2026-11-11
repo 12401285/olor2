@@ -968,24 +968,76 @@
   .hero-actions .btn, .applications-actions .btn, .technical-intro .btn { text-align: center; }
   .applications-actions .catalogue-benefit-title { max-width: 760px; margin: 0 auto 12px; color: var(--ink); font: 400 clamp(22px,2.1vw,28px)/1.25 Georgia, 'Times New Roman', serif; text-align: center; text-wrap: balance; }
   .applications-actions .architecture-cta-context { max-width: 640px; margin-bottom: 16px; }
+  body.residential-page .applications-actions .architecture-cta-context {
+    width: min(760px, 100%);
+    max-width: 760px;
+    text-align: left !important;
+    text-align-last: left !important;
+  }
   @media(max-width:600px) {
     .applications-actions .catalogue-benefit-title { font-size: 22px; margin-bottom: 10px; }
     .applications-actions .architecture-cta-context { margin-bottom: 14px; }
   }
 </style>
 
-<style id="architecture-product-grid-final-row">
-  .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"]:last-child { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .42fr) minmax(0, .58fr); align-items: center; text-align: left; }
-  .application-link-grid > .application-link-card:last-child .application-link-media { width: 100%; aspect-ratio: auto; min-height: 0; }
-  .application-link-grid > .application-link-card:last-child .application-link-media img { position: static; display: block; width: 100%; height: auto; object-fit: contain; transform: none; }
-  .application-link-grid > .application-link-card:last-child .application-link-copy { justify-content: center; padding: 24px 28px; gap: 10px; }
-  .application-link-grid > .application-link-card:last-child .application-link-copy strong { font-size: 28px; line-height: 1.15; }
-  .application-link-grid > .application-link-card:last-child .application-link-copy > span { max-width: 50ch; font-size: 15px; line-height: 1.6; }
-  @media(max-width:620px) {
-    .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"]:last-child { grid-template-columns: minmax(0, 1fr); text-align: center; }
-    .application-link-grid > .application-link-card:last-child .application-link-copy { padding: 16px 18px 18px; gap: 8px; }
-    .application-link-grid > .application-link-card:last-child .application-link-copy strong { font-size: 18px; line-height: 1.2; }
-    .application-link-grid > .application-link-card:last-child .application-link-copy > span { font-size: 12.5px; line-height: 1.5; }
+<style id="residential-external-applications-card">
+  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, calc((100% - 42px) / 4)) minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: center;
+  }
+  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.38 / 1;
+  }
+  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 24px 28px;
+    gap: 10px;
+    text-align: left;
+  }
+  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy strong {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy > span {
+    width: 100%;
+    max-width: 50ch;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  @media (max-width: 900px) {
+    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] {
+      grid-template-columns: minmax(0, calc((100% - 14px) / 2)) minmax(0, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] {
+      grid-template-columns: minmax(0, 1fr);
+      text-align: center;
+    }
+    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy {
+      padding: 16px 18px 18px;
+      gap: 8px;
+    }
+    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy strong {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy > span {
+      font-size: 12.5px;
+      line-height: 1.5;
+    }
   }
 </style>
 
@@ -1022,6 +1074,43 @@
     margin-left: auto;
     margin-right: auto;
   }
+  body.residential-page main .social-cases-head > p:not(.eyebrow) {
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+  body.residential-page main .testimonial-head > h2 {
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+  body.residential-page main .testimonial-head > p:not(.eyebrow) {
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+  body.residential-page main section.specification.technical > .container.process-inline {
+    padding-top: 28px !important;
+  }
+  body.residential-page main .technical .process-inline .section-head > h2 {
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+  @media (min-width: 761px) {
+    body.residential-page .social-cases-head {
+      width: 100%;
+      max-width: none;
+    }
+    body.residential-page main .social-cases-head > p:not(.eyebrow) {
+      width: 100%;
+      max-width: none;
+    }
+    body.residential-page main .social-cases-head > h2 {
+      width: 100%;
+      max-width: none;
+      font-size: clamp(34px, 3.8vw, 46px) !important;
+      line-height: 1.12;
+      white-space: nowrap;
+      text-wrap: nowrap;
+    }
+  }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="segment-pages.css" />
@@ -1057,6 +1146,8 @@
     font-size: clamp(32px, 2.35vw, 36px) !important;
     line-height: 1.15;
   }
+  body.residential-page .hero-with-video h1 .hero-title-highlight { color: var(--gold); }
+  body.residential-page .hero.hero-with-video { padding-top: clamp(92px, 10vw, 130px) !important; }
   body.residential-page .hero-subheadline {
     font-size: clamp(15px, 1.2vw, 17.28px) !important;
   }
@@ -1065,7 +1156,7 @@
     font-size: clamp(32.8px, 3.4vw, 48.96px) !important;
   }
   body.residential-page main .social-cases-head h2 {
-    font-size: clamp(32px, 2.92vw, 42px) !important;
+    font-size: clamp(34px, 3.8vw, 46px) !important;
   }
   body.residential-page main .experience.social-cases h3 {
     font-size: clamp(20px, 1.74vw, 25px) !important;
@@ -1090,7 +1181,11 @@
       font-size: clamp(28px, 7vw, 34px) !important;
     }
   }
+  @media (max-width: 640px) {
+    body.residential-page .hero.hero-with-video { padding-top: 84px !important; }
+  }
 </style>
+  <link rel="stylesheet" href="footer.css">
 </head>
 <body class="residential-page">
   
@@ -1146,7 +1241,7 @@
       <div class="container hero-stage">
         <div class="hero-copy">
           <p class="eyebrow">Inoxcolor para sua casa</p>
-          <h1 class="display" style="text-align: center; text-align-last: center; text-wrap: pretty; word-spacing: normal;">Uma casa sofisticada, com detalhes exclusivos que expressam seu estilo.</h1>
+          <h1 class="display" style="text-align: center; text-align-last: center; text-wrap: pretty; word-spacing: normal;"><span class="hero-title-highlight">Uma casa sofisticada</span>, com detalhes exclusivos que <span class="hero-title-highlight">expressam seu estilo.</span></h1>
         </div>
         <div class="hero-media-column">
           <figure class="hero-video-shell" id="apresentacao"><video controls playsinline preload="none" poster="assets/residencial-video-poster.png" aria-label="Vídeo residencial da Inoxcolor"><source src="residencial/Residencial vd1.mp4" type="video/mp4"></video></figure>
@@ -1292,13 +1387,14 @@
             <h3 id="cores-inoxcolor">Sete cores. Dois acabamentos. Encontre a sua combinação.</h3>
             <p>Qual acabamento combina com a sua casa? A Linha Polida traz brilho intenso e reflexos; a Linha Escovada oferece aspecto acetinado e textura linear sutil. Explore as sete cores e descubra a combinação que conversa com seus móveis, revestimentos e objetos de decoração.</p>
           </div>
+
           <div class="colors-catalog-link">
+            <a class="colors-options-cta" href="portifolio_cores.html">Clique na imagem</a>
           <a class="application-link-card" href="/arquitetura/catalogo-de-cores" aria-label="Conhecer Catálogo de Cores">
             <span class="application-link-media"><img src="assets/image-39.png" alt="Catálogo de Cores em aço inox colorido" loading="lazy" decoding="async"></span>
             <span class="application-link-copy"><strong>Catálogo de Cores</strong><span>Compare as sete cores Inoxcolor e encontre a combinação que expressa o seu estilo.</span></span>
           </a>
           </div>
-          <a class="colors-options-cta" href="portifolio_cores.html">Clique na imagem</a>
         </section>
 
 <section class="final-cta opportunity section"><div class="container"><h2 class="display">O seu estilo merece fazer parte da sua casa.</h2><p>Um perfil que destaca o painel. Um quadro que dá vida à parede. Um acabamento que completa o banheiro. Descubra como o aço inox colorido pode valorizar a decoração e expressar o seu jeito de morar.</p></div></section>
@@ -2020,6 +2116,7 @@ html{scroll-padding-top:87px}
     color: var(--ink);
     font-size: clamp(28px, 3.8vw, 42px);
     line-height: 1.1;
+    text-align: left;
   }
 
   .bbb-highlights .image-track {
@@ -2235,5 +2332,6 @@ html{scroll-padding-top:87px}
     });
   })();
 </script>
+  <script src="script.js"></script>
 </body>
 </html>
