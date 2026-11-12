@@ -162,7 +162,7 @@
 
       .water-ripple-hero {
         display: flex;
-        align-items: center;
+        align-items: left;
         min-height: 220px;
         padding: 112px 0 28px;
         color: #fff;
@@ -172,14 +172,16 @@
       }
 
       .water-ripple-hero > .container {
-        width: 100%;
+        width: 95%;
         max-width: none;
         padding: 0;
+        MARGIN-LEFT: -3%;
       }
 
       .water-ripple-hero-content {
         position: relative;
         width: 100%;
+
       }
 
       .water-ripple-title {
@@ -190,6 +192,7 @@
       }
 
       .water-ripple-title strong {
+
         display: block;
         color: #fff;
         font-family: "Inter", sans-serif;
@@ -211,6 +214,7 @@
         font-family: "Inter", sans-serif;
         font-size: clamp(.8rem, 1.8vw, 1.2rem);
         line-height: 1.6;
+        text-align: center;
         transform: translateY(-50%);
       }
 
@@ -306,40 +310,41 @@
 
         .water-ripple-hero-content {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: center;
           gap: 8px;
-          width: 110%;
+          width: 100%;
           min-height: 142px;
-          margin: 15% 0 0 -10%;
+          margin: 15% 0 0;
         }
 
         .water-ripple-title {
           box-sizing: border-box;
-          flex: 0 0 54%;
-          width: 54%;
+          flex: 0 1 auto;
+          width: 100%;
           max-width: none;
-          margin: 0 0 0 6%;
-          padding: 6px 8px;
+          margin: 0;
+          padding: 8px 12px;
         }
 
         .water-ripple-title strong {
           margin: 0;
-          font-size: clamp(.48rem, 2.4vw, .66rem);
+          font-size: clamp(1rem, 4.2vw, 1.125rem);
           line-height: 1.25;
-          letter-spacing: 0;
+          letter-spacing: .02em;
           text-align: center;
-          white-space: nowrap;
+          white-space: normal;
           transform: none;
         }
 
         .water-ripple-subtitle {
           position: static;
-          flex: 1;
-          width: auto;
+          width: 100%;
           margin: 0;
-          font-size: clamp(.42rem, 2.2vw, .56rem);
-          line-height: 1.3;
-          text-align: left;
+          font-size: clamp(.875rem, 3.4vw, .9rem);
+          line-height: 1.4;
+          text-align: center;
           white-space: normal;
           transform: none;
         }
@@ -381,6 +386,7 @@
           padding: 0 16px;
           border-radius: 999px;
           font-size: .75rem;
+          text-align: center;
         }
       }
     </style>
@@ -454,7 +460,7 @@
         </article>
         <article class="water-ripple-feature">
           <img class="imagem-esquerda" src="Revestimentos Water Ripple/7.jpg" alt="Aplicação arquitetônica do revestimento Water Ripple" loading="lazy" />
-          <div class="water-ripple-copy"><p>As ondulações do Water Ripple acompanham o percurso com a fluidez da água. A cada passo, um fragmento do ambiente reaparece no aço sob um novo reflexo.</p></div>
+          <div class="water-ripple-copy"><p>Entre um pavimento e outro, o Water Ripple da Inoxcolor dá à passagem uma identidade própria, unindo os ambientes pela continuidade das ondulações em aço inoxidável.</p></div>
         </article>
         <article class="water-ripple-feature">
           <img class="imagem-direita" src="Revestimentos Water Ripple/8.jpg" alt="Parede Water Ripple destacada por iluminação rasante" loading="lazy" />
@@ -568,7 +574,23 @@
         <div class="letras">
           <h3>Produtos</h3>
           <ul>
-			<li class="letraf"><a href="portifolio_cores.html">Portfólio de cores</a> <br><a href="chapas.html">Chapas</a> <br> <a href="Revestimentos.html">Revestimentos</a> <br> <a href="brises.html">Brises</a> <br> <a href="ralos.html">Ralos</a> <br> <a href="projetos.html">Obras de arte</a> <br> <a href="perfis_listelos.html">Perfil e Listelos</a> <br> <a href="quadros.html">Quadros Decorativos</a> <br> <a href="Letras_numeros.html">Letras e Números</a> <br> <a href="Aplições Externas.html">Aplicações externas</a></li>
+            <li class="letraf">
+              <a href="chapas.html">Chapas</a><br />
+              <a href="Revestimentos.html">Revestimentos Water Ripple</a><br />
+              <a href="porcelainox.html">Revestimentos Porcelinox</a><br />
+              <a href="colunas.html">Revestimentos de Colunas</a><br />
+              <a href="fachadas_paredes.html">Revestimentos de Fachadas</a><br />
+              <a href="elevadores.html">Revestimentos de Elevadores</a><br />
+              <a href="portas.html">Revestimentos de Portas</a><br />
+              <a href="moveis.html">Revestimentos de Móveis</a><br />
+              <a href="brises.html">Brises</a><br />
+              <a href="ralos.html">Ralos</a><br />
+              <a href="perfis_listelos.html">Perfis e filetes</a><br />
+              <a href="quadros.html">Quadros e esculturas</a><br />
+              <a href="projetos.html">Obras de Arte</a><br />
+              <a href="Letras_numeros.html">Letras e Números</a><br />
+              <a href="portifolio_cores.html">Portfólio de cores</a>
+            </li>
           </ul>
         </div>
 
@@ -586,7 +608,7 @@
         <!-- Formulário para capturar e-mail e gerar leads -->
         <div>
          <div class="newsletter-form">
-             <li><h3>Endereço</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
+             <li><h3>Endereço Comercial</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
             <li>Belo Horizonte, MG Cep 30170-002</li>
             <br>
             <h3>Horário de Atendimento</h3>
@@ -598,7 +620,7 @@
       <!-- Linha final do rodapé com direitos e redes sociais -->
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
-					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados.  2026 © Inoxcolor.</span>
+					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados. Inoxcolor © 2026.</span>
           <span></span>
         </div>
       </div>

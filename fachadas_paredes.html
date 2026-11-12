@@ -380,6 +380,7 @@
 		}
 
 		.colunas-subtitle {
+			align-items: right;
 			display: block;
 			position: absolute;
 			top: 50%;
@@ -392,7 +393,7 @@
 			font-weight: 400;
 			letter-spacing: 0.02em;
 			line-height: 1.7;
-			text-align: left;
+			text-align: right;
 			white-space: nowrap;
 			transform: translateY(-50%);
 		}
@@ -991,6 +992,145 @@
 				background: #fff !important;
 			}
 		}
+
+		@media (max-width: 768px) {
+			body.products-page-body.colunas-page.fachadas-page {
+				padding-top: 0 !important;
+			}
+
+			body.colunas-page.fachadas-page .page-hero {
+				margin-top: 0 !important;
+				padding: 82px 16px 24px !important;
+			}
+
+			body.colunas-page.fachadas-page .page-hero-inner {
+				width: 100% !important;
+				min-height: 148px !important;
+				margin: 0 !important;
+			}
+
+			body.colunas-page.fachadas-page .colunas-description {
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				gap: 12px !important;
+				width: 100% !important;
+			}
+
+			body.colunas-page.fachadas-page .colunas-title-frame {
+				width: min(100%, 360px) !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 12px 14px !important;
+				transform: none !important;
+			}
+
+			body.colunas-page.fachadas-page .colunas-title-frame strong {
+				width: 100% !important;
+				font-size: clamp(1rem, 4.8vw, 1.25rem) !important;
+				line-height: 1.3 !important;
+				letter-spacing: 0.06em !important;
+				white-space: normal !important;
+				transform: none !important;
+			}
+
+			body.colunas-page.fachadas-page .colunas-subtitle {
+				position: static !important;
+				width: min(100%, 360px) !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				font-size: clamp(0.85rem, 3.8vw, 1rem) !important;
+				line-height: 1.45 !important;
+				text-align: right !important;
+				white-space: normal !important;
+				transform: none !important;
+				MARGIN-LEFT: 50% !important;
+			}
+		}
+
+		body.fachadas-page main .colunas-intro-copy {
+			width: min(1000px, calc(100% - 48px)) !important;
+			max-width: 1000px !important;
+			margin: 32px auto 36px !important;
+		}
+
+		body.fachadas-page main .colunas-intro-copy p {
+			margin: 0 !important;
+			color: #121212 !important;
+			font-family: "Inter", sans-serif !important;
+			font-size: 1.2rem !important;
+			font-weight: 400 !important;
+			letter-spacing: normal !important;
+			line-height: 1.7 !important;
+			text-align: justify !important;
+			text-align-last: left !important;
+		}
+
+		body.fachadas-page main .colunas-feature {
+			width: min(1240px, calc(100% - 48px)) !important;
+			margin: 42px auto 0 !important;
+			gap: 10px !important;
+		}
+
+		body.fachadas-page main .colunas-feature-copy {
+			padding: 24px 28px !important;
+		}
+
+		body.fachadas-page main .colunas-feature-copy p {
+			width: 100% !important;
+			max-width: 520px !important;
+			margin: 0 !important;
+			color: #121212 !important;
+			font-family: "Inter", sans-serif !important;
+			font-size: 1.2rem !important;
+			font-weight: 400 !important;
+			letter-spacing: normal !important;
+			line-height: 1.7 !important;
+			text-align: justify !important;
+			text-align-last: left !important;
+		}
+
+		body.fachadas-page .colunas-architecture-btn {
+			white-space: nowrap !important;
+			text-align: center !important;
+		}
+
+		@media (max-width: 768px) {
+			body.fachadas-page main .colunas-intro-copy {
+				width: calc(100% - 36px) !important;
+				margin: 28px auto !important;
+			}
+
+			body.fachadas-page main .colunas-intro-copy p {
+				font-size: 1rem !important;
+				line-height: 1.7 !important;
+				text-align: justify !important;
+				text-align-last: left !important;
+			}
+
+			body.fachadas-page main .colunas-feature {
+				width: calc(100% - 32px) !important;
+				margin: 30px auto 0 !important;
+				gap: 14px !important;
+			}
+
+			body.fachadas-page main .colunas-feature-copy {
+				padding: 8px 12px !important;
+			}
+
+			body.fachadas-page main .colunas-feature-copy p {
+				padding: 0 !important;
+				font-size: 1rem !important;
+				line-height: 1.6 !important;
+			}
+
+			body.fachadas-page .colunas-architecture-btn {
+				justify-content: center !important;
+				font-size: clamp(7.2px, 2.9vw, 11px) !important;
+				letter-spacing: 0.01em !important;
+				padding: 0 16px !important;
+			}
+		}
 	</style>
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="mobile-header.css" />
@@ -1027,7 +1167,7 @@
 		<section class="page-hero">
 			<div class="container page-hero-inner">
 				<div class="colunas-description">
-					<div class="colunas-title-frame"><strong>Fachadas e Paredes</strong></div>
+					<div class="colunas-title-frame"><strong>Revestimentos de Fachadas</strong></div>
 					<p class="colunas-subtitle">Fachadas que se tornam assinatura.</p>
 				</div>
 			</div>
@@ -1111,7 +1251,23 @@
         <div class="letras">
           <h3>Produtos</h3>
           <ul>
-			<li class="letraf"><a href="portifolio_cores.html">Portfólio de cores</a> <br><a href="chapas.html">Chapas</a> <br> <a href="Revestimentos.html">Revestimentos</a> <br> <a href="brises.html">Brises</a> <br> <a href="ralos.html">Ralos</a> <br> <a href="projetos.html">Obras de arte</a> <br> <a href="perfis_listelos.html">Perfil e Listelos</a> <br> <a href="quadros.html">Quadros Decorativos</a> <br> <a href="Letras_numeros.html">Letras e Números</a> <br> <a href="Aplições Externas.html">Aplicações externas</a></li>
+            <li class="letraf">
+              <a href="chapas.html">Chapas</a><br />
+              <a href="Revestimentos.html">Revestimentos Water Ripple</a><br />
+              <a href="porcelainox.html">Revestimentos Porcelinox</a><br />
+              <a href="colunas.html">Revestimentos de Colunas</a><br />
+              <a href="fachadas_paredes.html">Revestimentos de Fachadas</a><br />
+              <a href="elevadores.html">Revestimentos de Elevadores</a><br />
+              <a href="portas.html">Revestimentos de Portas</a><br />
+              <a href="moveis.html">Revestimentos de Móveis</a><br />
+              <a href="brises.html">Brises</a><br />
+              <a href="ralos.html">Ralos</a><br />
+              <a href="perfis_listelos.html">Perfis e filetes</a><br />
+              <a href="quadros.html">Quadros e esculturas</a><br />
+              <a href="projetos.html">Obras de Arte</a><br />
+              <a href="Letras_numeros.html">Letras e Números</a><br />
+              <a href="portifolio_cores.html">Portfólio de cores</a>
+            </li>
           </ul>
         </div>
 
@@ -1129,7 +1285,7 @@
         <!-- Formulário para capturar e-mail e gerar leads -->
         <div>
          <div class="newsletter-form">
-             <li><h3>Endereço</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
+             <li><h3>Endereço Comercial</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
             <li>Belo Horizonte, MG Cep 30170-002</li>
             <br>
             <h3>Horário de Atendimento</h3>
@@ -1141,7 +1297,7 @@
       <!-- Linha final do rodapé com direitos e redes sociais -->
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
-					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados.  2026 © Inoxcolor.</span>
+					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados. Inoxcolor © 2026.</span>
           <span></span>
         </div>
       </div>

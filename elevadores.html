@@ -37,7 +37,7 @@
     .elevadores-description { position: relative; width: 100%; }
     .elevadores-title-frame {
       width: min(780px, 65%);
-      margin-left: -160px;
+      margin-left: -10px;
       padding: 22px 28px 20px;
       border: 1px solid rgba(255,255,255,.7);
     }
@@ -144,7 +144,13 @@
       .elevadores-feature:nth-of-type(odd) img,
       .elevadores-feature:nth-of-type(odd) .elevadores-copy { grid-column: auto; grid-row: auto; }
       .elevadores-feature img {
-        height: auto !important;
+        display: block;
+        width: 100% !important;
+        height: 260px !important;
+        min-height: 260px !important;
+        max-height: 260px !important;
+        object-fit: cover !important;
+        object-position: center;
       }
       .elevadores-copy { padding: 12px 8px; }
       .elevadores-architecture-btn {
@@ -267,6 +273,60 @@
           background: #fff !important;
         }
       }
+      @media (max-width: 768px) {
+        body.products-page-body.elevadores-page .elevadores-hero {
+          margin-top: -60% !important;
+          padding: 126px 12px 18px !important;
+        }
+        body.products-page-body.elevadores-page .elevadores-hero-inner {
+          box-sizing: border-box;
+          width: 100% !important;
+          max-width: none !important;
+          min-height: 142px !important;
+          margin: 15% 0 0 !important;
+          padding: 0 !important;
+        }
+        body.products-page-body.elevadores-page .elevadores-description {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: stretch !important;
+          justify-content: center !important;
+          gap: 8px !important;
+          width: 100% !important;
+          margin: 0 !important;
+        }
+        body.products-page-body.elevadores-page .elevadores-title-frame {
+          box-sizing: border-box;
+          flex: 0 1 auto;
+          width: 100% !important;
+          max-width: none !important;
+          margin: 0 !important;
+          padding: 8px 12px !important;
+          transform: none !important;
+        }
+        body.products-page-body.elevadores-page .elevadores-title-frame strong {
+          width: 100% !important;
+          max-width: none !important;
+          margin: 0 !important;
+          font-size: clamp(.75rem, 4.2vw, 1.125rem) !important;
+          line-height: 1.25 !important;
+          letter-spacing: .02em !important;
+          text-align: center !important;
+          white-space: normal !important;
+          transform: none !important;
+        }
+        body.products-page-body.elevadores-page .elevadores-subtitle {
+          position: static !important;
+          width: 100% !important;
+          max-width: none !important;
+          margin: 0 !important;
+          font-size: clamp(.875rem, 3.4vw, .9rem) !important;
+          line-height: 1.4 !important;
+          text-align: center !important;
+          white-space: normal !important;
+          transform: none !important;
+        }
+      }
   </style>
   <link rel="stylesheet" href="footer.css" />
 </head>
@@ -284,12 +344,12 @@
     </div>
   </header>
   <main>
-    <section class="page-hero elevadores-hero"><div class="container page-hero-inner elevadores-hero-inner"><div class="elevadores-description"><div class="elevadores-title-frame"><strong>Elevadores</strong></div><p class="elevadores-subtitle">Revestimentos que elevam espaços e percepções.</p></div></div></section>
+    <section class="page-hero elevadores-hero"><div class="container page-hero-inner elevadores-hero-inner"><div class="elevadores-description"><div class="elevadores-title-frame"><strong>Revestimentos de Elevadores</strong></div><p class="elevadores-subtitle">Revestimentos que elevam espaços e percepções.</p></div></div></section>
     <section class="section elevadores-section" aria-label="Elevadores revestidos em aço inox colorido">
       <article class="elevadores-intro"><p>Em empreendimentos de alto padrão, o elevador também integra a experiência arquitetônica. Revestido em aço inox colorido, transforma cada chegada em uma primeira impressão memorável.</p></article>
       <article class="elevadores-feature"><img src="elevadores/1.png" alt="Elevador revestido em aço inox colorido" loading="lazy" /><div class="elevadores-copy"><p>Portas, painéis e interiores de cabines dialogam com halls e demais elementos do projeto, criando continuidade visual, sofisticação e unidade estética.</p></div></article>
       <article class="elevadores-feature"><img src="elevadores/2.png" alt="Acabamentos de aço inox colorido para elevadores" loading="lazy" /><div class="elevadores-copy"><p>Nos acabamentos polido ou escovado, o aço inox revela diferentes expressões: do brilho marcante à elegância sutil da textura escovada.</p></div></article>
-      <article class="elevadores-feature"><img src="elevadores/3.png" alt="Arte autoral em aço inox colorido" loading="lazy" /><div class="elevadores-copy"><p>Além de nossa coleção de desenhos exclusivos, o arquitetos e designers podem criar sua própria arte para ser reproduzida no aço inox colorido, conferindo ao revestimento uma assinatura única, autoral e personalizada.</p></div></article>
+      <article class="elevadores-feature"><img src="elevadores/3.png" alt="Arte autoral em aço inox colorido" loading="lazy" /><div class="elevadores-copy"><p>Além de nossa coleção de desenhos exclusivos, os arquitetos e designers podem criar sua própria arte para ser reproduzida no aço inox colorido, conferindo ao revestimento uma assinatura única, autoral e personalizada.</p></div></article>
       <article class="elevadores-feature"><img src="elevadores/4.png" alt="Tecnologia de coloração do aço inox" loading="lazy" /><div class="elevadores-copy"><p>Não é pintura. É nanotecnologia de coloração do aço inox: a cor não descasca nem desbota, preservando a beleza e a integridade do material ao longo do tempo.</p></div></article>
       <article class="elevadores-feature"><img src="elevadores/5.png" alt="Revestimento elegante para elevadores" loading="lazy" /><div class="elevadores-copy"><p>Revestimento para elevadores, que valorizam cada projeto com exclusividade e elegância.</p></div></article>
       <article class="elevadores-feature"><img src="elevadores/6.png" alt="Elevador em hotéis e empreendimentos de alto padrão" loading="lazy" /><div class="elevadores-copy"><p>Uma solução para hotéis, edifícios corporativos, empreendimentos comerciais e residências de alto padrão, onde cada detalhe contribui para a percepção de excelência.</p></div></article>
@@ -321,7 +381,23 @@
         <div class="letras">
           <h3>Produtos</h3>
           <ul>
-			<li class="letraf"><a href="portifolio_cores.html">Portfólio de cores</a> <br><a href="chapas.html">Chapas</a> <br> <a href="Revestimentos.html">Revestimentos</a> <br> <a href="brises.html">Brises</a> <br> <a href="ralos.html">Ralos</a> <br> <a href="projetos.html">Obras de arte</a> <br> <a href="perfis_listelos.html">Perfil e Listelos</a> <br> <a href="quadros.html">Quadros Decorativos</a> <br> <a href="Letras_numeros.html">Letras e Números</a> <br> <a href="Aplições Externas.html">Aplicações externas</a></li>
+            <li class="letraf">
+              <a href="chapas.html">Chapas</a><br />
+              <a href="Revestimentos.html">Revestimentos Water Ripple</a><br />
+              <a href="porcelainox.html">Revestimentos Porcelinox</a><br />
+              <a href="colunas.html">Revestimentos de Colunas</a><br />
+              <a href="fachadas_paredes.html">Revestimentos de Fachadas</a><br />
+              <a href="elevadores.html">Revestimentos de Elevadores</a><br />
+              <a href="portas.html">Revestimentos de Portas</a><br />
+              <a href="moveis.html">Revestimentos de Móveis</a><br />
+              <a href="brises.html">Brises</a><br />
+              <a href="ralos.html">Ralos</a><br />
+              <a href="perfis_listelos.html">Perfis e filetes</a><br />
+              <a href="quadros.html">Quadros e esculturas</a><br />
+              <a href="projetos.html">Obras de Arte</a><br />
+              <a href="Letras_numeros.html">Letras e Números</a><br />
+              <a href="portifolio_cores.html">Portfólio de cores</a>
+            </li>
           </ul>
         </div>
 
@@ -339,7 +415,7 @@
         <!-- Formulário para capturar e-mail e gerar leads -->
         <div>
          <div class="newsletter-form">
-             <li><h3>Endereço</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
+             <li><h3>Endereço Comercial</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
             <li>Belo Horizonte, MG Cep 30170-002</li>
             <br>
             <h3>Horário de Atendimento</h3>
@@ -351,7 +427,7 @@
       <!-- Linha final do rodapé com direitos e redes sociais -->
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
-					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados.  2026 © Inoxcolor.</span>
+					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados. Inoxcolor © 2026.</span>
           <span></span>
         </div>
       </div>

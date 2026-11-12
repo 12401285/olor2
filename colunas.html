@@ -261,75 +261,93 @@
 		}
 
 		@media (max-width: 768px) {
-			.colunas-hero {
-				min-height: 142px;
-				padding: 98px 0 24px;
+			.colunas-page .page-hero {
+				padding: 82px 0 16px;
 			}
 
-			.colunas-title-frame {
-				width: calc(100% + 48px);
-				margin-left: -80px;
-				padding: 18px 16px;
+			.colunas-description {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 12px;
 			}
 
-			.colunas-title-frame h1 {
-				font-size: 1.5rem;
-				transform: translateX(80px);
+			.colunas-title-frame,
+			.colunas-page .page-hero .colunas-title-frame {
+				width: min(100%, 320px);
+				margin: 0;
+				padding: 14px 16px;
+				transform: none;
 			}
 
-			.colunas-carousel,
-			.colunas-carousel-inner,
-			.colunas-carousel-viewport,
-			.colunas-carousel-track {
-				height: min(72vw, 360px);
+			.colunas-title-frame strong {
+				font-size: 1.05rem;
+				line-height: 1.35;
+				letter-spacing: 0.12em;
+				transform: none;
+				text-align: center;
 			}
 
-			.colunas-carousel-track img {
-				height: min(72vw, 360px);
+			.colunas-subtitle {
+				position: static;
+				display: block;
+				width: min(100%, 330px);
+				margin: 0;
+				font-size: 0.8rem;
+				line-height: 1.5;
+				text-align: center;
+				white-space: normal;
+				transform: none;
 			}
 
-			.colunas-gallery {
-				grid-template-columns: 1fr;
-				gap: 28px;
-				margin: 48px auto;
+			.colunas-intro-copy {
+				width: calc(100% - 20px);
+				margin: 24px auto 12px;
 			}
 
-			.colunas-story {
-				gap: 42px;
-				width: calc(100% - 32px);
-				margin: 48px auto;
-			}
-
-			.colunas-story-item,
-			.colunas-story-item:nth-child(even) {
-				grid-template-columns: 1fr;
-				gap: 18px;
-			}
-
-			.colunas-story-item:nth-child(even) img,
-			.colunas-story-item:nth-child(even) .colunas-story-copy {
-				grid-column: auto;
-				grid-row: auto;
-			}
-
-			.colunas-story-item img {
-				height: min(72vw, 330px);
-			}
-
-			.colunas-story-copy {
-				padding: 0 4px;
-			}
-
-			.colunas-story-copy h2 {
-				margin-bottom: 18px;
-				font-size: 1.2rem;
-				line-height: 1.7;
-			}
-
-			.colunas-story-copy p {
-				font-size: 1.2rem;
+			.colunas-intro-copy p {
+				font-size: 1.05rem;
 				line-height: 1.7;
 				text-align: left;
+			}
+
+			.colunas-feature,
+			.colunas-feature:nth-child(even) {
+				grid-template-columns: 1fr;
+				gap: 16px;
+				width: calc(100% - 20px);
+			}
+
+			.colunas-feature img,
+			.colunas-feature:nth-child(even) img {
+				grid-column: auto;
+				grid-row: auto;
+				height: min(72vw, 260px);
+			}
+
+			.colunas-feature-copy {
+				padding: 0;
+			}
+
+			.colunas-feature-copy p {
+				font-size: 1rem;
+				line-height: 1.6;
+				text-align: left;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.colunas-page .page-hero {
+				padding-top: 72px;
+			}
+
+			.colunas-title-frame,
+			.colunas-page .page-hero .colunas-title-frame {
+				width: calc(100% - 20px);
+			}
+
+			.colunas-title-frame strong {
+				font-size: 0.9rem;
 			}
 		}
 
@@ -1035,6 +1053,132 @@
 				background: #fff !important;
 			}
 		}
+
+		@media (max-width: 768px) {
+			body.colunas-page .page-hero {
+				margin-top: 0 !important;
+				padding: 82px 16px 24px !important;
+			}
+
+			body.colunas-page .page-hero-inner {
+				width: 100% !important;
+				min-height: 148px !important;
+				margin: 0 !important;
+			}
+
+			body.colunas-page .colunas-description {
+				display: flex !important;
+				flex-direction: column !important;
+				align-items: center !important;
+				gap: 12px !important;
+				width: 100% !important;
+			}
+
+			body.colunas-page .colunas-title-frame {
+				flex: 0 1 auto !important;
+				width: min(100%, 360px) !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 12px 14px !important;
+				transform: none !important;
+			}
+
+			body.colunas-page .colunas-title-frame strong {
+				width: 100% !important;
+				max-width: none !important;
+				font-size: clamp(1rem, 4.8vw, 1.25rem) !important;
+				line-height: 1.3 !important;
+				letter-spacing: 0.06em !important;
+				white-space: normal !important;
+				transform: none !important;
+			}
+
+			body.colunas-page .colunas-subtitle {
+				position: static !important;
+				flex: 0 1 auto !important;
+				width: min(100%, 360px) !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				font-size: clamp(0.85rem, 3.8vw, 1rem) !important;
+				line-height: 1.45 !important;
+				text-align: center !important;
+				white-space: normal !important;
+				transform: none !important;
+			}
+		}
+
+		@media (max-width: 768px) {
+			body.products-page-body.colunas-page:has(.colunas-intro-copy) {
+				padding-top: 0 !important;
+			}
+		}
+
+		body.colunas-page main .colunas-intro-copy p,
+		body.colunas-page main .colunas-feature-copy p {
+			color: #121212;
+			font-family: "Inter", sans-serif;
+			font-size: 1.2rem;
+			font-weight: 400;
+			letter-spacing: normal;
+			line-height: 1.7;
+		}
+
+		body.colunas-page main .colunas-intro-copy p {
+			text-align: justify !important;
+			text-align-last: center !important;
+		}
+
+		body.colunas-page main .colunas-feature-copy p {
+			text-align: justify !important;
+			text-align-last: left !important;
+		}
+
+		@media (max-width: 768px) {
+			body.colunas-page main .colunas-intro-copy {
+				width: calc(100% - 36px) !important;
+				margin: 28px auto !important;
+			}
+
+			body.colunas-page main .colunas-intro-copy p,
+			body.colunas-page main .colunas-feature-copy p {
+				font-size: 1rem;
+			}
+
+			body.colunas-page main .colunas-intro-copy p {
+				text-align: justify !important;
+				text-align-last: left !important;
+				line-height: 1.7;
+			}
+
+			body.colunas-page main .colunas-feature {
+				width: calc(100% - 32px) !important;
+				margin: 30px auto 0 !important;
+				gap: 14px !important;
+			}
+
+			body.colunas-page main .colunas-feature-copy {
+				padding: 8px 12px !important;
+			}
+
+			body.colunas-page main .colunas-feature-copy p {
+				padding: 0 !important;
+				line-height: 1.6;
+				text-align: justify !important;
+				text-align-last: left !important;
+			}
+		}
+
+		@media (max-width: 768px) {
+			body.colunas-page main .colunas-feature > img {
+				display: block;
+				width: 100% !important;
+				height: 260px !important;
+				min-height: 260px !important;
+				max-height: 260px !important;
+				object-fit: cover !important;
+				object-position: center;
+			}
+		}
 	</style>
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="mobile-header.css" />
@@ -1104,7 +1248,7 @@
 				</div>
 			</article>
 			<article class="colunas-feature">
-				<img class="imagem-esquerda" src="imgn/2.png" alt="Coluna revestida em aço inox colorido no acabamento dourado" loading="lazy" />
+				<img class="imagem-esquerda" src="colunas4_debaixo.jpg" alt="Coluna revestida em aço inox colorido no acabamento dourado" loading="lazy" />
 				<div class="colunas-feature-copy">
 					<p>Apresentamos uma coleção de desenhos e criações exclusivas para transformar colunas em protagonistas da composição. Solicite o catálogo de desenhos, cores e acabamentos.</p>
 				</div>
@@ -1155,7 +1299,23 @@
         <div class="letras">
           <h3>Produtos</h3>
           <ul>
-			<li class="letraf"><a href="portifolio_cores.html">Portfólio de cores</a> <br><a href="chapas.html">Chapas</a> <br> <a href="Revestimentos.html">Revestimentos</a> <br> <a href="brises.html">Brises</a> <br> <a href="ralos.html">Ralos</a> <br> <a href="projetos.html">Obras de arte</a> <br> <a href="perfis_listelos.html">Perfil e Listelos</a> <br> <a href="quadros.html">Quadros Decorativos</a> <br> <a href="Letras_numeros.html">Letras e Números</a> <br> <a href="Aplições Externas.html">Aplicações externas</a></li>
+            <li class="letraf">
+              <a href="chapas.html">Chapas</a><br />
+              <a href="Revestimentos.html">Revestimentos Water Ripple</a><br />
+              <a href="porcelainox.html">Revestimentos Porcelinox</a><br />
+              <a href="colunas.html">Revestimentos de Colunas</a><br />
+              <a href="fachadas_paredes.html">Revestimentos de Fachadas</a><br />
+              <a href="elevadores.html">Revestimentos de Elevadores</a><br />
+              <a href="portas.html">Revestimentos de Portas</a><br />
+              <a href="moveis.html">Revestimentos de Móveis</a><br />
+              <a href="brises.html">Brises</a><br />
+              <a href="ralos.html">Ralos</a><br />
+              <a href="perfis_listelos.html">Perfis e filetes</a><br />
+              <a href="quadros.html">Quadros e esculturas</a><br />
+              <a href="projetos.html">Obras de Arte</a><br />
+              <a href="Letras_numeros.html">Letras e Números</a><br />
+              <a href="portifolio_cores.html">Portfólio de cores</a>
+            </li>
           </ul>
         </div>
 
@@ -1173,7 +1333,7 @@
         <!-- Formulário para capturar e-mail e gerar leads -->
         <div>
          <div class="newsletter-form">
-             <li><h3>Endereço</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
+             <li><h3>Endereço Comercial</h3>Av.Alveres Cabral 593 sala 1602 Lourdes,</li>
             <li>Belo Horizonte, MG Cep 30170-002</li>
             <br>
             <h3>Horário de Atendimento</h3>
@@ -1185,7 +1345,7 @@
       <!-- Linha final do rodapé com direitos e redes sociais -->
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
-					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados.  2026 © Inoxcolor.</span>
+					<span class="footer-note">As tonalidades das cores podem variar conforme a incidência e a refração da luz. Para uma escolha precisa, solicite seu catálogo de amostras. Imagens ilustrativas.  Todos os direitos reservados. Inoxcolor © 2026.</span>
           <span></span>
         </div>
       </div>
