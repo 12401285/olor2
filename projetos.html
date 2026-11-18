@@ -187,6 +187,7 @@
         .porcelinox-carousel-track img { height: clamp(220px, 56vw, 380px); }
       }
       @media (max-width: 768px) {
+        .obras-section { padding-bottom: 8px; }
         .obras-page .site-header {
           background: #fff;
           border-bottom: 1px solid rgb(240, 240, 240);
@@ -199,19 +200,36 @@
         .obras-title-frame { box-sizing: border-box; flex: 0 0 115px; width: 115px; max-width: none; margin: 0 0 0 6%; padding: 6px 8px; }
         .obras-title-frame strong { margin: 0; font-size: clamp(.5rem, 2.6vw, .72rem); line-height: 1.25; text-align: center; white-space: nowrap; transform: none; }
         .obras-subtitle { position: static; flex: 1; width: auto; max-width: none; margin: 0; font-size: clamp(.42rem, 2.2vw, .56rem); line-height: 1.3; text-align: left; white-space: normal; transform: none; }
-        .obras-intro { width: calc(100% - 32px); margin: 24px auto 30px; text-align: left; }
-        .obras-intro p { font-size: 1rem; line-height: 1.55; }
-        .obras-copy p { padding: 0 16px; font-size: 1rem; line-height: 1.55; text-align: justify !important; text-align-last: left !important; }
-        .obras-feature { grid-template-columns: 1fr; gap: 14px; width: calc(100% - 20px); margin: 22px auto; }
-        .obras-copy { align-self: stretch; padding: 12px 8px; }
-        .obras-copy p { padding: 0 16px; }
+        .obras-intro { width: calc(100% - 32px); margin: 22px auto 30px; text-align: left; }
+        .obras-intro p,
+        .obras-copy p {
+          margin: 0;
+          padding: 0;
+          font-family: "Inter", sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.55;
+          letter-spacing: 0;
+          text-align: justify;
+          text-align-last: left;
+        }
+        .obras-feature { grid-template-columns: 1fr; gap: 6px; width: calc(100% - 20px); margin: 22px auto; }
+        .obras-copy { align-self: stretch; width: 100%; padding: 12px 8px; }
         .porcelinox-carousel { margin: 18px auto 36px; }
         .obras-feature:nth-of-type(odd) img,
         .obras-feature:nth-of-type(odd) .obras-copy { grid-column: auto; grid-row: auto; }
-        .obras-feature img { height: auto !important; }
+        .obras-feature img {
+          width: 100% !important;
+          height: 260px !important;
+          min-height: 260px !important;
+          max-height: 260px !important;
+          aspect-ratio: 4 / 3;
+          object-fit: cover;
+          object-position: center;
+        }
         .obras-feature > img { min-height: 0; }
         .obras-architecture-btn {
-          margin-top: 40px;
+          margin-top: 12px;
           display: inline-flex !important;
           width: 100% !important;
           max-width: 100%;
@@ -267,7 +285,7 @@
       <section class="section obras-section" aria-label="Obras de arte Inoxcolor">
         <article class="obras-intro"><p>A arte alcança sua expressão mais nobre quando luz, aço colorido e movimento se unem para criar obras de presença marcante e sofisticação atemporal.</p></article>
         </div>
-        <article class="obras-feature"><img src="obras/1.jpg" alt="Escultura de galo em inox no Estádio do Atlético Mineiro" loading="lazy" /><div class="obras-copy"><p>A arte alcança sua expressão mais nobre quando luz, cor e movimento se unem para criar obras de presença marcante e sofisticação atemporal.</p></div></article>
+        <article class="obras-feature"><img src="obras/1.jpg" alt="Escultura de galo em inox no Estádio do Atlético Mineiro" loading="lazy" /><div class="obras-copy"><p>Nas obras de arte da Inoxcolor, a força do aço inox colorido ganha a delicadeza de um gesto esculpido.</p></div></article>
         <article class="obras-feature"><img src="obras/2.jpg" alt="Escultura abstrata de curvas em aço inox dourado e escuro" loading="lazy" /><div class="obras-copy"><p>Entre curvas, volumes e reflexos, a criação artística ganha uma nova dimensão, convertendo a matéria em uma experiência visual de absoluto luxo e singularidade.</p></div></article>
         <article class="obras-feature"><img src="obras/3.jpg" alt="Escultura de bola espelhada em ambiente interno" loading="lazy" /><div class="obras-copy"><p>As curvaturas cuidadosamente desenhadas revelam uma sofisticação escultural, enquanto a exposição de cores valoriza ainda mais a presença e a singularidade de cada obra.</p></div></article>
         <article class="obras-feature"><img src="obras/4.jpg" alt="Escultura esférica espelhada em área externa" loading="lazy" /><div class="obras-copy"><p>A riqueza cromática do aço inox colorido envolve a obra com profundidade e brilho, elevando sua expressão a um patamar de luxo.</p></div></article>
@@ -276,8 +294,8 @@
         <article class="obras-feature"><img src="obras/7.jpg" alt="Instalação artística em formato de estrela com telefone vermelho" loading="lazy" /><div class="obras-copy"><p>Em cada curva, o aço inox colorido traduz movimento, elegância e uma linguagem artística de extraordinário requinte.</p></div></article>
         <article class="obras-feature"><img src="obras/8.jpg" alt="Escultura colorida de borboleta em ambiente contemporâneo" loading="lazy" /><div class="obras-copy"><p>Feito para durar para sempre, assim como as grandes obras de arte, o aço inox colorido une beleza, resistência e permanência em uma única criação.</p></div></article>
         <article class="obras-feature"><img src="obras/9.jpg" alt="Escultura abstrata de formas curvas em aço dourado" loading="lazy" /><div class="obras-copy obras-final-copy"><p>Ao mesclar a intensidade das cores com a pureza do acabamento natural, a obra ganha contrastes sofisticados, profundidade visual e uma riqueza de expressão.</p></div></article>
-         <article class="obras-feature"><img src="obras/10.jpg" alt="Escultura colorida de borboleta em ambiente contemporâneo" loading="lazy" /><div class="obras-copy"><p>Quando a resistência sustenta a beleza e a cor traduz a emoção, a arte alcança sua expressão mais nobre</p></div></article>
-        <article class="obras-feature"><img src="obras/24.jpg" alt="Escultura abstrata de formas curvas em aço dourado" loading="lazy" /><div class="obras-copy obras-final-copy"><p>Quando o aço colorido encontra a arte, revela requinte em cada reflexo. Solicite nossa paleta de cores e acabamento</p><a class="btn btn-primary obras-architecture-btn" href="arquitetura.html">Explore nossas soluções para Arquitetura</a></div></article>
+         <article class="obras-feature"><img src="obras/10.jpg" alt="Escultura colorida de borboleta em ambiente contemporâneo" loading="lazy" /><div class="obras-copy"><p>Quando a resistência sustenta a beleza e a cor traduz a emoção, a arte alcança sua expressão mais nobre.</p></div></article>
+        <article class="obras-feature"><img src="obras/24.jpg" alt="Escultura abstrata de formas curvas em aço dourado" loading="lazy" /><div class="obras-copy obras-final-copy"><p>Quando o aço colorido encontra a arte, revela requinte em cada reflexo. Solicite nossa paleta de cores e acabamento.</p><a class="btn btn-primary obras-architecture-btn" href="arquitetura.html">Explore nossas soluções para Arquitetura</a></div></article>
         </section>
     </main>
     <footer class="site-footer" id="contato">

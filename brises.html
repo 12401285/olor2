@@ -125,7 +125,15 @@
         .brises-feature { grid-template-columns: 1fr; gap: 6px; width: calc(100% - 20px); margin: 22px auto; }
         .brises-feature:nth-of-type(odd) img,
         .brises-feature:nth-of-type(odd) .brises-copy { grid-column: auto; grid-row: auto; }
-        .brises-feature img { height: auto !important; }
+        .brises-feature img {
+          width: 100% !important;
+          height: 260px !important;
+          min-height: 260px !important;
+          max-height: 260px !important;
+          aspect-ratio: 4 / 3;
+          object-fit: cover;
+          object-position: center;
+        }
         .brises-copy { padding: 12px 8px; }
         .brises-architecture-btn {
           margin-top: 40px;

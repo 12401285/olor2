@@ -119,7 +119,7 @@
 				margin-top: 0;
 				background:
 					linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.36)),
-					url("img_porcelainox/1.jpg") center / cover;
+					url("Letras e numeros/carrossel/c1.png") center / cover;
 				padding: 82px 0 20px;
 			}
 
@@ -238,23 +238,23 @@
 					margin-top: 12px;
 				}
 
-				.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) {
+				.porcelinox-feature:has(> img[src="Letras e numeros/carrossel/c1.png"]) {
 					margin-top: 12px;
 				}
 
-				.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) img {
+				.porcelinox-feature:has(> img[src="Letras e numeros/carrossel/c1.png"]) img {
 					width: calc(100% + 130px);
 					max-width: none;
 					margin-left: 0%;
 				}
 
-				.porcelinox-feature:not(:has(> img[src="img_porcelainox/6.jpg"])) img {
+				.porcelinox-feature:not(:has(> img[src="Letras e numeros/carrossel/c1.png"])) img {
 					width: calc(100% + 130px);
 					max-width: none;
 					height: 360px;
 				}
 
-				.porcelinox-feature:not(:has(> img[src="img_porcelainox/6.jpg"])) .porcelinox-feature-copy {
+				.porcelinox-feature:not(:has(> img[src="Letras e numeros/carrossel/c1.png"])) .porcelinox-feature-copy {
 					padding: 12px 18px;
 					margin-left: 20%;
 				}
@@ -262,10 +262,10 @@
 				.porcelinox-feature:nth-child(even) img {
 					margin-left: calc((min(1200px, calc(100vw - 48px)) - 100vw) / 2 + 36px);
 				}
-					.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) .porcelinox-feature-copy {
+					.porcelinox-feature:has(> img[src="Letras e numeros/carrossel/c1.png"]) .porcelinox-feature-copy {
 						transform: translateX(40px);
 					}
-					.porcelinox-feature:has(> img[src="img_porcelainox/6.jpg"]) .porcelinox-feature-copy p {
+					.porcelinox-feature:has(> img[src="Letras e numeros/carrossel/c1.png"]) .porcelinox-feature-copy p {
 						text-align: justify;
 						text-align-last: left;
 					}
@@ -391,6 +391,11 @@
 			.porcelinox-feature-copy p {
 				text-align: justify;
 				text-align-last: left;
+				font-size: 1.2rem;
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				text-align: left;
 			}
 
 			.porcelinox-carousel > .porcelinox-feature-copy {
@@ -399,6 +404,11 @@
 				margin: -30px 0 24px max(9.8%, calc((100% - 1200px) / 2 + 96px));
 				padding: 0;
 				text-align: center;
+				font-size: 1.2rem;
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				text-align: left;
 			}
 
 			.porcelinox-carousel > .porcelinox-feature-copy p {
@@ -408,6 +418,7 @@
 				padding: 0;
 				text-align: justify;
 				text-align-last: center;
+				
 			}
 
 			.porcelinox-carousel {
@@ -499,6 +510,168 @@
 			}
 
 			@media (max-width: 768px) {
+				html body.products-page-body.porcelinox-page .porcelinox-description {
+					display: grid !important;
+					grid-template-columns: max-content minmax(0, 1fr) !important;
+					gap: 8px !important;
+					align-items: center !important;
+					width: 100% !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-title-frame {
+					width: max-content !important;
+					max-width: none !important;
+					margin: 0 0 0 14% !important;
+					padding: 7px 8px !important;
+					transform: none !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-title-frame strong {
+					width: max-content !important;
+					margin: 0 !important;
+					font-size: clamp(.58rem, 3.3vw, .88rem) !important;
+					line-height: 1.1 !important;
+					text-align: center !important;
+					white-space: nowrap !important;
+					transform: none !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-subtitle {
+					position: static !important;
+					width: auto !important;
+					min-width: 0 !important;
+					max-width: none !important;
+					margin: 0 !important;
+					font-size: clamp(.48rem, 2.45vw, .66rem) !important;
+					line-height: 1.25 !important;
+					text-align: left !important;
+					white-space: normal !important;
+					transform: none !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy {
+					width: calc(100% - 20px) !important;
+					max-width: none !important;
+					margin: 0 auto !important;
+					padding: 8px 0 0 !important;
+					background: transparent !important;
+				}
+
+				html body.products-page-body.porcelinox-page main p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2 p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5 p,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy p {
+					margin: 0 !important;
+					padding: 0 !important;
+					font-family: "Inter", sans-serif !important;
+					font-size: 0.78rem !important;
+					font-weight: 400 !important;
+					line-height: 1.25 !important;
+					letter-spacing: 0 !important;
+					text-align: justify !important;
+					text-align-last: left !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-description > p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5 {
+					box-sizing: border-box !important;
+					width: calc(100% - 20px) !important;
+					max-width: none !important;
+					margin: 0 auto !important;
+					padding: 8px 0 0 !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy p,
+				html body.products-page-body.porcelinox-page main .porcelinox-description > p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2 p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5 p {
+					margin: 0 !important;
+					padding: 0 !important;
+					font-family: "Inter", sans-serif !important;
+					font-size: 0.78rem !important;
+					font-weight: 400 !important;
+					line-height: 1.25 !important;
+					letter-spacing: 0 !important;
+					text-align: justify !important;
+					text-align-last: left !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy {
+				font-size: 1.2rem;
+				font-weight: 400;
+				letter-spacing: 0.02em;
+				line-height: 1.7;
+				text-align: left;
+				}
+
+				html body.products-page-body.porcelinox-page main p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2 p,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5 p,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy p {
+					margin: 0 !important;
+					padding: 0 !important;
+					font-family: "Inter", sans-serif !important;
+					font-size: 1rem !important;
+					font-weight: 400 !important;
+					line-height: 1.55 !important;
+					letter-spacing: 0 !important;
+					text-align: justify !important;
+					text-align-last: left !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-feature {
+					display: grid !important;
+					grid-template-columns: 1fr !important;
+					gap: 0 !important;
+					height: auto !important;
+					min-height: 0 !important;
+					margin: 12px auto 0 !important;
+					background: transparent !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5 {
+					display: block !important;
+					height: auto !important;
+					min-height: 0 !important;
+					margin: 0 !important;
+					padding: 12px 8px 0 !important;
+					background: transparent !important;
+				}
+
+				body.porcelinox-page main .porcelinox-feature img,
+				body.porcelinox-page main .porcelinox-carousel-track img,
+				body.porcelinox-page main .porcelinox-gallery img {
+					box-sizing: border-box;
+					width: 100% !important;
+					height: 260px !important;
+					min-height: 260px !important;
+					max-height: 260px !important;
+					margin: 0 !important;
+					aspect-ratio: 4 / 3;
+					object-fit: cover;
+					object-position: center;
+				}
+
+				body.porcelinox-page main .porcelinox-carousel-inner,
+				body.porcelinox-page main .porcelinox-carousel-viewport,
+				body.porcelinox-page main .porcelinox-carousel-track {
+					height: 260px;
+				}
+
 				body.porcelinox-page .site-header {
 					background: #fff !important;
 					border-bottom: 1px solid rgb(240, 240, 240) !important;
@@ -512,7 +685,7 @@
 					.porcelinox-page .page-hero {
 				background:
 					linear-gradient(90deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.36)),
-					url("img_porcelainox/1.jpg") center / cover;
+					url("Letras e numeros/carrossel/c1.png") center / cover;
 				padding: 130px 12px 18px;
 					margin-top: -32px;
 			}
@@ -632,7 +805,7 @@
 					object-position: center;
 				}
 
-				.porcelinox-feature img[src="img_porcelainox/7.jpg"] {
+				.porcelinox-feature img[src="Letras e numeros/carrossel/c1.png"] {
 					height: auto !important;
 					max-height: none;
 					object-fit: contain;
@@ -689,11 +862,13 @@
 				.porcelinox-carousel-inner,
 				.porcelinox-carousel-viewport,
 				.porcelinox-carousel-track {
-					height: min(40%, 340px);
+					height: 260px;
 				}
 
 				.porcelinox-carousel-track img {
-					height: min(40%, 340px);
+					height: 260px;
+					aspect-ratio: 4 / 3;
+					object-fit: cover;
 				}
 
 				.porcelinox-page .site-footer .footer-brand .btn_excl {
@@ -775,7 +950,7 @@
 				height: 340px;
 				margin: 0;
 				object-fit: cover;
-				box-shadow: 0 14px 28px rgba(23, 17, 14, 0.16);
+				box-shadow: 0 14px 28px rgba(23, 17, 14, 0);
 			}
 
 			.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3) img,
@@ -949,8 +1124,11 @@
 					grid-row: auto;
 					width: 100%;
 					margin-left: 0;
-					height: auto;
-					object-fit: contain;
+					height: 260px !important;
+					min-height: 260px;
+					max-height: 260px;
+					aspect-ratio: 4 / 3;
+					object-fit: cover;
 				}
 
 				.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy,
@@ -1069,7 +1247,7 @@
 				body.porcelinox-page .porcelinox-title-frame {
 					box-sizing: border-box;
 					width: 100% !important;
-					margin: 0 0 0 10% !important;
+					margin: 0 0 0 14% !important;
 					padding: 10px 8px !important;
 					transform: none !important;
 				}
@@ -1145,18 +1323,125 @@
 			}
 
 			@media (max-width: 768px) {
+				.porcelinox-page main .porcelinox-feature-copy p,
+				.porcelinox-page main .porcelinox-feature-copy2 p,
+				.porcelinox-page main .porcelinox-feature-copy5 p,
+				.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy p,
+				.porcelinox-page main .porcelinox-intro p,
+				.porcelinox-page main .porcelinox-description > p {
+					margin: 0;
+					padding: 0;
+					font-family: "Inter", sans-serif;
+					font-size: 1rem;
+					font-weight: 400;
+					line-height: 1.55;
+					letter-spacing: 0;
+					text-align: justify;
+					text-align-last: left;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3),
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) {
+					width: calc(100% - 20px);
+					margin: 22px auto;
+					gap: 6px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy,
+				.porcelinox-carousel + .section > .porcelinox-feature .porcelinox-feature-copy5 {
+					padding: 12px 8px;
+				}
+
+				.porcelinox-carousel + .section > .porcelinox-feature img,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(3) img,
+				.porcelinox-carousel + .section > .porcelinox-feature:nth-child(5) img,
+				.porcelinox-feature img {
+					width: 100% !important;
+					height: 260px !important;
+					min-height: 260px !important;
+					max-height: 260px !important;
+					margin-left: 0 !important;
+					aspect-ratio: 4 / 3;
+					object-fit: cover;
+					object-position: center;
+				}
+
+				.porcelinox-carousel-inner,
+				.porcelinox-carousel-viewport,
+				.porcelinox-carousel-track,
+				.porcelinox-carousel-track img {
+					height: 260px;
+				}
+
+				.porcelinox-carousel-track img {
+					aspect-ratio: 4 / 3;
+					object-fit: cover;
+				}
+
 				body.porcelinox-page main .porcelinox-feature-copy p,
 				body.porcelinox-page main .porcelinox-feature-copy2 p,
 				body.porcelinox-page main .porcelinox-feature-copy5 p,
 				body.porcelinox-page main .porcelinox-final-copy p:last-child {
-					padding: 0 16px;
+					padding: 0;
 					font-size: 1rem;
 					line-height: 1.55;
+					text-align: justify;
+					text-align-last: left;
 				}
 
 				body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy p {
-					text-align: center !important;
-					text-align-last: center !important;
+					padding: 0;
+					text-align: justify !important;
+					text-align-last: left !important;
+				}
+			}
+
+			@media (max-width: 768px) {
+				html body.products-page-body.porcelinox-page main .porcelinox-feature,
+				html body.products-page-body.porcelinox-page main .porcelinox-gallery,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel-inner,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel-viewport,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy2,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature-copy5 {
+					background: transparent !important;
+					box-shadow: none !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-feature,
+				html body.products-page-body.porcelinox-page main .porcelinox-feature img,
+				html body.products-page-body.porcelinox-page main .porcelinox-gallery,
+				html body.products-page-body.porcelinox-page main .porcelinox-gallery img {
+					border: 0 !important;
+					outline: 0 !important;
+					background: transparent !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-feature img,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel-track img,
+				html body.products-page-body.porcelinox-page main .porcelinox-gallery img {
+					box-sizing: border-box !important;
+					width: 100% !important;
+					height: 220px !important;
+					min-height: 220px !important;
+					max-height: 220px !important;
+					aspect-ratio: 16 / 9 !important;
+					object-fit: cover !important;
+					object-position: center !important;
+					margin: 0 !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel-inner,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel-viewport,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel-track {
+					height: 220px !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-gallery {
+					grid-template-columns: 1fr !important;
+					gap: 12px !important;
 				}
 			}
 		</style>
@@ -1227,6 +1512,7 @@
 			<section class="section">
 				<div class="container porcelinox-gallery">
 				</div>
+				<div class="porcelinox-feature-copy"><p>Antes mesmo de entrar, o olhar reconhece o cuidado da arquitetura no contorno preciso das letras e dos números da Inoxcolor.</p></div>
 				<div class="porcelinox-feature">
 					<img class="imagem-esquerda" src="Letrasnumeros/1.jpg" alt="Letras chapadas em aço inox em painel de recepção" loading="lazy" />
 					<div class="porcelinox-feature-copy5"><p> A cor nasce na própria superfície do material: não é pintura, não descasca e não desbota. É o luxo do aço inox colorido traduzido em beleza, resistência e permanência.</p></div>
