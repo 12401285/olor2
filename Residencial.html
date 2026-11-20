@@ -26,7 +26,7 @@
     .container { width: min(1200px, calc(100% - 48px)); margin: 0 auto; }
     .eyebrow { margin: 0 0 18px; color: var(--bronze); font-size: 12px; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
     .display { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -.035em; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 52px; padding: 0 24px; border: 1px solid var(--gold); background: var(--gold); color: #15130f; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: .2s ease; cursor: pointer; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 52px; padding: 0 24px; border: 1px solid var(--gold); background: var(--gold); color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transition: .2s ease; cursor: pointer; }
     .btn:hover { transform: translateY(-2px); background: #d5b579; }
     .btn-dark { background: var(--ink); border-color: var(--ink); color: var(--white); }
     .btn-outline { background: transparent; border-color: rgba(255,255,255,.48); color: var(--white); }
@@ -179,7 +179,7 @@
     /* Camada didática do mockup. O botão flutuante permite ocultá-la e ver a página limpa. */
     .guide-toolbar { position: fixed; z-index: 100; right: 18px; bottom: 18px; display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgba(20,20,18,.96); color: white; box-shadow: 0 10px 35px rgba(0,0,0,.28); }
     .guide-toolbar span { max-width: 190px; font-size: 10px; line-height: 1.4; letter-spacing: .06em; text-transform: uppercase; }
-    .guide-toggle { min-height: 36px; padding: 0 14px; border: 1px solid var(--gold); background: var(--gold); color: var(--ink); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+    .guide-toggle { min-height: 36px; padding: 0 14px; border: 1px solid var(--gold); background: var(--gold); color: #fff; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
     .implementation-note { width: min(1200px, calc(100% - 48px)); margin: 28px auto; padding: 25px 28px; display: grid; grid-template-columns: 180px 1fr 1fr; gap: 28px; border: 1px dashed var(--bronze); background: #fffaf0; box-shadow: 0 10px 30px rgba(88,65,37,.07); }
     .implementation-note.first { margin-top: 105px; }
     .implementation-note .fold { color: var(--bronze); font: 400 19px/1.2 Georgia,serif; }
@@ -384,8 +384,8 @@
   </style>
 
   <style>
-    .hero-with-video{min-height:auto;padding:0;background:#111;color:#fff}
-    .hero-with-video::before{background:linear-gradient(90deg,rgba(7,7,7,.96),rgba(7,7,7,.78))}
+    .hero-with-video{min-height:auto;padding:0;background:var(--cream);color:var(--ink)}
+    .hero-with-video::before{display:none}
     .hero-with-video .hero-stage{min-height:790px;padding-top:112px;padding-bottom:82px;display:grid;grid-template-columns:minmax(0,.94fr) minmax(420px,1.06fr);gap:58px;align-items:center}
     .hero-with-video .hero-copy{max-width:660px;padding:36px 0}
     .hero-with-video h1{font-size:clamp(41px,4.15vw,65px);line-height:1.04;word-spacing:normal;text-wrap:balance}
@@ -499,11 +499,13 @@
     .application-link-card::after{content:'↗';position:absolute;top:12px;right:12px;width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:#b78342;color:#fff;font-size:20px;line-height:1;box-shadow:0 8px 22px rgba(74,47,20,.25);transition:transform .25s ease,background .25s ease}
     .application-link-card:hover::after{transform:translate(2px,-2px);background:#8f6030}
     .app-grid a.app-card{display:block;color:#fff;text-decoration:none}
-    .colors-feature{margin-top:68px;padding:52px;background:#171614;color:#fff}
+    .colors-feature{margin-top:68px;padding:52px;background:var(--cream);color:var(--ink)}
     .colors-feature-copy{max-width:900px;margin:0 auto 34px;text-align:center}
-    .colors-feature-copy .eyebrow{color:#d7ae6d}
-    .colors-feature-copy h3{margin:13px 0 18px;font:400 clamp(30px,4vw,54px)/1.08 Georgia,serif;color:#fff}
-    .colors-feature-copy>p:last-child{max-width:790px;margin:0 auto;color:rgba(255,255,255,.72);font-size:16px;line-height:1.75}
+    .colors-feature-copy .eyebrow{color:#755329}
+    .colors-feature-copy h3{margin:13px 0 18px;font:400 clamp(30px,4vw,54px)/1.08 Georgia,serif;color:var(--ink)}
+    .colors-feature-copy>p:last-child{max-width:790px;margin:0 auto;color:#57534a;font-size:16px;line-height:1.75}
+    .colors-feature .colors-options-cta{color:#755329}
+    .colors-feature .colors-options-cta:hover,.colors-feature .colors-options-cta:focus-visible{color:#755329}
     .colors-catalog-link{max-width:760px;margin:0 auto}
     .colors-catalog-link .application-link-card{background:#f3efe5;border-color:rgba(215,174,109,.5)}
     .colors-catalog-link .application-link-media{aspect-ratio:1.7/1}
@@ -653,10 +655,11 @@
     flex-direction:column;
     grid-column:auto;
     grid-template-columns:1fr;
-    width:100%;
+    width:calc(100% - 16px);
     max-width:none;
     min-height:0;
-    margin:0;
+    margin:8px;
+    border:3px solid rgba(210,166,84,.72);
   }
   .testimonial-media,
   .testimonial-card-stacked .testimonial-media{
@@ -701,7 +704,7 @@
       border:1px solid var(--gold)!important;
       border-radius:999px!important;
       background:var(--gold)!important;
-      color:#17140f!important;
+      color:#fff!important;
       box-shadow:0 10px 26px rgba(125,86,31,.22);
       text-decoration:none;
     }
@@ -980,67 +983,6 @@
   }
 </style>
 
-<style id="residential-external-applications-card">
-  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: minmax(0, calc((100% - 42px) / 4)) minmax(0, 1fr);
-    column-gap: 14px;
-    align-items: center;
-  }
-  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-media {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1.38 / 1;
-  }
-  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy {
-    align-items: flex-start;
-    justify-content: center;
-    padding: 24px 28px;
-    gap: 10px;
-    text-align: left;
-  }
-  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy strong {
-    font-size: 28px;
-    line-height: 1.15;
-  }
-  body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy > span {
-    width: 100%;
-    max-width: 50ch;
-    font-size: 15px;
-    line-height: 1.6;
-    text-align: left;
-  }
-  @media (max-width: 900px) {
-    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] {
-      grid-template-columns: minmax(0, calc((100% - 14px) / 2)) minmax(0, 1fr);
-    }
-  }
-  @media (max-width: 640px) {
-    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] {
-      grid-template-columns: minmax(0, 1fr);
-      text-align: center;
-    }
-    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy {
-      padding: 16px 18px 18px;
-      gap: 8px;
-    }
-    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy strong {
-      font-size: 18px;
-      line-height: 1.2;
-    }
-    body.residential-page #captura .application-link-grid > .application-link-card[href="/arquitetura/aplicacoes-externas"] .application-link-copy > span {
-      font-size: 12.5px;
-      line-height: 1.5;
-    }
-  }
-</style>
-
 <style id="residential-heading-button-layout">
   .technical-intro > .btn.btn-dark {
     display: flex;
@@ -1146,11 +1088,61 @@
     font-size: clamp(32px, 2.35vw, 36px) !important;
     line-height: 1.15;
   }
-  body.residential-page .hero-with-video h1 .hero-title-highlight { color: var(--gold); }
+  body.residential-page .hero.hero-with-video { background: var(--cream) !important; color: var(--ink) !important; }
+  body.residential-page .hero.hero-with-video::before { display: none !important; }
+  body.residential-page .hero-copy > .eyebrow { color: #755329 !important; }
+  body.residential-page .hero.hero-with-video h1 { color: var(--ink) !important; }
+  body.residential-page .hero-with-video h1 .hero-title-highlight { color: #755329; }
   body.residential-page .hero.hero-with-video { padding-top: clamp(92px, 10vw, 130px) !important; }
+  body.residential-page,
+  body.residential-page main {
+    background: var(--cream) !important;
+  }
+  body.residential-page main .social-cases,
+  body.residential-page main .testimonials,
+  body.residential-page main .budget-closing {
+    background: var(--cream) !important;
+    color: var(--ink) !important;
+  }
+  body.residential-page main .proof-case-grid article,
+  body.residential-page main .testimonial-card {
+    background: var(--cream) !important;
+  }
+  body.residential-page main .proof-case-grid article {
+    border-color: var(--line) !important;
+  }
+  body.residential-page main .testimonial-card {
+    border-color: #8a651f !important;
+  }
+  body.residential-page main .social-cases-head > p:not(.eyebrow),
+  body.residential-page main .proof-case-grid h3,
+  body.residential-page main .proof-case-details dd,
+  body.residential-page main .testimonial-head > p:not(.eyebrow),
+  body.residential-page main .testimonial-copy blockquote,
+  body.residential-page main .testimonial-copy strong,
+  body.residential-page main .testimonial-copy small,
+  body.residential-page main .budget-closing p {
+    color: #57534a !important;
+  }
+  body.residential-page main .proof-case-name,
+  body.residential-page main .proof-case-detail dt,
+  body.residential-page main .testimonial-copy > span {
+    color: #755329 !important;
+  }
+  body.residential-page main .proof-case-detail {
+    border-color: #755329 !important;
+  }
+  body.residential-page .final-cta.opportunity {
+    background: var(--cream) !important;
+    color: var(--ink) !important;
+  }
+  body.residential-page .final-cta.opportunity::before { display: none !important; }
+  body.residential-page .final-cta.opportunity p:not(.eyebrow) { color: #57534a !important; }
   body.residential-page .hero-subheadline {
     font-size: clamp(15px, 1.2vw, 17.28px) !important;
+    color: #57534a !important;
   }
+  body.residential-page .hero-mechanism { color: #755329 !important; text-shadow: none; }
   body.residential-page main .eyebrow { font-size: 11px !important; }
   body.residential-page main h2:not(.facts-section-title) {
     font-size: clamp(32.8px, 3.4vw, 48.96px) !important;
@@ -1367,7 +1359,6 @@
       </div>
 
       <div class="carousel-footer">
-        <span>Explore aplicações marcantes da Inoxcolor.</span>
         <span id="bbb-carousel-status" role="status" aria-live="polite" aria-atomic="true">01 / 21</span>
       </div>
     </div>
@@ -1627,10 +1618,6 @@
             <span class="application-link-media"><img src="assets/image-37.jpg" alt="Letras e Números em aço inox colorido" loading="lazy" decoding="async"></span>
             <span class="application-link-copy"><strong>Letras e Números</strong><span>Letras e números para identificar sua casa com um detalhe que combina com a fachada.</span></span>
           </a>
-          <a class="application-link-card" href="/arquitetura/aplicacoes-externas" aria-label="Conhecer Aplicações Externas">
-            <span class="application-link-media"><img src="assets/image-38.jpg" alt="Aplicações Externas em aço inox colorido" loading="lazy" decoding="async"></span>
-            <span class="application-link-copy"><strong>Aplicações Externas</strong><span>Inspire-se em aplicações para fachadas, jardins e áreas externas da sua casa.</span></span>
-          </a>
         </div>
 
       </div>
@@ -1648,12 +1635,6 @@
           <div class="spec"><strong>Personalização</strong><span>Traga suas referências de desenhos, grafismos e padrões. Nossa equipe avalia como personalizar os produtos para a sua casa.</span></div><div class="spec"><strong>Apoio na escolha</strong><span>Orientação sobre produto, acabamento e aplicação para você decidir com mais clareza antes da compra.</span></div><div class="spec"><strong>Durabilidade</strong><span>Materiais e acabamentos escolhidos conforme o ambiente, com orientação de limpeza e manutenção para o cuidado no dia a dia.</span></div>
         </div>
       </div>
-      <div class="container process-inline"><div class="section-head"><p class="eyebrow">Como funciona</p><h2 class="display">Da inspiração aos detalhes da sua casa.</h2></div><div class="process-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));">
-        <article class="step"><span>01</span><h3>Conheça os produtos</h3><p>Veja as opções, compare cores e acabamentos e encontre ideias para o seu ambiente.</p></article>
-        <article class="step"><span>02</span><h3>Conte sua ideia</h3><p>Envie uma referência, uma foto do espaço, as medidas disponíveis ou uma descrição do que deseja para a sua casa.</p></article>
-        <article class="step"><span>03</span><h3>Receba orientação</h3><p>Nossa equipe avalia as possibilidades e orienta a escolha do produto e do acabamento para o seu ambiente.</p></article>
-        <article class="step"><span>04</span><h3>Avance ao orçamento</h3><p>Com as escolhas alinhadas, solicite um orçamento personalizado para os produtos que deseja.</p></article>
-      </div></div>
     </section>
 
 <section class="faq section" id="faq">
@@ -2088,7 +2069,7 @@ html{scroll-padding-top:87px}
   .site-header .nav-wrap>.nav-actions{position:absolute;top:50%;right:40px;display:flex;margin:0;padding:0;transform:translateY(-50%)}
   .site-header .main-nav a{padding:0;color:#e2e0e0;font-family:Inter,Arial,sans-serif;font-size:11px;font-weight:600;line-height:1;letter-spacing:.095em;text-transform:uppercase}
   .site-header .main-nav a::after{display:none}
-  .site-header .nav-actions .btn-primary{display:inline-flex;align-items:center;justify-content:center;width:140px;height:50px;min-height:50px;padding:0 18px;border:0;border-radius:999px;background:#dfc17d;color:#24211a;box-shadow:none;font-family:Inter,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
+  .site-header .nav-actions .btn-primary{display:inline-flex;align-items:center;justify-content:center;width:140px;height:50px;min-height:50px;padding:0 18px;border:0;border-radius:999px;background:#dfc17d;color:#fff;box-shadow:none;font-family:Inter,Arial,sans-serif;font-size:11px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
   .site-header .menu-toggle,.site-header .mobile-menu-panel{display:none!important}
 }
 @media (min-width:1025px) and (max-width:1250px){
@@ -2183,6 +2164,15 @@ html{scroll-padding-top:87px}
     min-width: 0;
     margin: 0;
     scroll-snap-align: start;
+  }
+
+  .bbb-highlights .image-slide figcaption {
+    min-height: 38px;
+    margin-top: 12px;
+    color: var(--ink);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left;
   }
 
   .bbb-highlights .image-carousel-media {
@@ -2386,5 +2376,24 @@ html{scroll-padding-top:87px}
   })();
 </script>
   <script src="script.js"></script>
+  <style id="gold-accent-and-button-text">
+    body.residential-page { --bronze: #c8a36a; }
+    body.residential-page main .hero-copy > .eyebrow,
+    body.residential-page main .hero-with-video h1 .hero-title-highlight,
+    body.residential-page main .hero-mechanism,
+    body.residential-page main .colors-feature-copy .eyebrow,
+    body.residential-page main .colors-options-cta,
+    body.residential-page main .proof-case-name,
+    body.residential-page main .proof-case-detail dt,
+    body.residential-page main .testimonial-copy > span {
+      color: #c8a36a !important;
+    }
+    body.residential-page main .btn,
+    body.residential-page .site-header .btn-primary,
+    body.residential-page .site-header .mobile-budget-link,
+    body.residential-page .guide-toggle {
+      color: #fff !important;
+    }
+  </style>
 </body>
 </html>

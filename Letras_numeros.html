@@ -1418,7 +1418,6 @@
 					outline: 0 !important;
 					background: transparent !important;
 				}
-
 				html body.products-page-body.porcelinox-page main .porcelinox-feature img,
 				html body.products-page-body.porcelinox-page main .porcelinox-carousel-track img,
 				html body.products-page-body.porcelinox-page main .porcelinox-gallery img {
@@ -1442,6 +1441,181 @@
 				html body.products-page-body.porcelinox-page main .porcelinox-gallery {
 					grid-template-columns: 1fr !important;
 					gap: 12px !important;
+				}
+			}
+			@media (max-width: 768px) {
+				html body.products-page-body.porcelinox-page .page-hero {
+					margin-top: -104px !important;
+					padding: 162px 6px 18px !important;
+				}
+
+				html body.products-page-body.porcelinox-page .page-hero-inner {
+					width: 100% !important;
+					min-height: 142px !important;
+					margin: 0 !important;
+					padding: 0 !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-description {
+					display: grid !important;
+					grid-template-columns: minmax(0, 58fr) minmax(0, 42fr) !important;
+					gap: 10px !important;
+					align-items: center !important;
+					width: 100% !important;
+					margin: 0 !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-title-frame {
+					box-sizing: border-box !important;
+					width: 100% !important;
+					margin: 0 !important;
+					padding: 7px 5px !important;
+					border: 1px solid rgba(255, 255, 255, 0.7) !important;
+					transform: none !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-title-frame strong {
+					width: 100% !important;
+					margin: 0 !important;
+					font-size: clamp(0.68rem, 3.1vw, 0.92rem) !important;
+					line-height: 1.15 !important;
+					text-align: center !important;
+					white-space: nowrap !important;
+					transform: none !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-subtitle {
+					position: static !important;
+					width: auto !important;
+					min-width: 0 !important;
+					max-width: none !important;
+					margin: 0 !important;
+					font-size: clamp(0.58rem, 2.7vw, 0.78rem) !important;
+					line-height: 1.25 !important;
+					text-align: left !important;
+					white-space: nowrap !important;
+					transform: none !important;
+				}
+			}
+			@media (max-width: 480px) {
+				html body.products-page-body.porcelinox-page .porcelinox-description {
+					display: flex !important;
+					justify-content: center !important;
+					align-items: center !important;
+					gap: 8px !important;
+					transform: translate(-24px, -72px) !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy:first-child {
+					transform: translateY(-24px) !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-title-frame {
+					flex: 0 0 auto !important;
+					width: max-content !important;
+					max-width: none !important;
+				}
+
+				html body.products-page-body.porcelinox-page .porcelinox-title-frame strong {
+					width: max-content !important;
+					max-width: none !important;
+					font-size: clamp(0.52rem, 3vw, 0.72rem) !important;
+					white-space: nowrap !important;
+					text-align: center !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-description > p.porcelinox-subtitle {
+					flex: 0 0 auto !important;
+					width: max-content !important;
+					max-width: none !important;
+					margin: 0 !important;
+					padding: 0 !important;
+					font-size: clamp(0.52rem, 3vw, 0.72rem) !important;
+					text-align: center !important;
+					text-align-last: center !important;
+					white-space: nowrap !important;
+					overflow-wrap: normal;
+				}
+			}
+			@media (max-width: 768px) {
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature {
+					grid-template-columns: minmax(0, 1fr) !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature img {
+					width: 100% !important;
+					height: 220px !important;
+					min-height: 220px !important;
+					max-height: 220px !important;
+					aspect-ratio: 16 / 9 !important;
+					object-fit: cover !important;
+					object-position: center !important;
+					margin: 0 !important;
+				}
+			}
+			@media (max-width: 349px) {
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature img {
+					box-sizing: border-box !important;
+					width: 100% !important;
+					min-width: 0 !important;
+					max-width: 100% !important;
+					height: auto !important;
+					min-height: 0 !important;
+					max-height: none !important;
+					aspect-ratio: 16 / 9 !important;
+				}
+
+			}
+			@media (max-width: 768px) {
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature-copy {
+					box-sizing: border-box !important;
+					width: calc(100% - 20px) !important;
+					max-width: none !important;
+					margin: 0 auto !important;
+					padding: 8px 0 !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature > .porcelinox-feature-copy,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature > .porcelinox-feature-copy5 {
+					box-sizing: border-box !important;
+					width: 100% !important;
+					max-width: none !important;
+					margin: 0 !important;
+					padding: 8px 0 !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel > .porcelinox-feature-copy > p,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature-copy > p,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature > .porcelinox-feature-copy > p,
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature > .porcelinox-feature-copy5 > p {
+					color: #121212 !important;
+					font-family: "Inter", sans-serif !important;
+					width: 100% !important;
+					max-width: none !important;
+					font-size: 1rem !important;
+					font-weight: 400 !important;
+					letter-spacing: 0 !important;
+					line-height: 1.55 !important;
+					word-spacing: normal !important;
+					text-align: justify !important;
+					text-align-last: left !important;
+					margin: 0 !important;
+					padding: 0 !important;
+				}
+			}
+			@media (max-width: 768px) {
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section {
+					padding-top: 0 !important;
+					padding-bottom: 14px !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-gallery + .porcelinox-feature-copy {
+					padding-top: 0 !important;
+				}
+
+				html body.products-page-body.porcelinox-page main .porcelinox-carousel + .section > .porcelinox-feature:last-child .porcelinox-architecture-btn {
+					margin-top: 8px !important;
 				}
 			}
 		</style>
@@ -1514,7 +1688,7 @@
 				</div>
 				<div class="porcelinox-feature-copy"><p>Antes mesmo de entrar, o olhar reconhece o cuidado da arquitetura no contorno preciso das letras e dos números da Inoxcolor.</p></div>
 				<div class="porcelinox-feature">
-					<img class="imagem-esquerda" src="Letrasnumeros/1.jpg" alt="Letras chapadas em aço inox em painel de recepção" loading="lazy" />
+					<img class="imagem-esquerda" src="Mobile letras e numeros/1.jpg" alt="Letras chapadas em aço inox em painel de recepção" loading="lazy" />
 					<div class="porcelinox-feature-copy5"><p> A cor nasce na própria superfície do material: não é pintura, não descasca e não desbota. É o luxo do aço inox colorido traduzido em beleza, resistência e permanência.</p></div>
 				</div>
 				<div class="porcelinox-feature">
@@ -1530,21 +1704,21 @@
 					<div class="porcelinox-feature-copy"><p> As letras-caixa possuem laterais que criam profundidade e volumetria, proporcionando maior imponência, presença visual e destaque à identidade apresentada.</p></div>
 				</div>
 				<div class="porcelinox-feature">
-					<img class="imagem-esquerda" src="Letrasnumeros/5.jpg" alt="Número residencial dourado em placa decorativa" loading="lazy" />
+					<img class="imagem-esquerda" src="Mobile letras e numeros/4.jpg" alt="Número residencial dourado em placa decorativa" loading="lazy" />
 					<div class="porcelinox-feature-copy porcelinox-final-copy"><p>Desenvolvidas em diferentes tipografias, dimensões e proporções, as letras podem acompanhar a linguagem de cada projeto e transformar nomes e marcas em elementos verdadeiramente autorais.</p></div>
 				</div>
 				<div class="porcelinox-feature">
-					<img class="imagem-direita" src="Letrasnumeros/6.jpg" alt="Aplicação Porcelinox 8" loading="lazy" />
+					<img class="imagem-direita" src="Mobile letras e numeros/5.jpg" alt="Aplicação Porcelinox 8" loading="lazy" />
 					<div class="porcelinox-feature-copy"><p>Os números residenciais ganham design de alto luxo e passam a compor a arquitetura da fachada, oferecendo uma identificação elegante que valoriza a entrada antes mesmo de a porta ser aberta.</p></div>
 				</div>
 				<div class="porcelinox-feature">
-					<img class="imagem-esquerda" src="Letrasnumeros/7.jpg" alt="Aplicação Porcelinox 7" loading="lazy" />
+					<img class="imagem-esquerda" src="Mobile letras e numeros/6.jpg" alt="Aplicação Porcelinox 7" loading="lazy" />
 					<div class="porcelinox-feature-copy porcelinox-final-copy"><p>Em acabamentos polidos ou escovados, letras e números interagem com a luz e acrescentam cor, reflexo e distinção a residências, edifícios e espaços comerciais de alto padrão.</p></div>
 					
 				</div>
 				<div class="porcelinox-feature">
 					<img class="imagem-direita" src="Letrasnumeros/8.jpg" alt="Aplicação Porcelinox 8" loading="lazy" />
-					<div class="porcelinox-feature-copy porcelinox-final-copy"><p>Descubra novas possibilidades para criar letras e números que expressem a identidade e a sofisticação de cada projeto. Solicite seu catálogo de cores e acabamentos.</p><a class="btn btn-primary porcelinox-architecture-btn" href="contato.html">Solicite seu catálogo de cores e acabamentos.</a></div>
+					<div class="porcelinox-feature-copy porcelinox-final-copy"><p>Descubra novas possibilidades para criar letras e números que expressem a identidade e a sofisticação de cada projeto. Solicite seu catálogo de cores e acabamentos.</p><a class="btn btn-primary porcelinox-architecture-btn" href="contato.html">Solicite seu catálogo de cores e acabamentos</a></div>
 				</div>
 			</section>
 		</main>

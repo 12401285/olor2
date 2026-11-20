@@ -18,15 +18,29 @@
     .downloads-page {
       --downloads-ink: #171615;
       --downloads-paper: #f7f5f1;
-      --downloads-gold: #d3b77f;
       margin: 0;
       background: var(--downloads-paper);
       color: var(--downloads-ink);
       font-family: "Inter", sans-serif;
     }
 
-    .downloads-page .site-header {
-      background: rgba(17, 17, 17, 0.92);
+    .downloads-page .site-header,
+    .downloads-page .site-header.scrolled {
+      background: transparent !important;
+      border-bottom: 0;
+      backdrop-filter: none;
+    }
+
+    @media (min-width: 801px) {
+      .downloads-page .site-header .main-nav a {
+        color: var(--downloads-ink) !important;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .downloads-page .site-header .menu-toggle span {
+        background: var(--downloads-ink);
+      }
     }
 
     .downloads-main {
@@ -38,34 +52,12 @@
       margin: 0 auto;
     }
 
-    .downloads-hero {
-      position: relative;
-      overflow: hidden;
-      padding: clamp(72px, 10vw, 128px) 0 clamp(64px, 8vw, 104px);
-      background:
-        radial-gradient(ellipse at 82% 18%, rgba(211, 183, 127, 0.18), transparent 34%),
-        linear-gradient(125deg, #171615 0%, #23211e 58%, #30291f 100%);
-      color: #fffaf0;
-    }
-
-    .downloads-hero::after {
-      position: absolute;
-      right: -110px;
-      bottom: -240px;
-      width: 520px;
-      height: 520px;
-      border: 1px solid rgba(211, 183, 127, 0.22);
-      border-radius: 50%;
-      content: "";
-      pointer-events: none;
-    }
-
     .downloads-eyebrow {
       display: flex;
       align-items: center;
       gap: 12px;
       margin: 0 0 20px;
-      color: var(--downloads-gold);
+      color: #8f6f46;
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.2em;
@@ -79,46 +71,8 @@
       content: "";
     }
 
-    .downloads-hero h1 {
-      max-width: 760px;
-      margin: 0;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.8rem, 6.4vw, 5.4rem);
-      font-weight: 500;
-      letter-spacing: -0.035em;
-      line-height: 0.98;
-    }
-
-    .downloads-hero h1 span {
-      color: var(--downloads-gold);
-    }
-
-    .downloads-intro {
-      max-width: 600px;
-      margin: 24px 0 0;
-      color: rgba(255, 250, 240, 0.72);
-      font-size: clamp(0.98rem, 1.5vw, 1.12rem);
-      line-height: 1.8;
-    }
-
-    .downloads-highlights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 32px;
-    }
-
-    .downloads-highlights span {
-      padding: 8px 13px;
-      border: 1px solid rgba(255, 250, 240, 0.2);
-      border-radius: 999px;
-      color: rgba(255, 250, 240, 0.82);
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-    }
-
     .manuals-section {
-      padding: clamp(56px, 8vw, 88px) 0 clamp(72px, 9vw, 112px);
+      padding: clamp(32px, 5vw, 56px) 0 clamp(72px, 9vw, 112px);
     }
 
     .manuals-heading {
@@ -260,6 +214,22 @@
       height: 16px;
     }
 
+    .downloads-contact {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .downloads-contact .btn {
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
     .downloads-page .site-footer {
       margin-top: 0 !important;
     }
@@ -284,26 +254,8 @@
         width: min(100% - 36px, 460px);
       }
 
-      .downloads-hero {
-        padding: 68px 0 62px;
-      }
-
-      .downloads-hero h1 {
-        font-size: clamp(2.7rem, 13vw, 4.2rem);
-      }
-
-      .downloads-highlights {
-        gap: 8px;
-        margin-top: 24px;
-      }
-
-      .downloads-highlights span {
-        padding: 7px 10px;
-        font-size: 0.68rem;
-      }
-
       .manuals-section {
-        padding: 54px 0 68px;
+        padding: 30px 0 68px;
       }
 
       .manuals-grid {
@@ -355,21 +307,6 @@
     </div>
   </header>
   <main class="downloads-main">
-    <section class="downloads-hero" aria-labelledby="downloads-title">
-      <div class="downloads-shell">
-        <p class="downloads-eyebrow">Biblioteca Inoxcolor</p>
-        <h1 id="downloads-title">Informação para <span>construir melhor.</span></h1>
-        <p class="downloads-intro">
-          Consulte nossos manuais técnicos e encontre orientações para especificar,
-          instalar e aproveitar cada solução Inoxcolor.
-        </p>
-        <div class="downloads-highlights" aria-label="Informações dos materiais">
-          <span>Manuais técnicos</span>
-          <span>Guias de instalação</span>
-          <span>Arquivos em PDF</span>
-        </div>
-      </div>
-    </section>
     <section class="manuals-section" id="manuais" aria-labelledby="manuals-title">
       <div class="downloads-shell">
         <div class="manuals-heading">
@@ -383,7 +320,7 @@
           <article class="manual-card">
             <div class="manual-card-top">
               <span class="manual-number">01</span>
-              <span class="manual-format">PDF · 2026</span>
+              <span class="manual-format">PDF</span>
             </div>
             <h3>Manual Técnico Inoxcolor</h3>
             <p>Informações técnicas e orientações para conhecer e especificar nossas soluções.</p>
@@ -411,7 +348,7 @@
           <article class="manual-card">
             <div class="manual-card-top">
               <span class="manual-number">03</span>
-              <span class="manual-format">PDF · 2026</span>
+              <span class="manual-format">PDF</span>
             </div>
             <h3>Instalação de Perfis e Listelos</h3>
             <p>Orientações para a instalação dos perfis e listelos Inoxcolor.</p>
@@ -422,6 +359,9 @@
               </svg>
             </a>
           </article>
+        </div>
+        <div class="downloads-contact">
+          <a class="btn btn-primary" href="https://wa.me/5531991257328?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Inoxcolor." target="_blank" rel="noopener noreferrer">Atendimento Exclusivo</a>
         </div>
       </div>
     </section>
