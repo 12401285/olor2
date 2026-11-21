@@ -2828,12 +2828,17 @@ if (menuToggle && navs.length && mobileMenuPanel) {
       text-align: justify !important;
       text-align-last: auto !important;
     }
+    /* Preserve the original 16:9 frame on mobile so the full video and logo stay visible. */
+    body.architecture-page main .hero-video-shell {
+      width: 100% !important;
+      aspect-ratio: 16 / 9 !important;
+    }
     body.architecture-page main .hero-video-shell video {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9 !important;
       object-fit: contain !important;
       object-position: center !important;
-    }
-    body.architecture-page main .hero-video-shell {
-      aspect-ratio: 1 / 1 !important;
     }
   }
 </style>
