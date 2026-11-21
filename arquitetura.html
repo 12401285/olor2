@@ -2830,7 +2830,10 @@ if (menuToggle && navs.length && mobileMenuPanel) {
     }
     /* Preserve the original 16:9 frame on mobile so the full video and logo stay visible. */
     body.architecture-page main .hero-video-shell {
-      width: 100% !important;
+      box-sizing: border-box !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      margin-left: calc(50% - 50vw) !important;
       aspect-ratio: 16 / 9 !important;
     }
     body.architecture-page main .hero-video-shell video {
