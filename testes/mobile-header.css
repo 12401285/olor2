@@ -1,0 +1,39 @@
+@media (max-width: 1024px) {
+  html body.products-page-body.portfolio-page-body .site-header,
+  html body.products-page-body.water-ripple-page .site-header,
+  html body.products-page-body.colunas-page .site-header,
+  html body.products-page-body.colunas-page.fachadas-page .site-header,
+  html body.products-page-body.elevadores-page.portas-page .site-header,
+  html body.products-page-body.brises-page .site-header,
+  html body.products-page-body.porcelinox-page .site-header {
+    background-color: transparent !important;
+    background-image: none !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-bottom: 0 !important;
+  }
+
+  html body.products-page-body.portfolio-page-body .site-header.scrolled,
+  html body.products-page-body.water-ripple-page .site-header.scrolled,
+  html body.products-page-body.colunas-page .site-header.scrolled,
+  html body.products-page-body.colunas-page.fachadas-page .site-header.scrolled,
+  html body.products-page-body.elevadores-page.portas-page .site-header.scrolled,
+  html body.products-page-body.brises-page .site-header.scrolled,
+  html body.products-page-body.porcelinox-page .site-header.scrolled {
+    background-color: #111 !important;
+    background-image: none !important;
+  }
+}
+
+@media (max-width: 980px) {
+  html body.products-page-body.portfolio-page-body {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body.products-page-body.elevadores-page.portas-page .site-header .brand-item img,
+  html body.products-page-body.brises-page .site-header .brand-item img {
+    transform: translateY(2px) !important;
+  }
+}

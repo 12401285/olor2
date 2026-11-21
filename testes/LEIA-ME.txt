@@ -1,0 +1,10 @@
+Otimização da página Inoxcolor | Indústria
+
+Para aplicar com segurança:
+1. Faça backup da página atualmente publicada.
+2. Substitua o HTML atual pelo arquivo industria.html deste pacote (renomeie para o nome usado no site, se necessário).
+3. Envie a pasta assets/ completa para o mesmo diretório da página HTML, sem alterar sua estrutura.
+4. Mantenha no servidor os arquivos e pastas existentes referenciados pelo HTML, como styles.css, footer.css, script.js, bbb/ e logo+fundo+sitw-640w.webp.
+5. Teste a página em desktop e celular, incluindo carrosséis, formulário e reprodução dos vídeos.
+
+As imagens e os vídeos que antes estavam embutidos no próprio HTML foram extraídos sem recompressão. Os caminhos de imagens já nomeadas, as classes e a estrutura visual foram preservados. Os vídeos externos são carregados somente quando solicitados pelo visitante.

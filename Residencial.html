@@ -2197,16 +2197,33 @@ html{scroll-padding-top:87px}
     }
 
     .bbb-highlights > .wrap {
-      width: calc(100% - 36px);
+      width: calc(100% - 54px);
     }
 
     .bbb-highlights .image-carousel-overlay {
       padding: 0 8px;
+      bottom: auto;
+      aspect-ratio: 16 / 10;
     }
 
     .bbb-highlights .image-carousel-overlay .slider-btn {
-      width: 40px;
-      height: 40px;
+      position: absolute;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      display: grid;
+      place-items: center;
+      transform: translateY(-50%);
+      font-size: 16px;
+    }
+
+    .bbb-highlights .image-carousel-overlay .slider-btn.prev {
+      left: -24px;
+    }
+
+    .bbb-highlights .image-carousel-overlay .slider-btn.next {
+      right: -24px;
     }
 
     .bbb-highlights h2 {
@@ -2218,7 +2235,7 @@ html{scroll-padding-top:87px}
     }
 
     .bbb-highlights .image-slide {
-      flex: 0 0 86%;
+      flex: 0 0 100%;
     }
   }
 </style>
