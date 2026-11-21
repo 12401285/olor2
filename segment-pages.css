@@ -604,15 +604,26 @@ body.residential-page .faq.section .faq-wrap {
   padding: 0 !important;
 }
 
-body.architecture-page .closing.budget-closing,
+body.architecture-page .closing.budget-closing {
+  padding: clamp(64px, 8vw, 96px) 24px !important;
+  background: var(--cream) !important;
+  color: var(--ink) !important;
+}
+
 body.residential-page .closing.budget-closing {
   padding: clamp(64px, 8vw, 96px) 24px !important;
   background: #171716 !important;
   color: #fffaf0 !important;
 }
 
-body.architecture-page .closing.budget-closing h2,
-body.architecture-page .closing.budget-closing p,
+body.architecture-page .closing.budget-closing h2 {
+  color: var(--ink) !important;
+}
+
+body.architecture-page .closing.budget-closing p {
+  color: #625e55 !important;
+}
+
 body.residential-page .closing.budget-closing h2,
 body.residential-page .closing.budget-closing p {
   color: #fffaf0 !important;
